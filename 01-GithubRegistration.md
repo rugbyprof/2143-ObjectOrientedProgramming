@@ -70,4 +70,4 @@ Every email must have a minimum of two items included:
 
 I can't promise an answer if you don't provide those two pieces of information.
 
-<sub>Source: http://en.wikipedia.org/wiki/Git_(software)</sub>
+<sub>[1] http://en.wikipedia.org/wiki/Git_(software)</sub>
