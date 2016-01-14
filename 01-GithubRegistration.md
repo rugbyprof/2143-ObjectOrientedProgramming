@@ -33,7 +33,7 @@ a means to push your files to a central repository. So if your using a lab or pe
 
 #### Edit the README.md 
 
-- Edit the readme file on github and place your contact information inside along with a picture of YOU. NOT an avatar. NOT a thumbnail. But a real live picture.
+- Edit the readme file on github and place your contact information inside along with a picture of YOU. NOT an avatar. NOT a thumbnail. But an easily identifiable picture of you.
 - Your readme should include:
     - Your image
     - Your first and last name
