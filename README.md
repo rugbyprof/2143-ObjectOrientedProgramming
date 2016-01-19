@@ -1,7 +1,8 @@
 # 2143 Object Oriented Programming
 
-Companion Site https://piazza.com/mwsu/spring2016/cmps2143/home
-
+- Companion Website:
+    - Signup Link: https://piazza.com/mwsu/spring2016/cmps2143
+    - Class Link: https://piazza.com/mwsu/spring2016/cmps2143/home
 - Days: TR 1100am 1220pm 
 - Location: BO 304 
 - Final Exam: Tuesday May 10th, 1:00 - 3:00 p.m.
@@ -10,21 +11,6 @@ Companion Site https://piazza.com/mwsu/spring2016/cmps2143/home
     - Martin Luther King: January 18 
     - Spring Break: March 21-26
 - Last Day for “W”: March 30
-
-## General Checklist:
-- Companion Website:
-    - Signup Link: https://piazza.com/mwsu/spring2016/cmps2143
-    - Class Link: https://piazza.com/mwsu/spring2016/cmps2143/home
-- Github Account
-- Linux overview
-- Programs
-- Projects
-- Mandatory Assignment Rules
-    - Due dates and times
-    - formatting programs
-    - names on all docs
-    - all files end up on Github
-
 
 ## Grading:	
 
