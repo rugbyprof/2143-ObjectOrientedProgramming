@@ -1,5 +1,5 @@
 ## Assignment 1 - Github
-(Creating an account and a repository)
+Creating an account and a repository
 #### Due: Thursday Jan 21st by Midnight.
 
 ## ![](http://f.cl.ly/items/3R3r0z1g3G0o0r2T1i0t/heavy_exclamation_mark_symbol_emoji_2757.jpg) Important:
