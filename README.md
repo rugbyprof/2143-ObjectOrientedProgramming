@@ -1,7 +1,6 @@
 # 2143 Object Oriented Programming
 
-## Companion Site
-https://piazza.com/mwsu/spring2016/cmps2143/home
+#### Companion Site https://piazza.com/mwsu/spring2016/cmps2143/home
 
 - Days: TR 1100am 1220pm 
 - Location: BO 304 
