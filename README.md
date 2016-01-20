@@ -1,7 +1,5 @@
 # 2143 Object Oriented Programming
 
-![banana](http://pngimg.com/upload/banana_PNG835.png)
-
 - Companion Website:
     - Signup Link: https://piazza.com/mwsu/spring2016/cmps2143
     - Class Link: https://piazza.com/mwsu/spring2016/cmps2143/home
