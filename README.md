@@ -59,4 +59,4 @@
 
 - Periodically homework assignments will be taken up and graded. It is the student's responsibility to keep up with assignments and to ask questions over the assigned work, even if absent. All homework assignments are due at the specified time that may or may not be in conjunction with a class day. All assignments / homeworks will be uploaded via Github.
 
-![description](http://images.clipartpanda.com/banana-20clip-20art-niEeKGXiA.png)
+![description](http://www.cliparthut.com/clip-arts/1004/banana-clip-art-1004558.png)
