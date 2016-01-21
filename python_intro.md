@@ -9,7 +9,7 @@ print "This line will be printed."
 ## Indentation
 Python uses indentation for blocks, instead of curly braces. Both tabs and spaces are supported, but the standard indentation requires standard Python code to use four spaces. For example:
 
-```
+```python
 x = 1
 if x == 1:
     # indented four spaces
@@ -25,13 +25,13 @@ This tutorial will go over a few basic types of variables.
 Python supports two types of numbers - integers and floating point numbers. (It also supports complex numbers, which will not be explained in this tutorial).
 
 To define an integer, use the following syntax:
-```
+```python
 myint = 7
 ```
 
 To define a floating point number, you may use one of the following notations:
 
-```
+```python
 myfloat = 7.0
 myfloat = float(7)
 ```
@@ -39,14 +39,14 @@ myfloat = float(7)
 ### Strings
 Strings are defined either with a single quote or a double quotes.
 
-```
+```python
 mystring = 'hello'
 mystring = "hello"
 ```
 
 The difference between the two is that using double quotes makes it easy to include apostrophes (whereas these would terminate the string if using single quotes)
 
-```
+```python
 mystring = "Don't worry about apostrophes"
 ```
 
@@ -54,7 +54,7 @@ There are additional variations on defining strings that make it easier to inclu
 
 Simple operators can be executed on numbers and strings:
 
-```
+```python
 #Adding Numbers
 one = 1
 two = 2
@@ -68,14 +68,14 @@ helloworld = hello + " " + world
 
 Assignments can be done on more than one variable "simultaneously" on the same line like this
 
-```
+```python
 a, b = 3, 4
 
 ```
 
 Mixing operators between numbers and strings is not supported:
 
-```
+```python
 # This will not work!
 print one + two + hello
 ```
@@ -84,7 +84,7 @@ print one + two + hello
 
 Lists are very similar to arrays. They can contain any type of variable, and they can contain as many variables as you wish. Lists can also be iterated over in a very simple manner. Here is an example of how to build a list.
 
-```
+```python
 mylist = []
 mylist.append(1)
 mylist.append(2)
@@ -101,7 +101,7 @@ for x in mylist:
 
 Accessing an index which does not exist generates an exception (an error).
 
-```
+```python
 mylist = [1,2,3]
 print(mylist[10])
 ```
