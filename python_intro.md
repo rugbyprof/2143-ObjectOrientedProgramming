@@ -723,6 +723,29 @@ or:
 phonebook.pop("John")
 ```
 
+Testing to see if a key exists, before trying to access it.
+
+```python
+d = dict()
+
+for i in xrange(100):
+    key = i % 10
+    if key in d:
+        d[key] += 1
+    else:
+        d[key] = 1
+```
+
+If you wanted a default, you can always use dict.get():
+
+```python
+d = dict()
+
+for i in range(100):
+    key = i % 10
+    d[key] = d.get(key, 0) + 1
+```
+
 ## Modules and Packages
 
 Modules in Python are simply Python files with the *.py* extension, which implement a set of functions. Modules are imported from other modules using the import command.
