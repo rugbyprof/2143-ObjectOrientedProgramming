@@ -21,7 +21,7 @@ Python is completely object oriented, and not "statically typed". You do not nee
 
 This tutorial will go over a few basic types of variables.
 
-### Numbers
+#### Numbers
 Python supports two types of numbers - integers and floating point numbers. (It also supports complex numbers, which will not be explained in this tutorial).
 
 To define an integer, use the following syntax:
@@ -36,7 +36,7 @@ myfloat = 7.0
 myfloat = float(7)
 ```
 
-### Strings
+#### Strings
 Strings are defined either with a single quote or a double quotes.
 
 ```python
@@ -105,14 +105,14 @@ print(L)
 #prints: ['yellow', 'red', 'blue', 'green', 'black']
 ```
 
-### Accessing / Indexing
+#### Accessing / Indexing
 
 ```python
 print(L[0])
 # prints 'yellow'
 ```
 
-### Slicing
+#### Slicing
 
 ```python
 L[1:4]  #returns ['red', 'blue', 'green']
@@ -122,14 +122,14 @@ L[-1]  	#returns 'black'
 L[1:-1] #returns ['red', 'blue', 'green']
 ```
 
-### Length 
+#### Length 
 number of items in list
 
 ```python
 len(L)  # returns 5
 ```
 
-### Sorting 
+#### Sorting 
 
 sorts the list
 
@@ -137,7 +137,7 @@ sorts the list
 sorted(L) # results in ['black', 'blue', 'green', 'red', 'yellow']
 ```
 
-### Append 
+#### Append 
 
 append to end of list
 
@@ -148,7 +148,7 @@ print(L)
 # prints ['black', 'blue', 'green', 'red', 'yellow', 'pink']
 ```
 
-### Insert
+#### Insert
 
 insert into list
 
@@ -158,7 +158,7 @@ print(L)
 # prints ['white', 'black', 'blue', 'green', 'red', 'yellow', 'pink']
 ```
 
-### Extend
+#### Extend
 
 grow the list
 
@@ -166,7 +166,7 @@ grow the list
 L.extend(L2)
 ```
 
-### Remove - remove first item in list with value "white"
+#### Remove - remove first item in list with value "white"
 ```python
 L.remove("white")
 
@@ -174,7 +174,7 @@ print(L)
 returns: ['black', 'blue', 'green', 'red', 'yellow', 'pink']
 ```
 
-### Delete
+#### Delete
 
 Remove an item from a list given its index instead of its value
 
@@ -185,35 +185,58 @@ print(L)
 # prints['blue', 'green', 'red', 'yellow', 'pink']
 ```
 
-Pop
+#### Pop
 
 Remove last item in the list
-L.pop()  = returns 'pink'
 
-# remove indexed value from list
-L.pop(1) = returns 'green'  
-Reverse - reversing the list
+```python
+L.pop()  # returns 'pink'
+```
+
+Remove indexed value from list
+
+```python
+L.pop(1) # returns 'green'  
+```
+
+#### Reverse 
+
+reversing the list
+
+```python
 L.reverse()
-Count
+```
+
+#### Count
 
 Search list and return number of instances found
+
+```python
 L.count('red')
+```
+
 Keyword "in" - can be used to test if an item is in a list
- 
+
+```python
 if 'red' in L:
-    print "list contains", 'red'
+    print("list contains", 'red')
+```
+
 For-in statement - makes it easy to loop over the items in a list
+
+```python
 for item in L:
     print item
 
 L = ['red', 'blue', 'green']
 for col in L:
     print col
+```
 
 ## Basic Operators
 This section explains how to use basic operators in Python.
 
-### Arithmetic Operators
+#### Arithmetic Operators
 
 Just as any other programming languages, the addition, subtraction, multiplication, and division operators can be used with numbers.
 ```
@@ -235,7 +258,7 @@ squared = 7 ** 2
 cubed = 2 ** 3
 ```
 
-### Using Operators with Strings
+#### Using Operators with Strings
 Python supports concatenating strings using the addition operator:
 
 ```
@@ -248,7 +271,7 @@ Python also supports multiplying strings to form a string with a repeating seque
 lotsofhellos = "hello" * 10
 ```
 
-### Using Operators with Lists
+#### Using Operators with Lists
 
 Lists can be joined with the addition operators:
 
@@ -365,7 +388,7 @@ print x < 3  # prints out True
 
 Notice that variable assignment is done using a single equals operator "=", whereas comparison between two variables is done using the double equals operator "==". The "not equals" operator is marked as "!=".
 
-### Boolean operators
+#### Boolean operators
 
 The "and" and "or" boolean operators allow building complex boolean expressions, for example:
 
@@ -379,7 +402,7 @@ if name == "John" or name == "Rick":
     print "Your name is either John or Rick."
 ```
 
-### The "in" operator
+#### The "in" operator
 
 The "in" operator could be used to check if a specified object exists within an `iterable` object container, such as a list:
 
@@ -429,7 +452,7 @@ Here are some examples for objects which are considered as empty:
 3. The number zero: 0 
 4. The false boolean variable: False
 
-### The "is" operator
+#### The "is" operator
 
 Unlike the double equals operator "==", the "is" operator does not match the values of the variables, but the instances themselves. For example:
 
@@ -440,7 +463,7 @@ print x == y # Prints out True
 print x is y # Prints out False
 ```
 
-### The "not" operator
+#### The "not" operator
 
 Using "not" before a boolean expression inverts it:
 
@@ -452,7 +475,7 @@ print (not False) == (False) # Prints out False
 ## Loops
 There are two types of loops in Python, `for` and `while`.
 
-### The "for" loop
+#### The "for" loop
 For loops iterate over a given sequence. Here is an example:
 
 ```
@@ -477,7 +500,7 @@ for x in xrange(3, 8, 2): # or range(3, 8, 2)
     print x
 ```
 
-### "while" loops
+#### "while" loops
 
 While loops repeat as long as a certain boolean condition is met. For example:
 
@@ -490,7 +513,7 @@ while count < 5:
     count += 1  # This is the same as count = count + 1
 ```
 
-### "break" and "continue" statements
+#### "break" and "continue" statements
 
 break is used to exit a for loop or a while loop, whereas continue is used to skip the current block, and return to the "for" or "while" statement. A few examples:
 
@@ -514,7 +537,7 @@ for x in xrange(10):
 
 ## Functions
 
-### What are Functions?
+#### What are Functions?
 Functions are a convenient way to divide your code into useful blocks, allowing us to order our code, make it more readable, reuse it and save some time. Also functions are a key way to define interfaces so programmers can share their code.
 
 How do you write functions in Python?
@@ -551,7 +574,7 @@ Functions may return a value to the caller, using the keyword: `return` . For ex
 def sum_two_numbers(a, b):
     return a + b
 ```
-### How do you call functions in Python?
+#### How do you call functions in Python?
 
 Simply write the function's name followed by (), placing any required arguments within the brackets. For example, lets call the functions written above (in the previous example):
 
@@ -610,7 +633,7 @@ Then print out both values:
 print myobjectx.variable   # This would print "blah".
 print myobjecty.variable   # This would print "yackity".
 ```
-### Accessing Object Functions
+#### Accessing Object Functions
 To access a function inside of an object you use notation similar to accessing a variable:
 
 ```
@@ -642,7 +665,7 @@ phonebook = {
 }
 ```
 
-### Iterating over dictionaries
+#### Iterating over dictionaries
 Dictionaries can be iterated over, just like a list. However, a dictionary, unlike a list, does not keep the order of the values stored in it. To iterate over key value pairs, use the following syntax:
 
 ```
@@ -650,7 +673,7 @@ for name, number in phonebook.iteritems():
     print "Phone number of %s is %d" % (name, number)
 ```
 
-### Removing a value
+#### Removing a value
 
 To remove a specified index, use either one of the following notations:
 
@@ -681,7 +704,7 @@ import urllib
 urllib.urlopen(...)
 ```
 
-### Exploring built-in modules
+#### Exploring built-in modules
 
 Two very important functions come in handy when exploring modules in Python - the dir and help functions.
 
@@ -699,11 +722,11 @@ When we find the function in the module we want to use, we can read about it mor
 help(urllib.urlopen)
 ```
 
-### Writing modules
+#### Writing modules
 
 Writing Python modules is very simple. To create a module of your own, simply create a new .py file with the module name, and then import it using the Python file name (without the .py extension) using the import command.
 
-### Writing packages
+#### Writing packages
 
 Packages are namespaces which contain multiple packages and modules themselves. They are simply directories, but with a twist.
 
