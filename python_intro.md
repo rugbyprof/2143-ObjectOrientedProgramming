@@ -2,7 +2,7 @@ Source: http://www.learnpython.org/
 
 To print a string, just write:
 
-```
+```python
 print "This line will be printed."
 ```
 
