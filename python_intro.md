@@ -535,6 +535,110 @@ for x in xrange(10):
     print x
 ```
 
+## Dictionaries
+
+A dictionary is a data type similar to arrays, but works with keys and values instead of indexes. Each value stored in a dictionary can be accessed using a key, which is any type of object (a string, a number, a list, etc.) instead of using its index to address it.
+
+For example, a database of phone numbers could be stored using a dictionary like this:
+
+```
+phonebook = {}
+phonebook["John"] = 938477566
+phonebook["Jack"] = 938377264
+phonebook["Jill"] = 947662781
+```
+
+Alternatively, a dictionary can be initialized with the same values in the following notation:
+
+```
+phonebook = {
+    "John" : 938477566,
+    "Jack" : 938377264,
+    "Jill" : 947662781
+}
+```
+
+#### Iterating over dictionaries
+Dictionaries can be iterated over, just like a list. However, a dictionary, unlike a list, does not keep the order of the values stored in it. To iterate over key value pairs, use the following syntax:
+
+```python
+for name, number in phonebook.iteritems():
+    print "Phone number of %s is %d" % (name, number)
+```
+
+```python
+d = {'x': 1, 'y': 2, 'z': 3} 
+list(d)
+# prints ['y', 'x', 'z']
+
+d.keys()
+# prints ['y', 'x', 'z']
+```
+
+Another way
+
+```python
+d.items()
+# prints [('y', 2), ('x', 1), ('z', 3)]
+```
+
+This gives you a list of tuples. When you loop over them like this, each tuple is unpacked into k and v automatically
+
+```python
+for k,v in d.items():
+    print k, 'corresponds to', v
+```
+
+Using k and v as variable names when looping over a dict is quite common if the body of the loop is only a few lines. For more complicated loops it may be a good idea to use more descriptive names
+
+```python
+for letter, number in d.items():
+    print letter, 'corresponds to', number
+```
+
+It's a good idea going forward to get into the habit of using format strings
+
+```python
+for letter, number in d.items():
+    print '{0} corresponds to {1}'.format(letter, number)
+```
+
+#### Removing a value
+
+To remove a specified index, use either one of the following notations:
+
+```
+del phonebook["John"]
+```
+or:
+
+```
+phonebook.pop("John")
+```
+
+Testing to see if a key exists, before trying to access it.
+
+```python
+d = dict()
+
+for i in xrange(100):
+    key = i % 10
+    if key in d:
+        d[key] += 1
+    else:
+        d[key] = 1
+```
+
+If you wanted a default, you can always use dict.get():
+
+```python
+d = dict()
+
+for i in range(100):
+    key = i % 10
+    d[key] = d.get(key, 0) + 1
+```
+
 ## Functions
 
 #### What are Functions?
@@ -642,109 +746,7 @@ myobjectx.function()
 
 The above would print out the message, "This is a message inside the class."
 
-## Dictionaries
 
-A dictionary is a data type similar to arrays, but works with keys and values instead of indexes. Each value stored in a dictionary can be accessed using a key, which is any type of object (a string, a number, a list, etc.) instead of using its index to address it.
-
-For example, a database of phone numbers could be stored using a dictionary like this:
-
-```
-phonebook = {}
-phonebook["John"] = 938477566
-phonebook["Jack"] = 938377264
-phonebook["Jill"] = 947662781
-```
-
-Alternatively, a dictionary can be initialized with the same values in the following notation:
-
-```
-phonebook = {
-    "John" : 938477566,
-    "Jack" : 938377264,
-    "Jill" : 947662781
-}
-```
-
-#### Iterating over dictionaries
-Dictionaries can be iterated over, just like a list. However, a dictionary, unlike a list, does not keep the order of the values stored in it. To iterate over key value pairs, use the following syntax:
-
-```python
-for name, number in phonebook.iteritems():
-    print "Phone number of %s is %d" % (name, number)
-```
-
-```python
-d = {'x': 1, 'y': 2, 'z': 3} 
-list(d)
-# prints ['y', 'x', 'z']
-
-d.keys()
-# prints ['y', 'x', 'z']
-```
-
-Another way
-
-```python
-d.items()
-# prints [('y', 2), ('x', 1), ('z', 3)]
-```
-
-This gives you a list of tuples. When you loop over them like this, each tuple is unpacked into k and v automatically
-
-```python
-for k,v in d.items():
-    print k, 'corresponds to', v
-```
-
-Using k and v as variable names when looping over a dict is quite common if the body of the loop is only a few lines. For more complicated loops it may be a good idea to use more descriptive names
-
-```python
-for letter, number in d.items():
-    print letter, 'corresponds to', number
-```
-
-It's a good idea going forward to get into the habit of using format strings
-
-```python
-for letter, number in d.items():
-    print '{0} corresponds to {1}'.format(letter, number)
-```
-
-#### Removing a value
-
-To remove a specified index, use either one of the following notations:
-
-```
-del phonebook["John"]
-```
-or:
-
-```
-phonebook.pop("John")
-```
-
-Testing to see if a key exists, before trying to access it.
-
-```python
-d = dict()
-
-for i in xrange(100):
-    key = i % 10
-    if key in d:
-        d[key] += 1
-    else:
-        d[key] = 1
-```
-
-If you wanted a default, you can always use dict.get():
-
-```python
-d = dict()
-
-for i in range(100):
-    key = i % 10
-    d[key] = d.get(key, 0) + 1
-```
 
 ## Modules and Packages
 
