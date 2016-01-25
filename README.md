@@ -50,7 +50,7 @@
 
 - Attending class is one of the primary keys to doing well in this class. Students may be dropped for excessive absences. There is no distinction made between excused and unexcused. 
 
-- Make-up exams are not given. If I see fit, then I will replace a missed exam with your final exam test grade.
+- Make-up exams are not given. If I see fit, then I will replace a missed exam with your final exam test grade. If you do miss an exam without prior approval, a letter from the dean of students will be needed as an excuse. 
 
 - A number of programming assignments will be made to code and execute. Microsoft Visual Studio 2013 or 2015 is recommended, although depending on class opinion, we may use QT4 for some assignments. 
 
