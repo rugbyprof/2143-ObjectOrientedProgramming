@@ -39,9 +39,6 @@ it should not print out:
 ## Starter Code
 
 ```python
-import os
-import time
-
 
 class fraction(object):
     def __init__(self,n=None,d=None):
