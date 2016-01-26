@@ -34,7 +34,7 @@ it should not print out:
 1/2 + 3/4 = 1 1/4
 ```
 - Prompting the user for input is not necessary (since not discussed) but not discouraged either
-- File is due on github by Tuesday February 2<sup>nd</sup> by class time. 
+- File is due on github by ***Tuesday February 2<sup>nd</sup>*** by class time. 
 
 ## Starter Code
 
