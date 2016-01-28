@@ -153,15 +153,4 @@ class golBoard(object):
 #b = golBoard(50,30,True,.25)
 b = golBoard(50,30)
 os.system('clear')
-
-
-print(b.liveOrDie(5,3))
-b.makeAlive(5,3)
-print(b.stringifyWorld())
-#b.computeNextGen()
-# for x in range(50):
-#     #os.system('cls')
-#     os.system('clear')
-#     b.addValue(x%10,x%10)
-#     print(b.stringifyWorld())
-#     time.sleep(0.05)
+time.sleep(0.05)
