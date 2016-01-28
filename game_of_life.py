@@ -16,7 +16,7 @@ Any dead cell with exactly three live neighbours becomes a live cell, as if by r
 
 class golBoard(object):
     def __init__(self,w=20,h=20,populate=False,Density=.25):
-        random.seed(234234)
+        random.seed(3453)
         self.width = w
         self.height = h
 
@@ -35,9 +35,10 @@ class golBoard(object):
     @param: int x - Column to add life
     @param: int y - Row to add life
     @returns: None
-    """  
+    """ 
     def makeAlive(self,x,y):
         self.currentGen[x][y] = True
+
         
     """
     @function: computeNextGen
@@ -49,7 +50,9 @@ class golBoard(object):
         nextGen = self.initGen()
         for x in range(self.width):
             for y in range(self.height):
-                self.liveOrDie(x,y)
+                nextGen[x][y] = self.liveOrDie(x,y)
+        self.currentGen = nextGen
+
         
     """
     @function: liveOrDie
@@ -62,6 +65,7 @@ class golBoard(object):
     def liveOrDie(self,x,y):
         neighbors = []
         alive = self.currentGen[x][y]
+
         neighbors.append(self.currentGen[x-1][y-1])      # upper left
         neighbors.append(self.currentGen[x][y-1])        # upper middle   
         neighbors.append(self.currentGen[x+1][y-1])      # upper right
@@ -75,14 +79,14 @@ class golBoard(object):
         
         if(alive):
             if count < 2 or count > 3:
-                return -1 
+                return 0 
             else:
-                return 0
+                return 1
         else:
             if count == 3:
                 return 1
             else:
-                return 0                  
+                return 0                 
                  
     """
     @function: initGen
@@ -144,7 +148,7 @@ class golBoard(object):
                 if cell == False:
                     string += ' .'
                 else:
-                    string += ' '+ u'\u265B'   # 07F7        2735  2620
+                    string += ' O'
             string += "\n"
         return string
 
