@@ -24,9 +24,9 @@ Name(s):
 
 - The code also needs to be on every group members individual github site. If the code is only on one group members github repo, then that person will get all the credit. 
 
-
-
 ## Starter Code
+
+https://github.com/rugbyprof/2143-ObjectOrientedProgramming/blob/master/game_of_life.py
 
 
 
