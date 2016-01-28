@@ -16,10 +16,10 @@ Any dead cell with exactly three live neighbours becomes a live cell, as if by r
 """
 
 class golBoard(object):
-    def __init__(self,w=20,h=20,populate=False,Density=.25):
-        random.seed(3453)
-        self.width = w
-        self.height = h
+    def __init__(self,rows=20,cols=20,populate=False,Density=.25):
+        random.seed()
+        self.width = cols
+        self.height = rows
 
         if populate:
             self.currentGen = self.initRandGen(Density)
@@ -37,8 +37,8 @@ class golBoard(object):
     @param: int y - Row to add life
     @returns: None
     """ 
-    def makeAlive(self,x,y):
-        self.currentGen[x][y] = True
+    def makeAlive(self,row,col):
+        self.currentGen[row-1][col-1] = True
 
         
     """
@@ -49,9 +49,9 @@ class golBoard(object):
     """        
     def computeNextGen(self):
         nextGen = self.initGen()
-        for x in range(self.width):
-            for y in range(self.height):
-                nextGen[x][y] = self.liveOrDie(x,y)
+        for row in range(self.height):
+            for col in range(self.width):
+                nextGen[row][col] = self.liveOrDie(row,col)
         self.currentGen = nextGen
 
         
@@ -63,18 +63,18 @@ class golBoard(object):
     @returns: Int : 0 = nothing changes , -1 = dies , 1 = birth
     """   
          
-    def liveOrDie(self,x,y):
+    def liveOrDie(self,r,c):
         neighbors = []
-        alive = self.currentGen[x][y]
+        alive = self.currentGen[r][c]
 
-        neighbors.append(self.currentGen[x-1][y-1])      # upper left
-        neighbors.append(self.currentGen[x][y-1])        # upper middle   
-        neighbors.append(self.currentGen[x+1][y-1])      # upper right
-        neighbors.append(self.currentGen[x+1][y])        # right
-        neighbors.append(self.currentGen[x-1][y])        # left 
-        neighbors.append(self.currentGen[x-1][y+1])      # bottom left
-        neighbors.append(self.currentGen[x][y+1])        # bottom middle 
-        neighbors.append(self.currentGen[x+1][y+1])      # bottom right
+        neighbors.append(self.currentGen[r-1][c-1])      # upper left
+        neighbors.append(self.currentGen[r][c-1])        # upper middle   
+        neighbors.append(self.currentGen[r+1][c-1])      # upper right
+        neighbors.append(self.currentGen[r+1][c])        # right
+        neighbors.append(self.currentGen[r-1][c])        # left 
+        neighbors.append(self.currentGen[r-1][c+1])      # bottom left
+        neighbors.append(self.currentGen[r][c+1])        # bottom middle 
+        neighbors.append(self.currentGen[r+1][c+1])      # bottom right
            
         count = neighbors.count(True)
         
@@ -97,12 +97,10 @@ class golBoard(object):
     """         
     def initGen(self):
         #return [[False] * self.width for row in range(self.height)]
-        board = []
+        
+        board = [i for i in range(self.height)]
         for i in range(self.height):
-           row = []
-           for j in range(self.width):
-               row.append(False)
-           board.append(row) 
+            board[i] = [0 for j in range(self.width)]
         return board      
     
     
@@ -118,9 +116,9 @@ class golBoard(object):
         numberOfLives = int(self.width * self.height * density)
         
         for i in range(numberOfLives):
-                x = random.randint(0, self.width-1)
-                y = random.randint(0, self.height-1)
-                gen[y][x] = self.randomLife()       # ??
+                row = random.randint(0, self.height-1)
+                col = random.randint(0, self.width-1)
+                gen[row][col] = self.randomLife()       # ??
         return gen
         
     """
@@ -153,6 +151,10 @@ class golBoard(object):
             string += "\n"
         return string
         
+    def printDebug(self):
+        for row in self.currentGen:  
+            print(row)
+              
 """
 @function: clearScreen
 @description: Clears the terminal screen
@@ -165,9 +167,24 @@ def clearScreen():
     else:
         os.system('cls')
 
+def printList(mylist):
+    string = ""
+    for rows in range(len(mylist)):
+        for cols in range(len(mylist)):
+            string += "%d " % (mylist[rows][cols])
+        string+= "\n"
+    print string
 
-b = golBoard(50,30,True,.25)
-print(b.stringifyWorld())
-clearScreen()
-print(b.stringifyWorld())
-time.sleep(0.05)
+
+rows = 20
+cols = 30
+generations = 30
+density = .25
+sleep = .05
+for x in range(generations):
+    b = golBoard(rows,cols,True,density)
+    clearScreen()
+    print(b.stringifyWorld())
+    time.sleep(sleep)
+
+   
