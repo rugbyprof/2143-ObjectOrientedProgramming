@@ -1,6 +1,7 @@
 import time
 import os
 import random
+import platform
 
 """
 NOT COMPLETE!
@@ -142,7 +143,7 @@ class golBoard(object):
     @returns: string - a string version 
     """
     def stringifyWorld(self):
-        string = ""
+        string = "\n\n"
         for row in self.currentGen:
             for cell in row:
                 if cell == False:
@@ -152,9 +153,15 @@ class golBoard(object):
             string += "\n"
         return string
 
+def clearScreen():
+    if platform.system() == 'Darwin':
+        os.system('clear')
+    else:
+        os.system('cls')
 
 
-#b = golBoard(50,30,True,.25)
-b = golBoard(50,30)
-os.system('clear')
+b = golBoard(50,30,True,.25)
+print(b.stringifyWorld())
+clearScreen()
+print(b.stringifyWorld())
 time.sleep(0.05)
