@@ -37,7 +37,10 @@ class golBoard(object):
         string = ""
         for row in self.board:
             for cell in row:
-                string += "%d"%(cell)
+                if cell == False:
+                    string += " ."
+                else:
+                    string += " O"             
             string += "\n"
         return string
 
