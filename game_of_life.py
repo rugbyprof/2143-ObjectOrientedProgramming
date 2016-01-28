@@ -5,7 +5,8 @@ import random
 """
 NOT COMPLETE!
 
-Code used in class, which we will continue with on Thursday as our introduction to python continues.
+An introduction to python using the game of life as a problem to solve in class.
+Not the most pythonic or succinct solution, but it's not meant to be.
 
 Any live cell with fewer than two live neighbours dies, as if caused by under-population.
 Any live cell with two or three live neighbours lives on to the next generation.
@@ -24,26 +25,18 @@ class golBoard(object):
         else:
             self.currentGen = self.initGen()
 
-        #self.board = []
-
-        #for i in range(self.height):
-        #    row = []
-        #    for j in range(self.width):
-        #        row.append(False)
-        #    self.board.append(row)
-
-        self.currentGen[7][5] = True
-        
+    def __str__(self):
+        return "width:%d height:%d" % (self.width,self.height)      
 
         
     """
-    @function: addValue
+    @function: makeAlive
     @description: Adds a life to specified location 
     @param: int x - Column to add life
     @param: int y - Row to add life
     @returns: None
     """  
-    def addValue(self,x,y):
+    def makeAlive(self,x,y):
         self.currentGen[x][y] = True
         
     """
@@ -63,10 +56,12 @@ class golBoard(object):
     @description: Calculates whether a cell lives or dies based on Game of Life rules
     @param: int x - Column to check
     @param: int y - Row to check
-    @returns: Bool : lives or dies 
-    """           
+    @returns: Int : 0 = nothing changes , -1 = dies , 1 = birth
+    """   
+         
     def liveOrDie(self,x,y):
         neighbors = []
+        alive = self.currentGen[x][y]
         neighbors.append(self.currentGen[x-1][y-1])      # upper left
         neighbors.append(self.currentGen[x][y-1])        # upper middle   
         neighbors.append(self.currentGen[x+1][y-1])      # upper right
@@ -74,9 +69,20 @@ class golBoard(object):
         neighbors.append(self.currentGen[x-1][y])        # left 
         neighbors.append(self.currentGen[x-1][y+1])      # bottom left
         neighbors.append(self.currentGen[x][y+1])        # bottom middle 
-        neighbors.append(self.currentGen[x+1][y+1])      # bottom right   
-        print(neighbors)
-        print(neighbors.count(True))                     
+        neighbors.append(self.currentGen[x+1][y+1])      # bottom right
+           
+        count = neighbors.count(True)
+        
+        if(alive):
+            if count < 2 or count > 3:
+                return -1 
+            else:
+                return 0
+        else:
+            if count == 3:
+                return 1
+            else:
+                return 0                  
                  
     """
     @function: initGen
@@ -85,7 +91,14 @@ class golBoard(object):
     @returns: list - 2D list containing False
     """         
     def initGen(self):
-        return [[False] * self.width for row in range(self.height)]
+        #return [[False] * self.width for row in range(self.height)]
+        board = []
+        for i in range(self.height):
+           row = []
+           for j in range(self.width):
+               row.append(False)
+           board.append(row) 
+        return board      
     
     
     """
@@ -131,18 +144,19 @@ class golBoard(object):
                 if cell == False:
                     string += ' .'
                 else:
-                    string += ' '+ u'\u2735'             
+                    string += ' '+ u'\u265B'   # 07F7        2735  2620
             string += "\n"
         return string
 
 
 
-    def __str__(self):
-        return "width:%d height:%d" % (self.width,self.height)
-
-
-b = golBoard(50,30,True,.25)
+#b = golBoard(50,30,True,.25)
+b = golBoard(50,30)
 os.system('clear')
+
+
+print(b.liveOrDie(5,3))
+b.makeAlive(5,3)
 print(b.stringifyWorld())
 #b.computeNextGen()
 # for x in range(50):
