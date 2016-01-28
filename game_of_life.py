@@ -152,7 +152,13 @@ class golBoard(object):
                     string += ' O'
             string += "\n"
         return string
-
+        
+"""
+@function: clearScreen
+@description: Clears the terminal screen
+@param: None
+@returns: None 
+"""
 def clearScreen():
     if platform.system() == 'Darwin':
         os.system('clear')
