@@ -1,4 +1,4 @@
-# Homework 2 - Getting your python feet wet
+# Homework 2 - Updating the liveOrDie Method
 Due on github by ***Tuesday February 2<sup>nd</sup>*** by class time. 
 
 ### Requirements
