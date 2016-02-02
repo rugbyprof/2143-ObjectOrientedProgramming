@@ -278,13 +278,15 @@ cols = 30
 generations = 30
 density = .25
 sleep = .05
-for x in range(generations):
-    b = golBoard(rows,cols,True,density)
-    clearScreen()
-    print(b.stringifyWorld())
-    time.sleep(sleep)
+# for x in range(generations):
+#     b = golBoard(rows,cols,True,density)
+#     clearScreen()
+#     print(b.stringifyWorld())
+#     time.sleep(sleep)
 
 b.printColoredSection(5,6)
+print(platform.system())
+
 #print_format_table()
 
 # for i in range(10):
