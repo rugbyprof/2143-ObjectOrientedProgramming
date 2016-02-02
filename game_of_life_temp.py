@@ -272,26 +272,27 @@ def print_format_table():
         print '\n'
 
 
+if __name__=='__main__':
 
-rows = 20
-cols = 30
-generations = 30
-density = .25
-sleep = .05
-for x in range(generations):
-    b = golBoard(rows,cols,True,density)
-    clearScreen()
-    print(b.stringifyWorld())
-    time.sleep(sleep)
+    rows = 20
+    cols = 30
+    generations = 30
+    density = .25
+    sleep = .05
+    for x in range(generations):
+        b = golBoard(rows,cols,True,density)
+        clearScreen()
+        print(b.stringifyWorld())
+        time.sleep(sleep)
 
-b.printColoredSection(5,6)
-#print_format_table()
+    b.printColoredSection(5,6)
+    #print_format_table()
 
-# for i in range(10):
-#     r = random.randint(0,rows-1)
-#     c = random.randint(0,cols-1)
-#     print('*',r,c)
-#     b.liveOrDie(r,c) 
+    # for i in range(10):
+    #     r = random.randint(0,rows-1)
+    #     c = random.randint(0,cols-1)
+    #     print('*',r,c)
+    #     b.liveOrDie(r,c) 
 
 
-#print_format_table()
+    #print_format_table()
