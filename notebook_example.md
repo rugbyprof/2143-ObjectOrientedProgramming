@@ -146,6 +146,6 @@ class Menu:
             sys.exit(0)
             
 if __name__ == "__main__":
-Menu().run()
+    Menu().run()
 ```
 
