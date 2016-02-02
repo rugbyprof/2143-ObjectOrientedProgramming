@@ -270,7 +270,11 @@ def print_format_table():
                 s1 += '\x1b[%sm %s \x1b[0m' % (format, format)
             print s1
         print '\n'
-
+    
+    def genericprint():
+        for i in range(self.height):
+            for j in range(self.width):
+                print self.currentGen[i][j]
 
 
 rows = 20
