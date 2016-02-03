@@ -3,18 +3,17 @@
 ### Homework 1:
 | #       | Item                                                       | Value       | Earned   |                |
 |:--------|:-----------------------------------------------------------|:------------|:---------|:---------------|
-| ***1*** | ***General***                                              | 30          |          | ![Alt text][1] |
-| -       | Code was on github                                         | pass/fail   |    15    | ![Alt text][1] |
-| -       | Code was commented                                         |             |    15    | ![Alt text][1] |
-| ***2*** | ***Add Method***                                           | 30          |          | ![Alt text][1] |
-| -       | Employed some kind of gcd method                           |             |    10    | ![Alt text][1] |
-| -       | Handled a whole number portion of the fraction             |             |    10    | ![Alt text][1] |
-| -       |                                                            |             |    10    | ![Alt text][1] |
-| ***2*** | ***Output***                                               | 10          |          | ![Alt text][1] |
-| -       | A screen with moving items fulfilling requirements         |             |    10    | ![Alt text][1] |
-| ***3*** | ***Correctness***                                          | 30          |          | ![Alt text][1] |
-| -       | Program generates correct results (it ran)                 |             |    30    | ![Alt text][1] |
-|         | Totals:                                                    | **100**     |  **100** | ![Alt text][1] |
+| ***1*** | ***General***                                              |             |          | ![Alt text][1] |
+| -       | Code was on github                                         | pass/fail   |          | ![Alt text][1] |
+| -       | Code could be ran.                                         | pass/fail   |          | ![Alt text][1] |
+| -       | Code was commented                                         |    10       |    10    | ![Alt text][1] |
+| ***2*** | ***Add Method***                                           |             |          | ![Alt text][1] |
+| -       | Employed some kind of gcd method                           |    30       |    30    | ![Alt text][1] |
+| -       | Handled a whole number portion of the fraction             |    30       |    30    | ![Alt text][1] |
+| -       |                                                            |             |          | ![Alt text][1] |
+| ***2*** | ***Overloaded Add Operator***                              |             |          | ![Alt text][1] |
+| -       | `__add__` existed and worked                               |    30       |    30    | ![Alt text][1] |
+|         | Totals:                                                    | **100**     |  **100** | ![Alt text][3] |
 
 ### Comments:
 ```
