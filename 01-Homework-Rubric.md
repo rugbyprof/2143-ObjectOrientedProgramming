@@ -13,7 +13,7 @@
 | -       |                                                            |             |          | ![Alt text][1] |
 | ***2*** | ***Overloaded Add Operator***                              |             |          | ![Alt text][1] |
 | -       | `__add__` existed and worked                               |    30       |    30    | ![Alt text][1] |
-|         | Totals:                                                    | **100**     |  **100** | ![Alt text][3] |
+|         | Totals:                                                    | **100**     |  **100** | ![Alt text][1] |
 
 ### Comments:
 ```
