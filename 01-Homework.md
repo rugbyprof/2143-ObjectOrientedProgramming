@@ -7,7 +7,7 @@
 ```python
 a = fraction(1,2)
 b = fraction(4,5)
-c = a * b
+c = a + b
 print(c)
 ```
 it would print out:
