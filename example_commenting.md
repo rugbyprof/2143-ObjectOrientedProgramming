@@ -100,7 +100,7 @@ class MyFraction:
         
         self.numerator = numerator
         self.denominator = denominator
-    
+        
 ```
 
 ### Method Comment Block
