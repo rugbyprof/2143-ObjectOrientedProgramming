@@ -6,10 +6,11 @@
 | ***1*** | ***General***                                              |             |          | ![Alt text][1] |
 | -       | Code was on github                                         | pass/fail   |          | ![Alt text][1] |
 | -       | Code could be ran.                                         | pass/fail   |          | ![Alt text][1] |
+| -       | Followed naming conventions (named your file correctly).   | 10          |  10      | ![Alt text][1] |
 | -       | Code was commented                                         |    10       |    10    | ![Alt text][1] |
 | ***2*** | ***Add Method***                                           |             |          | ![Alt text][1] |
-| -       | Employed some kind of gcd method                           |    30       |    30    | ![Alt text][1] |
-| -       | Handled a whole number portion of the fraction             |    30       |    30    | ![Alt text][1] |
+| -       | Employed some kind of gcd method                           |    25       |    25    | ![Alt text][1] |
+| -       | Handled a whole number portion of the fraction             |    25       |    25    | ![Alt text][1] |
 | ***2*** | ***Overloaded Add Operator***                              |             |          | ![Alt text][1] |
 | -       | `__add__` existed and worked                               |    30       |    30    | ![Alt text][1] |
 |         | Totals:                                                    | **100**     |  **100** | ![Alt text][1] |
