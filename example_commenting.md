@@ -1,9 +1,9 @@
-# Python Program requirements 
+# Python Documentation Requirements 
 
-This is how I want you to comment your code for class. It's not `pythonic` at all, but oh well. Python
-programmers have thier own way of doing things. I just created a format that shows clearly (to me) what
-each pertinant component is doing, and hopefully it will force you to "think" a little bit about design
-before you actually start coding. 
+This is how I want you to comment your code for class. Every program should have something similar
+to this. It's not `pythonic` at all, but oh well. Python programmers have thier own way of doing things. 
+I just created a format that shows clearly (to me) an overview of what your program does and requires (for
+usage). Hopefully it will also force you to "think" a little bit about design before you actually start coding. 
 
 ### Program Comment Block
 ```python
