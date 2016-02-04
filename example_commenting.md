@@ -2,14 +2,14 @@
 
 ### Program Comment Block
 ```python
-###
-#@Program: Program 2 - Program Title
-#@Description:
+"""
+# @Program: Program 2 - Program Title
+# @Description:
 #    This would be a short description of your program and a general overview of what you did. 
 #    Should be about a paragraph, depending on the program.
-#@Name: Joanna Culpepper
-#@Data: 3 Feb 2016
-###
+# @Name: Joanna Culpepper
+# @Data: 3 Feb 2016
+"""
 ```
 
 ### Class Comment Block
