@@ -5,6 +5,7 @@
 | -       | Code was on github                                         | pass/fail   |          | ![Alt text][1] |
 | -       | Code could be ran.                                         | pass/fail   |          | ![Alt text][1] |
 | -       | Code was commented                                         |    15       |    15    | ![Alt text][1] |
+| -       | Followed naming conventions (named your file correctly).   |    10          |  10   | ![Alt text][1] |
 | ***2*** | ***Live or Die Method***                                   |             |          | ![Alt text][1] |
 | -       | Solution worked for inner cells                            |    10       |    10    | ![Alt text][1] |
 | -       | Solution worked for edge cells                             |    20       |    20    | ![Alt text][1] |
@@ -13,7 +14,6 @@
 | ***3*** | ***Efficient Solution***                                   |    10       |   10     | ![Alt text][1] |
 |         | Totals:                                                    | **100**     |  **100** | ![Alt text][1] |
 
->Yes I know it only adds up to 90.
 
 ### Comments:
 ```
