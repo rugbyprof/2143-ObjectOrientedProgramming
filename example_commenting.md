@@ -1,5 +1,10 @@
 # Python Program requirements 
 
+This is how I want you to comment your code for class. It's not `pythonic` at all, but oh well. Python
+programmers have thier own way of doing things. I just created a format that shows clearly (to me) what
+each pertinant component is doing, and hopefully it will force you to "think" a little bit about design
+before you actually start coding. 
+
 ### Program Comment Block
 ```python
 """
@@ -41,6 +46,9 @@ Params:
 Methods:
 --------
     Alphebetize the methods here...
+    High level descriptions and usage here. This is a quick view for you or someone who's using your class so 
+    they know what methods are available, and how to use them. If they need more, they can go look at the method
+    itself.
     method1 - description
         usage: example1 use here
     method1 - description
@@ -50,7 +58,7 @@ Methods:
 
 **Example**
 
-```
+```python
 """
 Class:
 ------
@@ -74,15 +82,40 @@ Methods:
         usage:  f3 = MyFraction(2,3) + MyFraction(1,2)
                 f4 = f1 + f2
     sub - Subtract two fractions
-        usage: same as add
+        usage: same as add but use a + :)
     
     mul - Multiply two fractions
-        usage: same as add
+        usage: same as add but use a * :)
     
     div - Divide two fractions
-        usage: same as add
+        usage: same as add but use a / :)
 """
+class MyFraction:
+    def __init__(numerator=None,denominator=None):
+        pass
+    
 ```
 
 ### Method Comment Block
 
+```python
+
+def mul(rhs):
+    """
+    Description:
+    ------------
+        This method multiplys a passed in fraction to self, without altering self and passes back a new fraction
+        It does not reduce the resulting fraction. 
+    
+    Params:
+    -------
+        rhs - (MyFraction) The right hand side of the operation
+    
+    Returns:
+    --------
+        (MyFraction) - result of operation
+    """
+    
+    return MyFraction(self.numerator*rhs.numerator,self.denominator*rhs.denominator)
+    
+```
