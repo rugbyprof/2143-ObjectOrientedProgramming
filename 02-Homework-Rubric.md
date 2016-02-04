@@ -10,7 +10,10 @@
 | -       | Solution worked for edge cells                             |    20       |    20    | ![Alt text][1] |
 | -       | Rules applied properly according to game rules             |    20       |    20    | ![Alt text][1] |
 | -       | Method returned a 0 (zero) or a 1 (one) not T/F or other.  |    15       |    15    | ![Alt text][1] |
-|         | Totals:                                                    | **80**     |  **80** | ![Alt text][1] |
+| ***3*** | ***Efficeint Solution***                                   |    10       |   10     | ![Alt text][1] |
+|         | Totals:                                                    | **100**     |  **100** | ![Alt text][1] |
+
+>Yes I know it only adds up to 90.
 
 ### Comments:
 ```
