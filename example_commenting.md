@@ -1,18 +1,50 @@
 # Python Program requirements 
 
-## Comment Block at Top
+### Program Comment Block
 ```python
-"""
-@Program: Program 2 - Program Title
-@Description:
-    This would be a short description of your program and a general overview of what you did. 
-    Should be about a paragraph, depending on the program.
-@Name: Joanna Culpepper
-@Data: 3 Feb 2016
-"""
+###
+#@Program: Program 2 - Program Title
+#@Description:
+#    This would be a short description of your program and a general overview of what you did. 
+#    Should be about a paragraph, depending on the program.
+#@Name: Joanna Culpepper
+#@Data: 3 Feb 2016
+###
 ```
 
+### Class Comment Block
 
+**Definition**
+
+```python
+###
+# @Class: This is just the name of your class 
+# @Description:
+#    This would be a short description of your class and a general overview of what it does. 
+#
+# @Param: param1 - (type) All these are parameters that you passed into your class (possibly) to help construct the class
+# @Param: param2 - (type)
+# @Param: param3 - (type)
+#
+# @Method: method1 - description
+###
+```
+
+**Example**
+
+```python
+"""
+@Class: Fraction 
+@Description:
+    This is a class that assists in the general creation and manipulation of fractions. It provides overloaded operators
+    to assist in basic arithmetic operations between fractions.
+
+@Param: numerator    - (int) a numerator value or None
+@Param: denominator  - (int) a denominator value or None
+
+@Method: 
+"""
+```
 def module_level_function(param1, param2=None, *args, **kwargs):
     """This is an example of a module level function.
 
