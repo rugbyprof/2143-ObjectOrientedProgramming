@@ -17,7 +17,7 @@
 **Definition**
 
 ```python
-###
+"""
 # @Class: This is just the name of your class 
 # @Description:
 #    This would be a short description of your class and a general overview of what it does. 
@@ -27,7 +27,7 @@
 # @Param: param3 - (type)
 #
 # @Method: method1 - description
-###
+"""
 ```
 
 **Example**
