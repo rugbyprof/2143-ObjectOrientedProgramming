@@ -59,12 +59,14 @@ Methods:
 **Example**
 
 ```python
+from types import *
+
 """
 Class:
 ------
     MyFraction 
     f1 = MyFraction(2,3)    # creates 2/3
-    f2 = MyFraction()       # create None/None
+    f2 = MyFraction()       # creates None/None
     
 Description:
 ------------
@@ -92,8 +94,13 @@ Methods:
 """
 class MyFraction:
     def __init__(numerator=None,denominator=None):
-        pass
-    
+        assert (type(numerator) is int or numerator == None) , "Assertion: numerator bad value: %d" % (n)
+        assert (type(denominator) is int or denominator == None) , "Assertion: denominator bad value: %d" % (n)
+        assert (denominator != 0) , "Assertion: divide by zero!" 
+        
+        self.numerator = numerator
+        self.denominator = denominator
+        
 ```
 
 ### Method Comment Block
