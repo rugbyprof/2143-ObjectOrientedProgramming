@@ -3,12 +3,17 @@
 ### Program Comment Block
 ```python
 """
-# @Program: Program 2 - Program Title
-# @Description:
-#    This would be a short description of your program and a general overview of what you did. 
-#    Should be about a paragraph, depending on the program.
-# @Name: Joanna Culpepper
-# @Data: 3 Feb 2016
+Program:
+--------
+    Short Title  - Long Title
+
+Description:
+------------
+    This would be a short description of your program and a general overview of what you did. 
+    Should be about a paragraph, depending on the program.
+    
+Name: Joanna Culpepper
+Date: 3 Feb 2016
 """
 ```
 
@@ -18,262 +23,66 @@
 
 ```python
 """
-# @Class: This is just the name of your class 
-# @Description:
-#    This would be a short description of your class and a general overview of what it does. 
-#
-# @Param: param1 - (type) All these are parameters that you passed into your class (possibly) to help construct the class
-# @Param: param2 - (type)
-# @Param: param3 - (type)
-#
-# @Method: method1 - description
+Class:
+------
+    This is just the name of your class 
+    Usage: example class declaration here
+    
+Description:
+------------
+    This would be a short description of your class and a general overview of what it does. 
+
+Params:
+-------
+    param1 - (type) All these are parameters that you passed into your class (possibly) to help construct the class
+    param2 - (type) They should be alphebetized
+    param3 - (type)
+
+Methods:
+--------
+    Alphebetize the methods here...
+    method1 - description
+        usage: example1 use here
+    method1 - description
+        usage: example2 use here
 """
 ```
 
 **Example**
 
-```python
+```
 """
-@Class: Fraction 
-@Description:
+Class:
+------
+    MyFraction 
+    f1 = MyFraction(2,3)    # creates 2/3
+    f2 = MyFraction()       # create None/None
+    
+Description:
+------------
     This is a class that assists in the general creation and manipulation of fractions. It provides overloaded operators
     to assist in basic arithmetic operations between fractions.
 
-@Param: numerator    - (int) a numerator value or None
-@Param: denominator  - (int) a denominator value or None
+Params:
+-------
+    denominator  - (int) a denominator value or None
+    numerator    - (int) a numerator value or None
 
-@Method: 
+Methods:
+--------
+    add - Add two fractions
+        usage:  f3 = MyFraction(2,3) + MyFraction(1,2)
+                f4 = f1 + f2
+    sub - Subtract two fractions
+        usage: same as add
+    
+    mul - Multiply two fractions
+        usage: same as add
+    
+    div - Divide two fractions
+        usage: same as add
 """
 ```
-def module_level_function(param1, param2=None, *args, **kwargs):
-    """This is an example of a module level function.
 
-    Function parameters should be documented in the ``Args`` section. The name
-    of each parameter is required. The type and description of each parameter
-    is optional, but should be included if not obvious.
+### Method Comment Block
 
-    Parameter types -- if given -- should be specified according to
-    `PEP 484`_, though `PEP 484`_ conformance isn't required or enforced.
-
-    If \*args or \*\*kwargs are accepted,
-    they should be listed as ``*args`` and ``**kwargs``.
-
-    The format for a parameter is::
-
-        name (type): description
-            The description may span multiple lines. Following
-            lines should be indented. The "(type)" is optional.
-
-            Multiple paragraphs are supported in parameter
-            descriptions.
-
-    Args:
-        param1 (int): The first parameter.
-        param2 (Optional[str]): The second parameter. Defaults to None.
-            Second line of description should be indented.
-        *args: Variable length argument list.
-        **kwargs: Arbitrary keyword arguments.
-
-    Returns:
-        bool: True if successful, False otherwise.
-
-        The return type is optional and may be specified at the beginning of
-        the ``Returns`` section followed by a colon.
-
-        The ``Returns`` section may span multiple lines and paragraphs.
-        Following lines should be indented to match the first line.
-
-        The ``Returns`` section supports any reStructuredText formatting,
-        including literal blocks::
-
-            {
-                'param1': param1,
-                'param2': param2
-            }
-
-    Raises:
-        AttributeError: The ``Raises`` section is a list of all exceptions
-            that are relevant to the interface.
-        ValueError: If `param2` is equal to `param1`.
-
-
-    .. _PEP 484:
-       https://www.python.org/dev/peps/pep-0484/
-
-    """
-    if param1 == param2:
-        raise ValueError('param1 may not be equal to param2')
-    return True
-
-
-def example_generator(n):
-    """Generators have a ``Yields`` section instead of a ``Returns`` section.
-
-    Args:
-        n (int): The upper limit of the range to generate, from 0 to `n` - 1.
-
-    Yields:
-        int: The next number in the range of 0 to `n` - 1.
-
-    Examples:
-        Examples should be written in doctest format, and should illustrate how
-        to use the function.
-
-        >>> print([i for i in example_generator(4)])
-        [0, 1, 2, 3]
-
-    """
-    for i in range(n):
-        yield i
-
-
-class ExampleError(Exception):
-    """Exceptions are documented in the same way as classes.
-
-    The __init__ method may be documented in either the class level
-    docstring, or as a docstring on the __init__ method itself.
-
-    Either form is acceptable, but the two should not be mixed. Choose one
-    convention to document the __init__ method and be consistent with it.
-
-    Note:
-        Do not include the `self` parameter in the ``Args`` section.
-
-    Args:
-        msg (str): Human readable string describing the exception.
-        code (Optional[int]): Error code.
-
-    Attributes:
-        msg (str): Human readable string describing the exception.
-        code (int): Exception error code.
-
-    """
-
-    def __init__(self, msg, code):
-        self.msg = msg
-        self.code = code
-
-
-class ExampleClass(object):
-    """The summary line for a class docstring should fit on one line.
-
-    If the class has public attributes, they may be documented here
-    in an ``Attributes`` section and follow the same formatting as a
-    function's ``Args`` section. Alternatively, attributes may be documented
-    inline with the attribute's declaration (see __init__ method below).
-
-    Properties created with the ``@property`` decorator should be documented
-    in the property's getter method.
-
-    Attribute and property types -- if given -- should be specified according
-    to `PEP 484`_, though `PEP 484`_ conformance isn't required or enforced.
-
-    Attributes:
-        attr1 (str): Description of `attr1`.
-        attr2 (Optional[int]): Description of `attr2`.
-
-
-    .. _PEP 484:
-       https://www.python.org/dev/peps/pep-0484/
-
-    """
-
-    def __init__(self, param1, param2, param3):
-        """Example of docstring on the __init__ method.
-
-        The __init__ method may be documented in either the class level
-        docstring, or as a docstring on the __init__ method itself.
-
-        Either form is acceptable, but the two should not be mixed. Choose one
-        convention to document the __init__ method and be consistent with it.
-
-        Note:
-            Do not include the `self` parameter in the ``Args`` section.
-
-        Args:
-            param1 (str): Description of `param1`.
-            param2 (Optional[int]): Description of `param2`. Multiple
-                lines are supported.
-            param3 (List[str]): Description of `param3`.
-
-        """
-        self.attr1 = param1
-        self.attr2 = param2
-        self.attr3 = param3  #: Doc comment *inline* with attribute
-
-        #: List[str]: Doc comment *before* attribute, with type specified
-        self.attr4 = ['attr4']
-
-        self.attr5 = None
-        """Optional[str]: Docstring *after* attribute, with type specified."""
-
-    @property
-    def readonly_property(self):
-        """str: Properties should be documented in their getter method."""
-        return 'readonly_property'
-
-    @property
-    def readwrite_property(self):
-        """List[str]: Properties with both a getter and setter should only
-        be documented in their getter method.
-
-        If the setter method contains notable behavior, it should be
-        mentioned here.
-        """
-        return ['readwrite_property']
-
-    @readwrite_property.setter
-    def readwrite_property(self, value):
-        value
-
-    def example_method(self, param1, param2):
-        """Class methods are similar to regular functions.
-
-        Note:
-            Do not include the `self` parameter in the ``Args`` section.
-
-        Args:
-            param1: The first parameter.
-            param2: The second parameter.
-
-        Returns:
-            True if successful, False otherwise.
-
-        """
-        return True
-
-    def __special__(self):
-        """By default special members with docstrings are included.
-
-        Special members are any methods or attributes that start with and
-        end with a double underscore. Any special member with a docstring
-        will be included in the output.
-
-        This behavior can be disabled by changing the following setting in
-        Sphinx's conf.py::
-
-            napoleon_include_special_with_doc = False
-
-        """
-        pass
-
-    def __special_without_docstring__(self):
-        pass
-
-    def _private(self):
-        """By default private members are not included.
-
-        Private members are any methods or attributes that start with an
-        underscore and are *not* special. By default they are not included
-        in the output.
-
-        This behavior can be changed such that private members *are* included
-        by changing the following setting in Sphinx's conf.py::
-
-            napoleon_include_private_with_doc = True
-
-        """
-        pass
-
-    def _private_without_docstring(self):
-        pass
