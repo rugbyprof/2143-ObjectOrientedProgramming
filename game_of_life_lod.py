@@ -89,14 +89,14 @@ class gol(object):
         return 0 
         
         
-      
+if __name__=='__main__':
         
-g = gol(10,10)
-print(g)
-print((9,9),g.liveOrDie(9,9))
-print((0,0),g.liveOrDie(0,0))
-print((0,2),g.liveOrDie(0,2))
-print((5,6),g.liveOrDie(5,6))
-print((3,7),g.liveOrDie(3,7))
-print((7,5),g.liveOrDie(7,5))
-print((7,8),g.liveOrDie(7,8))
+    g = gol(10,10)
+    print(g)
+    print((9,9),g.liveOrDie(9,9))
+    print((0,0),g.liveOrDie(0,0))
+    print((0,2),g.liveOrDie(0,2))
+    print((5,6),g.liveOrDie(5,6))
+    print((3,7),g.liveOrDie(3,7))
+    print((7,5),g.liveOrDie(7,5))
+    print((7,8),g.liveOrDie(7,8))
