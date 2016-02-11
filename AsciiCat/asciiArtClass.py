@@ -1,17 +1,16 @@
 import cat
 import os
+import time
 
-
-class AsciiImage(object):
+class randomCat(object):
 
     def __init__(self):
         self.width = 0          # width of image
         self.height = 0         # height of image
-        self.name = 'cat'       # name of image
+        self.name = ''          # name of image
         self.path = '.'         # path on local file system
         self.format = 'png'     # format of picture we want
-
-
+        
     """
     @Description: 
     - Uses random cat to go get an amazing image from the internet
@@ -20,9 +19,34 @@ class AsciiImage(object):
     @Returns: 
     """
     def getImage(self):
+        self.name = self.getTimeStamp()
         cat.getCat(directory=self.path, filename=self.name, format=self.format)
+        
+    """
+    Saves the image to the local file system given:
+    - Names
+    - Path
+    """
+    def saveImage(self):
+        pass      
 
 
+    """
+    @Description:
+        Gets time stamp from local system. The format returned is 1455208995.19
+        so I cast the timestamp into a string, then split off the milliseconds.
+    @Params:
+        None
+    @Returns:
+        (string) seconds
+    """
+    def getTimeStamp(self):
+        ts = str(time.time())
+        seconds,milli = ts.split('.')
+        return seconds
+
+class AsciiCat(randomCat):
+        
     """
 
     """
@@ -37,24 +61,11 @@ class AsciiImage(object):
         pass
 
     """
-    Saves the image to the local file system given:
-    - Names
-    - Path
-    """
-    def saveImage(self):
-        pass
-
-    """
 
     """
     def nameImage(self):
         pass
 
-    """
-    Gets time stamp from local system
-    """
-    def getTimeStamp(self):
-        pass
 
     """
     Print the image to the screen
@@ -63,6 +74,6 @@ class AsciiImage(object):
         pass
 
 if __name__=='__main__':
-    A = AsciiImage()
+    A = AsciiCat()
     A.getImage()
     
