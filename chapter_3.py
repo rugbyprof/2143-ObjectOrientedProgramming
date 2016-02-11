@@ -27,3 +27,5 @@ class Subclass(LeftSubclass, RightSubclass):
         
 s = Subclass()
 s.call_me()
+
+

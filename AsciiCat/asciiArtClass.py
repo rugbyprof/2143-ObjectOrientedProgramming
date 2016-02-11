@@ -5,11 +5,11 @@ import os
 class AsciiImage(object):
 
     def __init__(self):
-        self.width = 0       # width of image
-        self.height = 0      # height of image
-        self.name = 'cat'        # name of image
-        self.path = '.'       # path on local file system
-        self.format = 'png'   
+        self.width = 0          # width of image
+        self.height = 0         # height of image
+        self.name = 'cat'       # name of image
+        self.path = '.'         # path on local file system
+        self.format = 'png'     # format of picture we want
 
 
     """
