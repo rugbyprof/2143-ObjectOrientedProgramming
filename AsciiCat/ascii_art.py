@@ -9,6 +9,7 @@ import os
 import sys
 
 
+
 """ 
 The ascii character set we use to replace pixels. 
 The grayscale pixel values are 0-255.

@@ -1,15 +1,19 @@
 import cat
 import os
+import time
+from PIL import Image
+import sys
 
-
-class AsciiImage(object):
+class RandomCat(object):
 
     def __init__(self):
-        self.width = 0          # width of image
-        self.height = 0         # height of image
-        self.name = 'cat'       # name of image
+
+        self.name = ''          # name of image
         self.path = '.'         # path on local file system
-        self.format = 'png'     # format of picture we want
+        self.format = 'png'
+        self.width = 0          # width of image
+        self.height = 0         # height of image        
+        self.img = None         # Pillow var to hold image
 
 
     """
@@ -20,22 +24,12 @@ class AsciiImage(object):
     @Returns: 
     """
     def getImage(self):
+        self.name = self.getTimeStamp()
         cat.getCat(directory=self.path, filename=self.name, format=self.format)
-
-
-    """
-
-    """
-    def convertToAscii(self):
-
-        pass
-
-    """
-    Converts to grayscale using PIL
-    """
-    def convertToGrayscale(self):
-        pass
-
+        self.img = Image.open(self.name+'.'+self.format)
+        
+        self.width, self.heigth = self.img.size
+        
     """
     Saves the image to the local file system given:
     - Names
@@ -54,15 +48,66 @@ class AsciiImage(object):
     Gets time stamp from local system
     """
     def getTimeStamp(self):
-        pass
+        seconds,milli = str(time.time()).split('.')
+        return seconds 
+
+
+""" 
+The ascii character set we use to replace pixels. 
+The grayscale pixel values are 0-255.
+0 - 25 = '#' (darkest character)
+250-255 = '.' (lightest character)
+"""
+
+
+class AsciiImage(RandomCat):
+
+    def __init__(self,new_width="not_set"):
+        super(AsciiImage, self).__init__()
+
+        self.newWidth = new_width
+        self.newHeight = 0
+            
+        self.asciiChars = [ '#', 'A', '@', '%', 'S', '+', '<', '*', ':', ',', '.']
+        self.imageAsAscii = []
+        
+        
+    """
+    Your comments here
+    """
+    def convertToAscii(self):
+    
+        if self.newWidth == "not_set":
+            self.newWidth = self.width
+            
+        self.newHeight = int((self.heigth * self.newWidth) / self.width)
+            
+        if self.newWidth == None:
+            self.newWidth = self.width
+            self.newHeight = self.height
+            
+        self.newImage = self.img.resize((self.newWidth, self.newHeight))
+        self.newImage = self.newImage.convert("L") # convert to grayscale
+        all_pixels = list(self.newImage.getdata())
+
+        for pixel_value in all_pixels:
+            index = pixel_value / 25 # 0 - 10
+            self.imageAsAscii.append(self.asciiChars[index])
 
     """
     Print the image to the screen
     """
     def printImage(self):
-        pass
+        self.imageAsAscii = ''.join(ch for ch in self.imageAsAscii)
+        for c in range(0, len(self.imageAsAscii), self.newWidth):
+            print (self.imageAsAscii[c:c+self.newWidth])
+
+
 
 if __name__=='__main__':
-    A = AsciiImage()
-    A.getImage()
+    Temp = AsciiImage(150)
+    Temp.getImage()
+    
+    Temp.convertToAscii()
+    Temp.printImage()
     
