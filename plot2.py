@@ -1,3 +1,19 @@
+"""
+Yahoo Finance Website:
+    https://pypi.python.org/pypi/yahoo-finance
+
+Installing yahoo finance:
+    git clone git://github.com/lukaszbanasiak/yahoo-finance.git
+    cd yahoo-finance
+    python setup.py install
+
+Instructions to install matplotlib here: 
+    http://matplotlib.org/faq/installing_faq.html
+
+Small tutorial on MatPlotLib:
+    http://matplotlib.org/users/pyplot_tutorial.html
+"""
+
 from yahoo_finance import Share 
 import matplotlib.pyplot as plt
 import random
@@ -32,12 +48,8 @@ class StockOrganizer(object):
             plt.plot(AllHighPrices[key])
         plt.ylabel('some numbers')
         plt.show()     
-           
-    
-                
-                
-                
-                
+                       
+
 if __name__=='__main__':
     MyStock = StockOrganizer()
     MyStock.loadStock("IBM")
@@ -47,12 +59,17 @@ if __name__=='__main__':
     # MyStock.dumpStocks()
     MyStock.graphAll()
     
-    # L = [random.randint(10, 100) for i in range(25)]
-    # M = [random.randint(10, 100) for i in range(25)] 
-    # plt.plot(L)
-    # plt.plot(M)
-    # plt.ylabel('some numbers')
-    # plt.show()
+    
+"""
+Scratch pad from class below:
+"""    
+
+# L = [random.randint(10, 100) for i in range(25)]
+# M = [random.randint(10, 100) for i in range(25)] 
+# plt.plot(L)
+# plt.plot(M)
+# plt.ylabel('some numbers')
+# plt.show()
 
     
 
