@@ -28,23 +28,17 @@ Date: 3 Feb 2016
 
 ```python
 """
-Class:
-------
-    This is just the name of your class 
-    Usage: example class declaration here
+@Class: This is just the name of your class 
+@Usage: example class declaration here
     
-Description:
-------------
+@Description:
     This would be a short description of your class and a general overview of what it does. 
-
-Params:
--------
+@Params:
     param1 - (type) All these are parameters that you passed into your class (possibly) to help construct the class
     param2 - (type) They should be alphebetized
     param3 - (type)
 
-Methods:
---------
+@Methods:
     Alphebetize the methods here...
     High level descriptions and usage here. This is a quick view for you or someone who's using your class so 
     they know what methods are available, and how to use them. If they need more, they can go look at the method
@@ -62,24 +56,19 @@ Methods:
 from types import *
 
 """
-Class:
-------
-    MyFraction 
+@Class: MyFraction 
+@Usage: 
     f1 = MyFraction(2,3)    # creates 2/3
     f2 = MyFraction()       # creates None/None
     
-Description:
-------------
+@Description:
     This is a class that assists in the general creation and manipulation of fractions. It provides overloaded operators
     to assist in basic arithmetic operations between fractions.
-
-Params:
--------
+@Params:
     denominator  - (int) a denominator value or None
     numerator    - (int) a numerator value or None
 
-Methods:
---------
+@Methods:
     add - Add two fractions
         usage:  f3 = MyFraction(2,3) + MyFraction(1,2)
                 f4 = f1 + f2
@@ -109,17 +98,12 @@ class MyFraction:
 
 def mul(rhs):
     """
-    Description:
-    ------------
+    @Description:
         This method multiplys a passed in fraction to self, without altering self and passes back a new fraction
         It does not reduce the resulting fraction. 
-    
-    Params:
-    -------
+    @Params:
         rhs - (MyFraction) The right hand side of the operation
-    
-    Returns:
-    --------
+    @Returns:
         (MyFraction) - result of operation
     """
     
