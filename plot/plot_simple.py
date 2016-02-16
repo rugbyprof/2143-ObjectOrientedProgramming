@@ -1,19 +1,7 @@
 import matplotlib.pyplot as plt
 import random
 from yahoo_finance import Share
-import json
 
-"""
-http://matplotlib.org/users/pyplot_tutorial.html
-https://pypi.python.org/pypi/yahoo-finance
-
-git clone git://github.com/lukaszbanasiak/yahoo-finance.git
-cd yahoo-finance
-sudo -H python3 setup.py install
-
-sudo -H pip3 install matplotlib
-sudo -H pip3 install numpy
-"""
 
 Shares = {}
 
@@ -68,10 +56,5 @@ plt.plot(D)
 plt.ylabel('Stock Price')
 plt.title('YHOO GOOG IBM')
 plt.xlabel('Julian Day')
-#plt.axis([1,365,0,55])
 plt.show()
 
-#L= [random.randint(10, 100) for i in range(25)]
-#plt.plot(L)
-#plt.ylabel('some numbers')
-#plt.show()
