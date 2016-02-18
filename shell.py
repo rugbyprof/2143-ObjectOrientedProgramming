@@ -23,9 +23,9 @@ import sys
     get_commands - get all commands from history
     number_commands - get number of commands in history
 """
-class history(object):
+class history(list):
     def __init__(self):
-        self.command_history = []
+        pass
 
     """
     @Name: push_command
@@ -36,7 +36,7 @@ class history(object):
     @Returns: None
     """
     def push_command(self,cmd):
-        self.command_history.append(cmd)
+        self.append(cmd)
         
     """
     @Name: get_commands
@@ -46,7 +46,7 @@ class history(object):
     @Returns: None
     """
     def get_commands(self):
-        return self.command_history
+        return self
         
     """
     @Name: number_commands
@@ -57,7 +57,7 @@ class history(object):
         (int) - number of commands
     """
     def number_commands(self):
-        return len(self.command_history)
+        return len(self)
 
 """
 @Name: parser
@@ -164,6 +164,7 @@ class driver(history,commander):
             self.push_command(self.input)   		# put in history
             parts = self.run_command(self.input)
             print(parts)
+            print(self.get_commands())
 
 
 if __name__=="__main__":
