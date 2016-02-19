@@ -27,11 +27,11 @@
     
 #### dict:
 
-- `D[k]` --> object
+- `D[k]` -> object
     - Produce the value associated with the key k in D.
 - `del D[k]`
     - Remove D[k] from D.
-- `k in d` --> bool
+- `k in d` -> bool
     - Produce True if k is a key in D and False otherwise.
 - `D.get(k)` -> object
     - Return D[k] if k in D, otherwise return None.
@@ -84,7 +84,7 @@
     
 #### str:
 
-- `x in s` --> bool
+- `x in s` -> bool
     - Produce True if and only if x is in s.
 - `str(x)` -> str
     - Convert an object into its string representation, if possible.
