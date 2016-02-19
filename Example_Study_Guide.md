@@ -279,7 +279,8 @@ Write a class called `wordDictonary` that represents an actual dictionary. Your 
     - continually remove the largest and smallest values from the list and return either the last value (if there is only one left) or the average of the two last values (if there are two left).
     - Do not sort the list, and don't use any for loops in your solution.
     - Functions `max` and `min` may be helpful, as well as one or more list methods.
-```
+
+```python
 def myMedian(L):
 """ 
 @Description: Return the median of the numbers in L.
