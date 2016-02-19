@@ -1,4 +1,4 @@
-## Short Python function/method descriptions:
+## Python Cheat Sheet:
 #### Builtin Methods:
 - `input([prompt])` -> str
     - Read a string from standard input. The trailing newline is stripped. The prompt string, if given, is printed without a trailing newline before reading.
