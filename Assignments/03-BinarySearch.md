@@ -34,6 +34,7 @@ A `Binary Search Tree` is a data structure (or a `Graph`) that organizes data su
 
 ### Binary Search Tree as An Array
 
+![](https://s3.amazonaws.com/f.cl.ly/items/2d0j1r030M1P3m28050c/array_bst.png}
 
 ### Corresponding Tree Locations
 
