@@ -11,9 +11,14 @@ lets discuss what a binary tree is.
 
 ![](http://cramster-image.s3.amazonaws.com/definitions/computerscience-5-img-1.png)
 
-A Binary Tree is a data structure (or a `Graph`) that organizes data such that each `Node` can have at most two `Child` nodes. A node can have 0,1 or 2 children. Nodes that have zero children are `leaves`. The node where the tree originates is the `root`. You can see an example of a binary tree structure below. 
+A `Binary Tree` is a data structure (or a `Graph`) that organizes data such that:
+- Each `Node` can have at most two `Child` nodes
+- A node can have 0,1 or 2 children. 
+- Nodes that have zero children are `leaves`. 
+- The node where the tree originates is the `root`. 
+- Non leaf nodes are called `inner nodes`
 
-A Binary __Search__ Tree is a data structure (or a `Graph`) that organizes data such that each `Node` can have at most two `Child` nodes AND that the child node on the left must contain a value that is less than it's parent and likewise the child on the right must contain a value that is greater than it's parent. Placing two values in a Binary Tree is possible, but let's not discuss that now. 
+A `Binary __Search__ Tree` is a data structure (or a `Graph`) that organizes data such that each `Node` can have at most two `Child` nodes AND that the child node on the left must contain a value that is less than it's parent and likewise the child on the right must contain a value that is greater than it's parent. Placing two values in a Binary Tree is possible, but let's not discuss that now. 
 
 ### Binary Search Tree as An Array
 
