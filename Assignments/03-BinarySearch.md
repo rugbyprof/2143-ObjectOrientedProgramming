@@ -5,20 +5,25 @@
 
 ### Overview
 
-You are going to write your first class in python. This class will treat a list as if it's a "Binary Tree". 
-To do this you simply have to follow a set of rules in how you place items into your list. First, however,
-lets discuss what a binary tree is. 
+You are going to write your first class in python. This class will treat a list as if it's a "Binary Search Tree". 
+Why? Because a Binary Search Tree allows an item to be found in O(lg N) time, whereas a list or an array only
+allows searches to be completed in O(N) time. 
+
+To make a a list function as a Binary Search Tree, we simply need to follow a set of rules in how items into the list. Then we follow
+the same rules in reverse to locate an item in the list in O(lg N) time. 
+
+First, lets do a small overview of a Binary Search Tree.
 
 ### Binary Tree
 
 ![](http://cramster-image.s3.amazonaws.com/definitions/computerscience-5-img-1.png)
 
-A `Binary Tree` is a data structure (or a `Graph`) that organizes data such that:
-- Each `node` can have at most two `child` nodes 
-- A node can have 0,1 or 2 children. 
+A `Binary Tree` is a hierarchical data structure (or a `Graph`) that organizes data such that:
+- A node can have 0,1 or 2 children (two children is what makes it a 'binary' tree).
 - Nodes that have zero children are `leaves`. 
 - The node where the tree originates is the `root`. 
 - Non leaf nodes are called `inner nodes`
+- More definitions later
 
 A `Binary Search Tree` is a data structure (or a `Graph`) that organizes data such that:
 
