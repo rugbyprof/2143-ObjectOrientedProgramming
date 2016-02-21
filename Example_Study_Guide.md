@@ -300,4 +300,32 @@ def myMedian(L):
 
 ```
 
+### Coffee Class 
+A coffee shop lets customers purchase coffee with pre-loaded electronic cards. They can reload their cards
+by specifying an amount of money to be added. Each card is also programmed with a default dollar amount
+that gets reloaded when the purchaser does not specify an amount.
 
+#### Defining the class
+- Write the constructor with the appropriate data members needed to keep track of 
+    - defualt reload amount
+    - current amount on the card
+- Write the reload method that allows the user to reload the card with a specified amount.
+- Write the default reload method that will reload the card with the default amount.
+- Write the buy_coffee method, which has a parameter indicating the amount paid.
+    - If the card has enough money to cover the purchase, the amount is deducted.
+    - If the card does not have enough money to cover the purchase, the balance is unchanged. 
+    - Return True iff the card had enough money to cover the purchase.
+
+There may some additional things you need to add to your class depending on the user stories (the way
+the class is used) below.
+
+#### Using the class
+- Create a card for Karen with an initial balance of $100 and a default reload value of $50.
+    - e.g.(card_for_karen = Card("Karen", 100, 50))
+- Have Karen buy 25 coffees at a cost of $2.50 each.
+- Create a card for Sven with an initial balance of $50 and a
+    - default reload value of $20.
+- Have Sven buy a fancy coffee at a cost of $5.
+- Reload Karen’s card with her default reload value.
+- Have Sven put an additional $5.75 on his card.
+- Print the owner and balance of both cards.
