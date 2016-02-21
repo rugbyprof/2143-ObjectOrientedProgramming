@@ -1,1 +1,39 @@
 
+# Program 1 - Binary Search
+
+### Overview
+
+You are going to write your first class in python. This class will treat a list as if it's a "Binary Tree". 
+To do this you simply have to follow a set of rules in how you place items into your list. First, however,
+lets discuss what a binary tree is. 
+
+![](https://s3.amazonaws.com/f.cl.ly/items/3m020U1u1f0s2j1t3f3A/binary_tree.png)
+![](https://s3.amazonaws.com/f.cl.ly/items/3l1f1s0q07343t2J1W01/binary_tree_table.png)
+1. Don't use the first element location in the list (leave the 0<sup>th</sup> element empty).
+    - This helps with our 
+
+### Requirements
+- Add an `add` method to the simple fraction class below
+- If you were to run the following code snippet:
+
+```python
+a = fraction(1,2)
+b = fraction(4,5)
+c = a + b
+print(c)
+```
+it would print out:
+```
+1 3/10
+```
+it should not print out:
+
+```
+13/10
+```
+
+- This means we need to handle:
+    - a `whole number` portion of a fraction.
+    - ability to reduce 
+
+### Deliverables
