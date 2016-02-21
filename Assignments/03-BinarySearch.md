@@ -32,7 +32,13 @@ A `Binary Search Tree` is a data structure (or a `Graph`) that organizes data su
 - Likewise the child on the right must contain a value that is greater than it's parent. 
 - Placing the same key values in a Binary Tree is possible, but lets assume unique keys for now.
 
-### Binary Search Tree as An Array
+### Binary Search Tree as An Array (List)
+
+We determine the location of items in the list by using the following method:
+
+1. Do not use the first list element. Zero messes things up.
+2. Left Child = 2*i (where i == index into list)
+3. Right Child - 2*i+1 
 
 ![](https://s3.amazonaws.com/f.cl.ly/items/2d0j1r030M1P3m28050c/array_bst.png)
 
