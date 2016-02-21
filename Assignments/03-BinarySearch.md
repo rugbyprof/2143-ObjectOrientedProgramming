@@ -37,8 +37,15 @@ A `Binary Search Tree` is a data structure (or a `Graph`) that organizes data su
 We determine the location of items in the list by using the following method:
 
 1. Do not use the first list element. Zero messes things up.
-2. Left Child = 2*i (where i == index into list)
-3. Right Child - 2*i+1 
+2. If the list is empty, place item at the 1<sup>st</sup> location.
+3. Each subsequent item to be inserted gets compared with the root and the next location gets calculated:
+    - if its less than: 
+        - Left Child = 2*i (where i == index into list)
+    - if its greater than:
+        - Right Child - 2*i+1 
+4. If that location is occupied, then keep comparing until an empty spot is found.
+
+
 
 ![](https://s3.amazonaws.com/f.cl.ly/items/2d0j1r030M1P3m28050c/array_bst.png)
 
