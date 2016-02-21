@@ -29,9 +29,6 @@ A `Binary Search Tree` is a data structure (or a `Graph`) that organizes data su
 
 ### Binary Search Tree as An Array
 
-![](https://s3.amazonaws.com/f.cl.ly/items/3m020U1u1f0s2j1t3f3A/binary_tree.png)
-
-You can see the binary tree above contains 12 items numbered 0 - 11. In this specific example the values are inserted in such a way that the tree is being filled in from left to right. Inserting values in this way creates a `complete` tree. This means that every `inner node` (non leaf node) has either all of its children, or a left child. 
 
 ### Corresponding Tree Locations
 ![](https://s3.amazonaws.com/f.cl.ly/items/3l1f1s0q07343t2J1W01/binary_tree_table.png)
