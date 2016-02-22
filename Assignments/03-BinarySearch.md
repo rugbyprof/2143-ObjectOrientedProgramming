@@ -80,7 +80,7 @@ Lets place the items
 
 ![](https://s3.amazonaws.com/f.cl.ly/items/2d0j1r030M1P3m28050c/array_bst.png)
 
-![](https://s3.amazonaws.com/f.cl.ly/items/322w0T3D0c1H1E2X2G15/array_bst_with_pointers.png)
+![](https://s3.amazonaws.com/f.cl.ly/items/1T0W103X2v3k2i081j2T/array_bst_with_pointers.png)
 
 ### List Locations for Unspecified Tree
 
