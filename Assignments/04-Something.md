@@ -1,3 +1,4 @@
+#NOT DONE!
 # Homework 4 - AsciiShop
 Due on github by ***Thursday March 3<sup>rd</sup>*** by class time. 
 
