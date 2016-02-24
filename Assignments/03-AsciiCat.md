@@ -27,12 +27,12 @@ EXTRA CREDIT (Pick One):
 
 @Name: crop
 @Description:
-    This will crop an image from a starting x,y coordinate to and ending x,y coordinate. For example:
+    This will crop an image from a starting x,y coordinate to an ending x,y coordinate. For example:
     crop((col,row),(col,row))
     crop((1,1),(8,4)) (all the zeros are cropped from the image)
     **********          0000000000
     **********          0*******00
-    **********          0*******00    
+    **********   =>     0*******00    
     **********          0*******00
     **********          0*******00
 @Params: 
