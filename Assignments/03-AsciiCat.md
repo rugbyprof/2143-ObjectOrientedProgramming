@@ -42,7 +42,9 @@ EXTRA CREDIT (Pick One):
 
 @Name: resize 
 @Description:
-    This method will resize the already converted ascii image. The problem with this is you can't just chop off pixels (thats cropping), or you can't just add pixels on the edges, that wouldn't look right either (you would end up with a border). The most straight forward approach to "resizing" is this:
+    This method will resize the already converted ascii image. The problem with this is you can't just chop off pixels (thats cropping), 
+    or you can't just add pixels on the edges, that wouldn't look right either (you would end up with a border). The most straight 
+    forward approach to "resizing" is this:
     
 Shrinking-
   Average groups of pixels (4x4 group => 1x1):
