@@ -1,10 +1,10 @@
-# Homework 3 - AsciiMagic
+# Homework 3 - AsciiShop
 Due on github by ***Thursday March 3<sup>rd</sup>*** by class time. 
 
 ### Requirements
-- Working by yourself, or with a partner, create a class called `asciiMagic` that will add additional functionality to the existing `asciiArtClass.py` we did in class. 
-- Create a folder called `AsciiMagic` for all your files.
-- Rename `asciiArtClass.py` to  `asciiMagic.py`.
+- Working by yourself, or with a partner, create a class called `asciiShop` that will add additional functionality to the existing `asciiArtClass.py` we did in class. 
+- Create a folder called `AsciiShop` for all your files.
+- Rename `asciiArtClass.py` to  `asciiShop.py`.
 - Additional methods to add:
 
 ```python
