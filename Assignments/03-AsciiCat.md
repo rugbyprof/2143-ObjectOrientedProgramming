@@ -2,7 +2,7 @@
 Due on github by ***Thursday March 3<sup>rd</sup>*** by class time. 
 
 ### Requirements
-- Working by yourself, or with a partner, create a class called `asciiMagic` that will add additional functionality to the existing `asciiArtClass.py` we did in class. It can be found [here](https://github.com/rugbyprof/2143-ObjectOrientedProgramming/blob/master/AsciiCat/asciiArtClass.py).
+- Working by yourself, or with a partner, create a class called `asciiMagic` that will add additional functionality to the existing `asciiArtClass.py` we did in class. 
 - Create a folder called `AsciiMagic` for all your files.
 - Rename `asciiArtClass.py` to  `asciiMagic.py`.
 - Additional methods to add:
@@ -65,6 +65,9 @@ Enlarging-
 
 - You should also make it so a user can pass in an image to the class. If so a new image won't get downloaded from the cloud.
 - This will help speed up testing.
+
+## Starter Code:
+Code can be found [here](https://github.com/rugbyprof/2143-ObjectOrientedProgramming/blob/master/AsciiCat/asciiArtClass.py).
 
 
 ### Deliverables
