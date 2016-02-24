@@ -6,7 +6,7 @@ Due on github by ***Thursday March 3<sup>rd</sup>*** by class time.
 - Create a folder called `AsciiMagic` for all your files.
 - Rename `asciiArtClass.py` to  `asciiMagic.py`.
 - Additional methods to add:
-- 
+
 ```python
 @Name: flip
 @Description:
@@ -65,12 +65,12 @@ Enlarging-
 @Returns: (string) - Inverted ascii image.
 ```
 
-- You should also make it so a user can pass in an image to the class. If so a new image won't get downloaded from the cloud.
+- You should also make it so a user can pass in an image name to the class. 
+- If an image name is passed in then there is no need to download a new one.
 - This will help speed up testing.
 
 ## Starter Code:
 Code can be found [here](https://github.com/rugbyprof/2143-ObjectOrientedProgramming/blob/master/AsciiCat/asciiArtClass.py).
-
 
 ### Deliverables
 
