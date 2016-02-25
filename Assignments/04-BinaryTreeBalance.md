@@ -1,8 +1,10 @@
 # Homework 4 - Binary Tree Balanced Loading
 Due on github by ***Thursday March 10<sup>rd</sup>*** by class time. 
 
+### Overview
+- Working by yourself, or with a partner, alter the `BinarySearch` class so that its perfectly balanced after loading a random set of integers. Also, there should be no duplicate key values in the tree.
+
 ### Requirements
-- Working by yourself, or with a partner, alter the `BinarySearch` class so that its perfectly balanced after loading of a random set of integers. Also, there should be no duplicate key values in the tree.
 - Create a folder called `BalancedBinaryTree` for all your files.
 - Rename `binary_search_tree_list.py` to  `balanced_binary_tree.py`.
 - Rename the `BinarySearch` class to `BalancedSearch`.
