@@ -78,5 +78,5 @@ Code can be found [here](https://github.com/rugbyprof/2143-ObjectOrientedProgram
 - The file should execute with no errors.
 - If you worked with a partner, both people should have the code in thier repo.
 - Your name (or both names) should be in all documents.
-- Comment, Comment, Comment ....
+- Comment, Comment, Comment (Correctly) .... 
 
