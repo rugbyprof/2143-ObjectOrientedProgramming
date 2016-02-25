@@ -64,22 +64,13 @@ class BinarySearch(object):
                 self.comparisons += 1
                 
                 
-                        
-        
-        
-        
-    
     def leftChild(self,i):
         return 2 * i
         
     def rightChild(self,i):
         return 2 * i + 1
         
-random.seed(345)
+random.seed(342345)
 bs = BinarySearch(4096)
 for x in range(1000):
     bs.insert(random.randint(0,99999))
-    
-print(bs.tree)
-# print(bs.find(24))
-# print(bs.comparisons)

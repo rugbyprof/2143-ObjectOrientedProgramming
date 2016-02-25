@@ -70,6 +70,7 @@ class AsciiImage(RandomCat):
             
         self.asciiChars = [ '#', 'A', '@', '%', 'S', '+', '<', '*', ':', ',', '.']
         self.imageAsAscii = []
+        self.matrix = None
         
         
     """
@@ -89,6 +90,8 @@ class AsciiImage(RandomCat):
         self.newImage = self.img.resize((self.newWidth, self.newHeight))
         self.newImage = self.newImage.convert("L") # convert to grayscale
         all_pixels = list(self.newImage.getdata())
+        self.matrix = listToMatrix(all_pixels,self.newWidth)
+        
 
         for pixel_value in all_pixels:
             index = pixel_value / 25 # 0 - 10
@@ -102,12 +105,27 @@ class AsciiImage(RandomCat):
         for c in range(0, len(self.imageAsAscii), self.newWidth):
             print (self.imageAsAscii[c:c+self.newWidth])
 
-
+"""
+Convert to 2D list of lists to help with manipulating the ascii image.
+Example:
+    
+    L = [0,1,2,3,4,5,6,7,8]
+    
+    L = to_matrix(L,3)
+    
+    L becomes:
+    
+    [[0,1,2],
+    [3,4,5],
+    [6,7,8]]
+"""
+def listToMatrix(l, n):
+    return [l[i:i+n] for i in xrange(0, len(l), n)]
 
 if __name__=='__main__':
-    Temp = AsciiImage(150)
-    Temp.getImage()
+    awesomeCat = AsciiImage(150)
+    awesomeCat.getImage()
     
-    Temp.convertToAscii()
-    Temp.printImage()
+    awesomeCat.convertToAscii()
+    awesomeCat.printImage()
     
