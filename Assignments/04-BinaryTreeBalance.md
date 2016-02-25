@@ -2,7 +2,7 @@
 Due on github by ***Thursday March 10<sup>rd</sup>*** by class time. 
 
 ### Overview
-- Working by yourself, or with a partner, alter the `BinarySearch` class so that its perfectly balanced after loading a random set of integers. Also, there should be no duplicate key values in the tree.
+- Working by yourself, or with a partner, alter the `BinarySearch` class so that the resulting list based tree is perfectly balanced after loading a random set of integers of size _N_. Also, there should be no duplicate key values in the tree.
 
 ### Requirements
 - Create a folder called `BalancedBinaryTree` for all your files.
