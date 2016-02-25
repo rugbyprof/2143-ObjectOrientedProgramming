@@ -1,11 +1,10 @@
-#NOT DONE!
-# Homework 4 - AsciiShop
-Due on github by ***Thursday March 3<sup>rd</sup>*** by class time. 
+# Homework 4 - Binary Tree Analysis
+Due on github by ***Thursday March 10<sup>rd</sup>*** by class time. 
 
 ### Requirements
-- Working by yourself, or with a partner, create a class called `asciiShop` that will add additional functionality to the existing `asciiArtClass.py` we did in class. 
-- Create a folder called `AsciiShop` for all your files.
-- Rename `asciiArtClass.py` to  `asciiShop.py`.
+- Working by yourself, or with a partner, alter the `BinarySearch` class to do some analysis of the list based implementation. 
+- Create a folder called `ListBasedBinaryTree` for all your files.
+- Rename `binary_search_tree_list.py` to  `binarySearchTree.py`.
 - Additional methods to add:
 
 ```python
