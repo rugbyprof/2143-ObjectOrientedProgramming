@@ -333,4 +333,4 @@ the class is used) below.
 
 #### Dictionary
 
-Use a dictionary to help you create a list of unique values. Lets say I asked you to create a list of _`N`_ integers where `0 <= N <= 99999` and any value of `N` occurs only once within the list. You cannot use the `in` operator to check and see if the value is already in the list. You also can't use sets like so: `myNums = list(set(myNums))`. So, use a dicionary to help keep your items unique. 
+Use a dictionary to help you create a list of unique values. Lets say I asked you to create a list of _`N`_ integers where _`0 <= N <= 99999`_ and any value of `N` occurs only once within the list. You cannot use the `in` operator to check and see if the value is already in the list. You also can't use sets like so: `myNums = list(set(myNums))`. So, use a dicionary to help keep your items unique. 
