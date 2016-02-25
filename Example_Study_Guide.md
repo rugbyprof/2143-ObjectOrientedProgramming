@@ -329,3 +329,8 @@ the class is used) below.
 - Reload Karen’s card with her default reload value.
 - Have Sven put an additional $5.75 on his card.
 - Print the owner and balance of both cards.
+
+
+#### Dictionary
+
+Use a dictionary to help you create a list of unique values. Lets say I asked you to create a list of integers between 0-99999 that is entirely unique, but you couldn't use `in` to check and see if the value was already in the list. You also can't use sets like so: `myNums = list(set(myNums))`. So, use a dicionary to help keep your items unique. 
