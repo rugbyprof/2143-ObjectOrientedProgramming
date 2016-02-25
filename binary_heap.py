@@ -1,3 +1,5 @@
+import random
+
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
@@ -62,4 +64,14 @@ class BinHeap:
      # 2**h - 1
      # L = (n + 1) / 2
 
-			
+b = BinHeap()
+
+for i in range(100000):
+    b.insert(random.randint(0,999999))
+
+
+newlist = []
+while b.currentSize > 0:
+    newlist.append(b.delMin())
+    
+print(newlist)
