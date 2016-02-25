@@ -10,6 +10,8 @@ Also remember that inserting ordered values into a tree creates a really really 
 
 So how do you solve it? Think binary search on an ordered list, and reverse engineer that. 
 
+Also start small. Like 7 values. Remember a `full` & `complete` tree holds 2<sup>h</sup> - 1 (where h = height of the tree). Power of 2 minus one will get you a full complete tree.
+
 ### Requirements
 - Create a folder called `BalancedBinaryTree` for all your files.
 - Rename `binary_search_tree_list.py` to  `balanced_binary_tree.py`.
