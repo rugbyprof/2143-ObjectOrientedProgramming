@@ -78,5 +78,6 @@ Code can be found [here](https://github.com/rugbyprof/2143-ObjectOrientedProgram
 - The file should execute with no errors.
 - If you worked with a partner, both people should have the code in thier repo.
 - Your name (or both names) should be in all documents.
+- When I run your program, it should print out two small ascii images. The first is a small cat image converted to ascii, and the second is the same image inverted.
 - Comment, Comment, Comment (Correctly) .... 
 
