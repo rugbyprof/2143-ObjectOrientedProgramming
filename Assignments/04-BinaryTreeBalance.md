@@ -9,7 +9,7 @@ Due on github by ***Thursday March 10<sup>rd</sup>*** by class time.
 - Rename `binary_search_tree_list.py` to  `balanced_binary_tree.py`.
 - Rename the `BinarySearch` class to `BalancedSearch`.
 - Alter the BalancedSearch class so that it results in a balanced binary tree representation of a given set of integers.
-- Ask the user "Load how many random numbers? ", then load that amount of numbers into the tree.
+- Ask the user "Number to insert: (1-100000) ", then load that amount of numbers into the tree.
 - Alter the insert method so that it receives a `list` instead of an `int`:
 - 
 ```python
