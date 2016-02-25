@@ -1,6 +1,6 @@
 import random
 
-class BinarySearch(object):
+class BinarySearchTree(object):
     def __init__(self,size=16):
         self.tree = [-1 for x in range(size)]
         self.size = size
@@ -71,6 +71,6 @@ class BinarySearch(object):
         return 2 * i + 1
         
 random.seed(342345)
-bs = BinarySearch(4096)
+bs = BinarySearchTree(4096)
 for x in range(1000):
     bs.insert(random.randint(0,99999))
