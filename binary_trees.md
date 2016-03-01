@@ -30,7 +30,7 @@ etc/ and usr/ are siblings in the filesystem tree.
     - A subtree is a set of nodes and edges comprised of a parent and all the descendants of
 that parent.
 - ***Leaf Node*** 
-    - A leaf node is a node that has no children. For example, node3, 4, 5 and node6.
+    - A leaf node is a node that has no children. For example, node3, 4, 5 and node6 are leaf nodes.
 
 ![](https://s3.amazonaws.com/f.cl.ly/items/0t342r0q3g333E2r2p1h/tree_edges_nodes.png)
 
