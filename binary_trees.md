@@ -20,8 +20,8 @@ Children The set of nodes c that have incoming edges from the same node to are s
 children of that node. In the tree above, nodes `log/`, `spool/`, and `yp/` are the children of node
 `var/`.
 - ***Parent*** 
-    - A node is the parent of all the nodes it connects to with outgoing edges. In Figure 6.2
-the node var/ is the parent of nodes log/, spool/, and yp/.
+    - A node is the parent of all the nodes it connects to with outgoing edges. In the tree above
+the node `var/` is the parent of nodes `log/`, `spool/`, and `yp/`.
 
 - ***Sibling*** 
     - Nodes in the tree that are children of the same parent are said to be siblings. The nodes
