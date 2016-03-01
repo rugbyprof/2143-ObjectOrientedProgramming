@@ -3,8 +3,8 @@ import requests
 
 people = []
 
-for i in range(100):
-    response = requests.get('http://api.randomuser.me/?nat=us&results=1000')
+for i in range(10):
+    response = requests.get('http://api.randomuser.me/?nat=us&results=100')
     data = response.json()
     print(i)
 
