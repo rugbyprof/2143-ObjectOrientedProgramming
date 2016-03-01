@@ -17,8 +17,8 @@ edges.
     - A path is an ordered list of nodes that are connected by edges. For example, Mammal →
 Carnivora → Felidae → Felis → Domestica is a path.
 Children The set of nodes c that have incoming edges from the same node to are said to be the
-children of that node. In Figure 6.2, nodes log/, spool/, and yp/ are the children of node
-var/.
+children of that node. In the tree above, nodes `log/`, `spool/`, and `yp/` are the children of node
+`var/`.
 - ***Parent*** 
     - A node is the parent of all the nodes it connects to with outgoing edges. In Figure 6.2
 the node var/ is the parent of nodes log/, spool/, and yp/.
