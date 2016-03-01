@@ -1,3 +1,7 @@
+### File System Tree
+    
+![](https://s3.amazonaws.com/f.cl.ly/items/2c3l1c3j113i3n3y343z/tree_file_system.png)
+
 - ***Node***
     - A node is a fundamental part of a tree. It can have a name, which we call the “key.”
 A node may also have additional information. We call this additional information the
@@ -9,15 +13,13 @@ that there is a relationship between them. Every node (except the root) is conne
 exactly one incoming edge from another node. Each node may have several outgoing
 edges.
 - ***Root*** 
-    - The root of the tree is the only node in the tree that has no incoming edges. `/` is the root in the tree below.
-    
-![](https://s3.amazonaws.com/f.cl.ly/items/2c3l1c3j113i3n3y343z/tree_file_system.png)
-    
+    - The root of the tree is the only node in the tree that has no incoming edges. `/` is the root in the file system tree.
+    - 
 - ***Path*** 
     - A path is an ordered list of nodes that are connected by edges. For example, Mammal →
 Carnivora → Felidae → Felis → Domestica is a path.
 Children The set of nodes c that have incoming edges from the same node to are said to be the
-children of that node. In the tree above, nodes `log/`, `spool/`, and `yp/` are the children of node
+children of that node. In the file system tree, nodes `log/`, `spool/`, and `yp/` are the children of node
 `var/`.
 - ***Parent*** 
     - A node is the parent of all the nodes it connects to with outgoing edges. In the tree above
