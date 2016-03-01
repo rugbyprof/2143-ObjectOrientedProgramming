@@ -14,7 +14,6 @@ exactly one incoming edge from another node. Each node may have several outgoing
 edges.
 - ***Root*** 
     - The root of the tree is the only node in the tree that has no incoming edges. `/` is the root in the file system tree.
-    - 
 - ***Path*** 
     - A path is an ordered list of nodes that are connected by edges. For example, Mammal →
 Carnivora → Felidae → Felis → Domestica is a path.
