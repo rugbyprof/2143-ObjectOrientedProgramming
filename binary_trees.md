@@ -2,6 +2,10 @@
 
 ## Tree Definitions
 
+A graph is an ordered pair _G = (V, E)_ comprising a set _V_ of vertices, nodes or points together with a set _E_ of edges, arcs or lines.
+
+A tree is an _undirected graph_ in which any two vertices are connected by exactly one path. In other words, any acyclic connected graph is a tree.
+
 ### File System Tree
     
 ![](https://s3.amazonaws.com/f.cl.ly/items/2c3l1c3j113i3n3y343z/tree_file_system.png)
