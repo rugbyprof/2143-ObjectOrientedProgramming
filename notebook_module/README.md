@@ -1,7 +1,9 @@
-Python 3 Object Oriented Programming
-Harness the power of Python 3 objects
-Dusty Phillips
-http://www.amazon.com/Python-3-Object-Oriented-Programming/dp/1849511268
+- Python 3 Object Oriented Programming
+- Harness the power of Python 3 objects
+- Dusty Phillips
+- http://www.amazon.com/Python-3-Object-Oriented-Programming/dp/1849511268
+
+## Case Study
 
 To tie it all together, let's build a simple command-line notebook application. This is a fairly simple task, so we won't be experimenting with multiple packages. We will, however, see common usage of classes, functions, methods, and docstrings.
 
@@ -20,4 +22,4 @@ As a design decision, we'll implement the menu interface now, but will keep the 
 So if we have two command-line interfaces each interacting with the Notebook, then Notebook is going to need some methods for them to interact with. We'll need to be able to add a new note, and modify an existing note by id, in addition to the search method we've already discussed. The interfaces will also need to be able to list all notes, but they can do that by accessing the notes list attribute directly.
 
 We may be missing a few details, but that gives us a really good overview of the code we need to write. We can summarize all this in a simple class diagram:
-                                                                                                                                                                                         Before writing any code, let's de ne the folder structure for this project. The menu interface should clearly be in its own module, since it will be an executable script, and we may have other executable scripts accessing the notebook in the future. The Notebook and Note objects can live together in one module. These modules can both exist in the same top-level directory without having to put them in a package. An empty command_option.py module can help remind us in the future that we were planning to add new user interfaces.
+                                                                                                                                         Before writing any code, let's de ne the folder structure for this project. The menu interface should clearly be in its own module, since it will be an executable script, and we may have other executable scripts accessing the notebook in the future. The Notebook and Note objects can live together in one module. These modules can both exist in the same top-level directory without having to put them in a package. An empty command_option.py module can help remind us in the future that we were planning to add new user interfaces.
