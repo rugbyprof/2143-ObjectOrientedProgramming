@@ -5,6 +5,10 @@
 
 ## Case Study: Command Line Notebook App
 
+#### Files:
 
+- notebook.py
+- menu.py
+- command_option.py
 
 
