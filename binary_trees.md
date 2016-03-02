@@ -51,6 +51,7 @@ root node is zero.
     - The height of a tree is equal to the maximum level of any node in the tree. The height
 of the tree in Figure 6.2 is two.
 
-Source: 
-- [1] https://www.cs.auckland.ac.nz/courses/compsci105ssc/resources/ProblemSolvingwithAlgorithmsandDataStructures.pdf
-- [2] https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)#Undirected_graph
+| Sources |        |
+|:------:|---------|
+|1        | https://www.cs.auckland.ac.nz/courses/compsci105ssc/resources/ProblemSolvingwithAlgorithmsandDataStructures.pdf |
+|2       | https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)#Undirected_graph |
