@@ -54,4 +54,4 @@ of the tree in Figure 6.2 is two.
 | Sources |        |
 |:------:|---------|
 |1        | [Problem Solving with Algorithms and DataStructures](https://www.cs.auckland.ac.nz/courses/compsci105ssc/resources/ProblemSolvingwithAlgorithmsandDataStructures.pdf) |
-|2       |[Wikipedia# Undirected Graph]( https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)#Undirected_graph) |
+|2       |[Wikipedia: Undirected Graph]( https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)#Undirected_graph) |
