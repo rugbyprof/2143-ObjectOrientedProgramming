@@ -52,5 +52,5 @@ root node is zero.
 of the tree in Figure 6.2 is two.
 
 Source: 
-[1] https://www.cs.auckland.ac.nz/courses/compsci105ssc/resources/ProblemSolvingwithAlgorithmsandDataStructures.pdf
-[2] https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)#Undirected_graph
+- [1] https://www.cs.auckland.ac.nz/courses/compsci105ssc/resources/ProblemSolvingwithAlgorithmsandDataStructures.pdf
+- [2] https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)#Undirected_graph
