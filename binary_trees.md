@@ -2,9 +2,9 @@
 
 ## Tree Definitions
 
-A graph is an ordered pair _G = (V, E)_ comprising a set _V_ of vertices, (aka nodes or points) together with a set _E_ of edges, (aka arcs or lines).
+A graph is an ordered pair ___G = (V, E)___ comprising a set ___V___ of vertices, (aka: nodes or points) together with a set ___E___ of edges, (aka: arcs or lines).
 
-A tree is an _undirected graph_ in which any two vertices are connected by exactly one path. In other words, any acyclic connected graph is a tree.
+A tree is an ___undirected graph___ in which any two vertices are connected by exactly one path. In other words, any acyclic connected graph is a tree.
 
 ### File System Tree
     
@@ -51,4 +51,6 @@ root node is zero.
     - The height of a tree is equal to the maximum level of any node in the tree. The height
 of the tree in Figure 6.2 is two.
 
-Source: https://www.cs.auckland.ac.nz/courses/compsci105ssc/resources/ProblemSolvingwithAlgorithmsandDataStructures.pdf
+Source: 
+[1] https://www.cs.auckland.ac.nz/courses/compsci105ssc/resources/ProblemSolvingwithAlgorithmsandDataStructures.pdf
+[2] https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)#Undirected_graph
