@@ -1,8 +1,23 @@
-import cat
+
 import os
 import time
+import urllib3, uuid
 from PIL import Image
 import sys
+
+
+url = 'http://thecatapi.com/api/images/get'
+
+def getCat(directory=None, filename=None, format='png'):
+    basename = '%s.%s' % (filename if filename else str(uuid.uuid4()), format)
+    savefile =  os.path.sep.join([directory.rstrip(os.path.sep), basename]) if directory else basename
+    downloadlink = url + '?type=%s' % format
+    http = urllib3.PoolManager()
+    r = http.request('GET', downloadlink)
+    fp = open(savefile, 'wb')
+    fp.write(r.data)
+    fp.close()
+    return savefile
 
 class RandomCat(object):
 
@@ -25,7 +40,7 @@ class RandomCat(object):
     """
     def getImage(self):
         self.name = self.getTimeStamp()
-        cat.getCat(directory=self.path, filename=self.name, format=self.format)
+        getCat(directory=self.path, filename=self.name, format=self.format)
         self.img = Image.open(self.name+'.'+self.format)
         
         self.width, self.heigth = self.img.size
