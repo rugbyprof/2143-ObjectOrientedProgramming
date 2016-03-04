@@ -105,9 +105,11 @@ class AsciiImage(RandomCat):
         self.newImage = self.img.resize((self.newWidth, self.newHeight))
         self.newImage = self.newImage.convert("L") # convert to grayscale
         all_pixels = list(self.newImage.getdata())
+
+        # Put all pixels into an NxM matrix
         self.matrix = listToMatrix(all_pixels,self.newWidth)
 
-
+        # Loop through matrix to convert to ascii
         for i in range(len(self.matrix)):
             for j in range(len(self.matrix[i])):
                 self.matrix[i][j] = self.asciiChars[self.matrix[i][j] // 25]
@@ -116,6 +118,7 @@ class AsciiImage(RandomCat):
     Print the image to the screen
     """
     def printImage(self):
+        # Using matrix to print out image
         for row in self.matrix:
             print(''.join(row))
 
