@@ -1,0 +1,294 @@
+digraph {
+	SlateBlue [label=SlateBlue]
+	LawnGreen [label=LawnGreen]
+	MidnightBlue [label=MidnightBlue]
+		PapayaWhip -> MidnightBlue
+	Lime [label=Lime]
+		LawnGreen -> Lime
+	MediumSpringGreen [label=MediumSpringGreen]
+		MidnightBlue -> MediumSpringGreen
+	DarkViolet [label=DarkViolet]
+		PapayaWhip -> DarkViolet
+	DarkKhaki [label=DarkKhaki]
+		LawnGreen -> DarkKhaki
+	DimGray [label=DimGray]
+		LawnGreen -> DimGray
+	Gray [label=Gray]
+		DarkViolet -> Gray
+	Salmon [label=Salmon]
+		PapayaWhip -> Salmon
+	Indigo [label=Indigo]
+		DimGray -> Indigo
+	RoyalBlue [label=RoyalBlue]
+		SlateBlue -> RoyalBlue
+	ForestGreen [label=ForestGreen]
+		DimGray -> ForestGreen
+	LightBlue [label=LightBlue]
+		MidnightBlue -> LightBlue
+	LightSkyBlue [label=LightSkyBlue]
+		Lime -> LightSkyBlue
+	Crimson [label=Crimson]
+		DarkViolet -> Crimson
+	FloralWhite [label=FloralWhite]
+		Gray -> FloralWhite
+	Peru [label=Peru]
+		Salmon -> Peru
+	MediumBlue [label=MediumBlue]
+		Lime -> MediumBlue
+	Thistle [label=Thistle]
+		PapayaWhip -> Thistle
+	DarkSlateBlue [label=DarkSlateBlue]
+		DarkViolet -> DarkSlateBlue
+	Cyan [label=Cyan]
+		DarkKhaki -> Cyan
+	LightPink [label=LightPink]
+		LightBlue -> LightPink
+	DodgerBlue [label=DodgerBlue]
+		ForestGreen -> DodgerBlue
+	Wheat [label=Wheat]
+		SlateBlue -> Wheat
+	Tomato [label=Tomato]
+		Thistle -> Tomato
+	SandyBrown [label=SandyBrown]
+		SlateBlue -> SandyBrown
+	LightYellow [label=LightYellow]
+		LightBlue -> LightYellow
+	LightSteelBlue [label=LightSteelBlue]
+		LightSkyBlue -> LightSteelBlue
+	Sienna [label=Sienna]
+		Salmon -> Sienna
+	DarkOliveGreen [label=DarkOliveGreen]
+		DarkKhaki -> DarkOliveGreen
+	OliveDrab [label=OliveDrab]
+		LawnGreen -> OliveDrab
+	Grey [label=Grey]
+		Gray -> Grey
+	RosyBrown [label=RosyBrown]
+		RoyalBlue -> RosyBrown
+	Purple [label=Purple]
+		Peru -> Purple
+	Tan [label=Tan]
+		SlateBlue -> Tan
+	LightSlateGray [label=LightSlateGray]
+		LightYellow -> LightSlateGray
+	YellowGreen [label=YellowGreen]
+		Thistle -> YellowGreen
+	Orchid [label=Orchid]
+		MidnightBlue -> Orchid
+	BlueViolet [label=BlueViolet]
+		DarkKhaki -> BlueViolet
+	DarkSlateGray [label=DarkSlateGray]
+		DarkKhaki -> DarkSlateGray
+	Snow [label=Snow]
+		Thistle -> Snow
+	GreenYellow [label=GreenYellow]
+		Indigo -> GreenYellow
+	LightSlateGrey [label=LightSlateGrey]
+		LightSteelBlue -> LightSlateGrey
+	OldLace [label=OldLace]
+		MidnightBlue -> OldLace
+	SaddleBrown [label=SaddleBrown]
+		Salmon -> SaddleBrown
+	LavenderBlush [label=LavenderBlush]
+		Gray -> LavenderBlush
+	Linen [label=Linen]
+		MediumSpringGreen -> Linen
+	DarkGoldenRod [label=DarkGoldenRod]
+		Crimson -> DarkGoldenRod
+	DarkGrey [label=DarkGrey]
+		Cyan -> DarkGrey
+	Brown [label=Brown]
+		Crimson -> Brown
+	Beige [label=Beige]
+		Crimson -> Beige
+	SlateGray [label=SlateGray]
+		Tan -> SlateGray
+	LightGray [label=LightGray]
+		LightSkyBlue -> LightGray
+	Ivory [label=Ivory]
+		Indigo -> Ivory
+	Green [label=Green]
+		Grey -> Green
+	OrangeRed [label=OrangeRed]
+		OliveDrab -> OrangeRed
+	DarkGray [label=DarkGray]
+		DarkGoldenRod -> DarkGray
+	Silver [label=Silver]
+		SandyBrown -> Silver
+	Azure [label=Azure]
+		BlueViolet -> Azure
+	LightSalmon [label=LightSalmon]
+		LightSkyBlue -> LightSalmon
+	HoneyDew [label=HoneyDew]
+		Indigo -> HoneyDew
+	DarkOrange [label=DarkOrange]
+		DarkSlateBlue -> DarkOrange
+	PowderBlue [label=PowderBlue]
+		RosyBrown -> PowderBlue
+	MediumPurple [label=MediumPurple]
+		MediumSpringGreen -> MediumPurple
+	Pink [label=Pink]
+		Purple -> Pink
+	FireBrick [label=FireBrick]
+		FloralWhite -> FireBrick
+	GoldenRod [label=GoldenRod]
+		Gray -> GoldenRod
+	LightGreen [label=LightGreen]
+		LightPink -> LightGreen
+	MediumAquaMarine [label=MediumAquaMarine]
+		MediumBlue -> MediumAquaMarine
+	LemonChiffon [label=LemonChiffon]
+		Lime -> LemonChiffon
+	PaleGreen [label=PaleGreen]
+		OliveDrab -> PaleGreen
+	WhiteSmoke [label=WhiteSmoke]
+		Wheat -> WhiteSmoke
+	SkyBlue [label=SkyBlue]
+		Sienna -> SkyBlue
+	SeaGreen [label=SeaGreen]
+		SandyBrown -> SeaGreen
+	CadetBlue [label=CadetBlue]
+		BlueViolet -> CadetBlue
+	MintCream [label=MintCream]
+		OliveDrab -> MintCream
+	RebeccaPurple [label=RebeccaPurple]
+		RosyBrown -> RebeccaPurple
+	PeachPuff [label=PeachPuff]
+		RoyalBlue -> PeachPuff
+	LightGrey [label=LightGrey]
+		LightGray -> LightGrey
+	Maroon [label=Maroon]
+		Linen -> Maroon
+	Gold [label=Gold]
+		ForestGreen -> Gold
+	Olive [label=Olive]
+		OliveDrab -> Olive
+	LightSeaGreen [label=LightSeaGreen]
+		LightPink -> LightSeaGreen
+	Bisque [label=Bisque]
+		BlueViolet -> Bisque
+	Navy [label=Navy]
+		OldLace -> Navy
+	MistyRose [label=MistyRose]
+		MintCream -> MistyRose
+	HotPink [label=HotPink]
+		Grey -> HotPink
+	DeepPink [label=DeepPink]
+		DarkViolet -> DeepPink
+	Chartreuse [label=Chartreuse]
+		Brown -> Chartreuse
+	AliceBlue [label=AliceBlue]
+		Beige -> AliceBlue
+	DarkTurquoise [label=DarkTurquoise]
+		DarkSlateBlue -> DarkTurquoise
+	Gainsboro [label=Gainsboro]
+		GoldenRod -> Gainsboro
+	Cornsilk [label=Cornsilk]
+		CadetBlue -> Cornsilk
+	DarkRed [label=DarkRed]
+		DarkOliveGreen -> DarkRed
+	Fuchsia [label=Fuchsia]
+		Gold -> Fuchsia
+	SeaShell [label=SeaShell]
+		Sienna -> SeaShell
+	BlanchedAlmond [label=BlanchedAlmond]
+		Beige -> BlanchedAlmond
+	Turquoise [label=Turquoise]
+		Wheat -> Turquoise
+	Black [label=Black]
+		Bisque -> Black
+	Khaki [label=Khaki]
+		LavenderBlush -> Khaki
+	Lavender [label=Lavender]
+		Ivory -> Lavender
+	MediumTurquoise [label=MediumTurquoise]
+		Lime -> MediumTurquoise
+	NavajoWhite [label=NavajoWhite]
+		Navy -> NavajoWhite
+	Teal [label=Teal]
+		Thistle -> Teal
+	LightGoldenRodYellow [label=LightGoldenRodYellow]
+		LightPink -> LightGoldenRodYellow
+	Plum [label=Plum]
+		PowderBlue -> Plum
+	Chocolate [label=Chocolate]
+		Chartreuse -> Chocolate
+	White [label=White]
+		YellowGreen -> White
+	DarkBlue [label=DarkBlue]
+		Cyan -> DarkBlue
+	DarkSeaGreen [label=DarkSeaGreen]
+		DarkOrange -> DarkSeaGreen
+	SteelBlue [label=SteelBlue]
+		Tan -> SteelBlue
+	Blue [label=Blue]
+		Bisque -> Blue
+	DimGrey [label=DimGrey]
+		FloralWhite -> DimGrey
+	MediumVioletRed [label=MediumVioletRed]
+		MediumSpringGreen -> MediumVioletRed
+	Red [label=Red]
+		Purple -> Red
+	MediumSeaGreen [label=MediumSeaGreen]
+		MediumBlue -> MediumSeaGreen
+	BurlyWood [label=BurlyWood]
+		Brown -> BurlyWood
+	Yellow [label=Yellow]
+		YellowGreen -> Yellow
+	Aqua [label=Aqua]
+		Azure -> Aqua
+	LimeGreen [label=LimeGreen]
+		MediumBlue -> LimeGreen
+	IndianRed [label=IndianRed]
+		HoneyDew -> IndianRed
+	GhostWhite [label=GhostWhite]
+		Gold -> GhostWhite
+	DarkSlateGrey [label=DarkSlateGrey]
+		DarkSlateGray -> DarkSlateGrey
+	Magenta [label=Magenta]
+		MediumAquaMarine -> Magenta
+	Violet [label=Violet]
+		Tomato -> Violet
+	PaleTurquoise [label=PaleTurquoise]
+		Orchid -> PaleTurquoise
+	PaleVioletRed [label=PaleVioletRed]
+		PaleGreen -> PaleVioletRed
+	DarkGreen [label=DarkGreen]
+		DarkGrey -> DarkGreen
+	DeepSkyBlue [label=DeepSkyBlue]
+		DimGray -> DeepSkyBlue
+	CornflowerBlue [label=CornflowerBlue]
+		Cornsilk -> CornflowerBlue
+	PaleGoldenRod [label=PaleGoldenRod]
+		Orchid -> PaleGoldenRod
+	Orange [label=Orange]
+		Orchid -> Orange
+	SpringGreen [label=SpringGreen]
+		Snow -> SpringGreen
+	DarkSalmon [label=DarkSalmon]
+		DarkRed -> DarkSalmon
+	Coral [label=Coral]
+		Chocolate -> Coral
+	MediumOrchid [label=MediumOrchid]
+		MediumBlue -> MediumOrchid
+	SlateGrey [label=SlateGrey]
+		Snow -> SlateGrey
+	Moccasin [label=Moccasin]
+		MistyRose -> Moccasin
+	LightCoral [label=LightCoral]
+		LightGray -> LightCoral
+	AntiqueWhite [label=AntiqueWhite]
+		AliceBlue -> AntiqueWhite
+	DarkMagenta [label=DarkMagenta]
+		DarkSlateBlue -> DarkMagenta
+	DarkCyan [label=DarkCyan]
+		DarkGoldenRod -> DarkCyan
+	LightCyan [label=LightCyan]
+		LightGoldenRodYellow -> LightCyan
+	Aquamarine [label=Aquamarine]
+		AliceBlue -> Aquamarine
+	MediumSlateBlue [label=MediumSlateBlue]
+		MediumPurple -> MediumSlateBlue
+	DarkOrchid [label=DarkOrchid]
+		DarkOrange -> DarkOrchid
+}
