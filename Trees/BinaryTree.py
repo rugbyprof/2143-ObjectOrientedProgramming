@@ -47,8 +47,6 @@ class TreeNode:
         if self.hasRightChild():
             self.rightChild.parent = self
 
-
-
                             
 class BinarySearchTree(graphviz.Digraph):
 
@@ -56,6 +54,8 @@ class BinarySearchTree(graphviz.Digraph):
         super().__init__()
         self.root = None
         self.size = 0
+        self.nodes = []
+        self.edges = []
 
     def length(self):
         return self.size
@@ -76,19 +76,17 @@ class BinarySearchTree(graphviz.Digraph):
                 self._put(key, val, currentNode.leftChild)
             else:
                 currentNode.leftChild = TreeNode(key, val,parent=currentNode)
-                self.node(str(key),str(val))
-                if currentNode.parent:
-                    self.edge(str(currentNode.parent.key),str(key))
+                self.node(key,val)
+                self.edge(currentNode.key,key)
         else:
             if currentNode.hasRightChild():
                 self._put(key, val, currentNode.rightChild)
             else:
                 currentNode.rightChild = TreeNode(key, val,parent=currentNode)
-                self.node(str(key),str(val))
-                if currentNode.parent:
-                    self.edge(str(currentNode.parent.key),str(key))
-                
+                self.node(key,val)
+                self.edge(currentNode.key,key)
 
+               
     def __setitem__(self, k, v):
         self.put(k, v)
 
@@ -212,18 +210,28 @@ class BinarySearchTree(graphviz.Digraph):
             else:
                 if currentNode.isLeftChild():
                     currentNode.rightChild.parent = currentNode.parent
-                    currentNode.parent.leftChild = \
-                        currentNode.rightChild
+                    currentNode.parent.leftChild = currentNode.rightChild
                 elif currentNode.isRightChild():
                     currentNode.rightChild.parent = currentNode.parent
-                    currentNode.parent.rightChild = \
-                        currentNode.rightChild
+                    currentNode.parent.rightChild = currentNode.rightChild
                 else:
                     currentNode.replaceNodeData(currentNode.rightChild.key,
                             currentNode.rightChild.payload,
                             currentNode.rightChild.leftChild,
                             currentNode.rightChild.rightChild)
 
+    def traverse(self):
+        tree = ''
+        return self._traverse(self.root, tree)
+
+    def _traverse(self, currentNode, tree):
+        if not currentNode:
+            return ' '
+        else:
+            tree += str(self._traverse(currentNode.leftChild, tree)) + ' ' + str(currentNode.key) + ' ' + str(self._traverse(currentNode.rightChild, tree))
+            return tree
+            
+        
 if __name__=='__main__':
     mytree = BinarySearchTree()
     with open("colors.txt", "r") as ins:
@@ -241,5 +249,7 @@ if __name__=='__main__':
     
     mytree.render('test-output/round-table.gv', view=True)
     print(dir(BinarySearchTree))
+    
+    print(mytree.traverse())
     
 
