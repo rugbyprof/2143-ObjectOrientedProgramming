@@ -145,4 +145,3 @@ Wheat 	#F5DEB3	 	Shades	Mix
 White 	#FFFFFF	 	Shades	Mix
 WhiteSmoke 	#F5F5F5	 	Shades	Mix
 Yellow 	#FFFF00	 	Shades	Mix
-YellowGreen 
