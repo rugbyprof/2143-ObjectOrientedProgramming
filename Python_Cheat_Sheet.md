@@ -103,6 +103,8 @@
     - Return True if and only if all cased characters in S are lowercase and there is at least one cased character in S.
 - `S.isupper()` -> bool
     - Return True if and only if all cased characters in S are uppercase and there is at least one cased character in S.
+- `str.join(sequence)` -> string
+    - The method join() returns a string in which the string elements of sequence have been joined by str separator.
 - `S.lower()` -> str
     - Return a copy of the string S converted to lowercase.
 - `S.lstrip([chars])` -> str
