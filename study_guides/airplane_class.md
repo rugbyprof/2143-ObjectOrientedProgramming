@@ -29,7 +29,10 @@ def __init__(self, plane_model, serial_num, num_seats, miles_travelled):
 	miles_travelled (float) - total number of miles plane has travelled.
 @Returns: None
 """
+```
 
+#### Answer:
+```python
     self.plane_model = plane_model
     self.serial_num = serial_num
     self.num_seats = num_seats
@@ -42,6 +45,7 @@ def __init__(self, plane_model, serial_num, num_seats, miles_travelled):
 
 Write a `__str__` method for class Airplane that returns strings of this form: 'Airplane(Boeing 747, 19643, 366, 45267.7)'
 
+#### Answer:
 ```python
 def __str__(self):
     return "%s %d %d %f" % (self.plane_model,self.serial_num,self.num_seats,self.miles_travelled)
