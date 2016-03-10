@@ -31,7 +31,7 @@ def __init__(self, plane_model, serial_num, num_seats, miles_travelled):
 """
 ```
 
-#### Answer:
+**Answer:**
 ```python
     self.plane_model = plane_model
     self.serial_num = serial_num
@@ -45,7 +45,7 @@ def __init__(self, plane_model, serial_num, num_seats, miles_travelled):
 
 Write a `__str__` method for class Airplane that returns strings of this form: 'Airplane(Boeing 747, 19643, 366, 45267.7)'
 
-#### Answer:
+**Answer:**
 ```python
 def __str__(self):
     return "%s %d %d %f" % (self.plane_model,self.serial_num,self.num_seats,self.miles_travelled)
@@ -65,13 +65,18 @@ def log_trip(self, num_miles):
 @Param: num_miles (float) - number of miles to add to the total
 @Returns: None
 """
+```
 
+**Answer:**
+```python
     self.miles_travelled += num_miles
 
 
 ```
 
 Example Here:
+
+**Answer:**
 ```
 airplane = Airplane('Boeing 747', '19643', 366, 45267.7)
 airplane.log_trip(1000.0)
@@ -85,7 +90,7 @@ Write an `__eq__` method in class `Airplane` that compares two Airplane objects 
 
 Consider two Airplanes equal if they have the same serial number. 
 
-
+**Answer:**
 ```python
 def __eq__(self,rhs):
     return self.serial_num == rhs.serial_num
