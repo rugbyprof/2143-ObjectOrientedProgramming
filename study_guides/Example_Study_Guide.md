@@ -334,3 +334,42 @@ the class is used) below.
 #### Dictionary
 
 Use a dictionary to help you create a list of unique values. Lets say I asked you to create a list of _`N`_ integers where _`0 <= N <= 99999`_ and any value of _`N`_ occurs only once within the list. You cannot use the `in` operator to check and see if the value is already in the list. You also can't use sets like so: `myNums = list(set(myNums))`. So, use a dicionary to help keep your items unique. 
+
+--
+
+#### Password File
+
+You decide to save all your passwords in files, one password per file. You then decide you want to update your 6-character MWSU Portal password, but you don’t remember which of your password files you saved it in. Luckily, this is the only 6-character password you have so you decide to write a function to find the password and change it.
+Your code runs, but the function’s body contains four bugs which will result in the function execution not matching its docstring description. In the space provided, rewrite the buggy lines with the bugs fixed. Do not add or remove any lines.
+
+```python
+def change_password(files_list, new_password):
+    """ (list of str, str) -> str
+    Preconditions:
+    (1) files_list is not empty.
+    (2) Each file in files_list contains one single-line password.
+    (3) All files in files_list contain passwords of different lengths.
+    (4) Your 6-character password is guaranteed to be in one of these files.
+    In the appropriate file from files_list, replace your 6-character password
+    with new_password, and return your old password.
+    """
+```
+
+**Code**
+If you think a given line contains a bug, rewrite it. Otherwise leave it blank.
+
+```python
+found = True
+for filename in files_list[:-1]:
+    passwd_file = open(filename, 'r')
+    first_line = passwd_file.read()
+    password = first_line.strip("2")
+    if password == 6:
+        passwd_file.close()
+        passwd_file = open(filename, 'w')
+        passwd_file.write(new_password)
+        found = True
+    passwd_file.close()
+    if found:  # This is correct. Do not modify.
+        return password
+```
