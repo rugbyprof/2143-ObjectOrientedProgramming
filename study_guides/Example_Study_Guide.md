@@ -259,7 +259,7 @@ print(f.add('Jen'))
 
 -- 
 
-#### Misc
+#### Dictionary Class
 
 Write a class called `wordDictonary` that represents an actual dictionary. Your class should contain the following methods:
 - `loadDictionary` : 
@@ -274,6 +274,8 @@ Write a class called `wordDictonary` that represents an actual dictionary. Your 
     - this method lets you remove a word from the dictionary. 
     
 --
+
+### Median Trickery
 
 - Complete the function using this algorithm: 
     - continually remove the largest and smallest values from the list and return either the last value (if there is only one left) or the average of the two last values (if there are two left).
@@ -331,7 +333,7 @@ the class is used) below.
 - Print the owner and balance of both cards.
 
 
-#### Dictionary
+#### Unique Dictionary
 
 Use a dictionary to help you create a list of unique values. Lets say I asked you to create a list of _`N`_ integers where _`0 <= N <= 99999`_ and any value of _`N`_ occurs only once within the list. You cannot use the `in` operator to check and see if the value is already in the list. You also can't use sets like so: `myNums = list(set(myNums))`. So, use a dicionary to help keep your items unique. 
 
