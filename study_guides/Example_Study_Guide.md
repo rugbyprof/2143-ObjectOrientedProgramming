@@ -509,3 +509,140 @@ class GrayScaler(object):
 
 
 ```
+
+##Question 13a:
+
+Here is the header and two methods for class Restaurant. 
+```python
+class Restaurant:
+    """ 
+    Information about a particular restaurant including its name,
+    price range, the types of cuisines it serves, and reviews.
+
+	@Description:
+		Records the restaurant's name, price range, and types of cuisines. 
+		It will also hold multiple reviews for the restaurant.
+		There are initially no reviews of this restaurant.
+	@Params:
+	    name 			(string) - name of restaurant
+	    price_range 	(string) - how expensive in dollar signs from 1-5 '$'
+	    cuisine_list  (list) - list of types of food served
+	"""
+    def __init__(self, name, price_range, cuisine_list):
+
+
+
+
+
+
+
+
+
+```
+
+**Example Usage:**
+```
+    >>> rest = Restaurant('Dumplings R Us', '$$', ['Chinese', 'Japanese'])
+    >>> rest.name
+    'Dumplings R Us'
+    >>> rest.price_range
+    '$$'
+    >>> rest.cuisine_list
+    ['Chinese', 'Japanese']
+    >>> rest.reviews
+    []
+    """
+```
+##Question 13b:
+    
+Assuming you implemented the restaurant class properly, now make a class to hold a review.
+
+```python
+"""
+@Description:
+    Creates a review that will contain the following information:
+    Author (string) - name of person who wrote the review
+    Rating (string) - 1-5 stars as a rating system
+    Recommends (bool) - Would recommend this restaurant
+"""
+
+
+
+
+
+
+
+
+
+
+```
+
+**Example Usage:**
+```
+rest = Restaurant('Mexican Grill', '$$$', ['Mexican'])
+Print(rest.reviews)
+Output: []
+
+review = Review('Susur Lee', '*****', True)
+rest.add_review(review)
+
+
+# Notice that by printing the first review we get a formatted statement!
+# Thats a __str__ method being implemented for the review class.
+Print(rest.reviews[0])
+Output: 'Susur Lee gives a **** star rating and recommends you do eat there'
+
+```
+
+##Question 13c:
+
+Implement the `__str__` method for the review class.
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
+
+
+
+
+##Question 13d:
+Complete method recommended_percentage in class Restaurant:
+
+```python
+"""
+@Description:
+    This method returns a percentage based on the number of stars in your restaurant. 
+    1 star = 10% tip and 5 star = 50% tip. So it will return a recommended tip based on the bill total
+    and the number of stars.
+@Param:
+    total (float) - bill total
+@Returns:
+    tip (float)
+"""
+def recommended_percentage(self,total):
+
+
+
+
+
+
+
+
+
+
+```
