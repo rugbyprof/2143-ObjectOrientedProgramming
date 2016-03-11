@@ -400,3 +400,97 @@ def Decrypt(message,shift):
 
 
 ```
+
+#### List practice
+
+- What are the two ways to add something to a list? How are they different?
+- What are the two ways to remove something from a list? How are they different?
+- What is the difference between a list and a tuple?
+- In the Python shell, do the following:
+    - Define a variable named states that is an empty list
+    - Add Iowa to the list
+    - Now add Nebraska to the end of the list
+    - Define a variable states2 that is initialized with New York, Vermont, and New Hampshire
+    - Add Maine to the beginning of the list
+    - Add Massachusetts so that it is the third state in the list
+    - Add Pennsylvania to the list so that it appears before New York. Do this as if you DO NOT KNOW where New York is in the list
+        - HINT: See what `states2.index(“New York”)` does. What can you conclude about what `listname.index(item)` does?
+    - Remove the 5th state from the list and print that state’s name
+
+
+#### Grayscale Class
+
+Create a class called `GrayScaler` that will convert an rgb value to grayscale by some chosen method. Your class should expect an rgb value that will be represented as a `tuple` looking something like this `(128,45,100)` where the values in order are red,green,blue and must be between 0-255 inclusive. So `(0,0,0)` and `(255,255,255)` are ok and are black and white respectively. 
+
+So what is gray scale? Its where you take the 3 individual parts of a color and create a single value to assign to all three.
+For example here is red: `(0,255,0)` and here is the gray scale equivalent: `(85,85,85)` (using the average method from below).
+
+Your `GrayScaler` class is serious about its grayscalin` powers and has three methods to turn a color into its monochromatic equivalent:
+- lightness
+- average
+- luminosity
+- custom
+
+**Lightness**
+
+The lightness method averages the most prominent and least prominent colors: `(max(R, G, B) + min(R, G, B)) / 2`.
+
+**Average**
+
+The average method simply averages the values: `(R + G + B) / 3`.
+
+**Luminosity**
+
+This method also averages the values, but it forms a weighted average to account for human perception. We’re more sensitive to green than other colors, so green is weighted most heavily. The formula for luminosity is `0.21 * R + 0.72 * G + 0.07 * B`
+
+**Custom**
+
+This method allows the user to pass in three floats to act as the weights in your formula: `w1 * R + w2 * G + w3 * B`
+
+Here is some example usage to help you determine how to design your class:
+
+```python
+
+myColor = (255,0,0)
+grayish = GrayScaler(myColor)
+gray1 = grayish.Average()
+gray2 = grayish.Custom(.33,.44,.23)
+
+
+grayish2 = GrayScaler() # defaults to black in the class
+grayish2.SetColor(255,192,203)
+gray3 = grayish2.Luminosity()
+```
+
+```python
+"""
+@Description: Gets an RGB color represented as a tuple, and converts it to a gray scale equivalent based on chosen method.
+@Methods:
+    Lightness - as described above
+    Average - as described above
+    Luminosity - as described above
+    Custom - as described above
+    SetColor - Lets user change the color originally passed in.
+"""
+class GrayScaler(object):
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
