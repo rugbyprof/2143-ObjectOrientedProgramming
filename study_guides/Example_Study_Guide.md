@@ -1,5 +1,6 @@
 
---
+##Question 1:
+
 Consider this program:
 ```python
 L = [4, 10, 8]
@@ -26,7 +27,8 @@ Fill in the Python Shell output after this program has executed.
 
 
 ```
---
+
+##Question 2:
 
 See the phone pad below:
 
@@ -41,11 +43,11 @@ alpha = ['ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQRS', 'TUV', 'WXYZ']
 
 ```
 
---
+##Question 2a:
 
 Would the previous function solution have been better with a dictionary? Explain.
 
---
+##Question 3:
 
 Write a function called `guessAnswer` that will guess the correct answer and return the number of guesses that were necessary. This function receives 3 values: 
 - `low`: lowest value that answer could be (inclusive)
@@ -54,11 +56,11 @@ Write a function called `guessAnswer` that will guess the correct answer and ret
 
 Your function should find the answer in less than O(N) time. Meaning you shouldn't loop from low -> high testing every value. 
 
---
+##Question 3a
 
 Try turning your `guessAnswer` function into a class that actually runs a game. 
 
---
+##Question 4a:
 
 #### Airplane & Flight Class
 
@@ -120,7 +122,7 @@ print(airplane.miles)
 # Prints: 45267.7
 ```
 
---
+##Question 4b:
 
 #### \_\_str__ Method
 
@@ -173,6 +175,9 @@ Example Here:
 
 
 ```
+
+##Question 4c:
+
 #### Overloading an Operator
 
 Write an `__eq__` method in class `Airplane` that compares two Airplane objects to see if they are equal.
@@ -181,7 +186,7 @@ Consider two Airplanes equal if they have the same serial number.
 
 
 
---
+##Question 4d:
 
 #### Class Flight
 
@@ -220,6 +225,7 @@ print(f.passengers)
 #Prints: []
 ```
 
+##Question 4e:
 
 #### Add Method to Flight Class
 
@@ -259,6 +265,7 @@ print(f.add('Jen'))
 
 -- 
 
+##Question 5:
 #### Dictionary Class
 
 Write a class called `wordDictonary` that represents an actual dictionary. Your class should contain the following methods:
@@ -273,7 +280,7 @@ Write a class called `wordDictonary` that represents an actual dictionary. Your 
 - `removeWord`:
     - this method lets you remove a word from the dictionary. 
     
---
+##Question 6:
 
 ### Median Trickery
 
@@ -301,6 +308,7 @@ def myMedian(L):
 
 
 ```
+##Question 7:
 
 ### Coffee Class 
 A coffee shop lets customers purchase coffee with pre-loaded electronic cards. They can reload their cards
@@ -333,11 +341,12 @@ the class is used) below.
 - Print the owner and balance of both cards.
 
 
+##Question 8:
 #### Unique Dictionary
 
 Use a dictionary to help you create a list of unique values. Lets say I asked you to create a list of _`N`_ integers where _`0 <= N <= 99999`_ and any value of _`N`_ occurs only once within the list. You cannot use the `in` operator to check and see if the value is already in the list. You also can't use sets like so: `myNums = list(set(myNums))`. So, use a dicionary to help keep your items unique. 
 
---
+##Question 9:
 
 #### Password File
 
@@ -376,7 +385,9 @@ for filename in files_list[:-1]:
     if found:  # This is correct. Do not modify.
         return password
 ```
-#### Encoding
+
+##Question 10:
+#### Simple Encryption
 
 Two friends like to send messages to each other, but they don’t want anyone else to read the messages. To keep the messages private, they change each letter in the original message to a different letter of the alphabet (by adding an integer value to it). For every letter, they both know which letter will be substituted for it, which is called an encoding. The message will contain only lowercase letters. It will not contain whitespace, digits, or punctuation. 
 
@@ -400,6 +411,7 @@ def Decrypt(message,shift):
 
 
 ```
+##Question 11:
 
 #### List practice
 
@@ -417,12 +429,14 @@ def Decrypt(message,shift):
         - HINT: See what `states2.index(“New York”)` does. What can you conclude about what `listname.index(item)` does?
     - Remove the 5th state from the list and print that state’s name
 
+##Question 12:
 
 #### Grayscale Class
 
 Create a class called `GrayScaler` that will convert an rgb value to grayscale by some chosen method. Your class should expect an rgb value that will be represented as a `tuple` looking something like this `(128,45,100)` where the values in order are red,green,blue and must be between 0-255 inclusive. So `(0,0,0)` and `(255,255,255)` are ok and are black and white respectively. 
 
-So what is gray scale? Its where you take the 3 individual parts of a color and create a single value to assign to all three.
+So what is gray scale? Its where you take the 3 individual parts of a color and using those values you calculate a single value that will be assigned to each of the 3 components, making it some shade of gray.
+ 
 For example here is red: `(0,255,0)` and here is the gray scale equivalent: `(85,85,85)` (using the average method from below).
 
 Your `GrayScaler` class is serious about its grayscalin` powers and has three methods to turn a color into its monochromatic equivalent:
@@ -457,14 +471,15 @@ gray1 = grayish.Average()
 gray2 = grayish.Custom(.33,.44,.23)
 
 
-grayish2 = GrayScaler() # defaults to black in the class
+grayish2 = GrayScaler() # defaults to black in the class if no color provided
 grayish2.SetColor(255,192,203)
 gray3 = grayish2.Luminosity()
 ```
 
 ```python
 """
-@Description: Gets an RGB color represented as a tuple, and converts it to a gray scale equivalent based on chosen method.
+@Description: Gets an RGB color represented as a tuple, and converts it to a 
+				gray scale equivalent based on chosen method.
 @Methods:
     Lightness - as described above
     Average - as described above
