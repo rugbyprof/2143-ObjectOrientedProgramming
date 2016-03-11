@@ -378,7 +378,9 @@ for filename in files_list[:-1]:
 
 Two friends like to send messages to each other, but they don’t want anyone else to read the messages. To keep the messages private, they change each letter in the original message to a different letter of the alphabet (by adding an integer value to it). For every letter, they both know which letter will be substituted for it, which is called an encoding. The message will contain only lowercase letters. It will not contain whitespace, digits, or punctuation. 
 
-The receiver of a secret message doesn’t want to convert it back to the original message by hand. Instead, that person asks you to write a function to do it. In other words, were creating a shift cipher where if the "shift" was 4, then A = E, B = F, ... Y = C, Z = D
+The receiver of a secret message doesn’t want to convert it back to the original message by hand. Instead, that person asks you to write a function to do it. In other words, were creating a shift cipher where if the "shift" was 4, then:
+
+`A = E, B = F, ... Y = C, Z = D`
 
 Define a function that given a secret message and the encoding used, returns the original message. 
 
