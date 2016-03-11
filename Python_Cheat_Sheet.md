@@ -4,6 +4,8 @@
     - Read a string from standard input. The trailing newline is stripped. The prompt string, if given, is printed without a trailing newline before reading.
 - `abs(x)` -> number
     - Return the absolute value of x.
+- `chr(i)` -> character
+    - Return a string of one character whose ASCII code is the integer i. For example, chr(97) returns the string 'a'. This is the inverse of ord().  
 - `int(x)` -> int
     - Convert x to an integer, if possible. A floating point argument will be truncated towards zero.
 - `len(x)` -> int
@@ -15,6 +17,8 @@
 - `min(a, b, c, ...)` -> object
     - With a single iterable argument, return its smallest item.
     - With two or more arguments, return the smallest argument.
+- `ord(c)` -> int
+    - Given a string of length one, return an integer representing the Unicode code point of the character when the argument is a unicode object, or the value of the byte when the argument is an 8-bit string. For example, ord('a') returns the integer 97 
 - `print(value, ..., sep=' ', end='\n')` -> NoneType
     - Prints the values. Optional keyword arguments:
     - sep: string inserted between values, default a space.
