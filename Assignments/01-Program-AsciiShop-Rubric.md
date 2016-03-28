@@ -6,12 +6,12 @@
 | -       | Code could be ran.                                         | pass/fail   |          | ![Alt text][1] |
 | -       | Code was commented                                         |    15       |    15    | ![Alt text][1] |
 | -       | Followed naming conventions (named your file correctly).   |    10       |     10   | ![Alt text][1] |
-| ***2*** | ***Flip Method       ***                                   |             |          | ![Alt text][1] |
+| ***2*** | ***Flip Method***                                          |             |          | ![Alt text][1] |
 | -       | worked                                                     |    20       |    20    | ![Alt text][1] |
 | -       | could choose the direction                                 |    5        |    5     | ![Alt text][1] |
-| ***4*** | ***Invert Method ***                                       |             |          | ![Alt text][1] |
+| ***4*** | ***Invert Method***                                       |             |          | ![Alt text][1] |
 | -       | worked                                                     |    20       |    20    | ![Alt text][1] |
-| ***6*** | ***Extra Credit ***                                        |             |          | ![Alt text][1] |
+| ***6*** | ***Extra Credit***                                        |             |          | ![Alt text][1] |
 | -       | Did one of the extra credit methods                        |    20       |    0     | ![Alt text][1] |
 |         | Totals:                                                    | **100**     |  **100** | ![Alt text][1] |
 
