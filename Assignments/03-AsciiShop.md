@@ -1,4 +1,4 @@
-# Homework 3 - AsciiShop
+# Program 1 - AsciiShop
 Due on github by ***Thursday March 3<sup>rd</sup>*** by class time. 
 
 ### Requirements
