@@ -9,7 +9,7 @@
 | ***2*** | ***Flip Method***                                          |             |          | ![Alt text][1] |
 | -       | worked                                                     |    30       |    30    | ![Alt text][1] |
 | -       | could choose the direction                                 |    10        |    10     | ![Alt text][1] |
-| ***4*** | ***Invert Method***                                        |             |          | ![Alt text][1] |
+| ***3*** | ***Invert Method***                                        |             |          | ![Alt text][1] |
 | -       | worked                                                     |    30       |    30    | ![Alt text][1] |
 |         | Totals:                                                    | **100**     |  **100** | ![Alt text][1] |
 | ***E*** | ***Extra Credit***                                         |             |          | ![Alt text][1] |
