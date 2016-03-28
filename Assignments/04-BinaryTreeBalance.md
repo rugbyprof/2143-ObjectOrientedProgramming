@@ -21,18 +21,19 @@ Also start small. Like 7 values. Remember a `full` & `complete` tree holds 2<sup
 - Add another insert method so that it receives a `list` instead of an `int`:
 
 ```python
+"""
 @Name: insertList
 @Description:
     Receives a list of unordered integers and inserts them into the binary tree in such a manner that the resulting tree is balanced.
 @Params:
     values (List) - unorderd list of integers
 @Returns: None
+"""
 ```
 
 ***Additional Helper Code***
 
 ```python
-
 # Create a list to hold unique integers
 unique = []
 
