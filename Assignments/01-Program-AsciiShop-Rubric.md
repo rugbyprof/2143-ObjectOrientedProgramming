@@ -5,7 +5,10 @@
 | -       | Code was on github                                         | pass/fail   |          | ![Alt text][1] |
 | -       | Code could be ran.                                         | pass/fail   |          | ![Alt text][1] |
 | -       | Code was commented                                         |    20       |    20    | ![Alt text][1] |
-| -       | Followed naming conventions (named your file correctly).   |    10       |     10   | ![Alt text][1] |
+| -       | Followed naming conventions (named your file correctly).   |            |         | ![Alt text][1] |
+|         |      Classname: asciiShop                                  |    3       |     3   | ![Alt text][1] |
+|         |     Foldername: AsciiShop for all your files.             |    3       |     3   | ![Alt text][1] |   
+|         |     Renamed asciiArtClass.py to asciiShop.py             |    3       |     3   | ![Alt text][1] |
 | ***2*** | ***Flip Method***                                          |             |          | ![Alt text][1] |
 | -       | worked                                                     |    30       |    30    | ![Alt text][1] |
 | -       | could choose the direction                                 |    10        |    10     | ![Alt text][1] |
