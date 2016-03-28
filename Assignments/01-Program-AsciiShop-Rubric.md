@@ -5,13 +5,14 @@
 | -       | Code was on github                                         | pass/fail   |          | ![Alt text][1] |
 | -       | Code could be ran.                                         | pass/fail   |          | ![Alt text][1] |
 | -       | Code was commented                                         |    15       |    15    | ![Alt text][1] |
-| -       | Followed naming conventions (named your file correctly).   |    10          |  10   | ![Alt text][1] |
-| ***2*** | ***Live or Die Method***                                   |             |          | ![Alt text][1] |
-| -       | Solution worked for inner cells                            |    10       |    10    | ![Alt text][1] |
-| -       | Solution worked for edge cells                             |    20       |    20    | ![Alt text][1] |
-| -       | Rules applied properly according to game rules             |    20       |    20    | ![Alt text][1] |
-| -       | Method returned a 0 (zero) or a 1 (one) not T/F or other.  |    15       |    15    | ![Alt text][1] |
-| ***3*** | ***Efficient Solution***                                   |    10       |   10     | ![Alt text][1] |
+| -       | Followed naming conventions (named your file correctly).   |    10       |     10   | ![Alt text][1] |
+| ***2*** | ***Flip Method       ***                                   |             |          | ![Alt text][1] |
+| -       | worked                                                     |    20       |    20    | ![Alt text][1] |
+| -       | could choose the direction                                 |    5        |    5     | ![Alt text][1] |
+| ***4*** | ***Invert Method ***                                       |             |          | ![Alt text][1] |
+| -       | worked                                                     |    20       |    20    | ![Alt text][1] |
+| ***6*** | ***Extra Credit ***                                        |             |          | ![Alt text][1] |
+| -       | Did one of the extra credit methods                        |    20       |    0     | ![Alt text][1] |
 |         | Totals:                                                    | **100**     |  **100** | ![Alt text][1] |
 
 
