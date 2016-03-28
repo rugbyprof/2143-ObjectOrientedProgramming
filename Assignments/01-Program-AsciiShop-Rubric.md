@@ -12,7 +12,7 @@
 | ***4*** | ***Invert Method***                                        |             |          | ![Alt text][1] |
 | -       | worked                                                     |    30       |    30    | ![Alt text][1] |
 |         | Totals:                                                    | **100**     |  **100** | ![Alt text][1] |
-| ***6*** | ***Extra Credit***                                         |             |          | ![Alt text][1] |
+| ***E*** | ***Extra Credit***                                         |             |          | ![Alt text][1] |
 | -       | Did one of the extra credit methods                        |    20       |    0     | ![Alt text][1] |
 
 ### Comments:
