@@ -8,6 +8,7 @@ Due on github by ***Thursday March 3<sup>rd</sup>*** by class time.
 - Additional methods to add:
 
 ```python
+"""
 @Name: flip
 @Description:
     This method will flip an image horizontally, or vertically. 
@@ -21,10 +22,14 @@ Due on github by ***Thursday March 3<sup>rd</sup>*** by class time.
     This method will take all the lightest pixels and make them the darkest, next lightest => next darkest, etc..
 @Params: None
 @Returns: (string) - Inverted ascii image.
+"""
+```
 
 
 EXTRA CREDIT (Pick One):
 
+```python
+"""
 @Name: crop
 @Description:
     This will crop an image from a starting x,y coordinate to an ending x,y coordinate. For example:
@@ -39,7 +44,12 @@ EXTRA CREDIT (Pick One):
   start (tuple) - (x,y)
   end (tuple) - (x,y)
 @Returns: (string) - Cropped ascii image.
+"""
+```
+OR:
 
+```python
+"""
 @Name: resize 
 @Description:
     This method will resize the already converted ascii image. The problem with this is you can't just chop off pixels (thats cropping), 
@@ -63,6 +73,7 @@ Enlarging-
     resize(2,'shrink') would shrink the ascii image by a factor of 2 (or half)
     resize(2,'enlarge') would double the size of the ascii image.
 @Returns: (string) - Inverted ascii image.
+"""
 ```
 
 - You should also make it so a user can pass in an image name to the class. 
