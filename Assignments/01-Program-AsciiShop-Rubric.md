@@ -1,21 +1,21 @@
 ### Program 1:
 | #       | Item                                                       | Value       | Earned   |                |
 |:--------|:-----------------------------------------------------------|:------------|:---------|:---------------|
-| ***1*** | ***General***                                              |             |          | ![Alt text][1] |
+| ***1*** | ***General***                                              |             |          |  |
 | -       | Code was on github                                         | pass/fail   |          | ![Alt text][1] |
 | -       | Code could be ran.                                         | pass/fail   |          | ![Alt text][1] |
 | -       | Code was commented                                         |    20       |    20    | ![Alt text][1] |
-| -       | Followed naming conventions (named your file correctly).   |            |         | ![Alt text][1] |
+| -       | Followed naming conventions (named your file correctly).   |            |         |   |
 |         |      Classname: asciiShop                                  |    3       |     3   | ![Alt text][1] |
-|         |     Foldername: AsciiShop for all your files.             |    3       |     3   | ![Alt text][1] |   
-|         |     Renamed asciiArtClass.py to asciiShop.py             |    3       |     3   | ![Alt text][1] |
-| ***2*** | ***Flip Method***                                          |             |          | ![Alt text][1] |
+|         |     Foldername: AsciiShop for all your files.              |    3       |     3   | ![Alt text][1] |   
+|         |     Renamed asciiArtClass.py to asciiShop.py               |    4       |     4   | ![Alt text][1] |
+| ***2*** | ***Flip Method***                                          |             |          |   |
 | -       | worked                                                     |    30       |    30    | ![Alt text][1] |
 | -       | could choose the direction                                 |    10        |    10     | ![Alt text][1] |
-| ***3*** | ***Invert Method***                                        |             |          | ![Alt text][1] |
+| ***3*** | ***Invert Method***                                        |             |          |   |
 | -       | worked                                                     |    30       |    30    | ![Alt text][1] |
 |         | Totals:                                                    | **100**     |  **100** | ![Alt text][1] |
-| ***E*** | ***Extra Credit***                                         |             |          | ![Alt text][1] |
+| ***E*** | ***Extra Credit***                                         |             |          |   |
 | -       | Did one of the extra credit methods                        |    20       |    0     | ![Alt text][1] |
 
 ### Comments:
