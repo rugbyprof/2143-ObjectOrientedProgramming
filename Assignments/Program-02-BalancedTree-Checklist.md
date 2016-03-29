@@ -1,20 +1,20 @@
 ## Program 2 - Binary Tree Balanced Loading
 | #       | Item                                                                         | Value       | Earned   |                |
-|:--------|:-----------------------------------------------------------------------------|:------------|:---------|:---------------|
-| ***1*** | ***General***                                                                |  -----------| -------  |------------   |
+|:--------|:-----------------------------------------------------------------------------|------------:|---------:|:---------------|
+| ***1*** | ***General***                                                                |             |          |                |
 | -       | Code was on github                                                           | pass/fail   |          | ![Alt text][1] |
 | -       | Code could be ran.                                                           | pass/fail   |          | ![Alt text][1] |
 | -       | Code was commented                                                           |    15       |    15    | ![Alt text][1] |
-| -       | Followed naming conventions (named your file correctly).                     | ----------  | -------- | -------------- |
+| -       | Followed naming conventions (named your file correctly).                     |             |          |                |
 |         |      Classname: BinarySearch to BalancedSearch                               |    5        |     5    | ![Alt text][1] |
 |         |     Foldername: BalancedBinaryTree for all your files.                       |    5        |     5    | ![Alt text][1] |   
 |         |     Renamed binary_search_tree_list.py to balanced_binary_tree.py            |    5        |     5    | ![Alt text][1] |
-| ***2*** | ***Prompted User***                                                          | ----------  | -------- |--------------|
+| ***2*** | ***Prompted User***                                                          |             |          |                |
 | -       | asked user                                                                   |    10       |    10    | ![Alt text][1] |
 | -       | used entered value                                                           |    10       |    10    | ![Alt text][1] |
-| ***3*** | ***Balanced Tree***                                                          | ----------  | -------- |--------------|
+| ***3*** | ***Balanced Tree***                                                          |             |          |                |
 | -       | worked                                                                       |    25       |    25    | ![Alt text][1] |
-| ***E*** | ***Added Method***                                                           | ----------  | -------- |--------------|
+| ***E*** | ***Added Method***                                                           |             |          |                |
 | -       | Added insert method that received an entire list                             |    10       |    10    | ![Alt text][1] |
 |         | Totals:                                                                      | **100**     |  **100** | ![Alt text][1] |
 
