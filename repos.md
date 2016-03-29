@@ -4,7 +4,6 @@
 - Ellis	Kevin	ktellis0110	https://github.com/Kellis224
 - Fuxa	Nicholas	nafuxa0726	https://github.com/liquidlife413
 - Gborgli	Christopher	cagborgli0311	https://github.com/cagborgli
-- Gonzalez	Clara	cgonzalez0830	https://github.com/cgn3llia7l
 - Harrelson	Braden	btharrelson0215	https://github.com/BradenHarrelson
 - Maughan	Zachary	zkmaughan1023	https://github.com/Synotaph
 - Mounce	Christine	clmounce0528	https://github.com/MounceCL
