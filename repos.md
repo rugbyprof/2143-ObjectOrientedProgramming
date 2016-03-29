@@ -9,7 +9,6 @@
 - Mounce	Christine	clmounce0528	https://github.com/MounceCL
 - Mullins	Samuel	ssmullins0727	https://github.com/ssmullins
 - Muskwe	YananaiTadiwa	ytmuskwe1209	https://github.com/EditSokotsu
-- Nuding	Landon	lcnuding1121	https://github.com/KaiSaitou
 - Placencia	Carlos	caplacencia0506	https://github.com/CarlosPlacencia
 - Poole	Kellie	kapoole1007	https://github.com/kellieapoole
 - Rollerson	Keona	krollerson0809	https://github.com/Kegoma11
