@@ -1,4 +1,4 @@
-### Program 1:
+### Program 2:
 | #       | Item                                                       | Value       | Earned   |                |
 |:--------|:-----------------------------------------------------------|:------------|:---------|:---------------|
 | ***1*** | ***General***                                              |             |          |  |
@@ -6,17 +6,17 @@
 | -       | Code could be ran.                                         | pass/fail   |          | ![Alt text][1] |
 | -       | Code was commented                                         |    20       |    20    | ![Alt text][1] |
 | -       | Followed naming conventions (named your file correctly).   |            |         |   |
-|         |      Classname: asciiShop                                  |    3       |     3   | ![Alt text][1] |
-|         |     Foldername: AsciiShop for all your files.              |    3       |     3   | ![Alt text][1] |   
-|         |     Renamed asciiArtClass.py to asciiShop.py               |    4       |     4   | ![Alt text][1] |
-| ***2*** | ***Flip Method***                                          |             |          |   |
+|         |      Classname: BinarySearch to BalancedSearch             |    3       |     3   | ![Alt text][1] |
+|         |     Foldername: BalancedBinaryTree for all your files.      |    3       |     3   | ![Alt text][1] |   
+|         |     Renamed binary_search_tree_list.py to balanced_binary_tree.py  |    4       |     4   | ![Alt text][1] |
+| ***2*** | ***Prompted User***                                          |             |          |   |
+| -       | asked user                                                 |    30       |    30    | ![Alt text][1] |
+| -       | used entered value                                         |    30       |    30    | ![Alt text][1] |
+| ***3*** | ***Balanced Tree***                                        |             |          |   |
 | -       | worked                                                     |    30       |    30    | ![Alt text][1] |
-| -       | could choose the direction                                 |    10        |    10     | ![Alt text][1] |
-| ***3*** | ***Invert Method***                                        |             |          |   |
-| -       | worked                                                     |    30       |    30    | ![Alt text][1] |
+| ***E*** | ***Added Method***                                         |             |          |   |
+| -       | Added insert method that received an entire list           |    20       |    0     | ![Alt text][1] |
 |         | Totals:                                                    | **100**     |  **100** | ![Alt text][1] |
-| ***E*** | ***Extra Credit***                                         |             |          |   |
-| -       | Did one of the extra credit methods                        |    20       |    0     | ![Alt text][1] |
 
 ### Comments:
 ```
