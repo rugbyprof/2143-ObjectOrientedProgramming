@@ -1,4 +1,4 @@
-# Homework 4 - Binary Tree Balanced Loading
+# Program 2 - Binary Tree Balanced Loading
 Due on github by ***Thursday March 10<sup>rd</sup>*** by class time. 
 
 ### Overview
