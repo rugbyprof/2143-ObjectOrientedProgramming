@@ -3,9 +3,16 @@
  
  Catches ANY type of exception
  """
- 
- try:
-    no_return()
-except:
-    print("I caught an exception")
+def no_return():
+    print("I am about to raise an exception") 
+    try:
+        x = 1 / 0
+    except:
+        print("I caught an exception and divided by zero")
+    print("This line will never execute") 
+    return "I won't be returned"
+    
+
 print("executed after the exception")
+
+print(no_return())

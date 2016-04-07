@@ -57,16 +57,29 @@ def printDiff(C, X, Y, i, j):
 if __name__=='__main__':
        
     if len(sys.argv) < 2:
+        print("Usage: file_open filename")
         sys.exit()
     else:
+  
+        try:
+            f = open(sys.argv[1])
+        except IOError as e:
+            print("I/O error({0}): {1}".format(e.errno, e.strerror))
+        except:
+            print("Unexpected error:", sys.exc_info()[0])
+            raise
+        
+        
+        for line in f.readlines():
+            X,Y = line.strip().split(',')
+            m = len(X)
+            n = len(Y)
+            C = LCS(X,Y)
 
-        with open(sys.argv[1]) as f:
-            for line in f:
-                line = line.strip()
-                if len(line) == 0:
-                    continue
-                print(line)
-    
+            print("Some LCS: '%s'" % backTrack(C, X, Y, m, n))
+            print("All LCSs: %s" % backTrackAll(C, X, Y, m, n))  
+        
+   
 #   X = "AATCC"
 # Y = "ACACG"
 # m = len(X)

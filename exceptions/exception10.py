@@ -1,13 +1,13 @@
-"""
-"""
+import random
 
 some_exceptions = [ValueError, TypeError, IndexError, None]
+raise Exception("some error")
 try:
     choice = random.choice(some_exceptions)
     print(choice)
     print("raising {}".format(choice))
-    if choice:
-        pass
+    # if choice:
+    #     pass
     raise choice("An error")
 except ValueError:
     print("Caught a ValueError")
