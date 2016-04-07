@@ -78,19 +78,19 @@ def funny_division3(anumber):
 # finally:
 #     print("This cleanup code is always called")
      
-# try:
-#     no_return()
-# except:
-#     print("I caught an exception")
-# print("executed after the exception")
+try:
+    no_return()
+except:
+    print("I caught an exception")
+print("executed after the exception")
 
 
 # print(funny_division(0))
 # print(funny_division(50.0))
 # print(funny_division("hello"))
 
-# for val in (0, "hello", 50.0, 13):
-#     print("Testing {}:".format(val), end=" ")
-#     print(funny_division3(val))
+for val in (0, "hello", 50.0, 13):
+    print("Testing {}:".format(val), end=" ")
+    print(funny_division3(val))
 
 #funny_division3(13)
