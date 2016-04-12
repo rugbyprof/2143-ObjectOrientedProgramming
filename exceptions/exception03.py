@@ -13,7 +13,4 @@ def no_return():
     print("This line will never execute") 
     return "I won't be returned"
     
-    
-
-    
 no_return()

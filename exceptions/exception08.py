@@ -6,7 +6,7 @@ Or maybe we want to do something with an exception and then allow it to continue
 def funny_division3(anumber):
        try:
            if anumber == 13:
-               raise ValueError("13 is an unlucky number")
+               ValueError("13 is an unlucky number")
            return 100 / anumber
        except ZeroDivisionError:
            return "Enter a number other than zero"
@@ -14,4 +14,8 @@ def funny_division3(anumber):
            return "Enter a numerical value"
        except ValueError:
            print("No, No, not 13!")
-           #raise raise
+           raise 
+           
+for val in (0, "hello", 50.0, 13):
+    print("Testing {}:".format(val), end=" ")
+    print(funny_division3(val))
