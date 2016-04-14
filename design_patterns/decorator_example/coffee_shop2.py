@@ -27,11 +27,9 @@ class Decorator(DrinkComponent):
     def __init__(self, drinkComponent):
         self.component = drinkComponent
     def getTotalCost(self):
-        return self.component.getTotalCost() + \
-          DrinkComponent.getTotalCost(self)
+        return self.component.getTotalCost() + DrinkComponent.getTotalCost(self)
     def getDescription(self):
-        return self.component.getDescription() + \
-          ' ' + DrinkComponent.getDescription(self)
+        return self.component.getDescription() + ' ' + DrinkComponent.getDescription(self)
 
 class ExtraEspresso(Decorator):
     cost = 0.75

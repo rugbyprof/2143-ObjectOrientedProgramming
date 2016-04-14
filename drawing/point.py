@@ -1,4 +1,4 @@
-class Point(object):
+class point(object):
     def __init__(self,x=None,y=None):
         if type(x) is tuple:            
             self.x = x[0]
@@ -28,10 +28,10 @@ class Point(object):
           
          
 if __name__=='__main__':
-    p = Point(4,5)
+    p = point(4,5)
     print(p)
     
-    r = Point((6,7))
+    r = point((6,7))
     print(r)
     
     print(p.x)
@@ -42,4 +42,4 @@ if __name__=='__main__':
     r.shift(4,5)
     print(r)
     
-    print(type(p) is Point)
+    print(type(p) is point)

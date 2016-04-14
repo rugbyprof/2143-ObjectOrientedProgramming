@@ -34,3 +34,7 @@ finally:
     stdscr.keypad(0)
     curses.echo()
     curses.endwin()
+    
+    
+
+
