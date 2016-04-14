@@ -9,14 +9,14 @@ class Line(object):
         elif type(p1) is tuple:
             self.p1 = Point(p1)
         else:
-            raise("oops")
+            raise TypeError("oops")
             
         if type(p2) is Point:
             self.p2 = p2
         elif type(p2) is tuple:
             self.p2 = Point(p2)
         else:
-            raise("oops")
+            raise TypeError("oops")
             
     def __str__(self):
         return "<%s , %s>" % (self.p1,self.p2)
