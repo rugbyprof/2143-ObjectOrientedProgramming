@@ -33,4 +33,5 @@ if __name__=='__main__':
     
     print(L1)
     print(L1.length())
+    print(dir(L1))
     
