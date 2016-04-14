@@ -9,14 +9,14 @@ class line(object):
         elif type(p1) is tuple:
             self.p1 = point(p1)
         else:
-            raise("oops")
+            raise TypeError("oops")
             
         if type(p2) is point:
             self.p2 = p2
         elif type(p2) is tuple:
             self.p2 = point(p2)
         else:
-            raise("oops")
+            raise TypeError("oops")
             
     def __str__(self):
         return "<%s , %s>" % (self.p1,self.p2)
@@ -34,4 +34,3 @@ if __name__=='__main__':
     print(L1)
     print(L1.length())
     print(dir(L1))
-    
