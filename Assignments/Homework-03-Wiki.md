@@ -21,5 +21,5 @@ Due: 24 Apr by Midnight (Sunday)
 
 
 ### Deliverables
-- Your content additions will be added directly to the OOP wiki, changes will be tracked by github.
+- Your content will be added directly to the wiki, changes will be tracked by github, therefore nothing to submit seperately.
 
