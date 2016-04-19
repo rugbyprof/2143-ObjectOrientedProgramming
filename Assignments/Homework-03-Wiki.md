@@ -9,7 +9,6 @@ Due: 24 Apr by Midnight (Sunday)
     - code examples
 - The length of your contribution will depend on the topic you choose, but should be thorough.
 - You can add to multiple topics. For example you find a good example for something that's already done, just add it.
-- This will end up being our study guide for the final, so you might want to read all entries as well as do a good job contributing.
 
 ### Instructions
 - Go here: https://github.com/rugbyprof/2143-ObjectOrientedProgramming/wiki 
