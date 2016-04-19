@@ -1,8 +1,5 @@
 from line import *
 
-
-
-
 class shape(object):
     def __init__(self,o,w,h):
         self.sides = []         # a list of lines  
@@ -22,8 +19,6 @@ class shape(object):
     def __str__():
         pass
         
-
-         
 class rectangle(shape):
     def __init__(self,o,w,h):
         super().__init__(o,w,h)
@@ -43,7 +38,7 @@ class rectangle(shape):
        
 
     def __str__(self):
-        return "%s %s %s %s" % (self.origin,self.width,self.height,self.lines)
+        return "%s %s %s %s" % (self.origin,self.width,self.height,self.sides)
         
         
 class right_triangle(shape):

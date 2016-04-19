@@ -597,6 +597,10 @@ if __name__=="__main__":
     r1 = Rock((200,100),15,70)
     r2 = Rock((200,100),15,85)
     
+    # rocks = []
+    # for i in range(100):
+    #     rocks.append(Rock((random.randint(win.width),random.randint(win.height)),15,random.randint(10,100)))
+    
     col = [random.random() for i in range(3)]+[1]
     while not win.has_exit:
         win.dispatch_events()
