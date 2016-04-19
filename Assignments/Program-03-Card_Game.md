@@ -1,4 +1,5 @@
-An in-depth example: card games
+## An in-depth example: card games
+
 Let's develop classes to represent playing cards, decks of cards, and poker hands. If you don’t play poker, you can read about it at http://wikipedia.org/wiki/Poker, but you probably won't need to, just keep reading.
 
 If you are not familiar with Anglo-American playing cards, you can read about them at http://wikipedia.org/wiki/Playing_cards.
@@ -11,33 +12,44 @@ An alternative is to use integers to encode the ranks and suits. In this context
 
 For example, this table shows the suits and the corresponding integer codes:
 
-Spades ↦↦ 3 Hearts ↦↦ 2 Diamonds ↦↦ 1 Clubs ↦↦ 0
+- Spades ↦↦ 3 
+- Hearts ↦↦ 2 
+- Diamonds ↦↦ 1 
+- Clubs ↦↦ 0
 
 This code makes it easy to compare cards; because higher suits map to higher numbers, we can compare suits by comparing their codes.
 
 The mapping for ranks is fairly obvious; each of the numerical ranks maps to the corresponding integer, and for face cards:
 
-Jack ↦↦ 11 Queen ↦↦ 12 King ↦↦ 13
+- Jack ↦↦ 11 
+- Queen ↦↦ 12 
+- King ↦↦ 13
 
 I am using the ↦↦ symbol to make it clear that these mappings are not part of the Python program. They are part of the program design, but they don’t appear explicitly in the code.
 
-15.8.1. Card class
+### Card class
 The class definition for Card looks like this:
 
+```python
 class Card(object):
     """represents a standard playing card."""
 
     def __init__(self, suit=0, rank=2):
         self.suit = suit
         self.rank = rank
+```
+
 As usual, the init method takes an optional parameter for each attribute. The default card is the 2 of Clubs.
 
 To create a Card, you call Card with the suit and rank of the card you want.
-
+```python
 queen_of_diamonds = Card(1, 12)
-15.8.2. Class attributes
+```
+
+### Class attributes
 In order to print Card objects in a way that people can easily read, we need a mapping from the integer codes to the corresponding ranks and suits. A natural way to do that is with lists of strings. We assign these lists to class attributes:
 
+```python
 # inside class Card:
 
     suit_names = ['Clubs', 'Diamonds', 'Hearts', 'Spades']
@@ -47,13 +59,15 @@ In order to print Card objects in a way that people can easily read, we need a m
     def __str__(self):
         return '%s of %s' % (Card.rank_names[self.rank],
                              Card.suit_names[self.suit])
-Variables like suit_names and rank_names, which are defined inside a class but outside of any method, are called class attributes because they are associated with the class object Card.
+```
+
+Variables like `suit_names` and `rank_names`, which are defined inside a class but outside of any method, are called class attributes because they are associated with the class object Card.
 
 This term distinguishes them from variables like suit and rank, which are called instance variables because they are associated with a particular instance.
 
-Both kinds of attribute are accessed using dot notation. For example, in __str__, self is a Card object, and self.rank is its rank. Similarly, Card is a class object, and Card.rank_names is a list of strings associated with the class.
+Both kinds of attribute are accessed using dot notation. For example, in` __str__`, `self` is a Card object, and `self.rank` is its rank. Similarly, `Card` is a class object, and `Card.rank_names` is a list of strings associated with the class.
 
-Every card has its own suit and rank, but there is only one copy of suit_names and rank_names.
+Every card has its own `suit` and `rank`, but there is only one copy of `suit_names` and `rank_names`.
 
 Putting it all together, the expression Card.rank_names[self.rank] means “use the attribute rank from the object self as an index into the list rank_names from the class Card, and select the appropriate string.”
 
@@ -61,11 +75,16 @@ The first element of rank_names is None because there is no card with rank zero.
 
 With the methods we have so far, we can create and print cards:
 
+```python
 >>> card1 = Card(2, 11)
 >>> print card1
 Jack of Hearts
-Diagram that shows the ``Card`` class object and one Card instance.
-Diagram that shows the Card class object and one Card instance.
+```
+
+![](https://s3.amazonaws.com/f.cl.ly/items/0X3r0o191q3p431D110I/card1.png)
+
+Diagram that shows the `Card` class object and one Card instance.
+
 
 Card is a class object, so it has type type. card1 has type Card. (To save space, I didn’t draw the contents of suit_names and rank_names).
 
@@ -227,5 +246,102 @@ Write a Deck method called deal_hands that takes two parameters, the number of h
 Inheritance is a useful feature. Some programs that would be repetitive without inheritance can be written more elegantly with it. Inheritance can facilitate code reuse, since you can customize the behavior of parent classes without having to modify them. In some cases, the inheritance structure reflects the natural structure of the problem, which makes the program easier to understand.
 
 On the other hand, inheritance can make programs difficult to read. When a method is invoked, it is sometimes not clear where to find its definition. The relevant code may be scattered among several modules. Also, many of the things that can be done using inheritance can be done as well or better without it.
+
+15.10. Class diagrams¶
+So far we have seen stack diagrams, which show the state of a program, and object diagrams, which show the attributes of an object and their values. These diagrams represent a snapshot in the execution of a program, so they change as the program runs.
+
+They are also highly detailed; for some purposes, too detailed. A class diagram is a more abstract representation of the structure of a program. Instead of showing individual objects, it shows classes and the relationships between them.
+
+There are several kinds of relationship between classes:
+
+Objects in one class might contain references to objects in another class. For example, each Rectangle contains a reference to a Point. This kind of relationship is called HAS-A, as in, “a Rectangle has a Point.”
+One class might inherit from another. This relationship is called IS-A, as in, “A Rectangle is a kind of Shape.”
+One class might depend on another in the sense that changes in one class would require changes in the other.
+A class diagram is a graphical representation of these relationships [2]. For example, this diagram shows the relationships between Card, Deck and Hand.
+
+![](15.10. Class diagrams¶
+So far we have seen stack diagrams, which show the state of a program, and object diagrams, which show the attributes of an object and their values. These diagrams represent a snapshot in the execution of a program, so they change as the program runs.
+
+They are also highly detailed; for some purposes, too detailed. A class diagram is a more abstract representation of the structure of a program. Instead of showing individual objects, it shows classes and the relationships between them.
+
+There are several kinds of relationship between classes:
+
+Objects in one class might contain references to objects in another class. For example, each Rectangle contains a reference to a Point. This kind of relationship is called HAS-A, as in, “a Rectangle has a Point.”
+One class might inherit from another. This relationship is called IS-A, as in, “A Rectangle is a kind of Shape.”
+One class might depend on another in the sense that changes in one class would require changes in the other.
+A class diagram is a graphical representation of these relationships [2]. For example, this diagram shows the relationships between Card, Deck and Hand.
+
+
+![](https://s3.amazonaws.com/f.cl.ly/items/1U3R2139101a093X1y3a/class1.png)
+Inheritance diagram for Point, Shape, and Rectangle.
+
+The arrow with a hollow triangle head represents an IS-A relationship; in this case it indicates that Rectangle inherits from Shape.
+
+The standard arrow head represents a HAS-A relationship; in this case a Deck has references to Card objects.
+
+A more detailed diagram might show that a Deck actually contains a list of Cards, but built-in types like list and dict are usually not included in class diagrams.
+
+15.11. Debugging
+When you start working with objects, you are likely to encounter some new exceptions. If you try to access an attribute that doesn’t exist, you get an AttributeError:
+
+>>> p = Point()
+>>> print p.z
+AttributeError: Point instance has no attribute 'z'
+If you are not sure what type an object is, you can ask:
+
+>>> type(p)
+<type '__main__.Point'>
+If you are not sure whether an object has a particular attribute, you can use the built-in function hasattr:
+
+>>> hasattr(p, 'x')
+True
+>>> hasattr(p, 'z')
+False
+The first argument can be any object; the second argument is a string that contains the name of the attribute.
+
+It is legal to add attributes to objects at any point in the execution of a program, but if you are a stickler for type theory, it is a dubious practice to have objects of the same type with different attribute sets. It is usually a good idea to initialize all of an objects attributes in the __init__ method.
+
+If you are not sure whether an object has a particular attribute, you can use the built-in function hasattr (see above ).
+
+Another way to access the attributes of an object is through the special attribute __dict__, which is a dictionary that maps attribute names (as strings) and values:
+
+>>> p = Point(3, 4)
+>>> print p.__dict__
+{'y': 4, 'x': 3}
+For purposes of debugging, you might find it useful to keep this function handy:
+
+def print_attributes(obj):
+    for attr in obj.__dict__:
+        print attr, getattr(obj, attr)
+print_attributes traverses the items in the object’s dictionary and prints each attribute name and its corresponding value.
+
+The built-in function getattr takes an object and an attribute name (as a string) and returns the attribute’s value.
+
+Inheritance can make debugging a challenge because when you invoke a method on an object, you might not know which method will be invoked.
+
+Suppose you are writing a function that works with Hand objects. You would like it to work with all kinds of Hands, like PokerHands, BridgeHands, etc. If you invoke a method like shuffle, you might get the one defined in Deck, but if any of the subclasses override this method, you’ll get that version instead.
+
+Any time you are unsure about the flow of execution through your program, the simplest solution is to add print statements at the beginning of the relevant methods. If Deck.shuffle prints a message that says something like Running Deck.shuffle, then as the program runs it traces the flow of execution.
+
+As an alternative, you could use this function, which takes an object and a method name (as a string) and returns the class that provides the definition of the method:
+
+def find_defining_class(obj, meth_name):
+    for ty in type(obj).mro():
+        if meth_name in ty.__dict__:
+            return ty
+Here’s an example:
+
+>>> hand = Hand()
+>>> print find_defining_class(hand, 'shuffle')
+<class 'Card.Deck'>
+So the shuffle method for this Hand is the one in Deck.
+
+find_defining_class uses the mro method to get the list of class objects (types) that will be searched for methods. “MRO” stands for “method resolution order.”
+
+Here’s a program design suggestion: whenever you override a method, the interface of the new method should be the same as the old. It should take the same parameters, return the same type, and obey the same preconditions and postconditions. If you obey this rule, you will find that any function designed to work with an instance of a superclass, like a Deck, will also work with instances of subclasses like a Hand or PokerHand.
+
+If you violate this rule, your code will collapse like (sorry) a house of cards.)
+
+
 
 Source: http://cs.colgate.edu/~jsommers/cosc101/html/oo.html
