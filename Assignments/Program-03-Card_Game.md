@@ -1,4 +1,18 @@
-## An in-depth example: card games
+## Video Poker
+
+| Hand	                 | Payout    |
+|:-----------------------|:---------:|
+| Royal Flush            |	800    | 
+| Four Aces or Eights    |		80 | 
+| Straight Flush         |		50 | 
+| Four Sevens            |		50 | 
+| Four of a Kind         |		25 | 
+| Full House             |		8 | 
+| Flush                  |		5  |
+| Straight               |		4 | 
+| Three of a Kind        |		3 | 
+| Two Pair               |		2 | 
+| Pair (Jacks or Better) |		1 | 
 
 Let's develop classes to represent playing cards, decks of cards, and poker hands. If you don’t play poker, you can read about it at http://wikipedia.org/wiki/Poker, but you probably won't need to, just keep reading.
 
