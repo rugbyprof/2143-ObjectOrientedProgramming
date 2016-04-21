@@ -6,27 +6,27 @@ $dir = scandir($path);
 array_shift($dir);
 array_shift($dir);
 
-// foreach($dir as $file){
+foreach($dir as $file){
 
-//     $path_parts = pathinfo($file);
-//     $ext = $path_parts['extension'];
-//     $name = $path_parts['filename'];
+    $path_parts = pathinfo($file);
+    $ext = $path_parts['extension'];
+    $name = $path_parts['filename'];
 
-//     $input = "{$path}{$file}";
-//     $output = "./medium/{$name}.gif";
+    $input = "{$path}{$file}";
+    $output = "./medium/{$name}.gif";
         
-//     echo $output."\n";
-//     exec("convert -resize 250x $input $output");
-//     $output = "./small/{$name}.gif";
-//     echo $output."\n";
-//     exec("convert -resize 150x $input $output");
-//     $output = "./xsmall/{$name}.gif";
-//     echo $output."\n";
-//     exec("convert -resize 100x $input $output");
-//     $output = "./xxsmall/{$name}.gif";
-//     echo $output."\n";
-//     exec("convert -resize 75x $input $output");    
-// }
+    echo $output."\n";
+    exec("convert -resize 250x $input $output");
+    $output = "./small/{$name}.gif";
+    echo $output."\n";
+    exec("convert -resize 150x $input $output");
+    $output = "./xsmall/{$name}.gif";
+    echo $output."\n";
+    exec("convert -resize 100x $input $output");
+    $output = "./xxsmall/{$name}.gif";
+    echo $output."\n";
+    exec("convert -resize 75x $input $output");    
+}
 
 
 exec("convert -resize 76x110! back_black.jpg ./xxsmall/back_black.gif"); 

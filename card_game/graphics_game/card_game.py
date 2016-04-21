@@ -142,9 +142,9 @@ def main():
     for c in hand.cards:
         print(c.card_image)
         images.append(Image(Point(x,y),c.card_image))
-    #     x+= 150
-    # for i in images:
-    #     i.draw(win)
+        x+= 150
+    for i in images:
+        i.draw(win)
         
 
     win.getMouse() # Pause to view result

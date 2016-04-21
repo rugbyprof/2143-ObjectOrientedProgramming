@@ -190,6 +190,19 @@ if __name__=='__main__':
         hands[i].sort()
         
     print(hands[1])
+    
+    
+    myhand = Hand('Terry')
+    for i in range(10):
+        myhand.add_card(deck.pop_card())
+        
+        
+        
+    print(myhand)
+    
+    myhand.sort()
+    
+    print(myhand)
 
       
     
