@@ -15,16 +15,16 @@ We are going to implement a video poker game. Video poker is an electronic versi
 
 | Rank | Name          | Cards                           |Example                                            |
 |:---:|:---------------|:--------------------------------|:--------------------------------------------------|
-|1.   |Royal flush      |A, K, Q, J, 10, all the same suit.|                                            |
-|2.   |Straight flush   | Five cards in a sequence, all in the same suit.|                                   |
-|3.   |Four of a kind   |All four cards of the same rank. |                                                  |
-|4.   |Full house       | Three of a kind with a pair. |                                                     |
-|5.   |Flush            |Any five cards of the same suit, but not in a sequence.|                            |
-|6.   |Straight         | Five cards in a sequence, but not of the same suit. |                              | 
-|7.   |Three of a kind  |Three cards of the same rank.|                                                      | 
-|8.   |Two pair         | Two different pairs. |                                                             | 
-|9.   |Pair             |Two cards of the same rank.|                                                        | 
-|10.  |High Card        | When you haven't made any of the hands above, the highest card plays. In the example below, the jack plays as the highest card.|                                                      | 
+|1.   |Royal flush      |A, K, Q, J, 10, all the same suit.|![](http://www.betcalculator.net/files/2012/08/royal-flush.png) |
+|2.   |Straight flush  | Five cards in a sequence, all in the same suit.|![](http://www.betcalculator.net/files/2012/08/straight-flush.png)|
+|3.   |Four of a kind   |All four cards of the same rank. |![](http://www.betcalculator.net/files/2012/08/poker1.png) |
+|4.   |Full house       | Three of a kind with a pair. |![](http://www.betcalculator.net/files/2012/08/full-house.png) |
+|5.   |Flush            |Any five cards of the same suit, but not in a sequence.|![](http://www.betcalculator.net/files/2012/08/flush.png) |
+|6.   |Straight         | Five cards in a sequence, but not of the same suit. |![](http://www.betcalculator.net/files/2012/08/straight.png)  | 
+|7.   |Three of a kind  |Three cards of the same rank.|![](http://www.betcalculator.net/files/2012/08/three-of-a-kind.png) | 
+|8.   |Two pair         | Two different pairs. |![](http://www.betcalculator.net/files/2012/08/two-pairs.png)  | 
+|9.   |Pair             |Two cards of the same rank.|![](http://www.betcalculator.net/files/2012/08/pair.png)  | 
+|10.  |High Card        | When you haven't made any of the hands above, the highest card plays. In the example below, the jack plays as the highest card.| | 
 
 
 | Hand	                 | Payout    |
