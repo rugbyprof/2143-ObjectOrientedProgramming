@@ -1,5 +1,22 @@
 ## Video Poker
 
+### Overview
+
+We are going to implement a video poker game. Video poker is an electronic version of the card game with the same name. The most basic rules are:
+
+- Deal the player 5 cards
+- If the player is happy with the hand because it has a high rank, keep the cards
+- If the player feels they could make a hand with a higher rank, allow the player to exchange 1 or all of thier cards.
+- The rank of the hand after the second deal is the result of that game. 
+
+### Poker Hand Ranks
+
+| Rank | Name           | Cards                            |Rank  | Name            | Cards                                        |
+|:----:|:---------------|:---------------------------------|:---:-|:----------------|:---------------------------------------------|
+|1     |Royal flush  |A, K, Q, J, 10, all the same suit.| 2.   | Straight flush  | Five cards in a sequence, all in the same suit.|
+
+
+
 | Hand	                 | Payout    |
 |:-----------------------|:---------:|
 | Royal Flush            |	800    | 
