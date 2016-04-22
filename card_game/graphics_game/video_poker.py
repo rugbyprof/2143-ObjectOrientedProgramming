@@ -1,6 +1,7 @@
 from graphics import *
 import os
 import random
+import time
 
 
 """
@@ -17,18 +18,19 @@ http://codereview.stackexchange.com/questions/82103/ascii-fication-of-playing-ca
 class GameCardImage(object):
 
     suits = ['spades','hearts','diamonds','clubs']
-    card_images = []
     
+    sizes = {'large':(500,726),
+             'medium':(250,363),
+             'small':(150,218),
+             'xsmall':(100,145),
+             'xxsmall':(75,109)
+             }
     
-    def __init__(self,cards_dir="./card_images/xsmall/",back='back_red.gif'):
+    def __init__(self,cards_dir="./card_images",back='back_black.gif',size='xsmall'):
         self.path = cards_dir
         self.card_back = back
-        
-        self.card_images.append(cards_dir+'black_joker.gif')
-        self.card_images.append(cards_dir+'red_joker.gif')
-        
-        for filename in os.listdir(self.path):
-            self.card_images.append(self.path+filename)
+        self.size = size
+       
 
     """
     @Description:
@@ -36,13 +38,33 @@ class GameCardImage(object):
         returns the correpsoning ascii representation of that card. 
     @Example:
     """
-    def get_image(self,suit=None,rank=None):
+    def get_card_face(self,suit=None,rank=None):
         if suit == None or rank == None:
-            return self.path + self.card_back;
+            return self.path + self.card_back
             
         if type(suit) is str:
             suit = self.suits.index(suit)
-        return self.card_images[((suit * 13) + rank) - 1] ;
+            
+        value = ((suit * 13) + rank) - 1
+        
+        image = self.path+'/'+self.size+'/'+str(value)+'.gif'
+        
+        return image
+        
+    def get_card_back(self):
+        return self.path+'/'+self.size+'/'+self.card_back  
+         
+    def set_card_back(self,path):
+        self.card_back = path
+        
+    def set_card_size(self,size):
+        self.card_size = size
+        
+        
+    def set_card_dir(self,dir):
+        self.path = dir
+        
+
             
         
         
@@ -65,10 +87,10 @@ class Card(GameCardImage):
             self.suit = suit
             
         self.rank = rank
-        self.card_image = self.get_image(self.suit,self.rank)
+        self.card_image = self.get_card_face(self.suit,self.rank)
 
     def __str__(self):
-        return (self.card)
+        return (self.card_image)
            
     def __cmp__(self,other):
         t1 = self.suit,self.rank
@@ -133,10 +155,14 @@ class Hand(Deck):
        
 def main():
     
+    card_width = 100
+    card_height = 100
+    
     win = GraphWin("My Circle", 800, 300)
     
-    exit_button = Image(Point(800-(24/2),12),'./images/exit.gif')
-    exit_button.draw(win)
+    exit_button_up = Image(Point(800-(24/2),12),'./images/exit_up.gif')
+    exit_button_down = Image(Point(800-(24/2),12),'./images/exit_down.gif')
+    exit_button_up.draw(win)
     
     # Create a hand of cards
     hand = Hand()
@@ -174,9 +200,16 @@ def main():
         click = win.getMouse()  # Pause to view result
         print(click.x,click.y)
         
-        # Only stop if the "exit" button is clicked
-        if 788 <= click.x <= 800 and 0 <= click.y <= 24:
+        # Only stop if the "exit" button is clicked 
+        # two images are used to show a type of animation
+        if 785 <= click.x <= 800 and 0 <= click.y <= 24:
+            exit_button_down.draw(win)
+            exit_button_up.undraw()
             loop = False
+            time.sleep(.1)
+            exit_button_up.draw(win)
+            exit_button_down.undraw()
+            time.sleep(.3)
             
     win.close()     # Close window when done    
         
