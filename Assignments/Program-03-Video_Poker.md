@@ -14,13 +14,12 @@ We are going to implement a video poker game. Video poker is an electronic versi
 ### Poker Hand Ranks
 
 | Rank | Name           | Cards                           |Rank | Name            | Cards                                        |
-|:----:|:---------------|:--------------------------------|:---:|:----------------|:---------------------------------------------|
-|1.     |Royal flush  |A, K, Q, J, 10, all the same suit.| 2.   | Straight flush  | Five cards in a sequence, all in the same suit.|
-|3.     |Four of a kind   |All four cards of the same rank. | 4.   | Full house  | Three of a kind with a pair. |
-|5.     |Flush  |Any five cards of the same suit, but not in a sequence.| 6.   | Straight | Five cards in a sequence, but not of the same suit. |
-|7.     |Three of a kind  |Three cards of the same rank. | 8.   | Two pair  | Two different pairs. |
-|9.     |Pair  |Two cards of the same rank.| 10.   | High Card   | When you haven't made any of the hands above, the highest card plays. 
-In the example below, the jack plays as the highest card.|
+|:---:|:---------------|:--------------------------------|:---:|:----------------|:---------------------------------------------|
+|1. |Royal flush  |A, K, Q, J, 10, all the same suit.| 2. | Straight flush  | Five cards in a sequence, all in the same suit.|
+|3. |Four of a kind   |All four cards of the same rank. | 4. | Full house  | Three of a kind with a pair. |
+|5. |Flush |Any five cards of the same suit, but not in a sequence.| 6.| Straight | Five cards in a sequence, but not of the same suit. |
+|7. |Three of a kind  |Three cards of the same rank. | 8.   | Two pair  | Two different pairs. |
+|9. |Pair  |Two cards of the same rank.| 10. | High Card | When you haven't made any of the hands above, the highest card plays. In the example below, the jack plays as the highest card.|
 
 
 | Hand	                 | Payout    |
