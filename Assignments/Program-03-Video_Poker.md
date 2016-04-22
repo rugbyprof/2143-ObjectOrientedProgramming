@@ -15,7 +15,7 @@ We are going to implement a video poker game. Video poker is an electronic versi
 
 | Rank | Name          | Cards                           |Example                                            |
 |:---:|:---------------|:--------------------------------|:--------------------------------------------------|
-|1.   |Royal flush      |A, K, Q, J, 10, all the same suit.|https://raw.githubusercontent.com/rugbyprof/2143-ObjectOrientedProgramming/master/card_game/graphics_game/card_images/tiny/05.gif https://raw.githubusercontent.com/rugbyprof/2143-ObjectOrientedProgramming/master/card_game/graphics_game/card_images/tiny/05.gif                                                 |
+|1.   |Royal flush      |A, K, Q, J, 10, all the same suit.|![](https://raw.githubusercontent.com/rugbyprof/2143-ObjectOrientedProgramming/master/card_game/graphics_game/card_images/tiny/05.gif) ![](https://raw.githubusercontent.com/rugbyprof/2143-ObjectOrientedProgramming/master/card_game/graphics_game/card_images/tiny/05.gif)                                                 |
 |2.   |Straight flush   | Five cards in a sequence, all in the same suit.|                                   |
 |3.   |Four of a kind   |All four cards of the same rank. |                                                  |
 |4.   |Full house       | Three of a kind with a pair. |                                                     |
