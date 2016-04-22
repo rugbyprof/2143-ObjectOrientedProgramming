@@ -20,39 +20,44 @@ foreach($dir as $file){
 
     $input = "{$path}{$file}";
     
-    $output = "./large/{$name}.gif";
-    echo $output."\n";
-    exec("convert -resize 500x $input $output");
+    // $output = "./large/{$name}.gif";
+    // echo $output."\n";
+    // exec("convert -resize 500x $input $output");
     
-    $output = "./medium/{$name}.gif";
-    echo $output."\n";
-    exec("convert -resize 250x $input $output");
+    // $output = "./medium/{$name}.gif";
+    // echo $output."\n";
+    // exec("convert -resize 250x $input $output");
     
-    $output = "./small/{$name}.gif";
-    echo $output."\n";
-    exec("convert -resize 150x $input $output");
+    // $output = "./small/{$name}.gif";
+    // echo $output."\n";
+    // exec("convert -resize 150x $input $output");
     
-    $output = "./xsmall/{$name}.gif";
-    echo $output."\n";
-    exec("convert -resize 100x $input $output");
+    // $output = "./xsmall/{$name}.gif";
+    // echo $output."\n";
+    // exec("convert -resize 100x $input $output");
     
-    $output = "./xxsmall/{$name}.gif";
+    // $output = "./xxsmall/{$name}.gif";
+    // echo $output."\n";
+    // exec("convert -resize 75x $input $output");   
+     
+    $output = "./tiny/{$name}.gif";
     echo $output."\n";
-    exec("convert -resize 75x $input $output");    
+    exec("convert -resize 40x $input $output");  
 }
 
+exec("convert -resize 76x110! back_black.jpg ./tiny/back_black.gif"); 
+// exec("convert -resize 76x110! back_black.jpg ./xxsmall/back_black.gif"); 
+// exec("convert -resize 101x146! back_black.jpg ./xsmall/back_black.gif");
+// exec("convert -resize 151x219! back_black.jpg ./small/back_black.gif");
+// exec("convert -resize 251x364! back_black.jpg ./medium/back_black.gif");
+// exec("convert -resize 500x back_black.jpg ./large/back_black.gif"); 
 
-exec("convert -resize 76x110! back_black.jpg ./xxsmall/back_black.gif"); 
-exec("convert -resize 101x146! back_black.jpg ./xsmall/back_black.gif");
-exec("convert -resize 151x219! back_black.jpg ./small/back_black.gif");
-exec("convert -resize 251x364! back_black.jpg ./medium/back_black.gif");
-exec("convert -resize 500x back_black.jpg ./large/back_black.gif"); 
-
-exec("convert -resize 76x110! back_red.png ./xxsmall/back_red.gif"); 
-exec("convert -resize 101x146! back_red.png ./xsmall/back_red.gif");
-exec("convert -resize 151x219! back_red.png ./small/back_red.gif");
-exec("convert -resize 251xx364! back_red.png ./medium/back_red.gif");
-exec("convert -resize 500x back_red.png ./large/back_red.gif"); 
+exec("convert -resize 76x110! back_red.png ./tiny/back_red.gif"); 
+// exec("convert -resize 76x110! back_red.png ./xxsmall/back_red.gif"); 
+// exec("convert -resize 101x146! back_red.png ./xsmall/back_red.gif");
+// exec("convert -resize 151x219! back_red.png ./small/back_red.gif");
+// exec("convert -resize 251xx364! back_red.png ./medium/back_red.gif");
+// exec("convert -resize 500x back_red.png ./large/back_red.gif"); 
 
 function get_value($name){
     $suit_value = ['spades'=>0,'hearts'=>1,'diamonds'=>2,'clubs'=>3];
