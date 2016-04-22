@@ -135,30 +135,51 @@ def main():
     
     win = GraphWin("My Circle", 800, 300)
     
+    exit_button = Image(Point(800-(24/2),12),'./images/exit.gif')
+    exit_button.draw(win)
+    
+    # Create a hand of cards
     hand = Hand()
+    
+    # Choose 5 cards (not randomly)
     hand.add_card(Card(2,12))
     hand.add_card(Card(2,11))
     hand.add_card(Card(2,9))
     hand.add_card(Card(2,10))
     hand.add_card(Card(2,8))
     
-    images = []
+    images = [] # List of Images 
 
-    x = 100
-    y = 100
+    x = 100     # Starting x coord for first card
+    y = 100     # Starting y coord for first card
+    
+    # Take our cards, and turn them into a list of graphics image type.
     for c in hand.cards:
-        print(c.card_image)
+    
+        #Add an image (graphics kind) to our list
         images.append(Image(Point(x,y),c.card_image))
-        x+= 150
+        
+        
+        #Move card right by 150 pixels
+        x+= 150     
+    
+    # Now draw all the cards on the screen
     for i in images:
         i.draw(win)
         
-
-    win.getMouse() # Pause to view result
-    win.close()    # Close window when done    
+        
+    loop = True
+    while loop:
+    
+        click = win.getMouse()  # Pause to view result
+        print(click.x,click.y)
+        
+        # Only stop if the "exit" button is clicked
+        if 788 <= click.x <= 800 and 0 <= click.y <= 24:
+            loop = False
+            
+    win.close()     # Close window when done    
         
 if __name__=='__main__':
 
-    g = GameCardImage()
-    print(g.get_image(2,13))
     main()
