@@ -128,10 +128,10 @@ class Hand(Deck):
     def __init__(self,label=''):
         self.cards = []
         self.label = label
-        
-        
+
+
+       
 def main():
-    
     
     win = GraphWin("My Circle", 800, 300)
     
