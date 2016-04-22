@@ -14,6 +14,8 @@
 | Two Pair               |		2 | 
 | Pair (Jacks or Better) |		1 | 
 
+Documentation: http://mcsp.wartburg.edu/zelle/python/graphics/graphics.pdf
+
 Let's develop classes to represent playing cards, decks of cards, and poker hands. If you don’t play poker, you can read about it at http://wikipedia.org/wiki/Poker, but you probably won't need to, just keep reading.
 
 If you are not familiar with Anglo-American playing cards, you can read about them at http://wikipedia.org/wiki/Playing_cards.
