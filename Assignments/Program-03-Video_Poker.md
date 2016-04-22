@@ -24,7 +24,7 @@ We are going to implement a video poker game. Video poker is an electronic versi
 |7.   |Three of a kind  |Three cards of the same rank.|![](http://www.betcalculator.net/files/2012/08/three-of-a-kind.png) | 
 |8.   |Two pair         | Two different pairs. |![](http://www.betcalculator.net/files/2012/08/two-pairs.png)  | 
 |9.   |Pair             |Two cards of the same rank.|![](http://www.betcalculator.net/files/2012/08/pair.png)  | 
-|10.  |High Card        | When you haven't made any of the hands above, the highest card plays. In the example below, the jack plays as the highest card.| | 
+|10.  |High Card        | When you haven't made any of the hands above, the highest card plays. | 
 
 
 | Hand	                 | Payout    |
