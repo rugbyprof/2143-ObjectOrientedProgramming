@@ -1,15 +1,24 @@
-#Still working on it. Will be done tonight.
+## Not Done
+
+I'm not done but that doesn't mean you can't start working on it. Start to think how you will determine poker hands. I have some code below to point you in the right direction. 
+
+Also play with the graphics class, documentation here: Documentation: http://mcsp.wartburg.edu/zelle/python/graphics/graphics.pdf
+
+Figure out how to click the area below a card in order to "hold" that card for the next deal. 
+
 
 ## Video Poker
 
 ### Overview
 
-We are going to implement a video poker game. Video poker is an electronic version of the card game with the same name. The most basic rules are:
+We are going to implement a video poker game. Video poker is an electronic version of the card game with the same name (minus the video). The basic rules are:
 
-- Deal the player 5 cards
-- If the player is happy with the hand because it has a high rank, keep the cards
-- If the player feels they could make a hand with a higher rank, allow the player to exchange 1 or all of thier cards.
-- The rank of the hand after the second deal is the result of that game. 
+- Deal a player 5 cards
+- If the player is happy with the hand because it has a high enough rank, the player can keep the cards.
+- If the player feels they could make a hand with a higher rank, the player is allowed to exchange 1 or all of their cards (this rule can change based on the house rules).
+- The rank of the hand after the second deal is the result of that game.
+- There are variations of poker, Texas Hold'em being one of them. We will stick to the variation I just described.
+- So how are the hands ranked? See below:
 
 ### Poker Hand Ranks
 
@@ -30,22 +39,46 @@ We are going to implement a video poker game. Video poker is an electronic versi
 |11.  |Pair                | Two cards of the same rank. Must be Jacks or better. | 1 |
 |12.  |High Card           | When you haven't made any of the hands above, the highest card plays. This is a loser in video poker. | 0 |
 
+The table above has an additional column called "payout", this is the number of points a player can earn in the video poker version for the corresponding hand. Another question you might be having is: "How do I calculate a given hand?". Lets talk a little card arithmetic:
 
-| Hand	                 | Payout    |
-|:-----------------------|:---------:|
-| Royal Flush            |	800    | 
-| Four Aces or Eights    |		80 | 
-| Straight Flush         |		50 | 
-| Four Sevens            |		50 | 
-| Four of a Kind         |		25 | 
-| Full House             |		8 | 
-| Flush                  |		5  |
-| Straight               |		4 | 
-| Three of a Kind        |		3 | 
-| Two Pair               |		2 | 
-| Pair (Jacks or Better) |		1 | 
 
-Documentation: http://mcsp.wartburg.edu/zelle/python/graphics/graphics.pdf
+
+```python
+
+	# Suits are stored in each card as strings
+	suits = ['spades','hearts','diamonds','clubs'] 
+	
+	# Ranks are stored as integers. So the deck is represented as cards from 2 ... 53.
+	ranks = [i for i in range(2,54)]
+	
+	# To get the integer value of a suit we do (in this case a 1):
+	suit_val = suits.index("hearts")
+	
+	# The first 13 cards (integers 2 - 14) represent all the 'spades'
+	# The next 13 cards (integers 15 - 28) represent all the 'hearts'
+	# And so on ...
+	
+	# So even though we store the suit for a card in the object, we only 
+	# need it's integer value. 
+	
+	card1 = Card('diamonds',11) # This becomes card (2,11) or (37) or jack of diamonds.
+	
+	# We calculate the integer value:
+	card_value = ((suit * 13) + rank)
+	
+	# How do we leverage this knowledge to start to calculate hands?
+	
+	def get_suit(card_value):
+		return card_value % 4
+		
+	def get_rank(card_value):
+		return card_value % 13
+		
+	
+```
+
+
+We discussed a lot of this in class, but lets go over the high points. 
 
 Let's develop classes to represent playing cards, decks of cards, and poker hands. If you don’t play poker, you can read about it at http://wikipedia.org/wiki/Poker, but you probably won't need to, just keep reading.
 
@@ -389,6 +422,7 @@ Here’s a program design suggestion: whenever you override a method, the interf
 
 If you violate this rule, your code will collapse like (sorry) a house of cards.)
 
+Documentation: http://mcsp.wartburg.edu/zelle/python/graphics/graphics.pdf
 
 
 Source: http://cs.colgate.edu/~jsommers/cosc101/html/oo.html
