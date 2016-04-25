@@ -71,7 +71,7 @@ The table above has an additional column called "payout", this is the number of 
 
 ## General Requirements (80% of your score)
 
-Using the starter code at [here](https://github.com/rugbyprof/2143-ObjectOrientedProgramming/tree/master/card_game/graphics_game) fulfill the following requirements without using the graphics module. 
+Using the starter code at [here](https://github.com/rugbyprof/2143-ObjectOrientedProgramming/tree/master/card_game/graphics_game) fulfill the following requirements without using the graphics module. Use the 'video_poker.py` file as your starting point for this part as well as the next.
 
 - First get some of your "winning hand functions" working. Start with the easier ones:
     - Flush 
