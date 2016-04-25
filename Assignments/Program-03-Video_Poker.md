@@ -75,12 +75,18 @@ The table above has an additional column called "payout", this is the number of 
 	
 ```
 
+## Requirements
 
+Using the starter code at: https://github.com/rugbyprof/2143-ObjectOrientedProgramming/tree/master/card_game/graphics_game fulfill the following requirements:
 
-### Card class
+- A user will start the game with 0 points displayed somewhere in the upper right corner of the screen.
+- The opening screen should have the "back" of five cards showing.
+- Show the user a "Deal" button that when pressed will display 5 cards. This can already be present when the game is started. 
+- After a hand is dealt, provide the user some way to "hold" some or all of the cards displayed on the deal (usually a checkbox, but doesn't have to be). 
+- After the first deal, and the user holds some cards (or none of the cards), let the user re-deal replacing the non-held cards with new cards from he deck. 
+- At this point, you should calculate thier score, show what they won (0 - 800) and update the total at the top right. 
 
 
 Documentation: http://mcsp.wartburg.edu/zelle/python/graphics/graphics.pdf
 
 
-Source: http://cs.colgate.edu/~jsommers/cosc101/html/oo.html
