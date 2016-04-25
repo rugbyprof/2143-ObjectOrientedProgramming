@@ -132,6 +132,9 @@ class C(B):
 
     def __init__(self):
         print("Constructor C was called")
+        
+x = C()
+#What happens? Anything printed?
 ```
 
 
