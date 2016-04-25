@@ -226,10 +226,10 @@ Create class that either extends the candy class OR uses composition to create a
 - Call your class `inventory`.
 - Use a dictionary to keep track of your candy.
 - Minimum methods:
-    - AddCandy(int key,string name,float price,int amount) 
+    - `AddCandy(int key,string name,float price,int amount) `
         - adds a candy to your inventory
         - returns None
-    - SellCandy(int key,int amount) 
+    - `SellCandy(int key,int amount)` 
         - sells (subtracts) a `amount` of candies. 
         - returns cost of selling that many candies.
 
