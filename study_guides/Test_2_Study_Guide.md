@@ -193,9 +193,9 @@ def ratio(a,b):
 Describe to me a situation in which a `finally` clause would come in handy. We know that a finally clause will execute no matter what, but when is that good? Example code would be nice.
 
 
-The next group of questions will all deal with a store that sells candy. Your going to extend the candy class to create an inventory class, and then add some error handling.
-
 ## Question 9:
+
+This group of questions will all deal with a store that sells candy. Your going to extend the candy class to create an inventory class, and then add some error handling.
 
 ### Part A:
 
@@ -277,3 +277,10 @@ Example string function for inventory class:
             
         return val
 ```
+
+### Part C
+
+Add some exception checking to your inventory class to handle if a user tries to purchase more candy than there is in inventory.
+
+Bonus: Write your exception as it's own class (as described 
+
