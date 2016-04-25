@@ -195,49 +195,49 @@ Describe to me a situation in which a `finally` clause would come in handy. We k
 
 ## Question 9:
 
-This group of questions will all deal with a store that sells candy. Your going to extend the candy class to create an inventory class, and then add some error handling.
+This group of questions will all deal with a store that sells office supplies. Your going to extend the item class to create an inventory class, and then add some error handling. Obviously, we are over simplifying this for brevity.
 
 ### Part A:
 
-Given the following class to a candy item:
+Given the following class defining an office supply `item`:
 
 ```python
 
-class candy(object):
-    def __init__(self,id,name,cost_each,amount):
-        self.id = id
-        self.name = name
-        self.cost = cost_each
-        self.amount = amount
+class item(object):
+    def __init__(self,key,name,cost,amount):
+        self.key = key				# Unique key for a candy
+        self.name = name			# Name of candy
+        self.cost = cost			# Cost per box or bag
+        self.amount = amount			# Number in stock
         
-C = item(3,"jaw breakers",3.99)
+C = item(3,"scissors",4.99,10)
     	
 ```
 
-Add a __str__ method to print out a candy item so that `C` above would print out (notice the 3.99):
+Add a __str__ method to print out the item so that `C` above would print out (notice the 3.99):
 
 ```
-(id:3 , name:jaw breakers , cost:3.99 , amount:10)
+(id:3 , name:scissors , cost:4.99 , amount:10)
 ```
 
 ### Part B:
 
-Create a class that either extends the `candy` class OR uses composition to create the `inventory` class. Explain your method of choice.
+Create a class that either extends the `item` class OR uses composition to create the `inventory` class. Explain your method of choice.
 
 - Call your class `inventory`.
-- Use a dictionary to keep track of your candy.
+- Use a dictionary to keep track of your office items.
 - Minimum methods:
-    - `AddCandy(int key,string name,float price,int amount) `
-        - adds a candy to your inventory
+    - `AddItem(int key,string name,float price,int amount) `
+        - adds an item(s) to your inventory
         - returns None
-    - `SellCandy(int key,int amount)` 
-        - sells (subtracts) a `amount` of candies. 
-        - returns cost of selling that many candies.
+    - `SellItem(int key,int amount)` 
+        - sells (subtracts) a `amount` of items from inventory. 
+        - returns cost of selling that many item(s).
 
 ```python
-a = candy(1,"jaw breakers",3.99,10)
-b = candy(2,"lollipops",4.99,20)
-c = candy(3,"bubble gum",2.99,15)
+a = item(1,"paper pad",3.99)
+b = item(2,"tape",1.99)
+c = item(3,"scissors",4.99)
 
 print(a)
 print(b)
@@ -245,11 +245,13 @@ print(c)
 
 i = inventory()
 
-i.addItem(a)
-i.addItem(b)
-i.addItem(c)
+i.addItem(a,35)
+i.addItem(b,20)
+i.addItem(c,35)
 
 print(i.sellItem(2,4))
+
+print(i)
 
 # I implemented a string method for my inventory class (look below the output)
 print(i)
@@ -258,13 +260,13 @@ print(i)
 Output:
 
 ```
-(key:1 , name:jaw breakers , cost:3.99 , amount:10)
-(key:2 , name:lollipops , cost:4.99 , amount:20)
-(key:3 , name:bubble gum , cost:2.99 , amount:15)
-19.96
-(key:1 , name:jaw breakers , cost:3.99 , amount:10)
-(key:2 , name:lollipops , cost:4.99 , amount:16)
-(key:3 , name:bubble gum , cost:2.99 , amount:15)
+(key:1 , name:paper pad , cost:3.99)
+(key:2 , name:tape , cost:1.99)
+(key:3 , name:scissors , cost:4.99)
+7.96
+35 (key:1 , name:paper pad , cost:3.99)
+16 (key:2 , name:tape , cost:1.99)
+35 (key:3 , name:scissors , cost:4.99)
 ```
 
 Example string function for inventory class:
@@ -281,17 +283,18 @@ Example string function for inventory class:
 
 ### Part C
 
-Add some exception checking to your inventory class to handle if a user tries to purchase more candy than there is in inventory.
+Add some exception checking to your inventory class to handle if a user tries to purchase more items than there is in inventory.
 
 Bonus: Write your exception as it's own class (as described starting on page 108 in your text).
 
 
 ### Part D
 
-Lets say I wanted to define a new type called a "case". A `case` of `candy` would (in addition to the attributes in candy) keep track of:
+Lets say I wanted to define a new type called a "case". A `case` of `items` holds multiples of the same type. It would (in addition to the attributes in `item`) keep track of:
 
-- weight of case
-- cost of case
-- amount per case
+- weight of case (in whatever system you wish lbs, kg, etc)
+- discount (cost per case as a percent discount of the original price, like .22) 
+    - The cost for a case of 'paper pads' that holds 48 would be 48 * 3.99 * .22
+- amount per case (count of items in a case)
 
-Create a class that either extends the `candy` class OR uses composition to create the `case` class. Explain your method of choice.
+Create a class that either extends the `item` class OR uses composition to create the `case` class. Explain your method of choice.
