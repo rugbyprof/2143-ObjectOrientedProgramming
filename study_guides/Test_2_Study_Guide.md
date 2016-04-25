@@ -24,6 +24,23 @@ print(c1)
 
 ```
 
+##Question 2:
+
+Overload the addition operator so that we can add two colors. Adding colors is a pretty wierd experience, so we will create our own addition method. Basically we will average each color. 
+
+For example:
+
+```python
+
+c1 = (255,255,255)
+c2 = (0,0,0)
+c3 = c1 + c2
+
+print(c3)
+#prints: (128,128,128)
+```
+
+##Question 3:
 
 ### Grayscale Class
 
@@ -89,6 +106,29 @@ class GrayScaler(Color):
 
 
 
+
+
+
+
+
+
+```
+##Question 4:
+
+Does does not always explicitly run the constructor of a parent class. How would we do this? And hwo can we pass parameters back to our parent class? Give and example.
+
+
+
+
+
+##Question 5:
+
+Create a point class, line class, and a rectangle class. 
+- A point is a tuple of two integers: (3,6)
+- A line consists of two points: (3,6),(7,8)
+	- Add a length method 
+- A rectangle consists of two points as well, the upper right, and the lower left.
+	- Add an area and perimeter method
 
 
 
