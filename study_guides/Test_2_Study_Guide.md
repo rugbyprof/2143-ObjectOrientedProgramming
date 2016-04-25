@@ -193,5 +193,87 @@ def ratio(a,b):
 Describe to me a situation in which a `finally` clause would come in handy. We know that a finally clause will execute no matter what, but when is that good? Example code would be nice.
 
 
+The next group of questions will all deal with a store that sells candy. Your going to extend the candy class to create an inventory class, and then add some error handling.
 
+## Question 9:
 
+### Part A:
+
+Given the following class to a candy item:
+
+```python
+
+class candy(object):
+    def __init__(self,id,name,cost_each,amount):
+        self.id = id
+        self.name = name
+        self.cost = cost_each
+        self.amount = amount
+        
+C = item(3,"jaw breakers",3.99)
+    	
+```
+
+Add a __str__ method to print out a candy item so that `C` above would print out (notice the 3.99):
+
+```
+(id:3 , name:jaw breakers , cost:3.99 , amount:10)
+```
+
+### Part B:
+
+Create class that either extends the candy class OR uses composition to create an inventory class. Explain why your choosing either method. 
+- Call your class `inventory`.
+- Use a dictionary to keep track of your candy.
+- Minimum methods:
+    - AddCandy(int key,string name,float price,int amount) 
+        - adds a candy to your inventory
+        - returns None
+    - SellCandy(int key,int amount) 
+        - sells (subtracts) a `amount` of candies. 
+        - returns cost of selling that many candies.
+
+```python
+a = candy(1,"jaw breakers",3.99,10)
+b = candy(2,"lollipops",4.99,20)
+c = candy(3,"bubble gum",2.99,15)
+
+print(a)
+print(b)
+print(c)
+
+i = inventory()
+
+i.addItem(a)
+i.addItem(b)
+i.addItem(c)
+
+print(i.sellItem(2,4))
+
+# I implemented a string method for my inventory class (look below the output)
+print(i)
+```
+
+Output:
+
+```
+(key:1 , name:jaw breakers , cost:3.99 , amount:10)
+(key:2 , name:lollipops , cost:4.99 , amount:20)
+(key:3 , name:bubble gum , cost:2.99 , amount:15)
+19.96
+(key:1 , name:jaw breakers , cost:3.99 , amount:10)
+(key:2 , name:lollipops , cost:4.99 , amount:16)
+(key:3 , name:bubble gum , cost:2.99 , amount:15)
+```
+
+Example string function for inventory class:
+
+```python
+    def __str__(self):
+        val = ''
+        for i in self.dict:
+            val += str(self.dict[i])
+            val += "\n"
+            
+        return val
+```
