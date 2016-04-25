@@ -115,7 +115,7 @@ class GrayScaler(Color):
 ```
 ##Question 4:
 
-Does does not always explicitly run the constructor of a parent class. How would we do this? And hwo can we pass parameters back to our parent class? Give and example.
+Python does not always explicitly run the constructor of a parent class. How would we do this? And hwo can we pass parameters back to our parent class? Give and example.
 
 
 
