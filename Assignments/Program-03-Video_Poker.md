@@ -73,6 +73,35 @@ The table above has an additional column called "payout", this is the number of 
 
 Using the starter code at [here](https://github.com/rugbyprof/2143-ObjectOrientedProgramming/tree/master/card_game/graphics_game) fulfill the following requirements without using the graphics module. Use the 'video_poker.py` file as your starting point for this part as well as the next.
 
+- This is an oop course, so you will be expected to create at least two classes:
+    - A `game_driver` class that runs the game (print menus, prompts user, etc)
+
+    - A `video_poker` class that handles all things dealing with 
+        - dealing cards 
+        - determining winning hands
+        
+- For example:
+
+```python
+
+game = game_driver()
+
+game.print_menu()
+# Prints:
+# 1: New Game
+# 2: Play Again
+# 3: Quit
+
+game.deal(5)
+# Prints:
+# (3,11) (3,12) (2,12) (1,13) (1,13)
+
+```
+
+Well how can game deal cards? Probably because we `extended` class `video_poker`.
+
+I would start with your video_poker class first:
+   
 - First get some of your "winning hand functions" working. Start with the easier ones:
     - Flush 
     - Pair
