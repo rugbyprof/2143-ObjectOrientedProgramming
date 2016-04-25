@@ -77,7 +77,7 @@ The table above has an additional column called "payout", this is the number of 
 
 ## Requirements
 
-Using the starter code at: https://github.com/rugbyprof/2143-ObjectOrientedProgramming/tree/master/card_game/graphics_game fulfill the following requirements:
+Using the starter code at [here](https://github.com/rugbyprof/2143-ObjectOrientedProgramming/tree/master/card_game/graphics_game) fulfill the following requirements:
 
 - A user will start the game with 0 points displayed somewhere in the upper right corner of the screen.
 - The opening screen should have the "back" of five cards showing.
