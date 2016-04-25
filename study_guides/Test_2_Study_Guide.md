@@ -1,13 +1,33 @@
 ##Question 1:
 
-#### Grayscale Class
+### Color Class
 
-Create a class called `GrayScaler` that will convert an rgb value to grayscale by some chosen method. Your class should expect 
-an rgb value that will be represented as a `tuple` looking something like this `(128,45,100)` where the values in order are 
-red,green,blue and must be between 0-255 inclusive. So `(0,0,0)` and `(255,255,255)` are ok and are black and white respectively.
+- Create a class called "Color" that will store a tuple of (r,g,b). 
+- The tuple should be stored in a data member called color.
+- The components of the color tuple should be stored in data members: red, green, blue as well 
+- Add a __str__ method to print out the color class so it looks like: "(red: redVal, green: greenVal, blue: blueVal)"
+- Here is some usage:
 
-Your class will store the tuple intact, and will not store the red, green, and blue seperately. Also, any calculations should NOT
-destroy the original color, they should only return the grayscale version of the stored color. 
+```python
+
+c1 = Color((255,0,0))
+print(c1.red)
+#prints: 255
+
+c1.blue = 255
+print(c1)
+#prints: (red: 255, green: 0, blue: 255)
+
+c1.color = (0,0,0)
+print(c1)
+#prints: (red: 0, green: 0, blue: 0)
+
+```
+
+
+### Grayscale Class
+
+This class will ***extend*** the color class.
 
 So what is gray scale? Its where you take the 3 individual parts of a color and using those values you calculate a single value that will be assigned to each of the 3 components, making it some shade of gray.
  
@@ -61,7 +81,7 @@ gray3 = grayish2.Luminosity()
     Custom - as described above
     SetColor - Lets user change the color originally passed in.
 """
-class GrayScaler(object):
+class GrayScaler(Color):
 
 
 
