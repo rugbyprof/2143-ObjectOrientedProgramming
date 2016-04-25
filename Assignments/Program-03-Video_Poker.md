@@ -1,13 +1,6 @@
-## Not Done
-
-I'm not done but that doesn't mean you can't start working on it. Start to think how you will determine poker hands. I have some code below to point you in the right direction. 
-
-Also play with the graphics class, documentation here: Documentation: http://mcsp.wartburg.edu/zelle/python/graphics/graphics.pdf
-
-Figure out how to click the area below a card in order to "hold" that card for the next deal. 
-
-
 ## Video Poker
+
+The assignment is complete, but check back to see if I've added any helper code. I most likely will.
 
 ### Overview
 
