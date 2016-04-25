@@ -115,10 +115,24 @@ class GrayScaler(Color):
 ```
 ##Question 4:
 
-Python does not always explicitly run the constructor of a parent class. How would we do this? And hwo can we pass parameters back to our parent class? Give and example.
+Python does not always explicitly run the constructor of a parent class. How would we do this? And how can we pass parameters back to our parent class? Look at the code below, run it, then alter it to give an example of running a parents constructor and passing back parameters. You can make whatever alterations you want to get your point across.
 
+```python
+class A(object):
 
+    def __init__(self):
+        print("Constructor A was called")
 
+class B(A):
+
+    def __init__(self):
+        print("Constructor B was called")
+
+class C(B):
+
+    def __init__(self):
+        print("Constructor C was called")
+```
 
 
 ##Question 5:
