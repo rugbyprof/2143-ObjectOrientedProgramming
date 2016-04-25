@@ -222,7 +222,8 @@ Add a __str__ method to print out a candy item so that `C` above would print out
 
 ### Part B:
 
-Create class that either extends the candy class OR uses composition to create an inventory class. Explain why your choosing either method. 
+Create a class that either extends the `candy` class OR uses composition to create the `inventory` class. Explain your method of choice.
+
 - Call your class `inventory`.
 - Use a dictionary to keep track of your candy.
 - Minimum methods:
@@ -284,3 +285,13 @@ Add some exception checking to your inventory class to handle if a user tries to
 
 Bonus: Write your exception as it's own class (as described starting on page 108 in your text).
 
+
+### Part D
+
+Lets say I wanted to define a new type called a "case". A `case` of `candy` would (in addition to the attributes in candy) keep track of:
+
+- weight of case
+- cost of case
+- amount per case
+
+Create a class that either extends the `candy` class OR uses composition to create the `case` class. Explain your method of choice.
