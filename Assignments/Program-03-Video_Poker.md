@@ -75,18 +75,38 @@ The table above has an additional column called "payout", this is the number of 
 	
 ```
 
-## Requirements
 
-Using the starter code at [here](https://github.com/rugbyprof/2143-ObjectOrientedProgramming/tree/master/card_game/graphics_game) fulfill the following requirements:
+## General Requirements (80% of your score)
 
+Using the starter code at [here](https://github.com/rugbyprof/2143-ObjectOrientedProgramming/tree/master/card_game/graphics_game) fulfill the following requirements without using the graphics module. 
+
+- First get some of your "winning hand functions" working. Start with the easier ones:
+    - Flush 
+    - Pair
+    - Three of a Kind
+    - Four of a Kind
+    - etc. 
+
+- Test your functions by dealing random hands, and seeing if you identify the methods you have implemented.
+- Once you have most of your winning methods finished, add them to a game system. 
+- Do text based first.
+	- Using  a menu driven system:
+	- Deal 5 cards
+		- (1,3)(1,11)(2,5)(3,5)(1,8)
+	- Let the user "hold" cards by entering 2,3 or something similar
+	- Deal the second hand
+		- (1,13)(3,5)(2,5)(3,5)(1,9)
+	- Calculate the score
+	    - Three of a kind = 3pts
+	- Re-deal if desired
+
+## Graphics Requirements (20% of your score)
 - A user will start the game with 0 points displayed somewhere in the upper right corner of the screen.
 - The opening screen should have the "back" of five cards showing.
 - Show the user a "Deal" button that when pressed will display 5 cards. This can already be present when the game is started. 
 - After a hand is dealt, provide the user some way to "hold" some or all of the cards displayed on the deal (usually a checkbox, but doesn't have to be). 
 - After the first deal, and the user holds some cards (or none of the cards), let the user re-deal replacing the non-held cards with new cards from he deck. 
 - At this point, you should calculate thier score, show what they won (0 - 800) and update the total at the top right. 
-
-
-Documentation: http://mcsp.wartburg.edu/zelle/python/graphics/graphics.pdf
+- Documentation: http://mcsp.wartburg.edu/zelle/python/graphics/graphics.pdf
 
 
