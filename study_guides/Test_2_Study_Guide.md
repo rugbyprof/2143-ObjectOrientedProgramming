@@ -161,3 +161,37 @@ Create a point class, line class, and a rectangle class.
 
 ```
 
+## Question 6:
+
+Remember exceptions? Looking at the example below answer a couple of questions:
+- What kind of exception is this? 
+- Does it have to specify the exception type?
+
+```python
+def no_return():
+	print("I am about to raise an exception") 
+	raise Exception("This is always raised") 
+	print("This line will never execute") 
+	return "I won't be returned"
+```
+
+
+## Question 7:
+
+Look at the method below and fix it by adding a `try ... except` clause ensuring that:
+- We don't divide by zero
+- a and b are both integers
+
+```python
+def ratio(a,b):
+	return a / b
+
+```
+
+## Question 8:
+
+Describe to me a situation in which a `finally` clause would come in handy. We know that a finally clause will execute no matter what, but when is that good? Example code would be nice.
+
+
+
+
