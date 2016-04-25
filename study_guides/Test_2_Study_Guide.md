@@ -282,5 +282,5 @@ Example string function for inventory class:
 
 Add some exception checking to your inventory class to handle if a user tries to purchase more candy than there is in inventory.
 
-Bonus: Write your exception as it's own class (as described 
+Bonus: Write your exception as it's own class (as described starting on page 108 in your text).
 
