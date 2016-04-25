@@ -23,7 +23,8 @@ class GameCardImage(object):
              'medium':(250,363),
              'small':(150,218),
              'xsmall':(100,145),
-             'xxsmall':(75,109)
+             'xxsmall':(75,109),
+             'tiny':(),
              }
     
     def __init__(self,cards_dir="./card_images",back='back_black.gif',size='xsmall'):
