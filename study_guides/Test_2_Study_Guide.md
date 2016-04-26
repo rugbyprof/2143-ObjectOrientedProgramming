@@ -299,7 +299,11 @@ Lets say I wanted to define a new type called a "case". A `case` of `items` hold
 
 Create a class that either extends the `item` class OR uses composition to create the `case` class. Explain your method of choice.
 
+
+
 ## Question 10:
+
+Modify the Account class from lecture so that it has a new attribute, transactions, that is a list keeping track of any transactions performed.
 
 ```python
 class Account(object):
@@ -312,13 +316,12 @@ class Account(object):
     def __init__(self, account_holder):
         self.balance = 0
         self.holder = account_holder
-        self.transactions = []
 
     def deposit(self, amount):
         """Increase the account balance by amount and return the
         new balance.
         """
-        self.transactions.append(('deposit', amount))
+        
         self.balance = self.balance + amount
         return self.balance
 
@@ -326,7 +329,7 @@ class Account(object):
         """Decrease the account balance by amount and return the
         new balance.
         """
-        self.transactions.append(('withdraw', amount))
+        
         if amount > self.balance:
             return 'Insufficient funds'
         self.balance = self.balance - amount
@@ -347,6 +350,8 @@ eric_account.withdraw(100)      # buying dinner
 print(eric_account.transactions)
 # Prints: [('deposit', 1000000), ('withdraw', 100)]
 ```
+
+## Question 11:
 
 We'd like to be able to cash checks, so let's add a `deposit_check` method to our CheckingAccount class. It will take a `Check` object as an argument, and check to see if the `payable_to` attribute matches the CheckingAccount's holder. If so, it marks the Check as deposited, and adds the amount specified to the CheckingAccount's total.
 
@@ -387,5 +392,30 @@ class Check(object):
     
     
     
+```
+
+## Question 12:
+
+```python
+class Person(object):
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def is_old(self):
+        return self.age > 40
+
+        
+person = Person('G. H. Hardy', 70)  
+print person.is_old() # Prints True
+```
+
+Write a `Student` class that extends the `Person` class and add a method: `is_honor_student` that would print `True` if the students gpa is greater than 3.0
+
+```python
+student = Student('G. H. Hardy', 70, 4.0)
+print student.is_old()	# prints True
+print student.is_honor_student()	# prints True
 ```
 
