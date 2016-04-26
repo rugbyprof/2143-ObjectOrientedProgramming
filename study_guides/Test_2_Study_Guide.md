@@ -298,3 +298,94 @@ Lets say I wanted to define a new type called a "case". A `case` of `items` hold
 - amount per case (count of items in a case)
 
 Create a class that either extends the `item` class OR uses composition to create the `case` class. Explain your method of choice.
+
+## Question 10:
+
+```python
+class Account(object):
+    """
+    A bank account that allows deposits and withdrawals.
+    """
+
+    interest = 0.02
+
+    def __init__(self, account_holder):
+        self.balance = 0
+        self.holder = account_holder
+        self.transactions = []
+
+    def deposit(self, amount):
+        """Increase the account balance by amount and return the
+        new balance.
+        """
+        self.transactions.append(('deposit', amount))
+        self.balance = self.balance + amount
+        return self.balance
+
+    def withdraw(self, amount):
+        """Decrease the account balance by amount and return the
+        new balance.
+        """
+        self.transactions.append(('withdraw', amount))
+        if amount > self.balance:
+            return 'Insufficient funds'
+        self.balance = self.balance - amount
+        return self.balance
+```
+
+Some Account usage:
+
+```python
+eric_account = Account('Eric')
+eric_account.deposit(1000000)   # depositing my paycheck for the week
+
+print(eric_account.transactions)
+# Prints: [('deposit', 1000000)]
+
+eric_account.withdraw(100)      # buying dinner
+
+print(eric_account.transactions)
+# Prints: [('deposit', 1000000), ('withdraw', 100)]
+```
+
+We'd like to be able to cash checks, so let's add a `deposit_check` method to our CheckingAccount class. It will take a `Check` object as an argument, and check to see if the `payable_to` attribute matches the CheckingAccount's holder. If so, it marks the Check as deposited, and adds the amount specified to the CheckingAccount's total.
+
+Write an appropriate Check class, and add the `deposit_check` method to the CheckingAccount class. 
+Use inheritance whenever possible.
+
+```python
+class CheckingAccount(Account):
+    """A bank account that charges for withdrawals.
+
+    >>> check = Check("Steven", 42)  # 42 dollars, payable to Steven
+    >>> steven_account = CheckingAccount("Steven")
+    >>> eric_account = CheckingAccount("Eric")
+    >>> eric_account.deposit_check(check)  # trying to steal steven’s money
+    The police have been notified.
+    >>> eric_account.balance
+    0
+    >>> check.deposited
+    False
+    >>> steven_account.balance
+    0
+    >>> steven_account.deposit_check(check)
+    42
+    >>> check.deposited
+    True
+    >>> steven_account.deposit_check(check)  # can't cash check twice
+    The police have been notified.
+    """
+    withdraw_fee = 1
+    interest = 0.01
+
+    def withdraw(self, amount):
+        return Account.withdraw(self, amount + self.withdraw_fee)
+
+
+class Check(object):
+    "*** YOUR CODE HERE ***"
+    
+    
+    
+```
+
