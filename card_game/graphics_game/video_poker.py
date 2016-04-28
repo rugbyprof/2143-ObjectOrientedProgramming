@@ -46,7 +46,10 @@ class GameCardImage(object):
         if type(suit) is str:
             suit = self.suits.index(suit)
             
-        value = ((suit * 13) + rank) - 1
+        value = ((suit * 13) + rank) 
+        
+        if value < 10:
+            value = '0'+ str(value)
         
         image = self.path+'/'+self.size+'/'+str(value)+'.gif'
         
@@ -65,18 +68,13 @@ class GameCardImage(object):
     def set_card_dir(self,dir):
         self.path = dir
         
-
-            
-        
-        
+  
 """
 @Class Card 
 @Description:
     
 """
 class Card(GameCardImage):
-    ranks = [None, "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King","Ace"]
-
     def __init__(self, suit='', rank=0):
         super().__init__()
         
@@ -91,7 +89,7 @@ class Card(GameCardImage):
         self.card_image = self.get_card_face(self.suit,self.rank)
 
     def __str__(self):
-        return (self.card_image)
+        return ("(suit:%s , rank:%s , card_image:%s)") % (self.suit, self.rank, self.card_image)
            
     def __cmp__(self,other):
         t1 = self.suit,self.rank
@@ -119,7 +117,7 @@ class Deck(object):
         #assume top of deck = 0th element
         self.cards = []
         for suit in range(4):
-            for rank in range(1,14):
+            for rank in range(2,15):
                 self.cards.append(Card(suit,rank))
                 
     def __str__(self):
@@ -139,6 +137,8 @@ class Deck(object):
     
     def sort(self):
         self.cards = sorted(self.cards)
+        
+        
        
 """
 @Class: Hand 
@@ -147,73 +147,228 @@ class Deck(object):
     This class represents a hand of cards 
 @Methods:
 """ 
-class Hand(Deck):
+class Hand(object):
     def __init__(self,label=''):
         self.cards = []
         self.label = label
-
-
-       
-def main():
-    
-    card_width = 100
-    card_height = 100
-    
-    win = GraphWin("My Circle", 800, 300)
-    
-    exit_button_up = Image(Point(800-(24/2),12),'./images/exit_up.gif')
-    exit_button_down = Image(Point(800-(24/2),12),'./images/exit_down.gif')
-    exit_button_up.draw(win)
-    
-    # Create a hand of cards
-    hand = Hand()
-    
-    # Choose 5 cards (not randomly)
-    hand.add_card(Card(2,12))
-    hand.add_card(Card(2,11))
-    hand.add_card(Card(2,9))
-    hand.add_card(Card(2,10))
-    hand.add_card(Card(2,8))
-    
-    images = [] # List of Images 
-
-    x = 100     # Starting x coord for first card
-    y = 100     # Starting y coord for first card
-    
-    # Take our cards, and turn them into a list of graphics image type.
-    for c in hand.cards:
-    
-        #Add an image (graphics kind) to our list
-        images.append(Image(Point(x,y),c.card_image))
+        self.rankCount = {}     # Used to calculate pairs, three of a kind, etc.
+        self.suitCount = {}     # Used to calculate flush
         
+    def addCard(self,card):
         
-        #Move card right by 150 pixels
-        x+= 150     
-    
-    # Now draw all the cards on the screen
-    for i in images:
-        i.draw(win)
-        
-        
-    loop = True
-    while loop:
-    
-        click = win.getMouse()  # Pause to view result
-        print(click.x,click.y)
-        
-        # Only stop if the "exit" button is clicked 
-        # two images are used to show a type of animation
-        if 785 <= click.x <= 800 and 0 <= click.y <= 24:
-            exit_button_down.draw(win)
-            exit_button_up.undraw()
-            loop = False
-            time.sleep(.1)
-            exit_button_up.draw(win)
-            exit_button_down.undraw()
-            time.sleep(.3)
+        if not card.suit in self.suitCount:
+            self.suitCount[card.suit] = 1
+        else:
+            self.suitCount[card.suit] += 1
             
-    win.close()     # Close window when done    
+        if not card.rank in self.rankCount:
+            self.rankCount[card.rank] = 1
+        else:
+            self.rankCount[card.rank] += 1  
+            
+        self.cards.append(card)
+        
+    def getCards(self):
+        return self.cards
+   
+    def sortHand(self):
+        self.cards = sorted(self.cards)
+        
+    def replaceCard(self,id,card):
+        print(id)
+        self.cards[id] = card
+        
+    def getPosition(self,card):
+        return self.cards.index(card)
+        
+        
+    def trashHand(self):
+        self.cards = []
+        self.rankCount = {}     # Used to calculate pairs, three of a kind, etc.
+        self.suitCount = {}     # Used to calculate flush        
+       
+"""
+@Class Video Poker 
+@Description:
+    This class handles all things video poker 
+@Methods:
+    deal() - deals a set number of cards 
+    checkHand() - processes hand to see what hand possibilities there are
+    pairs() - returns index of pairs if true
+    twoPair() - uses pairs to determine 
+    etc....
+""" 
+class VideoPoker(object):
+    def __init__(self):
+        self.deck = Deck()
+
+    def deal(self,number=5):
+        hand = Hand()
+        self.deck.shuffle()
+
+        for i in range(0,number):
+            hand.addCard(self.deck.pop_card())
+            
+        return hand
+        
+    def getCard(self):
+        return self.deck.pop_card()
+            
+    def checkHand(self,hand):
+        for c in hand.getCards():
+            pass
+
+    def pair(self):
+        pass
+        
+    def twoPair(self):
+        pass
+    
+    def threeOfAKind(self):
+        pass
+    
+    def flush(self):
+        pass
+    
+"""
+@Class ClickHandler
+@Description:
+    This class is extended by video poker to handle all of the image interaction.  
+@Methods:
+    addImage(x,y,w,h,path) - stores an images location, size and path  
+    checkClicked(x,y) - returns the ID of an image that was clicked
+    drawImage() - displays an image on the graphics window
+    pushImage() - cheesy animation to "push" an image  
+"""    
+class clickHandler(object):
+    def __init__(self,win):
+        self.win = win
+        self.clickages ={}
+        self.id = 0
+        
+    def addImage(self,x,y,w,h,path):
+        self.id += 1
+        image = Image(Point(x,y),path)
+        self.clickages[self.id] = {'path':path,'image':image,'x':x,'y':y,'w':w,'h':h}
+        return self.id
+        
+    def checkClicked(self,x,y):
+        print(x,y)
+        for k, v in self.clickages.items():
+            left = v['x'] - (v['w'] / 2)
+            right = v['x'] + (v['w'] / 2)
+            top = v['y'] - (v['h'] / 2)
+            bottom = v['y'] + (v['h'] / 2)
+            print(v)
+
+            #print(left,right,top,bottom)
+            #print("%4.0f >= %4.0f and %4.0f <= %4.0f and %4.0f <= %4.0f and %4.0f >= %4.0f" %(x,left,x,right,y,top,y,bottom))
+            if x >= left and x <= right and y >= top and y <= bottom:
+                return k
+                
+        return None
+        
+    def drawImage(self,id):
+        self.clickages[id]['image'].draw(self.win)
+        
+    def pushImage(self,id):
+        x = self.clickages[id]['x']
+        y = self.clickages[id]['y']    
+        img_down = Image(Point(x,y+3),self.clickages[id]['path'])
+
+        #self.clickages[id]['image'].undraw()
+        img_down.draw(self.win)
+        time.sleep(.1)
+        img_down.undraw()
+        #self.clickages[id]['image'].draw(self.win)
+        time.sleep(.1)
+        
+    def __str__(self):
+        return ("(%s)") % (str(self.clickages))
+
+"""
+@Class Game
+@Description:
+    This is where I will put my game logic.  
+@Methods:
+    addImage(x,y,w,h,path) - stores an images location, size and path  
+    checkClicked(x,y) - returns the ID of an image that was clicked
+    drawImage() - displays an image on the graphics window
+    pushImage() - cheesy animation to "push" an image  
+"""  
+class Game(clickHandler):
+    
+    def __init__(self,width,height):
+        self.win = GraphWin("Video Poker", 800, 300)
+        super().__init__(self.win)
+        
+        self.cardIDs = []
+        
+        self.vp = VideoPoker()
+        self.hand = self.vp.deal()
+        self.vp.checkHand(self.hand)
+                
+        exit_button = self.addImage(800-(24/2),12,24,24,'./images/exit_up.gif')
+        
+        self.drawImage(exit_button)
+       
+        self.draw_hand()
+        
+            
+        loop = True
+        while loop:
+    
+            click = self.win.getMouse()  # Pause to view result
+            print(click.x,click.y)
+            
+            
+            clicked = self.checkClicked(click.x,click.y)
+            
+            if clicked:
+                
+                try:
+                    index = self.cardIDs.index(clicked)
+                except ValueError:
+                    "Card Not In List"
+                else:
+                    self.hand.replaceCard(self.cardIDs.index(clicked),self.vp.getCard())
+                
+                self.draw_hand()
+
+                if clicked == exit_button:
+                    self.pushImage(clicked)
+                    loop = False
+                    time.sleep(.3)
+            
+        self.win.close()     # Close window when done  
+        
+    def game_loop(self):
+        pass
+        
+    def draw_hand(self):
+
+        x = 100     # Starting x coord for first card
+        y = 100     # Starting y coord for first card
+        
+        # Take our cards, and turn them into a list of graphics image type.
+        cards = self.hand.getCards()
+                
+        for c in cards:
+            print(c)
+            #Add an image (graphics kind) to our list
+            id = self.addImage(x,y,100,145,c.card_image)
+            self.drawImage(id)
+            self.cardIDs.append(id)
+            
+            #Move card right by 150 pixels
+            x+= 150     
+        
+            
+    def card_clicked(self,x,y):
+        pass
+        
+
         
 if __name__=='__main__':
 
-    main()
+    g = Game(800, 300)
