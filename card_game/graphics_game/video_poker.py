@@ -169,12 +169,15 @@ class Hand(object):
         self.cards.append(card)
         
     def getCards(self):
+
         return self.cards
    
     def sortHand(self):
         self.cards = sorted(self.cards)
         
     def replaceCard(self,id,card):
+        print(self.rankCount)
+        print(self.suitCount)
         print(id)
         self.cards[id] = card
         
