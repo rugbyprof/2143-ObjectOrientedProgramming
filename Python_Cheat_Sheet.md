@@ -127,10 +127,10 @@
 - `S.upper()` -> str
     - Return a copy of the string S converted to uppercase.
 
-#### Exceptions:
+#### Some Common Exceptions:
 
 - `exception TypeError`
-Raised when an operation or function is applied to an object of inappropriate type. The associated value is a string giving details about the type mismatch.
+>Raised when an operation or function is applied to an object of inappropriate type. The associated value is a string giving details about the type mismatch.
 
 - `exception ValueError`
 >Raised when a built-in operation or function receives an argument that has the right type but an inappropriate value, and the situation is not described by a more precise exception such as IndexError.
