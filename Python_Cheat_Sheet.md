@@ -147,7 +147,7 @@ except SomeException:
 - `exception ZeroDivisionError`
 >Raised when the second argument of a division or modulo operation is zero. The associated value is a string indicating the type of the operands and the operation.
 
-- `exception FileExistsError'
+- `exception FileExistsError`
 >Raised when trying to create a file or directory which already exists. Corresponds to errno EEXIST.
 
 - `exception FileNotFoundError'
