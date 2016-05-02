@@ -154,13 +154,6 @@ Create a point class, line class, and a rectangle class.
 
 
 
-
-
-
-
-
-```
-
 ## Question 6:
 
 Remember exceptions? Looking at the example below answer a couple of questions:
