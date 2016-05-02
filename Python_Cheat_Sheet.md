@@ -126,3 +126,20 @@
     - If chars is given and not None, remove characters in chars instead.
 - `S.upper()` -> str
     - Return a copy of the string S converted to uppercase.
+
+#### Exceptions:
+
+- `exception TypeError`
+Raised when an operation or function is applied to an object of inappropriate type. The associated value is a string giving details about the type mismatch.
+
+- `exception ValueError`
+>Raised when a built-in operation or function receives an argument that has the right type but an inappropriate value, and the situation is not described by a more precise exception such as IndexError.
+
+- `exception ZeroDivisionError`
+>Raised when the second argument of a division or modulo operation is zero. The associated value is a string indicating the type of the operands and the operation.
+
+- `exception FileExistsError'
+>Raised when trying to create a file or directory which already exists. Corresponds to errno EEXIST.
+
+- `exception FileNotFoundError'
+>Raised when a file or directory is requested but doesn’t exist. Corresponds to errno ENOENT.
