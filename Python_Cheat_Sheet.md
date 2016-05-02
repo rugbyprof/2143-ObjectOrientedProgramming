@@ -129,6 +129,15 @@
 
 #### Some Common Exceptions:
 
+```python
+try:
+    ...
+except SomeException:
+    tb = sys.exc_info()[2]
+    raise OtherException(...).with_traceback(tb)
+```
+
+
 - `exception TypeError`
 >Raised when an operation or function is applied to an object of inappropriate type. The associated value is a string giving details about the type mismatch.
 
