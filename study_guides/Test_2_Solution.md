@@ -1,6 +1,5 @@
-# Question 1
 
-### Question 1
+## Question 1
 ```python
 L = [4,3,55,6,5,44,3,4,3,55,66,77]
 
@@ -9,7 +8,7 @@ for i in range(len(L)):
 ```
 
 
-# Question 2
+## Question 2
 ```python
 class color(object):
     def __init__(self,r,g,b):
@@ -21,7 +20,7 @@ class color(object):
         
 ```
 
-# Question 3
+## Question 3
 ```python
 def __add__(self,rhs):
     c1 = self.color
@@ -34,7 +33,7 @@ c3 = c1 + c2
 print(c3)
 ```
 
-### Question 4
+## Question 4
 
 ```python
 class GrayScaler(object):
@@ -64,7 +63,7 @@ cust = gray.custom(.2,.5,.3)
 print(cust)
 ```
 
-### Question 5
+## Question 5
 
 ```python
 class Pet(object):
@@ -94,7 +93,7 @@ print(myDog)
 print(myDog.makesSound())
 ```
 
-### question 6
+## question 6
 ```python
 def exists(filename):
 	try:
@@ -105,11 +104,13 @@ def exists(filename):
 		return False
 ```
 
-# Question 7
+## Question 7
 
-# 
+```python
+```
 
-### Question 8
+
+## Question 8
 ```python
 class Email(object):
 	def __init__(self, msg, subj, sender, receiver):
