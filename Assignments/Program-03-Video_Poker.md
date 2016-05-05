@@ -69,7 +69,7 @@ The table above has an additional column called "payout", this is the number of 
 ```
 
 
-## General Requirements (80% of your score)
+## General Requirements (100000% of your score)
 
 Using the starter code at [here](https://github.com/rugbyprof/2143-ObjectOrientedProgramming/tree/master/card_game/graphics_game) fulfill the following requirements without using the graphics module. Use the 'video_poker.py` file as your starting point for this part as well as the next.
 
@@ -130,7 +130,7 @@ I would start with your video_poker class first:
 	    - Three of a kind = 3pts
 	- Re-deal if desired
 
-## Graphics Requirements (20% of your score)
+## Graphics Requirements (BONUS)
 - A user will start the game with 0 points displayed somewhere in the upper right corner of the screen.
 - The opening screen should have the "back" of five cards showing.
 - Show the user a "Deal" button that when pressed will display 5 cards. This can already be present when the game is started. 
