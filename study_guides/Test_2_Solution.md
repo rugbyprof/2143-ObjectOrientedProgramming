@@ -273,6 +273,19 @@ Your answer is a short explanation with example code to back up your answer.
 ### Answer:
 
 ```python
+def can_open(name):
+    result = {}
+    try:
+         file = open(name, 'w')
+         result = {'message':"File opened",'success':True}
+    except IOError:
+         result = {'message':"File failed to open",'success':False}
+    else:
+         file.close()
+    finally:
+        return result
+
+print(can_open("temp3.txt"))
 ```
 
 
