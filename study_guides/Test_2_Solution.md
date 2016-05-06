@@ -193,8 +193,8 @@ print(cust)
 
 ### Notes:
 
-I messed up on the line `myColor = (160,32,240)`. It should have read `myColor = color(160,32,240)`, but since it didn't
-I altered the answer to match ... well the question. 
+- I messed up on the line `myColor = (160,32,240)`. It should have read `myColor = color(160,32,240)`, but since it didn't I altered the answer to match ... well the question. 
+- A lot of you ignored the fact that a `tuple` was passed in (see usage) and instead you assumed r,g,b (three values). You need to pay attention to detail. 
 
 
 ## Question 5
