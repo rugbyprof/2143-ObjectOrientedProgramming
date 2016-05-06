@@ -448,8 +448,8 @@ print(list2)
 ```
 ### Notes:
 
-- Remember a list is similar to an array, so you have access to each element via some index, but you don't have direct access to each email based on some key (like in a dictionary.
-- Below is a dictionary that holds all the emails sent by someone using the email address as a key:
+- Remember a list is similar to an array, so you have access to each element via some index, but you don't have direct access to each email based on some key (like in a dictionary).
+- Below are two dictionarys that hold all the emails sent / received using email as a key:
 
 ```python
 emails_sent['joe@yahoo.com'] =   [('fake message 1' , 'fake subject 1' , 'joe@yahoo.com' , 'sue@gmail.com')]
@@ -464,7 +464,7 @@ emails_received['joe@yahoo.com'] = [('fake message 3' , 'fake subject 3' , 'bill
 ```
 
 - So if I print `emails_sent['bill@yahoo.com']` I get a list of each email bill sent.
-- What about a list? Well theres no reason to split emails "sent" vs "received" becuase a list doesn't provide key access, it's simply a collection that uses a numerical index. 
+- What about a list? Well theres no reason to split emails "sent" vs "received" becuase a list doesn't provide key access, it's simply a collection that uses a numerical index to access locations. Python does provide methods to "find" items in a list, but they still require a traversal and are O(n) access time, where as  a dictionary has O(1) access time.
 
 ```python
 emails_sent = [ ('fake message 1' , 'fake subject 1' , 'joe@yahoo.com' , 'sue@gmail.com'),
