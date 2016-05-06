@@ -97,6 +97,9 @@ c2 = color(178,34,34)
 c3 = c1 + c2
 print(c3)
 ```
+### Notes:
+A lot of you returned `(r,g,b)` which is NOT a type `color`, it's a primitive data type: `tuple` which if you tried to add it to another color, would fail. From the usage, you should have figured out that `c3` needed to be of type `color`.
+
 
 ## Question 4
 
