@@ -372,13 +372,15 @@ Your answer should be a complete class that would fulfill the usage example abov
 
 ### Answer:
 ```python
+
 class Email(object):
 	def __init__(self, msg, subj, sender, receiver):
 		self.message = msg
 		self.subject = subj
 		self.sender = sender 	#email address
 		self.receiver = receiver #email address
-		
+
+# Using a dictionary		
 class EmailLogger(object):
 	def __init__(self):
 		self.emails_sent = {}
@@ -398,6 +400,28 @@ class EmailLogger(object):
 		
 	def get_received_by(self,receiver):
 		return self.emails_received[receiver]
+
+# Using a list
+class EmailLogger(object):
+    def __init__(self):
+        self.emails = []
+
+    def add(self,email):
+        self.emails.append(email)
+
+    def get_sent_by(self,sender):
+        temp = []
+        for e in self.emails:
+            if e.sender == sender:
+                temp.append(e)
+        return temp
+
+    def get_received_by(self,receiver):
+        temp = []
+        for e in self.emails:
+            if e.receiver == receiver:
+                temp.append(e)
+        return temp
 		
 Logger = EmailLogger()
 
