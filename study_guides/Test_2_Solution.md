@@ -136,7 +136,9 @@ print(gray2)
 
 ### Answer:
 ```python
-class GrayScaler(object):
+# Don't inherit from color ... write your own string method.
+
+class GrayScaler1(object):
     def __init__(self,c):
         self.color = c
         
@@ -150,10 +152,36 @@ class GrayScaler(object):
         w = (c[0]*w1 + c[1] * w2 + c[2] * w3)
         return color(w,w,w)
         
-        
     def __str__(self):
-        return self.color.__str__()
+        c = self.color
+        return "(red: %d , green: %d , blue: %d)" % (c[0],c[1],c[2])
 
+myColor = (160,32,240)
+gray = GrayScaler(myColor)
+print(gray)
+avg = gray.average()
+print(avg)
+cust = gray.custom(.2,.5,.3)
+print(cust)
+
+# Inheriting from color doesn't give us a lot to "extend" aside from the "__str__" method. But
+# it doesn't hurt much and may be useful if the color class were to add some functionality.
+
+class GrayScaler2(color):
+    def __init__(self,c):
+        self.color = c
+
+    def average(self):
+        c = self.color
+        avg = (c[0]+c[1]+c[2]) / 3
+        return color(avg,avg,avg)
+
+    def custom(self,w1,w2,w3):
+        c = self.color
+        w = (c[0]*w1 + c[1] * w2 + c[2] * w3)
+        return color(w,w,w)
+        
+        
 myColor = (160,32,240)
 gray = GrayScaler(myColor)
 print(gray)
