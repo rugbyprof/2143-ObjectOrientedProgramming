@@ -141,12 +141,12 @@ class GrayScaler(object):
         self.color = c
         
     def average(self):
-        c = self.color.color
+     	c = self.color
         avg = (c[0]+c[1]+c[2]) / 3
         return color(avg,avg,avg)
         
     def custom(self,w1,w2,w3):
-        c = self.color.color
+        c = self.color
         w = (c[0]*w1 + c[1] * w2 + c[2] * w3)
         return color(w,w,w)
         
@@ -154,7 +154,7 @@ class GrayScaler(object):
     def __str__(self):
         return self.color.__str__()
 
-myColor = color(160,32,240)
+myColor = (160,32,240)
 gray = GrayScaler(myColor)
 print(gray)
 avg = gray.average()
@@ -162,6 +162,12 @@ print(avg)
 cust = gray.custom(.2,.5,.3)
 print(cust)
 ```
+
+### Notes:
+
+I messed up on the line `myColor = (160,32,240)`. It should have read `myColor = color(160,32,240)`, but since it didn't
+I altered the answer to match ... well the question. 
+
 
 ## Question 5
 
