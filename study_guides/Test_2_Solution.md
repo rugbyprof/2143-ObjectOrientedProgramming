@@ -446,3 +446,31 @@ list2 = Logger.get_received_by("sue@gmail.com")
 print(list2)
 # list2 = [Email1,Email2,Email4]
 ```
+### Notes:
+
+- Remember a list is similar to an array, so you have access to each element via some index, but you don't have direct access to each email based on some key (like in a dictionary.
+- Below is a dictionary that holds all the emails sent by someone using the email address as a key:
+
+```python
+emails_sent['joe@yahoo.com'] =   [('fake message 1' , 'fake subject 1' , 'joe@yahoo.com' , 'sue@gmail.com')]
+emails_sent['bill@yahoo.com'] =  [('fake message 2' , 'fake subject 2 ', 'bill@yahoo.com ', 'sue@gmail.com'),
+				  ('fake message 3 ', 'fake subject 3' , 'bill@yahoo.com' , 'joe@yahoo.com')]
+emails_sent['jon@hotmail.com'] = [('fake message 4' , 'fake subject 4' , 'jon@hotmail.com' , 'sue@gmail.com')]
+
+emails_received['sue@gmail.com'] = [('fake message 1' , 'fake subject 1' , 'joe@yahoo.com' , 'sue@gmail.com'),
+				    ('fake message 2' , 'fake subject 2' , 'bill@yahoo.com ', 'sue@gmail.com'),
+				    ('fake message 4' , 'fake subject 4' , 'jon@hotmail.com' , 'sue@gmail.com')]
+emails_received['joe@yahoo.com'] = [('fake message 3' , 'fake subject 3' , 'bill@yahoo.com' , 'joe@yahoo.com')]				
+```
+
+- So if I print `emails_sent['bill@yahoo.com']` I get a list of each email bill sent.
+- What about a list? Well theres no reason to split emails "sent" vs "received" becuase a list doesn't provide key access, it's simply a collection that uses a numerical index. 
+
+```python
+emails_sent = [ ('fake message 1' , 'fake subject 1' , 'joe@yahoo.com' , 'sue@gmail.com'),
+		('fake message 2' , 'fake subject 2' , 'bill@yahoo.com' , 'sue@gmail.com'),
+		('fake message 3' , 'fake subject 3' , 'bill@yahoo.com' , 'joe@yahoo.com'),
+                ('fake message 4' , 'fake subject 4' , 'jon@hotmail.com' , 'sue@gmail.com')]
+```
+- So to find any emails sent by `bill` I would need to "find" the emails that matched 'bill@yahoo.com'. 
+- Both methods work, and each has merit. 
