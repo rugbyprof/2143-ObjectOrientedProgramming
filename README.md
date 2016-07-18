@@ -39,7 +39,7 @@
 | Participation	                 | 05% |  F       | below 59 |
 
 
->**1**. Lowest exam grade replaced by Final Exam grade (if beneficial).
+>**1**. Lowest exam grade replaced by Final Exam grade (if beneficial and deemed ok by instructor).
 >
 **2**. Despite the low overall value of the programming portion of the course, ALL programs must be turned in running to pass the course.  They don't have to be necessarily correct, but they must run and they need to at least approach the solution (a "Hello World" program will not work). 
 >
