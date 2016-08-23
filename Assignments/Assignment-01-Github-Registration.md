@@ -48,20 +48,19 @@ a means to push your files to a central repository. So if your using a lab or pe
 - This is vital as I need access to your files with edit permissions.
 
 
-#### Send me an email:
+#### Update the Class Roster:
 
-https://docs.google.com/spreadsheets/d/1wX5f7oQNqYAx6Hj1KRe35Fv28uLIAsv40_QTgXh9-LA/edit?usp=sharing
+- Here is a link to our class roster on google docs: https://docs.google.com/spreadsheets/d/1wX5f7oQNqYAx6Hj1KRe35Fv28uLIAsv40_QTgXh9-LA/edit?usp=sharing
 
-- `To`: terry.griffin@mwsu.edu
-- `Subject`: 2143 OOP - Assignment 1 
+- Update the roster by adding your information to it. 
 
->
-Hello Professor Griffin,<br><br>
-My Name is: place your name here<br>
-My Github username is: githubusername<br>
-My Repository name is: your-repository-name
+Add:
+1. Your name (last, first)
+2. Your email
+3. Your github username
+4. A link to your 2143-OOP repository
 
-Your repository name and your github username are NOT the same thing.
+- Your repository name and your github username are NOT the same thing.
 
 #### Rules for emailing me:
 
