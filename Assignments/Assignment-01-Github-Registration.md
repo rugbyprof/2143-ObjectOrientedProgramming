@@ -24,6 +24,8 @@ As with most other distributed revision control systems, and unlike most clientâ
 We will be using github this semester as a means of communicating, storing documents (assignments and programs), as well as 
 a means to push your files to a central repository. So if your using a lab or personal machine, there's a centralized location that we both have access to.
 
+---
+
 #### Create a Github account. 
 - When you create a Github account, you must choose a `username`. 
 - This is very important to remember, because you will update the class roster with this username so I know where to find all your assignments.
@@ -47,6 +49,7 @@ a means to push your files to a central repository. So if your using a lab or pe
 - You can do this in the settings of your repository. 
 - This is vital as I need access to your files with edit permissions.
 
+---
 
 #### Update the Class Roster:
 
@@ -61,6 +64,8 @@ Add:
 4. A link to your 2143-OOP repository
 
 - Your repository name and your github username are NOT the same thing.
+
+---
 
 #### Rules for emailing me:
 
