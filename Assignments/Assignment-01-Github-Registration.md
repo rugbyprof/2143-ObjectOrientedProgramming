@@ -1,6 +1,6 @@
 ## Assignment 1 - Github
 Creating an account and a repository
-#### Due: Thursday Jan 21st by Midnight.
+#### Due: Thursday Sep 1st by classtime.
 
 ## ![](http://f.cl.ly/items/3R3r0z1g3G0o0r2T1i0t/heavy_exclamation_mark_symbol_emoji_2757.jpg) Important:
 
@@ -26,7 +26,7 @@ a means to push your files to a central repository. So if your using a lab or pe
 
 #### Create a Github account. 
 - When you create a Github account, you must choose a `username`. 
-- This is very important to remember, because you will email it to me in the next part of this assignment.
+- This is very important to remember, because you will update the class roster with this username so I know where to find all your assignments.
 - Create a repository named:
     -`2143-OOP-yourlastname`
     - replace the `yourlastname` with your last name to make it unique.
@@ -49,6 +49,8 @@ a means to push your files to a central repository. So if your using a lab or pe
 
 
 #### Send me an email:
+
+https://docs.google.com/spreadsheets/d/1wX5f7oQNqYAx6Hj1KRe35Fv28uLIAsv40_QTgXh9-LA/edit?usp=sharing
 
 - `To`: terry.griffin@mwsu.edu
 - `Subject`: 2143 OOP - Assignment 1 
