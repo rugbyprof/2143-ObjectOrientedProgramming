@@ -58,6 +58,7 @@ a means to push your files to a central repository. So if your using a lab or pe
 - Update the roster by adding your information to it. 
 
 Add:
+
 1. Your name (last, first)
 2. Your email
 3. Your github username
