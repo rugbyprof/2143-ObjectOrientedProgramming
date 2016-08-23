@@ -61,10 +61,10 @@ Add:
 
 1. Your name (last, first)
 2. Your email
-3. Your github username
-4. A link to your 2143-OOP repository
+3. Your github username<sup>*</sup>
+4. A link to your 2143-OOP repository<sup>*</sup>
 
-- Your repository name and your github username are NOT the same thing.
+*Your repository name and your github username are NOT the same thing.
 
 ---
 
