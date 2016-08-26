@@ -36,9 +36,13 @@ So, NO email! Unless I specifically ask. Slack is your communication conduit for
 
 Our next step is to figure out what editor we want to use. This is largely based on the type of development we are going to do. I will say this, we won't be using visual studio professoinal! It's good, but too big for our needs. Were going to use Python as our development languare, and even though Visual Studio Professional can run Python, I would like use something a little more light-weight that will still allow us to write code: [Visual Studio Code](https://code.visualstudio.com)
 
-#### What is Git?
+### Github
 
 ![](https://d17oy1vhnax1f7.cloudfront.net/items/1J3p2j221s2q2q1G100T/elmah.io.apps.github.hGP6.png)
+
+In addition to our team chat, and our code editor, we need a place where we can store / retreive our code base. A `code base` is  
+
+### What is Git?
 
 >Git is a distributed revision control and source code management (SCM) system with an emphasis on speed,data integrity,and support for distributed, non-linear workflows. Git was initially designed and developed by Linus Torvalds for Linux kernel development in 2005, and has since become the most widely adopted version control system for software development.<br><br>
 As with most other distributed revision control systems, and unlike most client–server systems, every Git working directory is a full-fledged repository with complete history and full version-tracking capabilities, independent of network access or a central server. Like the Linux kernel, Git is free software distributed under the terms of the GNU General Public License  [[1]](http://en.wikipedia.org/wiki/Git_(software)).
