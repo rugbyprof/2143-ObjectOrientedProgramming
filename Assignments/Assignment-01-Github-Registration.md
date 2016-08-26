@@ -1,6 +1,33 @@
-## Assignment 1 - Github
-Creating an account and a repository
+## Assignment 1 - Setting up Develepment Environment
 #### Due: Thursday Sep 1st by classtime.
+
+## ADE - Academic Development Environment
+
+Typically a `development environment` is:
+>A set of processes and programming tools used to create the program or software product. 
+
+This usually consists of a local code editor, with the libraries / frameworks downloaded and installed for your particular type of coding. In addition a local server to run code on might be necessary. What is absolutely necessary is the initial code base that your going to be working with. This is usually kept in some type of repository managed with Git or Subversion (version control software).
+Ultimately you will NOT work until your environment is set up! For us in class it's similar and no less important! 
+
+
+### Team Chat (25%)
+
+The first step in doing well in any of my courses is establishing a base of communication and . Not everything can be done while we are in class. Otherwise: 
+1. I would lecture,
+2. give an assignment,
+3. you would complete said assignment, 
+4. then you would go home.
+
+That's so highschool. Assignments will (and should) be challenging. Therefore you will need help from me and your classmates. Since the labs are only open 9-5 with limited help, we need to alleviate that problem. So we will use a chat client built for developers called [Slack](https://slack.com). You should have gotten an invite already from me. Accept it. If you didn't, ask me for another invite. [Here](https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-users) is a getting started guide to help you use slack. Basically slack provides:
+
+- Team chat (class members).
+- Code highlighting for snippets so we can share code and read it better.
+- File sharing simply by dragging and dropping.
+- Private channels so you can discuss things without everyone seeing (even I can't see).
+- Polls so we can vote on things (mainly for me).
+
+Creating an account and a repository
+
 
 ## ![](http://f.cl.ly/items/3R3r0z1g3G0o0r2T1i0t/heavy_exclamation_mark_symbol_emoji_2757.jpg) Important:
 
