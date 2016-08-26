@@ -79,6 +79,10 @@ a means to push your files to a central repository. So if your using a lab or pe
 
 ---
 
+![](http://d2.alternativeto.net/dist/icons/gitorious_73152.png?width=64&height=64&mode=crop&upscale=false)
+
+![](https://d17oy1vhnax1f7.cloudfront.net/items/191N123J0W2W0e353m3S/python_icon.hFzk.png)
+
 #### Update the Class Roster:
 
 - Here is a link to our class roster on google docs: https://docs.google.com/spreadsheets/d/1wX5f7oQNqYAx6Hj1KRe35Fv28uLIAsv40_QTgXh9-LA/edit?usp=sharing
