@@ -193,9 +193,11 @@ Every email must have a minimum of two items included:
 
 I can't promise an answer if you don't provide those two pieces of information.
 
+
+Sources:
 - <sub>[1] http://en.wikipedia.org/wiki/Git_(software)</sub>
 - <sub>[2] https://slack.com</sub>
 - <sub>[3] http://www.openbookproject.net/courses/webappdev/units/softwaredesign/resources/install_python_win7.html </sub>
-
-
-
+- <sub>[4] https://code.visualstudio.com/</sub>
+- <sub>[5] https://git-for-windows.github.io/</sub>
+- <sub>[6] https://www.python.org/</sub>
