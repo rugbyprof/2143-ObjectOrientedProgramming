@@ -12,13 +12,15 @@ Ultimately you will NOT work until your environment is set up! For us in class i
 
 ### Team Chat (25%)
 
+![](https://d17oy1vhnax1f7.cloudfront.net/items/1J3A0f36402p2r1K1u0L/slack-2014.hG65.png)
+
 The first step in doing well in any of my courses is establishing a base of communication and . Not everything can be done while we are in class. Otherwise: 
 1. I would lecture,
 2. give an assignment,
 3. you would complete said assignment, 
 4. then you would go home.
 
-That's so highschool. Assignments will (and should) be challenging. Therefore you will need help from me and your classmates. Since the labs are only open 9-5 with limited help, we need to alleviate that problem. So we will use a chat client built for developers called [Slack](https://slack.com). You should have gotten an invite already from me. Accept it. If you didn't, ask me for another invite. [Here](https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-users) is a getting started guide to help you use slack. Basically slack provides:
+That's so highschool. Assignments will (and should) be challenging. Therefore you will need help from me and your classmates. Since the labs are only open 9-5 with limited help, we need to alleviate that problem. So we will use a chat client built for developers called [Slack](https://slack.com)<sup>2</sup>. You should have gotten an invite already from me. Accept it. If you didn't, ask me for another invite. [Here](https://get.slack.help/hc/en-us/articles/218080037-Getting-started-for-new-users) is a getting started guide to help you use slack. Basically slack provides:
 
 - Team chat (class members).
 - Code highlighting for snippets so we can share code and read it better.
@@ -26,18 +28,17 @@ That's so highschool. Assignments will (and should) be challenging. Therefore yo
 - Private channels so you can discuss things without everyone seeing (even I can't see).
 - Polls so we can vote on things (mainly for me).
 
-Creating an account and a repository
+So, NO email! Unless I specifically ask. Slack is your communication conduit for this class.
 
+### Editor
 
-## ![](http://f.cl.ly/items/3R3r0z1g3G0o0r2T1i0t/heavy_exclamation_mark_symbol_emoji_2757.jpg) Important:
+![](https://d17oy1vhnax1f7.cloudfront.net/items/0K2j0e0y0G0h1X2x0p1O/visual-studio-2015-update-1-icon.hFUc.png)
 
-I cannot perform my job of assessing your work if you do not complete this assignment correctly. Therefore:
-- If you don't complete it, drop the course because you will fail
-- If you complete it late, you will lose 1 letter grade off of your final grade.
-- If you complete it wrong, you will lose 1/2 of one letter grade off of your final grade.
-- Having said that, feel free to get help from me at anytime.
+Our next step is to figure out what editor we want to use. This is largely based on the type of development we are going to do. I will say this, we won't be using visual studio professoinal! It's good, but too big for our needs. Were going to use Python as our development languare, and even though Visual Studio Professional can run Python, I would like use something a little more light-weight that will still allow us to write code: [Visual Studio Code](https://code.visualstudio.com)
 
 #### What is Git?
+
+![](https://d17oy1vhnax1f7.cloudfront.net/items/1J3p2j221s2q2q1G100T/elmah.io.apps.github.hGP6.png)
 
 >Git is a distributed revision control and source code management (SCM) system with an emphasis on speed,data integrity,and support for distributed, non-linear workflows. Git was initially designed and developed by Linus Torvalds for Linux kernel development in 2005, and has since become the most widely adopted version control system for software development.<br><br>
 As with most other distributed revision control systems, and unlike most client–server systems, every Git working directory is a full-fledged repository with complete history and full version-tracking capabilities, independent of network access or a central server. Like the Linux kernel, Git is free software distributed under the terms of the GNU General Public License  [[1]](http://en.wikipedia.org/wiki/Git_(software)).
@@ -106,3 +107,14 @@ Every email must have a minimum of two items included:
 I can't promise an answer if you don't provide those two pieces of information.
 
 <sub>[1] http://en.wikipedia.org/wiki/Git_(software)</sub>
+<sub>[2] https://slack.com</sub>
+
+
+
+## ![](http://f.cl.ly/items/3R3r0z1g3G0o0r2T1i0t/heavy_exclamation_mark_symbol_emoji_2757.jpg) Important:
+
+I cannot perform my job of assessing your work if you do not complete this assignment correctly. Therefore:
+- If you don't complete it, drop the course because you will fail
+- If you complete it late, you will lose 1 letter grade off of your final grade.
+- If you complete it wrong, you will lose 1/2 of one letter grade off of your final grade.
+- Having said that, feel free to get help from me at anytime.
