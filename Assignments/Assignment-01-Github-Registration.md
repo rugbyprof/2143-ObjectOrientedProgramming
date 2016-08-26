@@ -29,6 +29,7 @@ Ultimately you will NOT work until your environment is set up! For us in class i
 The first step in doing well in any of my courses is establishing a base of communication. Why? Not everything can be done while we are in class. 
 
 Otherwise: 
+
 1. I would lecture
 2. give an assignment
 3. you would complete said assignment
