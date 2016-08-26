@@ -34,7 +34,9 @@ So, NO email! Unless I specifically ask. Slack is your communication conduit for
 
 ![](https://d17oy1vhnax1f7.cloudfront.net/items/0K2j0e0y0G0h1X2x0p1O/visual-studio-2015-update-1-icon.hFUc.png)
 
-Our next step is to figure out what editor we want to use. This is largely based on the type of development we are going to do. I will say this, we won't be using visual studio professoinal! It's good, but too big for our needs. Were going to use Python as our development languare, and even though Visual Studio Professional can run Python, I would like use something a little more light-weight that will still allow us to write code: [Visual Studio Code](https://code.visualstudio.com)
+Our next step is to figure out what editor we want to use. This is largely based on the type of development we are going to do. I will say this, we won't be using visual studio professoinal! It's good, but too big for our needs. Were going to use Python as our development language, and even though Visual Studio Professional can run Python, I would like use something a little more light-weight that will still allow us to write code: [Visual Studio Code](https://code.visualstudio.com)
+
+This editor allows to install some cool plugins as well
 
 ### Github
 
