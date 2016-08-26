@@ -30,7 +30,7 @@ a means to push your files to a central repository. So if your using a lab or pe
 - When you create a Github account, you must choose a `username`. 
 - This is very important to remember, because you will update the class roster with this username so I know where to find all your assignments.
 - Create a repository named:
-    -`2143-OOP-yourlastname`
+    - `2143-OOP-yourlastname`
     - replace the `yourlastname` with your last name to make it unique.
 - Check the box that says: "Add a README.md file"
 
