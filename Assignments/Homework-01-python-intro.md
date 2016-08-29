@@ -1,3 +1,5 @@
+# Ignore for now
+
 # Homework 1 - Getting your python feet wet
 
 ### Requirements
