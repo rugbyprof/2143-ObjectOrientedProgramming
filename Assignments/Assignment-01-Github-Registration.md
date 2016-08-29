@@ -1,5 +1,5 @@
 ## Assignment 1 - Setting up Develepment Environment
-#### Due: Thursday Sep 1st by classtime.
+#### Due: Wednesday Aug 31st by classtime.
 
 ## ADE - Academic Development Environment
 
