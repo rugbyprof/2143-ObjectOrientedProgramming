@@ -159,6 +159,7 @@ a means to push your files to a central repository. So if your using a lab or pe
 #### Make me a contributer:
 
 - Go to your repo settings and add `rugbyprof` as a collaborater.
+- Go to your repo settings and add `Cdbot100` (Scott Gordon) as a collaborater.
 - You can do this in the settings of your repository. 
 - This is vital as I need access to your files with edit permissions.
 
