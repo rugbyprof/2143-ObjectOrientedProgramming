@@ -1,17 +1,16 @@
 # 2143 Object Oriented Programming
 
-- Companion Website:
-    - Signup Link: https://piazza.com/mwsu/spring2016/cmps2143
-    - Class Link: https://piazza.com/mwsu/spring2016/cmps2143/home
-- Days: TR 1100am 1220pm 
-- Location: BO 304 
-- Final Exam: Tuesday May 10th, 1:00 - 3:00 p.m.
-- Dates: January 16 - May 6
+## Roster
+[Class Roster](https://docs.google.com/spreadsheets/d/1wX5f7oQNqYAx6Hj1KRe35Fv28uLIAsv40_QTgXh9-LA/edit?usp=sharing)
+
+- Days: MW 1300am 1420pm 
+- Location: BO 320 
+- Final Exam: Monday Dec 12th, 3:30 - 4:30 p.m.
+- Dates: August 29 - Dec 9
 - Holidays: 
-    - Martin Luther King: January 18 
-    - Spring Break: March 21-26
-    - Easter Break: March 28-29
+    - Thanksgiving November 23-25 
 - Last Day for “W”: March 30
+
 
 ## Course Topics:
 
