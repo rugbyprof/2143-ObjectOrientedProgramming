@@ -3,7 +3,7 @@
 ## Roster
 ![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster](https://docs.google.com/spreadsheets/d/1wX5f7oQNqYAx6Hj1KRe35Fv28uLIAsv40_QTgXh9-LA/edit?usp=sharing)
 
-- Days: MW 1:00 p.m. 2:20 p.m. 
+- Days: MW 1:00 p.m. - 2:20 p.m. 
 - Location: BO 320 
 - Final Exam: Monday Dec 12th, 3:30 p.m. - 5:30 p.m.
 - Dates: August 29 - Dec 9
