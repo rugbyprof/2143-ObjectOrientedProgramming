@@ -456,7 +456,7 @@ Here are some examples for objects which are considered as empty:
 
 Unlike the double equals operator "==", the "is" operator does not match the values of the variables, but the instances themselves. For example:
 
-```
+```python
 x = [1,2,3]
 y = [1,2,3]
 print x == y # Prints out True
@@ -467,7 +467,7 @@ print x is y # Prints out False
 
 Using "not" before a boolean expression inverts it:
 
-```
+```python
 print not False # Prints out True
 print (not False) == (False) # Prints out False
 ```
@@ -478,7 +478,7 @@ There are two types of loops in Python, `for` and `while`.
 #### The "for" loop
 For loops iterate over a given sequence. Here is an example:
 
-```
+```python
 primes = [2, 3, 5, 7]
 for prime in primes:
     print prime
@@ -486,7 +486,7 @@ for prime in primes:
 
 For loops can iterate over a sequence of numbers using the "range" and "xrange" functions. The difference between range and xrange is that the range function returns a new list with numbers of that specified range, whereas xrange returns an iterator, which is more efficient. (Python 3 uses the range function, which acts like xrange). Note that the xrange function is zero based.
 
-```
+```python
 # Prints out the numbers 0,1,2,3,4
 for x in xrange(5): # or range(5)
     print x
@@ -504,7 +504,7 @@ for x in xrange(3, 8, 2): # or range(3, 8, 2)
 
 While loops repeat as long as a certain boolean condition is met. For example:
 
-```
+```python
 # Prints out 0,1,2,3,4
 
 count = 0
@@ -517,7 +517,7 @@ while count < 5:
 
 break is used to exit a for loop or a while loop, whereas continue is used to skip the current block, and return to the "for" or "while" statement. A few examples:
 
-```
+```python
 # Prints out 0,1,2,3,4
 
 count = 0
@@ -541,7 +541,7 @@ A dictionary is a data type similar to arrays, but works with keys and values in
 
 For example, a database of phone numbers could be stored using a dictionary like this:
 
-```
+```python
 phonebook = {}
 phonebook["John"] = 938477566
 phonebook["Jack"] = 938377264
@@ -550,7 +550,7 @@ phonebook["Jill"] = 947662781
 
 Alternatively, a dictionary can be initialized with the same values in the following notation:
 
-```
+```python
 phonebook = {
     "John" : 938477566,
     "Jack" : 938377264,
@@ -607,12 +607,12 @@ for letter, number in d.items():
 
 To remove a specified index, use either one of the following notations:
 
-```
+```python
 del phonebook["John"]
 ```
 or:
 
-```
+```python
 phonebook.pop("John")
 ```
 
@@ -649,7 +649,7 @@ As we have seen on previous tutorials, Python makes use of blocks.
 
 A block is an area of code of written in the format of:
 
-```
+```python
 block_head: 
     1st block line 
     2nd block line 
@@ -660,21 +660,21 @@ Where a block line is more Python code (even another block), and the block head 
 
 Functions in python are defined using the block keyword "def", followed with the function's name as the block's name. For example:
 
-```
+```python
 def my_function():
     print "Hello From My Function!"
 ```
 
 Functions may also receive arguments (variables passed from the caller to the function). For example:
 
-```
+```python
 def my_function_with_args(username, greeting):
     print "Hello, %s , From My Function!, I wish you %s"%(username, greeting)
 ```
 
 Functions may return a value to the caller, using the keyword: `return` . For example:
 
-```
+```python
 def sum_two_numbers(a, b):
     return a + b
 ```
@@ -682,7 +682,7 @@ def sum_two_numbers(a, b):
 
 Simply write the function's name followed by (), placing any required arguments within the brackets. For example, lets call the functions written above (in the previous example):
 
-```
+```python
 # print a simple greeting 
 my_function()
 
@@ -699,7 +699,7 @@ Objects are an encapsulation of variables and functions into a single entity. Ob
 
 A very basic class would look something like this:
 
-```
+```python
 class MyClass:
     variable = "blah"
 
@@ -709,7 +709,7 @@ class MyClass:
 
 We'll explain why you have to include that "self" as a parameter a little bit later. First, to assign the above class(template) to an object you would do the following:
 
-```
+```python
 myobjectx = MyClass()
 ```
 Now the variable "myobjectx" holds an object of the class "MyClass" that contains the variable and the function defined within the class called "MyClass".
@@ -717,30 +717,30 @@ Now the variable "myobjectx" holds an object of the class "MyClass" that contain
 Accessing Object Variables
 To access the variable inside of the newly created object "MyObject" you would do the following:
 
-```
+```python
 myobjectx.variable
 ```
 So for instance the below would output the string "blah":
 
-```
+```python
 print myobjectx.variable
 ```
 You can create multiple different objects that are of the same class(have the same variables and functions defined). However, each object contains independent copies of the variables defined in the class. For instance, if we were to define another object with the "MyClass" class and then change the string in the variable above:
 
-```
+```python
 myobjecty = MyClass()
 myobjecty.variable = "yackity"
 ```
 Then print out both values:
 
-```
+```python
 print myobjectx.variable   # This would print "blah".
 print myobjecty.variable   # This would print "yackity".
 ```
 #### Accessing Object Functions
 To access a function inside of an object you use notation similar to accessing a variable:
 
-```
+```python
 myobjectx.function()
 ```
 
@@ -758,7 +758,7 @@ The first time a module is loaded into a running Python script, it is initialize
 
 If we want to import the module "urllib", which enables us to create read data from URLs, we simply import the module:
 
-```
+```python
 # import the library
 import urllib
 
@@ -772,7 +772,7 @@ Two very important functions come in handy when exploring modules in Python - th
 
 We can look for which functions are implemented in each module by using the dir function:
 
-```
+```python
 >>> import urllib
 >>> dir(urllib)
 ['ContentTooShortError', 'FancyURLopener', 'MAXFTPCACHE', 'URLopener', '__all__', '__builtins__', '__doc__', '__file__', '__name__', '__package__', '__version__', '_ftperrors', '_get_proxies', '_get_proxy_settings', '_have_ssl', '_hexdig', '_hextochr', '_hostprog', '_is_unicode', '_localhost', '_noheaders', '_nportprog', '_passwdprog', '_portprog', '_queryprog', '_safe_map', '_safe_quoters', '_tagprog', '_thishost', '_typeprog', '_urlopener', '_userprog', '_valueprog', 'addbase', 'addclosehook', 'addinfo', 'addinfourl', 'always_safe', 'basejoin', 'c', 'ftpcache', 'ftperrors', 'ftpwrapper', 'getproxies', 'getproxies_environment', 'getproxies_macosx_sysconf', 'i', 'localhost', 'main', 'noheaders', 'os', 'pathname2url', 'proxy_bypass', 'proxy_bypass_environment', 'proxy_bypass_macosx_sysconf', 'quote', 'quote_plus', 'reporthook', 'socket', 'splitattr', 'splithost', 'splitnport', 'splitpasswd', 'splitport', 'splitquery', 'splittag', 'splittype', 'splituser', 'splitvalue', 'ssl', 'string', 'sys', 'test', 'test1', 'thishost', 'time', 'toBytes', 'unquote', 'unquote_plus', 'unwrap', 'url2pathname', 'urlcleanup', 'urlencode', 'urlopen', 'urlretrieve']
@@ -780,7 +780,7 @@ We can look for which functions are implemented in each module by using the dir 
 
 When we find the function in the module we want to use, we can read about it more using the help function, inside the Python interpreter:
 
-```
+```python
 help(urllib.urlopen)
 ```
 
@@ -798,12 +798,12 @@ If we create a directory called foo, which marks the package name, we can then c
 
 To use the module bar, we can import it in two ways:
 
-```
+```python
 import foo.bar
 ```
 or:
 
-```
+```python
 from foo import bar
 ```
 In the first method, we must use the foo prefix whenever we access the module bar. In the second method, we don't, because we import the module to our module's namespace.
@@ -818,7 +818,7 @@ When an iteration over a set of item starts using the for statement, the generat
 
 Here is a simple example of a generator function which returns 7 random integers:
 
-```
+```python
 import random
 
 def lottery():
@@ -841,7 +841,7 @@ List Comprehensions is a very powerful tool, which creates a new list based on a
 
 For example, let's say we need to create a list of integers which specify the length of each word in a certain sentence, but only if the word is not the word "the".
 
-```
+```python
 sentence = "the quick brown fox jumps over the lazy dog"
 words = sentence.split()
 word_lengths = []
@@ -852,7 +852,7 @@ for word in words:
 
 Using a list comprehension, we could simplify this process to this notation:
 
-```
+```python
 sentence = "the quick brown fox jumps over the lazy dog"
 words = sentence.split()
 word_lengths = [len(word) for word in words if word != "the"]
@@ -862,7 +862,7 @@ word_lengths = [len(word) for word in words if word != "the"]
 
 Every function in Python receives a predefined number of arguments, if declared normally, like this:
 
-```
+```python
 def myfunction(first, second, third):
     # do something with the 3 variables
     ...
@@ -870,7 +870,7 @@ def myfunction(first, second, third):
 
 It is possible to declare functions which receive a variable number of arguments, using the following syntax:
 
-```
+```python
 def foo(first, second, third, *therest):
     print "First: %s" % first
     print "Second: %s" % second
@@ -880,7 +880,7 @@ def foo(first, second, third, *therest):
 
 The "therest" variable is a list of variables, which receives all arguments which were given to the "foo" function after the first 3 arguments. So calling foo(1,2,3,4,5) will print out:
 
-```
+```python
 First: 1
 Second: 2
 Third: 3
@@ -889,7 +889,7 @@ And all the rest... [4, 5]
 
 It is also possible to send functions arguments by keyword, so that the order of the argument does not matter, using the following syntax:
 
-```
+```python
 def bar(first, second, third, **options):
     if options.get("action") == "sum":
         print "The sum is: %d" % (first + second + third)
@@ -903,7 +903,7 @@ print "Result: %d" % result
 
 The following code yields the following output:
 
-```
+```python
 The sum is: 6
 Result: 1
 ```
@@ -917,7 +917,7 @@ In Python 2.5, the simplejson module is used, whereas in Python 2.7, the json mo
 
 In order to use the json module, it must first be imported:
 
-```
+```python
 import json
 ```
 
@@ -925,13 +925,13 @@ There are two basic formats for JSON data. Either in a string or the object data
 
 To load JSON back to a data structure, use the "loads" method. This method takes a string and turns it back into the json object datastructure:
 
-```
+```python
 print json.loads(json_string)
 ```
 
 To encode a data structure to JSON, use the "dumps" method. This method takes an object and returns a String:
 
-```
+```python
 json_string = json.dumps([1, 2, 3, "a", "b", "c"])
 ```
 
@@ -939,7 +939,7 @@ Python supports a Python proprietary data serialization method called pickle (an
 
 You can use it exactly the same way.
 
-```
+```python
 import cPickle
 pickled_string = cPickle.dumps([1, 2, 3, "a", "b", "c"])
 print cPickle.loads(pickled_string)
@@ -949,7 +949,7 @@ print cPickle.loads(pickled_string)
 
 Sets are lists with no duplicate entries. Let's say you want to collect a list of words used in a paragraph:
 
-```
+```python
 print set("my name is Eric and Eric is my name".split())
 ```
 
@@ -957,14 +957,14 @@ This will print out a list containing "my", "name", "is", "Eric", and finally "a
 
 Sets are a powerful tool in Python since they have the ability to calculate differences and intersections between other sets. For example, say you have a list of participants in events A and B:
 
-```
+```python
 a = set(["Jake", "John", "Eric"])
 b = set(["John", "Jill"])
 ```
 
 To find out which members attended both events, you may use the "intersection" method:
 
-```
+```python
 >>> a.intersection(b)
 set(['John'])
 >>> b.intersection(a)
@@ -973,7 +973,7 @@ set(['John'])
 
 To find out which members attended only one of the events, use the "symmetric_difference" method:
 
-```
+```python
 >>> a.symmetric_difference(b)
 set(['Jill', 'Jake', 'Eric'])
 >>> b.symmetric_difference(a)
@@ -982,7 +982,7 @@ set(['Jill', 'Jake', 'Eric'])
 
 To find out which members attended only one event and not the other, use the "difference" method:
 
-```
+```python
 >>> a.difference(b)
 set(['Jake', 'Eric'])
 >>> b.difference(a)
@@ -991,7 +991,7 @@ set(['Jill'])
 
 To receive a list of all participants, use the "union" method:
 
-```
+```python
 >>> a.union(b)
 set(['Jill', 'Jake', 'John', 'Eric'])
 ```
@@ -1002,7 +1002,7 @@ Code introspection is the ability to examine classes, functions and keywords to 
 
 Python provides several functions and utilities for code introspection.
 
-```
+```python
 help()
 dir()
 hasattr()

@@ -28,7 +28,9 @@
 | `tail file`           | display the last few lines of a file |
 | `grep 'keyword' file` | search a file for keywords |
 | `wc file`             | count number of lines/words/characters in file |
-| `chmod xxx filename`  | change modify permission  on filename| 
+| `chmod xxx filename`  | change modify permission  on filename | 
+| `chmod +x filename`  | add `execute` to file name |
+
 
 | Command                    | Meaning |
 |----------------------------|---------|
