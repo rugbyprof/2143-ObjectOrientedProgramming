@@ -3,7 +3,7 @@
 To print a string, just write:
 
 ```python
-print("This line will be printed.")
+print "This line will be printed."
 ```
 
 ## Indentation
@@ -17,18 +17,12 @@ if x == 1:
 ```
 
 ## Variables and Types
-- Python is completely object oriented, and not "statically typed". 
-- You do not need to declare variables before using them, or declare their type. 
-- Every variable in Python is an object.
+Python is completely object oriented, and not "statically typed". You do not need to declare variables before using them, or declare their type. Every variable in Python is an object.
 
 This tutorial will go over a few basic types of variables.
 
-### Numbers
-Python supports two types of numbers: 
-- integers  
-- floating point 
-
-It also supports complex numbers, which will not be explained in this tutorial.
+#### Numbers
+Python supports two types of numbers - integers and floating point numbers. (It also supports complex numbers, which will not be explained in this tutorial).
 
 To define an integer, use the following syntax:
 ```python
@@ -42,7 +36,7 @@ myfloat = 7.0
 myfloat = float(7)
 ```
 
-### Strings
+#### Strings
 Strings are defined either with a single quote or a double quotes.
 
 ```python
@@ -82,21 +76,13 @@ a, b = 3, 4
 Mixing operators between numbers and strings is not supported:
 
 ```python
-one = 1
-two = 2
-hello = "hello"
-
 # This will not work!
 print one + two + hello
 ```
 
 ## Lists
 
-- Lists are very similar to arrays. 
-- They can contain any type of variable, and they can contain as many variables as you wish. 
-- Lists can also be iterated over in a very simple manner. 
-
-Here is an example of how to build a list.
+Lists are very similar to arrays. They can contain any type of variable, and they can contain as many variables as you wish. Lists can also be iterated over in a very simple manner. Here is an example of how to build a list.
 
 ```python
 mylist = []
@@ -107,7 +93,7 @@ print(mylist[0]) # prints 1
 print(mylist[1]) # prints 2
 print(mylist[2]) # prints 3
 
-# prints out 1,2,3 (notice the looping construct, it's not like C++).
+# prints out 1,2,3
 for x in mylist:
     print x
 ```
@@ -122,15 +108,11 @@ print(L)
 #### Accessing / Indexing
 
 ```python
-L = ['yellow', 'red', 'blue', 'green', 'black']
-
 print(L[0])
 # prints 'yellow'
 ```
 
 #### Slicing
-The colon `:` operator is kindof like the "range" operator in excel. Think of it as 
-the "everything in-between operator".
 
 ```python
 L[1:4]  #returns ['red', 'blue', 'green']
@@ -141,8 +123,7 @@ L[1:-1] #returns ['red', 'blue', 'green']
 ```
 
 #### Length 
-
-- Number of items in list
+number of items in list
 
 ```python
 len(L)  # returns 5
@@ -150,7 +131,7 @@ len(L)  # returns 5
 
 #### Sorting 
 
-- Sorts the list
+sorts the list
 
 ```python
 sorted(L) # results in ['black', 'blue', 'green', 'red', 'yellow']
@@ -158,7 +139,7 @@ sorted(L) # results in ['black', 'blue', 'green', 'red', 'yellow']
 
 #### Append 
 
-- Append to end of list
+append to end of list
 
 ```python
 L.append("pink")
@@ -169,7 +150,7 @@ print(L)
 
 #### Insert
 
-- Insert into list
+insert into list
 
 ```python
 L.insert(0, "white")
@@ -179,15 +160,13 @@ print(L)
 
 #### Extend
 
-- Grow the list
+grow the list
 
 ```python
 L.extend(L2)
 ```
 
-#### Remove - 
-
-- Remove first item in list with value "white"
+#### Remove - remove first item in list with value "white"
 ```python
 L.remove("white")
 
@@ -197,7 +176,7 @@ returns: ['black', 'blue', 'green', 'red', 'yellow', 'pink']
 
 #### Delete
 
-- Remove an item from a list given its index instead of its value
+Remove an item from a list given its index instead of its value
 
 ```python
 del.L[0]
@@ -208,13 +187,13 @@ print(L)
 
 #### Pop
 
-- Remove last item in the list
+Remove last item in the list
 
 ```python
 L.pop()  # returns 'pink'
 ```
 
-- Remove indexed value from list
+Remove indexed value from list
 
 ```python
 L.pop(1) # returns 'green'  
@@ -222,7 +201,7 @@ L.pop(1) # returns 'green'
 
 #### Reverse 
 
-- Reversing the list
+reversing the list
 
 ```python
 L.reverse()
@@ -230,20 +209,20 @@ L.reverse()
 
 #### Count
 
-- Search list and return number of instances found
+Search list and return number of instances found
 
 ```python
 L.count('red')
 ```
 
-- Keyword "in" - can be used to test if an item is in a list
+Keyword "in" - can be used to test if an item is in a list
 
 ```python
 if 'red' in L:
     print("list contains", 'red')
 ```
 
-- For-in statement - makes it easy to loop over the items in a list
+For-in statement - makes it easy to loop over the items in a list
 
 ```python
 for item in L:
@@ -260,23 +239,21 @@ This section explains how to use basic operators in Python.
 #### Arithmetic Operators
 
 Just as any other programming languages, the addition, subtraction, multiplication, and division operators can be used with numbers.
-```
+```python
 number = 1 + 2 * 3 / 4.0
 ```
 
 Try to predict what the answer will be. Does python follow order of operations?
 
-Another operator available is the modulo (`%`) operator, which returns the integer remainder of the division. 
+Another operator available is the modulo (%) operator, which returns the integer remainder of the division. dividend % divisor = remainder.
 
-`dividend % divisor = remainder`.
-
-```
+```python
 remainder = 11 % 3
 ```
 
 Using two multiplication symbols makes a power relationship.
 
-```
+```python
 squared = 7 ** 2
 cubed = 2 ** 3
 ```
@@ -284,13 +261,13 @@ cubed = 2 ** 3
 #### Using Operators with Strings
 Python supports concatenating strings using the addition operator:
 
-```
+```python
 helloworld = "hello" + " " + "world"
 ```
 
 Python also supports multiplying strings to form a string with a repeating sequence:
 
-```
+```python
 lotsofhellos = "hello" * 10
 ```
 
@@ -298,7 +275,7 @@ lotsofhellos = "hello" * 10
 
 Lists can be joined with the addition operators:
 
-```
+```python
 even_numbers = [2,4,6,8]
 odd_numbers = [1,3,5,7]
 all_numbers = odd_numbers + even_numbers
@@ -306,7 +283,7 @@ all_numbers = odd_numbers + even_numbers
 
 Just as in strings, Python supports forming new lists with a repeating sequence using the multiplication operator:
 
-```
+```python
 print [1,2,3] * 3
 ```
 
@@ -316,7 +293,7 @@ Python uses C-style string formatting to create new, formatted strings. The `%` 
 
 Let's say you have a variable called "name" with your user name in it, and you would then like to print out a greeting to that user.
 
-```
+```python
 # This prints out "Hello, John!"
 name = "John"
 print "Hello, %s!" % name
@@ -324,7 +301,7 @@ print "Hello, %s!" % name
 
 To use two or more argument specifiers, use a tuple (parentheses):
 
-```
+```python
 # This prints out "John is 23 years old."
 name = "John"
 age = 23
@@ -333,14 +310,14 @@ print "%s is %d years old." % (name, age)
 
 Any object which is not a string can be formatted using the %s operator as well. The string which returns from the "repr" method of that object is formatted as the string. For example:
 
-```
+```python
 # This prints out: A list: [1, 2, 3]
 mylist = [1,2,3]
 print "A list: %s" % mylist
 ```
 Here are some basic argument specifiers you should know:
 
-```
+```python
 %s - String (or any object with a string representation, like numbers)
 %d - Integers
 %f - Floating point numbers
@@ -351,17 +328,17 @@ Here are some basic argument specifiers you should know:
 ## Basic String Operations
 Strings are bits of text. They can be defined as anything between quotes:
 
-```
+```python
 astring = "Hello world!"
 ```
 As you can see, the first thing you learned was printing a simple sentence. This sentence was stored by Python as a string. However, instead of immediately printing strings out, we will explore the various things you can do to them.
 
-```
+```python
 print len(astring)
 ```
 That prints out 12, because "Hello world!" is 12 characters long, including punctuation and spaces.
 
-```
+```python
 print astring.index("o")
 ```
 
@@ -369,12 +346,12 @@ That prints out 4, because the location of the first occurrence of the letter "o
 
 But why didn't it print out 5? Isn't "o" the fifth character in the string? To make things more simple, Python (and most other programming languages) start things at 0 instead of 1. So the index of "o" is 4.
 
-```
+```python
 print astring.count("l")
 ```
 For those of you using silly fonts, that is a lowercase L, not a number one. This counts the number of l's in the string. Therefore, it should print 3.
 
-```
+```python
 print astring[3:7]
 ```
 This prints a slice of the string, starting at index 3, and ending at index 6. But why 6 and not 7? Again, most programming languages do this - it makes doing math inside those brackets easier.
@@ -383,26 +360,26 @@ If you just have one number in the brackets, it will give you the single charact
 
 You can even put negative numbers inside the brackets. They are an easy way of starting at the end of the string instead of the beginning. This way, -3 means "3rd character from the end".
 
-```
+```python
 print astring.upper()
 print astring.lower()
 ```
 These make a new string with all letters converted to uppercase and lowercase, respectively.
 
-```
+```python
 print astring.startswith("Hello")
 print astring.endswith("asdfasdfasdf")
 ```
 This is used to determine whether the string starts with something or ends with something, respectively. The first one will print True, as the string starts with "Hello". The second one will print False, as the string certainly does not end with "asdfasdfasdf".
 
-```
+```python
 afewwords = astring.split(" ")
 ```
 
 ## Conditions
 Python uses boolean variables to evaluate conditions. The boolean values True and False are returned when an expression is compared or evaluated. For example:
 
-```
+```python
 x = 2
 print x == 2 # prints out True
 print x == 3 # prints out False
@@ -415,7 +392,7 @@ Notice that variable assignment is done using a single equals operator "=", wher
 
 The "and" and "or" boolean operators allow building complex boolean expressions, for example:
 
-```
+```python
 name = "John"
 age = 23
 if name == "John" and age == 23:
@@ -429,7 +406,7 @@ if name == "John" or name == "Rick":
 
 The "in" operator could be used to check if a specified object exists within an `iterable` object container, such as a list:
 
-```
+```python
 if name in ["John", "Rick"]:
     print "Your name is either John or Rick."
 ```
@@ -438,7 +415,7 @@ Python uses indentation to define code blocks, instead of brackets. The standard
 
 Here is an example for using Python's "if" statement using code blocks:
 
-```
+```python
 if <statement is true>:
     <do something>
     ....
@@ -455,7 +432,7 @@ else:
 
 For example:
 
-```
+```python
 x = 2
 if x == 2:
     print "x equals two!"
@@ -479,7 +456,7 @@ Here are some examples for objects which are considered as empty:
 
 Unlike the double equals operator "==", the "is" operator does not match the values of the variables, but the instances themselves. For example:
 
-```
+```python
 x = [1,2,3]
 y = [1,2,3]
 print x == y # Prints out True
@@ -490,7 +467,7 @@ print x is y # Prints out False
 
 Using "not" before a boolean expression inverts it:
 
-```
+```python
 print not False # Prints out True
 print (not False) == (False) # Prints out False
 ```
@@ -501,7 +478,7 @@ There are two types of loops in Python, `for` and `while`.
 #### The "for" loop
 For loops iterate over a given sequence. Here is an example:
 
-```
+```python
 primes = [2, 3, 5, 7]
 for prime in primes:
     print prime
@@ -509,7 +486,7 @@ for prime in primes:
 
 For loops can iterate over a sequence of numbers using the "range" and "xrange" functions. The difference between range and xrange is that the range function returns a new list with numbers of that specified range, whereas xrange returns an iterator, which is more efficient. (Python 3 uses the range function, which acts like xrange). Note that the xrange function is zero based.
 
-```
+```python
 # Prints out the numbers 0,1,2,3,4
 for x in xrange(5): # or range(5)
     print x
@@ -527,7 +504,7 @@ for x in xrange(3, 8, 2): # or range(3, 8, 2)
 
 While loops repeat as long as a certain boolean condition is met. For example:
 
-```
+```python
 # Prints out 0,1,2,3,4
 
 count = 0
@@ -540,7 +517,7 @@ while count < 5:
 
 break is used to exit a for loop or a while loop, whereas continue is used to skip the current block, and return to the "for" or "while" statement. A few examples:
 
-```
+```python
 # Prints out 0,1,2,3,4
 
 count = 0
@@ -564,7 +541,7 @@ A dictionary is a data type similar to arrays, but works with keys and values in
 
 For example, a database of phone numbers could be stored using a dictionary like this:
 
-```
+```python
 phonebook = {}
 phonebook["John"] = 938477566
 phonebook["Jack"] = 938377264
@@ -573,7 +550,7 @@ phonebook["Jill"] = 947662781
 
 Alternatively, a dictionary can be initialized with the same values in the following notation:
 
-```
+```python
 phonebook = {
     "John" : 938477566,
     "Jack" : 938377264,
@@ -630,12 +607,12 @@ for letter, number in d.items():
 
 To remove a specified index, use either one of the following notations:
 
-```
+```python
 del phonebook["John"]
 ```
 or:
 
-```
+```python
 phonebook.pop("John")
 ```
 
@@ -672,7 +649,7 @@ As we have seen on previous tutorials, Python makes use of blocks.
 
 A block is an area of code of written in the format of:
 
-```
+```python
 block_head: 
     1st block line 
     2nd block line 
@@ -683,21 +660,21 @@ Where a block line is more Python code (even another block), and the block head 
 
 Functions in python are defined using the block keyword "def", followed with the function's name as the block's name. For example:
 
-```
+```python
 def my_function():
     print "Hello From My Function!"
 ```
 
 Functions may also receive arguments (variables passed from the caller to the function). For example:
 
-```
+```python
 def my_function_with_args(username, greeting):
     print "Hello, %s , From My Function!, I wish you %s"%(username, greeting)
 ```
 
 Functions may return a value to the caller, using the keyword: `return` . For example:
 
-```
+```python
 def sum_two_numbers(a, b):
     return a + b
 ```
@@ -705,7 +682,7 @@ def sum_two_numbers(a, b):
 
 Simply write the function's name followed by (), placing any required arguments within the brackets. For example, lets call the functions written above (in the previous example):
 
-```
+```python
 # print a simple greeting 
 my_function()
 
@@ -722,7 +699,7 @@ Objects are an encapsulation of variables and functions into a single entity. Ob
 
 A very basic class would look something like this:
 
-```
+```python
 class MyClass:
     variable = "blah"
 
@@ -732,7 +709,7 @@ class MyClass:
 
 We'll explain why you have to include that "self" as a parameter a little bit later. First, to assign the above class(template) to an object you would do the following:
 
-```
+```python
 myobjectx = MyClass()
 ```
 Now the variable "myobjectx" holds an object of the class "MyClass" that contains the variable and the function defined within the class called "MyClass".
@@ -740,30 +717,30 @@ Now the variable "myobjectx" holds an object of the class "MyClass" that contain
 Accessing Object Variables
 To access the variable inside of the newly created object "MyObject" you would do the following:
 
-```
+```python
 myobjectx.variable
 ```
 So for instance the below would output the string "blah":
 
-```
+```python
 print myobjectx.variable
 ```
 You can create multiple different objects that are of the same class(have the same variables and functions defined). However, each object contains independent copies of the variables defined in the class. For instance, if we were to define another object with the "MyClass" class and then change the string in the variable above:
 
-```
+```python
 myobjecty = MyClass()
 myobjecty.variable = "yackity"
 ```
 Then print out both values:
 
-```
+```python
 print myobjectx.variable   # This would print "blah".
 print myobjecty.variable   # This would print "yackity".
 ```
 #### Accessing Object Functions
 To access a function inside of an object you use notation similar to accessing a variable:
 
-```
+```python
 myobjectx.function()
 ```
 
@@ -781,7 +758,7 @@ The first time a module is loaded into a running Python script, it is initialize
 
 If we want to import the module "urllib", which enables us to create read data from URLs, we simply import the module:
 
-```
+```python
 # import the library
 import urllib
 
@@ -795,7 +772,7 @@ Two very important functions come in handy when exploring modules in Python - th
 
 We can look for which functions are implemented in each module by using the dir function:
 
-```
+```python
 >>> import urllib
 >>> dir(urllib)
 ['ContentTooShortError', 'FancyURLopener', 'MAXFTPCACHE', 'URLopener', '__all__', '__builtins__', '__doc__', '__file__', '__name__', '__package__', '__version__', '_ftperrors', '_get_proxies', '_get_proxy_settings', '_have_ssl', '_hexdig', '_hextochr', '_hostprog', '_is_unicode', '_localhost', '_noheaders', '_nportprog', '_passwdprog', '_portprog', '_queryprog', '_safe_map', '_safe_quoters', '_tagprog', '_thishost', '_typeprog', '_urlopener', '_userprog', '_valueprog', 'addbase', 'addclosehook', 'addinfo', 'addinfourl', 'always_safe', 'basejoin', 'c', 'ftpcache', 'ftperrors', 'ftpwrapper', 'getproxies', 'getproxies_environment', 'getproxies_macosx_sysconf', 'i', 'localhost', 'main', 'noheaders', 'os', 'pathname2url', 'proxy_bypass', 'proxy_bypass_environment', 'proxy_bypass_macosx_sysconf', 'quote', 'quote_plus', 'reporthook', 'socket', 'splitattr', 'splithost', 'splitnport', 'splitpasswd', 'splitport', 'splitquery', 'splittag', 'splittype', 'splituser', 'splitvalue', 'ssl', 'string', 'sys', 'test', 'test1', 'thishost', 'time', 'toBytes', 'unquote', 'unquote_plus', 'unwrap', 'url2pathname', 'urlcleanup', 'urlencode', 'urlopen', 'urlretrieve']
@@ -803,7 +780,7 @@ We can look for which functions are implemented in each module by using the dir 
 
 When we find the function in the module we want to use, we can read about it more using the help function, inside the Python interpreter:
 
-```
+```python
 help(urllib.urlopen)
 ```
 
@@ -821,12 +798,12 @@ If we create a directory called foo, which marks the package name, we can then c
 
 To use the module bar, we can import it in two ways:
 
-```
+```python
 import foo.bar
 ```
 or:
 
-```
+```python
 from foo import bar
 ```
 In the first method, we must use the foo prefix whenever we access the module bar. In the second method, we don't, because we import the module to our module's namespace.
@@ -841,7 +818,7 @@ When an iteration over a set of item starts using the for statement, the generat
 
 Here is a simple example of a generator function which returns 7 random integers:
 
-```
+```python
 import random
 
 def lottery():
@@ -864,7 +841,7 @@ List Comprehensions is a very powerful tool, which creates a new list based on a
 
 For example, let's say we need to create a list of integers which specify the length of each word in a certain sentence, but only if the word is not the word "the".
 
-```
+```python
 sentence = "the quick brown fox jumps over the lazy dog"
 words = sentence.split()
 word_lengths = []
@@ -875,7 +852,7 @@ for word in words:
 
 Using a list comprehension, we could simplify this process to this notation:
 
-```
+```python
 sentence = "the quick brown fox jumps over the lazy dog"
 words = sentence.split()
 word_lengths = [len(word) for word in words if word != "the"]
@@ -885,7 +862,7 @@ word_lengths = [len(word) for word in words if word != "the"]
 
 Every function in Python receives a predefined number of arguments, if declared normally, like this:
 
-```
+```python
 def myfunction(first, second, third):
     # do something with the 3 variables
     ...
@@ -893,7 +870,7 @@ def myfunction(first, second, third):
 
 It is possible to declare functions which receive a variable number of arguments, using the following syntax:
 
-```
+```python
 def foo(first, second, third, *therest):
     print "First: %s" % first
     print "Second: %s" % second
@@ -903,7 +880,7 @@ def foo(first, second, third, *therest):
 
 The "therest" variable is a list of variables, which receives all arguments which were given to the "foo" function after the first 3 arguments. So calling foo(1,2,3,4,5) will print out:
 
-```
+```python
 First: 1
 Second: 2
 Third: 3
@@ -912,7 +889,7 @@ And all the rest... [4, 5]
 
 It is also possible to send functions arguments by keyword, so that the order of the argument does not matter, using the following syntax:
 
-```
+```python
 def bar(first, second, third, **options):
     if options.get("action") == "sum":
         print "The sum is: %d" % (first + second + third)
@@ -926,7 +903,7 @@ print "Result: %d" % result
 
 The following code yields the following output:
 
-```
+```python
 The sum is: 6
 Result: 1
 ```
@@ -940,7 +917,7 @@ In Python 2.5, the simplejson module is used, whereas in Python 2.7, the json mo
 
 In order to use the json module, it must first be imported:
 
-```
+```python
 import json
 ```
 
@@ -948,13 +925,13 @@ There are two basic formats for JSON data. Either in a string or the object data
 
 To load JSON back to a data structure, use the "loads" method. This method takes a string and turns it back into the json object datastructure:
 
-```
+```python
 print json.loads(json_string)
 ```
 
 To encode a data structure to JSON, use the "dumps" method. This method takes an object and returns a String:
 
-```
+```python
 json_string = json.dumps([1, 2, 3, "a", "b", "c"])
 ```
 
@@ -962,7 +939,7 @@ Python supports a Python proprietary data serialization method called pickle (an
 
 You can use it exactly the same way.
 
-```
+```python
 import cPickle
 pickled_string = cPickle.dumps([1, 2, 3, "a", "b", "c"])
 print cPickle.loads(pickled_string)
@@ -972,7 +949,7 @@ print cPickle.loads(pickled_string)
 
 Sets are lists with no duplicate entries. Let's say you want to collect a list of words used in a paragraph:
 
-```
+```python
 print set("my name is Eric and Eric is my name".split())
 ```
 
@@ -980,14 +957,14 @@ This will print out a list containing "my", "name", "is", "Eric", and finally "a
 
 Sets are a powerful tool in Python since they have the ability to calculate differences and intersections between other sets. For example, say you have a list of participants in events A and B:
 
-```
+```python
 a = set(["Jake", "John", "Eric"])
 b = set(["John", "Jill"])
 ```
 
 To find out which members attended both events, you may use the "intersection" method:
 
-```
+```python
 >>> a.intersection(b)
 set(['John'])
 >>> b.intersection(a)
@@ -996,7 +973,7 @@ set(['John'])
 
 To find out which members attended only one of the events, use the "symmetric_difference" method:
 
-```
+```python
 >>> a.symmetric_difference(b)
 set(['Jill', 'Jake', 'Eric'])
 >>> b.symmetric_difference(a)
@@ -1005,7 +982,7 @@ set(['Jill', 'Jake', 'Eric'])
 
 To find out which members attended only one event and not the other, use the "difference" method:
 
-```
+```python
 >>> a.difference(b)
 set(['Jake', 'Eric'])
 >>> b.difference(a)
@@ -1014,7 +991,7 @@ set(['Jill'])
 
 To receive a list of all participants, use the "union" method:
 
-```
+```python
 >>> a.union(b)
 set(['Jill', 'Jake', 'John', 'Eric'])
 ```
@@ -1025,7 +1002,7 @@ Code introspection is the ability to examine classes, functions and keywords to 
 
 Python provides several functions and utilities for code introspection.
 
-```
+```python
 help()
 dir()
 hasattr()
