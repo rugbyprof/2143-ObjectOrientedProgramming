@@ -1,11 +1,13 @@
 
-def gcd(n, d):
-    while n != d:
-        if n > d:
-            n = n - d
-        else:
-            d = d - n
-    return n
+def gcd(a, b):
+    """Return greatest common divisor using Euclid's Algorithm."""
+    while b:      
+        a, b = b, a % b
+    return a
+
+def lcm(a, b):
+    """Return lowest common multiple."""
+    return a * b // gcd(a, b)
 
 class Fraction(object):
 
