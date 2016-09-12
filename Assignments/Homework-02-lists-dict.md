@@ -2,15 +2,19 @@
 Due: September 16<sup>th</sup> by class time.
 
 ## Lists
+
 A list is an ordered collection of values. You can have a list of integers, a list of strings, or even a mix of any types of values you want; this means that the list need not be homoge- nous. You can add and remove items to and from a list them by calling list methods, and you can access elements through the index notation. Let’s look at an example:
+
 ```
 >>> fantasy_team = []
 >>> fantasy_team.append("frank gore")
 >>> print(fantasy_team)
 [’frank gore’]
->>> fantasy_team.append("calvin johnson") >>> print(fantasy_team[1])
+>>> fantasy_team.append("calvin johnson") 
+>>> print(fantasy_team[1])
 calvin johnson
->>> fantasy_team.remove("calvin johnson") >>> fantasy_team[0] = "aaron rodgers"
+>>> fantasy_team.remove("calvin johnson") 
+>>> fantasy_team[0] = "aaron rodgers"
 >>> print(fantasy_team)
 [’aaron rodgers’]
 ```
@@ -20,34 +24,53 @@ Lists can be created using square braces, and likewise, their elements can be ac
 #### 1.1 Basics
 ---
 1. What would Python print?
-```    
->>> a = [1, 5, 4, 2, 3] >>> print(a[0], a[-1])
+```python
+>>> a = [1, 5, 4, 2, 3] 
+>>> print(a[0], a[-1])
 >>> a[4] = a[2] + a[-2]
 >>> a
->>> len(a) >>> 4 in a
+>>> len(a) 
+>>> 4 in a
 >>> a[1] = [a[1], a[0]]
 >>> a
 ```
 
 #### 1.2 List methods
- In addition to the indexing operator, lists have many mutating methods, some examples of which are listed here:
+
+---
+
+In addition to the indexing operator, lists have many mutating methods, some examples of which are listed here:
+ 
 1. append(el) → Adds el to the end of the list
 2. index(el) → Returns the index of el if it occurs in the list, otherwise errors. 3. insert(i, el) → Insert el at index i
 4. remove(el) → Removes the first occurrence of el in list, otherwise errors
 5. sort() → Sorts elements of list in place
+
 List methods are called via ’dot notation’, as in:
+
+```
 >>> fruits = [’apple’, ’pineapple’]
 >>> fruits.append(’banana’)
+```
+
 1. Write a function that removes all instances of an element from a list.
+
+```python
 def remove_all(el, lst):
 """Removes all instances of el from lst. >>> x = [3, 1, 2, 1, 5, 1, 1, 7]
 >>> remove_all(1, x)
 >>> x
 [3, 2, 5, 7]
 """
-CS61A Spring 2013: Amir Kamil, with
-Hamilton Nguyen, Joy Jeng, Keegan Mann, Stephen Martinis, Albert Wu, Julia Oh, Robert Huang, Mark Miyashita, Sharad Vikram, Soumya Basu, and Richard Hwang
- DISCUSSION 6: LIST AND DICTIONARIES Page 3 2. Write a function that takes in two values, x and y, and a list, and adds as many y’s to
+
+
+
+
+
+
+```
+ 
+2. Write a function that takes in two values, x and y, and a list, and adds as many y’s to
 the end of the list as there are x’s. Do not use the built-in function count.
 def add_this_many(x, y, lst):
 """ Adds y to the end of lst the number of times x occurs in lst. >>> lst = [1, 2, 4, 2, 1]
