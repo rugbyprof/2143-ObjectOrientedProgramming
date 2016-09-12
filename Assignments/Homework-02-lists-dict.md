@@ -23,7 +23,7 @@ Lists can be created using square braces, and likewise, their elements can be ac
 
 #### 1.1 Basics
 ---
-1. What would Python print?
+**1.** What would Python print?
 ```python
 >>> a = [1, 5, 4, 2, 3] 
 >>> print(a[0], a[-1])
@@ -41,10 +41,10 @@ Lists can be created using square braces, and likewise, their elements can be ac
 
 In addition to the indexing operator, lists have many mutating methods, some examples of which are listed here:
  
-1. append(el) → Adds el to the end of the list
-2. index(el) → Returns the index of el if it occurs in the list, otherwise errors. 3. insert(i, el) → Insert el at index i
-4. remove(el) → Removes the first occurrence of el in list, otherwise errors
-5. sort() → Sorts elements of list in place
+1. `append(el)` → Adds el to the end of the list
+2. `index(el)` → Returns the index of el if it occurs in the list, otherwise errors. 3. insert(i, el) → Insert el at index i
+4. `remove(el)` → Removes the first occurrence of el in list, otherwise errors
+5. `sort()` → Sorts elements of list in place
 
 List methods are called via ’dot notation’, as in:
 
@@ -70,18 +70,34 @@ def remove_all(el, lst):
 
 ```
  
-2. Write a function that takes in two values, x and y, and a list, and adds as many y’s to
+**2.** Write a function that takes in two values, x and y, and a list, and adds as many y’s to
 the end of the list as there are x’s. Do not use the built-in function count.
+
+```python
 def add_this_many(x, y, lst):
 """ Adds y to the end of lst the number of times x occurs in lst. >>> lst = [1, 2, 4, 2, 1]
 >>> add_this_many(1, 5, lst)
 >>> lst
 [1, 2, 4, 2, 1, 5, 5]
 """
- 1.3 Slicing
+
+
+
+
+```
+
+#### 1.3 Slicing
+---
+
 Like tuples, lists also support slicing notation, allowing you to retrieve multiple elements of a list at once. Slicing a list returns a new list. Slicing has the following syntax:
-                     lst[start:end:interval]
-where start, end, and interval are integers. The slice includes the element at start and every interval elements up to but not including the element at end. It is legal to omit one or more of start, end, and incr; they default to 0, len(lst), and 1, respectively. Start and end can be negative, meaning you count from the end.
+
+```python 
+lst[start:end:interval]
+```
+
+where start, end, and interval are integers. The slice includes the element at start and every interval elements up to but not including the element at end. It is legal to omit one or more of start, end, and incr; they default to 0, `len(lst)`, and 1, respectively. Start and end can be negative, meaning you count from the end.
+
+```python
 >>> a = [0, 1, 2, 3, 4, 5, 6]
 >>> a[1:4]
 [1, 2, 3]
@@ -94,34 +110,53 @@ where start, end, and interval are integers. The slice includes the element at s
 >>> a[1:4:] # equivalent to a[1:4:1] or a[1:4] [1, 2, 3]
 >>> a[-1:]
 [6]
-CS61A Spring 2013: Amir Kamil, with
-Hamilton Nguyen, Joy Jeng, Keegan Mann, Stephen Martinis, Albert Wu, Julia Oh, Robert Huang, Mark Miyashita, Sharad Vikram, Soumya Basu, and Richard Hwang
-  DISCUSSION 6: LIST AND DICTIONARIES 1. What would Python print?
-   >>> a = [3, 1, 4, 2, 5, 3]
-   >>> a[:4]
+```
+
+**1.** What would Python print?
+
+```python
+>>> a = [3, 1, 4, 2, 5, 3]
+>>> a[:4]
 >>> a
 >>> a[1::2]
 >>> a[:]
 >>> a[4:2]
 >>> a[1:-2]
 >>> a[::-1]
-For loops
-Page 4
- 1.4
- There are two main methods of looping through lists.
-• for el in lst → loops through the elements in lst
-• for i in range(len(lst)) → loops through the valid, positive indices of lst
+```
+
+
+#### 1.4 For loops
+
+---
+
+There are two main methods of looping through lists.
+
+- `for el in lst` → loops through the elements in lst
+- `for i in range(len(lst))` → loops through the valid, positive indices of lst
+
 If you do not need indices, looping over elements is usually more clear. Let’s try this out.
- CS61A Spring 2013: Amir Kamil, with
-Hamilton Nguyen, Joy Jeng, Keegan Mann, Stephen Martinis, Albert Wu, Julia Oh, Robert Huang, Mark Miyashita, Sharad Vikram, Soumya Basu, and Richard Hwang
-DISCUSSION 6: LIST AND DICTIONARIES Page 5 1. In the homework, you reversed rlists iteratively and recursively. Let’s reverse Python lists in place, meaning mutate the passed in list itself, instead of returning a new list.
+
+**1.** In the homework, you reversed rlists iteratively and recursively. Let’s reverse Python lists in place, meaning mutate the passed in list itself, instead of returning a new list.
 Why is this solution preferred?
+
+```python
 def reverse(lst):
 """ Reverses lst in place. >>> x = [3, 2, 4, 5, 1] >>> reverse(x)
 >>> x
 [1, 5, 4, 2, 3]
 """
- 2. Write a function that rotates the elements of a list to the right by k. Elements should not ”fall off”; they should wrap around the beginning of the list. rotate should returnanewlist. Tomakealistofn0’s,youcandothis: [0] * n
+
+
+
+
+
+
+```
+
+**2.** Write a function that rotates the elements of a list to the right by k. Elements should not ”fall off”; they should wrap around the beginning of the list. `rotate` should return a new list. To make alist of `n` `0’s`,you can do this: `[0] * n`
+
+```python
 def rotate(lst, k):
 """ Return a new list, with the same elements
           of lst, rotated to the right k.
@@ -129,11 +164,14 @@ def rotate(lst, k):
       >>> rotate(x, 3)
       [3, 4, 5, 1, 2]
       """
+
+```
+
+
 1.5 Higher order functions
 Many times, we wish an operation to be applied to all elements of a list. Python has methods built in to help us with these tasks:
-CS61A Spring 2013: Amir Kamil, with
-Hamilton Nguyen, Joy Jeng, Keegan Mann, Stephen Martinis, Albert Wu, Julia Oh, Robert Huang, Mark Miyashita, Sharad Vikram, Soumya Basu, and Richard Hwang
-  DISCUSSION 6: LIST AND DICTIONARIES Page 6 • map(fn, lst) → applies fn to each element in lst
+
+• map(fn, lst) → applies fn to each element in lst
 • filter(pred, lst) → keeps those elements in lst that satisfy the predicate
 • reduce(accum, lst, zero value) → repeatedly calls the accumulator, which
 takes in two arguments and returns a single value, on elements of lst
@@ -155,9 +193,8 @@ Recall that dictionaries are data structures that map keys to values. Dictionari
 >>> superbowls
 {’peyton manning’: 1, ’tom brady’: 3, ’joe flacco’: 1, ’joe montana’: 4}
 Dictionaries are indexed with similar syntax as sequences, only they use keys, which can be any immutable value, not just numbers. Dictionaries themselves are mutable; we can
-CS61A Spring 2013: Amir Kamil, with
-Hamilton Nguyen, Joy Jeng, Keegan Mann, Stephen Martinis, Albert Wu, Julia Oh, Robert Huang, Mark Miyashita, Sharad Vikram, Soumya Basu, and Richard Hwang
-    DISCUSSION 6: LIST AND DICTIONARIES Page 7 add, remove, and change entries after creation. There is only one value per key, however, in a dictionary (we call this injective or one-to-one).
+
+ add, remove, and change entries after creation. There is only one value per key, however, in a dictionary (we call this injective or one-to-one).
 1. Continuing from above, what would Python print?
 >>> ’colin kaepernick’ in superbowls
    >>> len(superbowls)
@@ -174,15 +211,14 @@ To iterate over a dictionary’s keys:
 for k in d.keys(): ...
 and to remove an entry:
 del dictionary[key]
-  CS61A Spring 2013: Amir Kamil, with
-Hamilton Nguyen, Joy Jeng, Keegan Mann, Stephen Martinis, Albert Wu, Julia Oh, Robert Huang, Mark Miyashita, Sharad Vikram, Soumya Basu, and Richard Hwang
-DISCUSSION 6: LIST AND DICTIONARIES
+
+
 2. Given a dictionary replace all occurrences of x as the value with y.
 def replace_all(d, x, y):
 """Replaces all values of x with y. >>> d = {1: {2:3, 3:4}, 2:{4:4, 5:3}} >>> replace_all(d,3,1)
 >>> d
 {1: {2: 1, 3: 4}, 2: {4: 4, 5: 1}} """
-Page 8
+
  3. Given a (non-nested) dictionary delete all occurences of a value. You cannot delete items in a dictionary as you are iterating through it.
 def rm(d, x):
 """Removes all pairs with value x. >>> d = {1:2, 2:3, 3:2, 4:3}
@@ -190,5 +226,4 @@ def rm(d, x):
 >>> d
 {2:3, 4:3}
 """
- CS61A Spring 2013: Amir Kamil, with
-Hamilton Nguyen, Joy Jeng, Keegan Mann, Stephen Martinis, Albert Wu, Julia Oh, Robert Huang, Mark Miyashita, Sharad Vikram, Soumya Basu, and Richard Hwang
+
