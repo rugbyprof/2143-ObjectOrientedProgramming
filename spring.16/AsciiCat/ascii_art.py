@@ -29,7 +29,7 @@ def image_to_ascii(image):
     return image_as_ascii	
 
 if __name__=="__main__":
-    img = Image.open("cat.png")
+    img = Image.open("1457040446.png")
     width, heigth = img.size
     new_width = 80 
     new_heigth = int((heigth * new_width) / width)
