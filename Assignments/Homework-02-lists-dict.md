@@ -1,5 +1,6 @@
 ## LIST AND DICTIONARIES
-Due: September 16<sup>th</sup> by class time.
+Due: September 19<sup>th</sup> by class time.
+
 
 ## 1 Lists
 
