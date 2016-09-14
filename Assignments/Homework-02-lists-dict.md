@@ -1,5 +1,5 @@
 ## LIST AND DICTIONARIES
-Due: September 16<sup>th</sup> by class time.
+Due: September 19<sup>th</sup> by class time.
 
 ## 1 Lists
 
@@ -23,7 +23,7 @@ Lists can be created using square braces, and likewise, their elements can be ac
 
 #### 1.1 Basics
 ---
-**1.** What would Python print?
+**`A:`** What would Python print?
 ```python
 >>> a = [1, 5, 4, 2, 3] 
 >>> print(a[0], a[-1])
@@ -53,7 +53,7 @@ List methods are called via ’dot notation’, as in:
 >>> fruits.append(’banana’)
 ```
 
-1. Write a function that removes all instances of an element from a list.
+**`B:`** Write a function that removes all instances of an element from a list.
 
 ```python
 def remove_all(el, lst):
@@ -70,7 +70,7 @@ def remove_all(el, lst):
 
 ```
  
-**2.** Write a function that takes in two values, x and y, and a list, and adds as many y’s to
+**`C:`** Write a function that takes in two values, x and y, and a list, and adds as many y’s to
 the end of the list as there are x’s. Do not use the built-in function count.
 
 ```python
@@ -112,7 +112,7 @@ where start, end, and interval are integers. The slice includes the element at s
 [6]
 ```
 
-**1.** What would Python print?
+**`D:`**  What would Python print?
 
 ```python
 >>> a = [3, 1, 4, 2, 5, 3]
@@ -137,7 +137,7 @@ There are two main methods of looping through lists.
 
 If you do not need indices, looping over elements is usually more clear. Let’s try this out.
 
-**1.** In the homework, you reversed rlists iteratively and recursively. Let’s reverse Python lists in place, meaning mutate the passed in list itself, instead of returning a new list.
+**`E:`**  In the homework, you reversed rlists iteratively and recursively. Let’s reverse Python lists in place, meaning mutate the passed in list itself, instead of returning a new list.
 Why is this solution preferred?
 
 ```python
@@ -154,7 +154,7 @@ def reverse(lst):
 
 ```
 
-**2.** Write a function that rotates the elements of a list to the right by k. Elements should not ”fall off”; they should wrap around the beginning of the list. `rotate` should return a new list. To make alist of `n` `0’s`,you can do this: `[0] * n`
+**`F.`** Write a function that rotates the elements of a list to the right by k. Elements should not ”fall off”; they should wrap around the beginning of the list. `rotate` should return a new list. To make alist of `n` `0’s`,you can do this: `[0] * n`
 
 ```python
 def rotate(lst, k):
@@ -186,7 +186,7 @@ We can also use higher order functions in list comprehensions. List comprehensio
 
 where the if clause is optional. 
 
-1. What would Python print?
+**`G:`**  What would Python print?
 ```python
 >>> l_1, l_2 = lambda x: 3*x + 1, lambda x: x % 2 == 0 >>> list(filter(l_2, map(l_1, [1,2,3,4])))
 >>> [x*x - x for x in [1, 2, 3, 4] if x > 2]
@@ -211,7 +211,7 @@ Recall that dictionaries are data structures that map keys to values. Dictionari
 
 Dictionaries are indexed with similar syntax as sequences, only they use keys, which can be any immutable value, not just numbers. Dictionaries themselves are mutable; we can add, remove, and change entries after creation. There is only one value per key, however, in a dictionary (we call this _injective_ or one-to-one).
 
-1. Continuing from above, what would Python print?
+**`H:`**  Continuing from above, what would Python print?
 ```python
 >>> ’colin kaepernick’ in superbowls
    >>> len(superbowls)
@@ -235,7 +235,7 @@ and to remove an entry:
 `del dictionary[key]`
 
 
-2. Given a dictionary replace all occurrences of x as the value with y.
+**`I:`**  Given a dictionary replace all occurrences of x as the value with y.
 
 ```python
 def replace_all(d, x, y):
@@ -250,7 +250,7 @@ def replace_all(d, x, y):
 
 ```
 
- 3. Given a (non-nested) dictionary delete all occurences of a value. You cannot delete items in a dictionary as you are iterating through it.
+**`J:`**  Given a (non-nested) dictionary delete all occurences of a value. You cannot delete items in a dictionary as you are iterating through it.
 
  ```python
 def rm(d, x):
