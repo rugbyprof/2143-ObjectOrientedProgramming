@@ -38,7 +38,7 @@ class AsciiCard(object):
     """
     @Description:
         This method takes a card suit, and an integer between 2,14 inclusive and 
-        returns the correpsoning ascii representation of that card. 
+        returns the corresponding ascii representation of that card. 
     @Example:
         print(a.get_ascii('Spades',7)) 
             _____

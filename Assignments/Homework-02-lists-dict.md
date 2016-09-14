@@ -1,7 +1,7 @@
 ## LIST AND DICTIONARIES
 Due: September 16<sup>th</sup> by class time.
 
-## Lists
+## 1 Lists
 
 A list is an ordered collection of values. You can have a list of integers, a list of strings, or even a mix of any types of values you want; this means that the list need not be homoge- nous. You can add and remove items to and from a list them by calling list methods, and you can access elements through the index notation. Let’s look at an example:
 
@@ -168,21 +168,36 @@ def rotate(lst, k):
 ```
 
 
-1.5 Higher order functions
+**1.5 Higher order functions**
+
+---
+
 Many times, we wish an operation to be applied to all elements of a list. Python has methods built in to help us with these tasks:
 
-• map(fn, lst) → applies fn to each element in lst
-• filter(pred, lst) → keeps those elements in lst that satisfy the predicate
-• reduce(accum, lst, zero value) → repeatedly calls the accumulator, which
-takes in two arguments and returns a single value, on elements of lst
+- **`map(fn, lst)`** → applies fn to each element in lst
+- **`filter(pred, lst)`** → keeps those elements in lst that satisfy the predicate
+- **`reduce(accum, lst, zero value)`** → repeatedly calls the accumulator, which takes in two arguments and returns a single value, on elements of lst
+
 We can also use higher order functions in list comprehensions. List comprehensions are a compact way to apply some operations to a sequence. They look like this:
+
+```
          [expression for value in sequence if predicate]
-where the if clause is optional. 1. What would Python print?
+```
+
+where the if clause is optional. 
+
+1. What would Python print?
+```python
 >>> l_1, l_2 = lambda x: 3*x + 1, lambda x: x % 2 == 0 >>> list(filter(l_2, map(l_1, [1,2,3,4])))
 >>> [x*x - x for x in [1, 2, 3, 4] if x > 2]
 >>> [[y*2 for y in [x, x+1]] for x in [1,2,3,4]]
-2 Dictionaries
+```
+
+## 2 Dictionaries
+
 Recall that dictionaries are data structures that map keys to values. Dictionaries are usually unordered (unlike real-world dictionaries) – in other words, the key-value pairs are not arranged in the dictionary in any particular order. Let’s look at an example:
+
+```python
 >>> superbowls = {’joe montana’: 4, ’tom brady’:3, ’joe flacco’: 0}
 >>> superbowls[’tom brady’]
 3
@@ -192,10 +207,12 @@ Recall that dictionaries are data structures that map keys to values. Dictionari
 >>> superbowls[’joe flacco’] = 1
 >>> superbowls
 {’peyton manning’: 1, ’tom brady’: 3, ’joe flacco’: 1, ’joe montana’: 4}
-Dictionaries are indexed with similar syntax as sequences, only they use keys, which can be any immutable value, not just numbers. Dictionaries themselves are mutable; we can
+```
 
- add, remove, and change entries after creation. There is only one value per key, however, in a dictionary (we call this injective or one-to-one).
+Dictionaries are indexed with similar syntax as sequences, only they use keys, which can be any immutable value, not just numbers. Dictionaries themselves are mutable; we can add, remove, and change entries after creation. There is only one value per key, however, in a dictionary (we call this _injective_ or one-to-one).
+
 1. Continuing from above, what would Python print?
+```python
 >>> ’colin kaepernick’ in superbowls
    >>> len(superbowls)
    >>> superbowls[’peyton manning’] = superbowls[’joe montana’]
@@ -206,20 +223,36 @@ Dictionaries are indexed with similar syntax as sequences, only they use keys, w
             superbowls[’joe montana’] + superbowls[’peyton manning’]
    >>> superbowls[[’steelers’, ’49ers’]] = 11
    >>> superbowls
+```
+
 Dictionaries in general can be arbitrarily deep, meaning their values can be dictio- naries themselves. Let’s get practice traversing these deep structures. To do so, we’ll need to know a couple more things about dictionaries.
 To iterate over a dictionary’s keys:
-for k in d.keys(): ...
+
+`for k in d.keys(): ...`
+
 and to remove an entry:
-del dictionary[key]
+
+`del dictionary[key]`
 
 
 2. Given a dictionary replace all occurrences of x as the value with y.
+
+```python
 def replace_all(d, x, y):
 """Replaces all values of x with y. >>> d = {1: {2:3, 3:4}, 2:{4:4, 5:3}} >>> replace_all(d,3,1)
 >>> d
 {1: {2: 1, 3: 4}, 2: {4: 4, 5: 1}} """
 
+
+
+
+
+
+```
+
  3. Given a (non-nested) dictionary delete all occurences of a value. You cannot delete items in a dictionary as you are iterating through it.
+
+ ```python
 def rm(d, x):
 """Removes all pairs with value x. >>> d = {1:2, 2:3, 3:2, 4:3}
 >>> rm(d,2)
@@ -227,3 +260,9 @@ def rm(d, x):
 {2:3, 4:3}
 """
 
+
+
+
+
+
+```
