@@ -1,6 +1,23 @@
 ## LIST AND DICTIONARIES
 Due: September 19<sup>th</sup> by class time.
 
+What to turn in:
+- A python document with all your functions and answers from below.
+- Use comments where and when needed to explain your answers.
+- A comment block at the top should look like this:
+
+```python
+"""
+Name: Your Name
+Email: your.email@somewhere.com
+Assignment: Homework 1 - Lists and Dictionaries
+Due: 19 Sep @ 1:00 p.m.
+"""
+
+```
+
+- Make sure you clearly mark each answer appropriately: A, B, C, D ... J
+
 ## 1 Lists
 
 A list is an ordered collection of values. You can have a list of integers, a list of strings, or even a mix of any types of values you want; this means that the list need not be homoge- nous. You can add and remove items to and from a list them by calling list methods, and you can access elements through the index notation. Let's look at an example:
@@ -294,7 +311,7 @@ Results: {2:3, 4:3}
     pass 
 
 
-    
+
 
 
 
