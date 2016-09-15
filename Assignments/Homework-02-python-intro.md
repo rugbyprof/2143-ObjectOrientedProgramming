@@ -1,6 +1,5 @@
-# Ignore for now
-
-# Homework 1 - Getting your python feet wet
+# Homework 2 - Getting your python feet wet
+Due: September 26<sup>th</sup> by class time.
 
 ### Requirements
 - Add an `add` method to the simple fraction class below
@@ -29,14 +28,14 @@ it should not print out:
 ### Deliverables
 
 - A python file called `fraction_class.py` containing your added method(s).
-- This file should be pushed to your github repo (I'll show you how on Thursday).
+- Place this in your assignments folder and push to your github repo.
 - Execution of the program should print something similar to the following:
 
 ```
 1/2 + 3/4 = 1 1/4
 ```
+
 - Prompting the user for input is not necessary (since not discussed) but not discouraged either
-- File is due on github by ***Tuesday February 2<sup>nd</sup>*** by class time. 
 
 ## Starter Code
 

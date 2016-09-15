@@ -17,6 +17,9 @@ Due: 19 Sep @ 1:00 p.m.
 ```
 
 - Make sure you clearly mark each answer appropriately: A, B, C, D ... J
+- Additionally, create a folder called `Assignments` in your github repo.
+- Place a copy of your document in this folder and call it `homework-01.py`
+- Push your new folder and document to github.
 
 ## 1 Lists
 
