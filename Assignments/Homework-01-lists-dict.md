@@ -79,7 +79,7 @@ Given: x = [3, 1, 2, 1, 5, 1, 1, 7]
 Usage: remove_all(1, x)
 Would result in: [3, 2, 5, 7]
 """
-
+   pass
 
 
 
@@ -97,7 +97,7 @@ Given: lst = [1, 2, 4, 2, 1]
 Usage: add_this_many(1, 5, lst)
 Results in: [1, 2, 4, 2, 1, 5, 5]
 """
-
+    pass
 
 
 
@@ -115,33 +115,46 @@ lst[start:end:interval]
 where start, end, and interval are integers. The slice includes the element at start and every interval elements up to but not including the element at end. It is legal to omit one or more of start, end, and incr; they default to 0, `len(lst)`, and 1, respectively. Start and end can be negative, meaning you count from the end.
 
 ```python
->>> a = [0, 1, 2, 3, 4, 5, 6]
->>> a[1:4]
-[1, 2, 3]
->>> a[1:6:2]
-[1, 3, 5]
->>> a[:4] # equivalent to a[0:4]
-[0, 1, 2, 3]
->>> a[3:] # equivalent to a[3:len(a)]
-[3, 4, 5, 6]
->>> a[1:4:] # equivalent to a[1:4:1] or a[1:4] [1, 2, 3]
->>> a[-1:]
-[6]
+a = [0, 1, 2, 3, 4, 5, 6]
+print(a[1:4])
+# Prints: [1, 2, 3]
+print(a[1:6:2])
+# Prints: [1, 3, 5]
+a[:4] # equivalent to a[0:4]
+# Prints: [0, 1, 2, 3]
+a[3:] # equivalent to a[3:len(a)]
+# Prints: [3, 4, 5, 6]
+a[1:4:] # equivalent to a[1:4:1] or a[1:4] 
+# Prints: [1, 2, 3]
+a[-1:]
+# Prints: [6]
 ```
 
 **1.** What would Python print?
 
 ```python
->>> a = [3, 1, 4, 2, 5, 3]
->>> a[:4]
->>> a
->>> a[1::2]
->>> a[:]
->>> a[4:2]
->>> a[1:-2]
->>> a[::-1]
-```
+a = [3, 1, 4, 2, 5, 3]
+print(a[:4])
+# Prints: ??
 
+print(a)
+# Prints: ??
+
+print(a[1::2])
+# Prints: ??
+
+print(a[:])
+# Prints: ??
+
+print(a[4:2])
+# Prints: ??
+
+print(a[1:-2])
+# Prints: ??
+
+print(a[::-1])
+# Prints: ??
+```
 
 #### 1.4 For loops
 
