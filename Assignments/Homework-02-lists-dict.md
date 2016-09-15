@@ -5,18 +5,20 @@ Due: September 19<sup>th</sup> by class time.
 
 A list is an ordered collection of values. You can have a list of integers, a list of strings, or even a mix of any types of values you want; this means that the list need not be homoge- nous. You can add and remove items to and from a list them by calling list methods, and you can access elements through the index notation. Let’s look at an example:
 
-```
->>> fantasy_team = []
->>> fantasy_team.append("frank gore")
->>> print(fantasy_team)
-[’frank gore’]
->>> fantasy_team.append("calvin johnson") 
->>> print(fantasy_team[1])
-calvin johnson
->>> fantasy_team.remove("calvin johnson") 
->>> fantasy_team[0] = "aaron rodgers"
->>> print(fantasy_team)
-[’aaron rodgers’]
+```python
+fantasy_team = []
+fantasy_team.append("frank gore")
+print(fantasy_team)
+# Prints: [’frank gore’]
+
+fantasy_team.append("calvin johnson") 
+print(fantasy_team[1])
+# Prints: calvin johnson
+
+fantasy_team.remove("calvin johnson") 
+fantasy_team[0] = "aaron rodgers"
+print(fantasy_team)
+# Prints: [’aaron rodgers’]
 ```
 
 Lists can be created using square braces, and likewise, their elements can be accessed via square braces. Just like tuples, lists are zero-indexed. Let’s try out some basics.
@@ -24,15 +26,26 @@ Lists can be created using square braces, and likewise, their elements can be ac
 #### 1.1 Basics
 ---
 **`A:`** What would Python print?
+
 ```python
->>> a = [1, 5, 4, 2, 3] 
->>> print(a[0], a[-1])
->>> a[4] = a[2] + a[-2]
->>> a
->>> len(a) 
->>> 4 in a
->>> a[1] = [a[1], a[0]]
->>> a
+a = [1, 5, 4, 2, 3] 
+print(a[0], a[-1])
+# Prints: ??
+
+a[4] = a[2] + a[-2]
+Print(a)
+# Prints: ??
+
+print(len(a))
+# Prints: ??
+
+print(4 in a)
+# Prints: ??
+
+a[1] = [a[1], a[0]]
+print(a)
+# Prints: ??
+
 ```
 
 #### 1.2 List methods
@@ -41,28 +54,29 @@ Lists can be created using square braces, and likewise, their elements can be ac
 
 In addition to the indexing operator, lists have many mutating methods, some examples of which are listed here:
  
-1. `append(el)` → Adds el to the end of the list
-2. `index(el)` → Returns the index of el if it occurs in the list, otherwise errors. 3. insert(i, el) → Insert el at index i
-4. `remove(el)` → Removes the first occurrence of el in list, otherwise errors
+1. `append(el)` → Adds `el` to the end of the list
+2. `index(el)` → Returns the index of `el` if it occurs in the list, otherwise errors. 
+3. `insert(i, el)` → Insert `el` at index `i`
+4. `remove(el)` → Removes the first occurrence of `el` in list, otherwise errors
 5. `sort()` → Sorts elements of list in place
 
 List methods are called via ’dot notation’, as in:
 
-```
->>> fruits = [’apple’, ’pineapple’]
->>> fruits.append(’banana’)
+```python
+fruits = [’apple’, ’pineapple’]
+fruits.append(’banana’)
 ```
 
 **`B:`** Write a function that removes all instances of an element from a list.
 
 ```python
 def remove_all(el, lst):
-"""Removes all instances of el from lst. >>> x = [3, 1, 2, 1, 5, 1, 1, 7]
->>> remove_all(1, x)
->>> x
-[3, 2, 5, 7]
+"""Removes all instances of el from lst. 
+Given: x = [3, 1, 2, 1, 5, 1, 1, 7]
+Usage: remove_all(1, x)
+Would result in: [3, 2, 5, 7]
 """
-
+   pass
 
 
 
@@ -75,12 +89,12 @@ the end of the list as there are x’s. Do not use the built-in function count.
 
 ```python
 def add_this_many(x, y, lst):
-""" Adds y to the end of lst the number of times x occurs in lst. >>> lst = [1, 2, 4, 2, 1]
->>> add_this_many(1, 5, lst)
->>> lst
-[1, 2, 4, 2, 1, 5, 5]
+""" Adds y to the end of lst the number of times x occurs in lst. 
+Given: lst = [1, 2, 4, 2, 1]
+Usage: add_this_many(1, 5, lst)
+Results in: [1, 2, 4, 2, 1, 5, 5]
 """
-
+    pass
 
 
 
@@ -98,31 +112,45 @@ lst[start:end:interval]
 where start, end, and interval are integers. The slice includes the element at start and every interval elements up to but not including the element at end. It is legal to omit one or more of start, end, and incr; they default to 0, `len(lst)`, and 1, respectively. Start and end can be negative, meaning you count from the end.
 
 ```python
->>> a = [0, 1, 2, 3, 4, 5, 6]
->>> a[1:4]
-[1, 2, 3]
->>> a[1:6:2]
-[1, 3, 5]
->>> a[:4] # equivalent to a[0:4]
-[0, 1, 2, 3]
->>> a[3:] # equivalent to a[3:len(a)]
-[3, 4, 5, 6]
->>> a[1:4:] # equivalent to a[1:4:1] or a[1:4] [1, 2, 3]
->>> a[-1:]
-[6]
+a = [0, 1, 2, 3, 4, 5, 6]
+print(a[1:4])
+# Prints: [1, 2, 3]
+print(a[1:6:2])
+# Prints: [1, 3, 5]
+a[:4] # equivalent to a[0:4]
+# Prints: [0, 1, 2, 3]
+a[3:] # equivalent to a[3:len(a)]
+# Prints: [3, 4, 5, 6]
+a[1:4:] # equivalent to a[1:4:1] or a[1:4] 
+# Prints: [1, 2, 3]
+a[-1:]
+# Prints: [6]
 ```
 
 **`D:`**  What would Python print?
 
 ```python
->>> a = [3, 1, 4, 2, 5, 3]
->>> a[:4]
->>> a
->>> a[1::2]
->>> a[:]
->>> a[4:2]
->>> a[1:-2]
->>> a[::-1]
+a = [3, 1, 4, 2, 5, 3]
+print(a[:4])
+# Prints: ??
+
+print(a)
+# Prints: ??
+
+print(a[1::2])
+# Prints: ??
+
+print(a[:])
+# Prints: ??
+
+print(a[4:2])
+# Prints: ??
+
+print(a[1:-2])
+# Prints: ??
+
+print(a[::-1])
+# Prints: ??
 ```
 
 
