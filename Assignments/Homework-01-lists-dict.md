@@ -3,13 +3,13 @@ Due: September 19<sup>th</sup> by class time.
 
 ## 1 Lists
 
-A list is an ordered collection of values. You can have a list of integers, a list of strings, or even a mix of any types of values you want; this means that the list need not be homoge- nous. You can add and remove items to and from a list them by calling list methods, and you can access elements through the index notation. Let’s look at an example:
+A list is an ordered collection of values. You can have a list of integers, a list of strings, or even a mix of any types of values you want; this means that the list need not be homoge- nous. You can add and remove items to and from a list them by calling list methods, and you can access elements through the index notation. Let's look at an example:
 
 ```python
 fantasy_team = []
 fantasy_team.append("frank gore")
 print(fantasy_team)
-# Prints: [’frank gore’]
+# Prints: ['frank gore']
 
 fantasy_team.append("calvin johnson") 
 print(fantasy_team[1])
@@ -18,10 +18,10 @@ print(fantasy_team[1])
 fantasy_team.remove("calvin johnson") 
 fantasy_team[0] = "aaron rodgers"
 print(fantasy_team)
-# Prints: [’aaron rodgers’]
+# Prints: ['aaron rodgers']
 ```
 
-Lists can be created using square braces, and likewise, their elements can be accessed via square braces. Just like tuples, lists are zero-indexed. Let’s try out some basics.
+Lists can be created using square braces, and likewise, their elements can be accessed via square braces. Just like tuples, lists are zero-indexed. Let's try out some basics.
 
 #### 1.1 Basics
 ---
@@ -60,11 +60,11 @@ In addition to the indexing operator, lists have many mutating methods, some exa
 4. `remove(el)` → Removes the first occurrence of `el` in list, otherwise errors
 5. `sort()` → Sorts elements of list in place
 
-List methods are called via ’dot notation’, as in:
+List methods are called via 'dot notation', as in:
 
 ```python
-fruits = [’apple’, ’pineapple’]
-fruits.append(’banana’)
+fruits = ['apple', 'pineapple']
+fruits.append('banana')
 ```
 
 **`B:`** Write a function that removes all instances of an element from a list.
@@ -84,8 +84,8 @@ Would result in: [3, 2, 5, 7]
 
 ```
  
-**`C:`** Write a function that takes in two values, x and y, and a list, and adds as many y’s to
-the end of the list as there are x’s. Do not use the built-in function count.
+**`C:`** Write a function that takes in two values, x and y, and a list, and adds as many y's to
+the end of the list as there are x's. Do not use the built-in function count.
 
 ```python
 def add_this_many(x, y, lst):
@@ -163,18 +163,19 @@ There are two main methods of looping through lists.
 - `for el in lst` → loops through the elements in lst
 - `for i in range(len(lst))` → loops through the valid, positive indices of lst
 
-If you do not need indices, looping over elements is usually more clear. Let’s try this out.
+If you do not need indices, looping over elements is usually more clear. Let's try this out.
 
-**`E:`**  In the homework, you reversed rlists iteratively and recursively. Let’s reverse Python lists in place, meaning mutate the passed in list itself, instead of returning a new list.
-Why is this solution preferred?
+**`E:`**  Let's reverse Python lists in place, meaning mutate the passed in list itself, instead of returning a new list.
+We didn't discuss this in class directly, so feel free to use google. Why is the "in place" solution preferred?
 
 ```python
 def reverse(lst):
-""" Reverses lst in place. >>> x = [3, 2, 4, 5, 1] >>> reverse(x)
->>> x
-[1, 5, 4, 2, 3]
+""" Reverses lst in place. 
+Given: x = [3, 2, 4, 5, 1] 
+Usage: reverse(x)
+Results: [1, 5, 4, 2, 3]
 """
-
+    pass
 
 
 
@@ -182,79 +183,78 @@ def reverse(lst):
 
 ```
 
-**`F.`** Write a function that rotates the elements of a list to the right by k. Elements should not ”fall off”; they should wrap around the beginning of the list. `rotate` should return a new list. To make alist of `n` `0’s`,you can do this: `[0] * n`
+**`F.`** Write a function that rotates the elements of a list to the right by `k`. Elements should not ”fall off”; they should wrap around the beginning of the list. `rotate` should return a new list. To make a list of `n` `0's`,you can do this: `[0] * n`
 
 ```python
 def rotate(lst, k):
-""" Return a new list, with the same elements
-          of lst, rotated to the right k.
-      >>> x = [1, 2, 3, 4, 5]
-      >>> rotate(x, 3)
-      [3, 4, 5, 1, 2]
-      """
+""" Return a new list, with the same elements of lst, rotated to the right k.
+Given: x = [1, 2, 3, 4, 5]
+Usage: rotate(x, 3)
+Results: [3, 4, 5, 1, 2]
+"""
+    pass
+
+
+
+
 
 ```
 
-
-**1.5 Higher order functions**
-
----
-
-Many times, we wish an operation to be applied to all elements of a list. Python has methods built in to help us with these tasks:
-
-- **`map(fn, lst)`** → applies fn to each element in lst
-- **`filter(pred, lst)`** → keeps those elements in lst that satisfy the predicate
-- **`reduce(accum, lst, zero value)`** → repeatedly calls the accumulator, which takes in two arguments and returns a single value, on elements of lst
-
-We can also use higher order functions in list comprehensions. List comprehensions are a compact way to apply some operations to a sequence. They look like this:
-
-```
-         [expression for value in sequence if predicate]
-```
-
-where the if clause is optional. 
-
-**`G:`**  What would Python print?
-```python
->>> l_1, l_2 = lambda x: 3*x + 1, lambda x: x % 2 == 0 >>> list(filter(l_2, map(l_1, [1,2,3,4])))
->>> [x*x - x for x in [1, 2, 3, 4] if x > 2]
->>> [[y*2 for y in [x, x+1]] for x in [1,2,3,4]]
-```
 
 ## 2 Dictionaries
 
-Recall that dictionaries are data structures that map keys to values. Dictionaries are usually unordered (unlike real-world dictionaries) – in other words, the key-value pairs are not arranged in the dictionary in any particular order. Let’s look at an example:
+Recall that dictionaries are data structures that map keys to values. Dictionaries are usually unordered (unlike real-world dictionaries) – in other words, the key-value pairs are not arranged in the dictionary in any particular order. Let's look at an example:
 
 ```python
->>> superbowls = {’joe montana’: 4, ’tom brady’:3, ’joe flacco’: 0}
->>> superbowls[’tom brady’]
-3
->>> superbowls[’peyton manning’] = 1
->>> superbowls
-{’peyton manning’: 1, ’tom brady’: 3, ’joe flacco’: 0, ’joe montana’: 4}
->>> superbowls[’joe flacco’] = 1
->>> superbowls
-{’peyton manning’: 1, ’tom brady’: 3, ’joe flacco’: 1, ’joe montana’: 4}
+superbowls = {'joe montana': 4, 'tom brady':3, 'joe flacco': 0}
+print(superbowls['tom brady'])
+# Prints: 3
+
+superbowls['peyton manning'] = 1
+print(superbowls)
+# Prints: {'peyton manning': 1, 'tom brady': 3, 'joe flacco': 0, 'joe montana': 4}
+
+superbowls['joe flacco'] = 1
+print(superbowls)
+# Prints:{'peyton manning': 1, 'tom brady': 3, 'joe flacco': 1, 'joe montana': 4}
 ```
 
 Dictionaries are indexed with similar syntax as sequences, only they use keys, which can be any immutable value, not just numbers. Dictionaries themselves are mutable; we can add, remove, and change entries after creation. There is only one value per key, however, in a dictionary (we call this _injective_ or one-to-one).
 
 **`H:`**  Continuing from above, what would Python print?
+
 ```python
->>> ’colin kaepernick’ in superbowls
-   >>> len(superbowls)
-   >>> superbowls[’peyton manning’] = superbowls[’joe montana’]
-   >>> superbowls[(’eli manning’, ’giants’)] = 2
-   >>> superbowls[3] = ’cat’
-   >>> superbowls
-   >>> superbowls[(’eli manning’, ’giants)] = \
-            superbowls[’joe montana’] + superbowls[’peyton manning’]
-   >>> superbowls[[’steelers’, ’49ers’]] = 11
-   >>> superbowls
+print('colin kaepernick' in superbowls)
+#Prints: ??
+
+print(len(superbowls))
+#Prints: ??
+
+print(superbowls['peyton manning'] == superbowls['joe montana'])
+#Prints: ??
+
+superbowls[('eli manning', 'giants')] = 2
+print(superbowls)
+#Prints: ??
+
+superbowls[3] = 'cat'
+print(superbowls)
+#Prints: ??
+
+
+superbowls[('eli manning', 'giants')] =  superbowls['joe montana'] + superbowls['peyton manning']
+print(superbowls)
+#Prints: ??
+
+superbowls[['steelers', '49ers']] = 11
+print(superbowls)
+#Prints: ??
+
+
 ```
 
-Dictionaries in general can be arbitrarily deep, meaning their values can be dictio- naries themselves. Let’s get practice traversing these deep structures. To do so, we’ll need to know a couple more things about dictionaries.
-To iterate over a dictionary’s keys:
+Dictionaries in general can be arbitrarily deep, meaning their values can be dictionaries themselves. Let's get practice traversing these deep structures. To do so, we'll need to know a couple more things about dictionaries.
+To iterate over a dictionary's keys:
 
 `for k in d.keys(): ...`
 
@@ -267,9 +267,13 @@ and to remove an entry:
 
 ```python
 def replace_all(d, x, y):
-"""Replaces all values of x with y. >>> d = {1: {2:3, 3:4}, 2:{4:4, 5:3}} >>> replace_all(d,3,1)
->>> d
-{1: {2: 1, 3: 4}, 2: {4: 4, 5: 1}} """
+"""Replaces all values of x with y. 
+Given: d = {1: {2:3, 3:4}, 2:{4:4, 5:3}} 
+Usage: replace_all(d,3,1)
+Results: {1: {2: 1, 3: 4}, 2: {4: 4, 5: 1}} 
+"""
+    pass
+
 
 
 
@@ -278,17 +282,19 @@ def replace_all(d, x, y):
 
 ```
 
-**`J:`**  Given a (non-nested) dictionary delete all occurences of a value. You cannot delete items in a dictionary as you are iterating through it.
+**`J:`**  Given a (non-nested) dictionary delete all occurences of a value. You cannot delete items in a dictionary as you are iterating through it (google :) ).
 
  ```python
 def rm(d, x):
-"""Removes all pairs with value x. >>> d = {1:2, 2:3, 3:2, 4:3}
->>> rm(d,2)
->>> d
-{2:3, 4:3}
+"""Removes all pairs with value x. 
+Given:  d = {1:2, 2:3, 3:2, 4:3}
+Usage:  rm(d,2)
+Results: {2:3, 4:3}
 """
+    pass 
 
 
+    
 
 
 
