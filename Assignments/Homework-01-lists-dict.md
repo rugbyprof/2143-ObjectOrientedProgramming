@@ -6,18 +6,20 @@ Due: September 19<sup>th</sup> by class time.
 
 A list is an ordered collection of values. You can have a list of integers, a list of strings, or even a mix of any types of values you want; this means that the list need not be homoge- nous. You can add and remove items to and from a list them by calling list methods, and you can access elements through the index notation. Let’s look at an example:
 
-```
->>> fantasy_team = []
->>> fantasy_team.append("frank gore")
->>> print(fantasy_team)
-[’frank gore’]
->>> fantasy_team.append("calvin johnson") 
->>> print(fantasy_team[1])
-calvin johnson
->>> fantasy_team.remove("calvin johnson") 
->>> fantasy_team[0] = "aaron rodgers"
->>> print(fantasy_team)
-[’aaron rodgers’]
+```python
+fantasy_team = []
+fantasy_team.append("frank gore")
+print(fantasy_team)
+# Prints: [’frank gore’]
+
+fantasy_team.append("calvin johnson") 
+print(fantasy_team[1])
+# Prints: calvin johnson
+
+fantasy_team.remove("calvin johnson") 
+fantasy_team[0] = "aaron rodgers"
+print(fantasy_team)
+# Prints: [’aaron rodgers’]
 ```
 
 Lists can be created using square braces, and likewise, their elements can be accessed via square braces. Just like tuples, lists are zero-indexed. Let’s try out some basics.
