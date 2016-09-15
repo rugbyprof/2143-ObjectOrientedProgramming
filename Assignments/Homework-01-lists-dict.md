@@ -25,17 +25,30 @@ print(fantasy_team)
 Lists can be created using square braces, and likewise, their elements can be accessed via square braces. Just like tuples, lists are zero-indexed. Let’s try out some basics.
 
 #### 1.1 Basics
+
 ---
+
 **1.** What would Python print?
+
 ```python
->>> a = [1, 5, 4, 2, 3] 
->>> print(a[0], a[-1])
->>> a[4] = a[2] + a[-2]
->>> a
->>> len(a) 
->>> 4 in a
->>> a[1] = [a[1], a[0]]
->>> a
+a = [1, 5, 4, 2, 3] 
+print(a[0], a[-1])
+# Prints: ??
+
+a[4] = a[2] + a[-2]
+Print(a)
+# Prints: ??
+
+print(len(a))
+# Prints: ??
+
+print(4 in a)
+# Prints: ??
+
+a[1] = [a[1], a[0]]
+print(a)
+# Prints: ??
+
 ```
 
 #### 1.2 List methods
@@ -44,26 +57,27 @@ Lists can be created using square braces, and likewise, their elements can be ac
 
 In addition to the indexing operator, lists have many mutating methods, some examples of which are listed here:
  
-1. `append(el)` → Adds el to the end of the list
-2. `index(el)` → Returns the index of el if it occurs in the list, otherwise errors. 3. insert(i, el) → Insert el at index i
-4. `remove(el)` → Removes the first occurrence of el in list, otherwise errors
+1. `append(el)` → Adds `el` to the end of the list
+2. `index(el)` → Returns the index of `el` if it occurs in the list, otherwise errors. 
+3. `insert(i, el)` → Insert `el` at index `i`
+4. `remove(el)` → Removes the first occurrence of `el` in list, otherwise errors
 5. `sort()` → Sorts elements of list in place
 
 List methods are called via ’dot notation’, as in:
 
-```
->>> fruits = [’apple’, ’pineapple’]
->>> fruits.append(’banana’)
+```python
+fruits = [’apple’, ’pineapple’]
+fruits.append(’banana’)
 ```
 
 1. Write a function that removes all instances of an element from a list.
 
 ```python
 def remove_all(el, lst):
-"""Removes all instances of el from lst. >>> x = [3, 1, 2, 1, 5, 1, 1, 7]
->>> remove_all(1, x)
->>> x
-[3, 2, 5, 7]
+"""Removes all instances of el from lst. 
+Given: x = [3, 1, 2, 1, 5, 1, 1, 7]
+Usage: remove_all(1, x)
+Would result in: [3, 2, 5, 7]
 """
 
 
@@ -73,15 +87,15 @@ def remove_all(el, lst):
 
 ```
  
-**2.** Write a function that takes in two values, x and y, and a list, and adds as many y’s to
-the end of the list as there are x’s. Do not use the built-in function count.
+**2.** Write a function that takes in two values, ***x*** and ***y***, and a list, and adds as many ***y’s*** to
+the end of the list as there are ***x’s***. Do not use the built-in function count.
 
 ```python
 def add_this_many(x, y, lst):
-""" Adds y to the end of lst the number of times x occurs in lst. >>> lst = [1, 2, 4, 2, 1]
->>> add_this_many(1, 5, lst)
->>> lst
-[1, 2, 4, 2, 1, 5, 5]
+""" Adds y to the end of lst the number of times x occurs in lst. 
+Given: lst = [1, 2, 4, 2, 1]
+Usage: add_this_many(1, 5, lst)
+Results in: [1, 2, 4, 2, 1, 5, 5]
 """
 
 
