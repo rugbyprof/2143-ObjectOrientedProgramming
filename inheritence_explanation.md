@@ -261,5 +261,5 @@ class Friend(Contact, AddressHolder):
 
 Not complete ....
 
-http://www.programiz.com/python-programming/namespace
-http://www.python-course.eu/python3_multiple_inheritance.php
+- http://www.programiz.com/python-programming/namespace
+- http://www.python-course.eu/python3_multiple_inheritance.php
