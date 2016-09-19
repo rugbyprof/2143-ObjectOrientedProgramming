@@ -67,7 +67,7 @@ class Contact:
 ```
 
 Extending the built in `dict` type
-```swift
+```python
 class LongNameDict(dict):
     def longest_key(self):
           longest = None
@@ -232,7 +232,7 @@ Contact.__init__(self, name, email)
 AddressHolder.__init__(self, street, city, state, code)
 ```
 
-```
+```python
 class Contact:
     all_contacts = []
     
