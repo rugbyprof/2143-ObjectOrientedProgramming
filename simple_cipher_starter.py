@@ -29,7 +29,7 @@ class ShiftCipher(object):
 	     None
 	"""
 	def promptUserMessage(self):
-		temp = input("Message: ")
+		temp = raw_input("Message: ")
 		self.setMessage(temp)
 
 	"""
