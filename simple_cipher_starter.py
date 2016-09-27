@@ -16,7 +16,9 @@ class ShiftCipher(object):
 		self.cipherText = None
 		self.cleanText = None
 		self.shift = 3
-		
+	"""
+	Nice string representation of your class to help debug.
+	"""
 	def __str__(self):
 		return "plainText: %s\ncipherText: %s\ncleanText: %s\nshift: %d\n" % (self.plainText,self.cipherText,self.cleanText,self.shift)
 	
