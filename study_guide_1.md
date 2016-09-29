@@ -9,7 +9,7 @@ method for accessing each element (by access I mean print).
 =====
 A clerk works in a store where the cost of each item is a positive integer number of dollars.
 So, for example, something might cost $21, but nothing costs $9.99. In order to make change
-a clerk has an unbounded number of bills in each of 2the following denominations: $1, $2,
+a clerk has an unbounded number of bills in each of of the following denominations: $1, $2,
 $5, $10, and $20. Write a procedure that takes two arguments, the cost of an item and the
 amount paid, and prints how to make change using the smallest possible number of bills.
 
