@@ -1,6 +1,12 @@
 # Not Done
 
 ======
+Discuss the following data types:
+- lists
+- dictionary's
+- tuples
+
+======
 Looping over Lists:
 
 Given the following list: `[34,55,3,22,"hello","wassup",99,17.9,42]` provide more than one 
