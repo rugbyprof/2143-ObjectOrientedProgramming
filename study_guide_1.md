@@ -32,6 +32,10 @@ and the target is the word `dont` then your procedure should return the list `1,
 Create a data structure to hold data for a student. This structure would hold the following:
 string first_name, string last_name, int id, string dob, ...
 
+=====
+
+Write a function that will return a `tuple` that contains the `average`, `maximum`, and the `minimum` number in a list of integers.
+
 
 
 
