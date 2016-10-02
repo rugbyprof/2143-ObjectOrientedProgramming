@@ -55,4 +55,18 @@ print(s1.getAvg())
 s1.setList(l2)
 print(s1.getMax())
 ```
+=====
 
+Given the following class:
+
+```python
+class Point:
+    """ Point class represents and manipulates x,y coords. """
+
+    def __init__(self,x=0,y=0):
+        """ Create a new point at the origin """
+        self.x = x
+        self.y = y
+```
+
+Write a `str` method to print out the string representation of the class.
