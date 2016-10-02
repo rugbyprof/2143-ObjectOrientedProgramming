@@ -83,6 +83,8 @@ class Point:
     #Looks like an answer to another question!!! ;)
     def __str__(self):
         return "({0},{1})".format(self.x,self.y)
+        # or
+        # return "(%d , %d)" % (self.x,self.y)
     
     def __add__(self,other):
         x = self.x + other.x
