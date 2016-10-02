@@ -36,6 +36,23 @@ string first_name, string last_name, int id, string dob, ...
 
 Write a function that will return a `tuple` that contains the `average`, `maximum`, and the `minimum` number in a list of integers.
 
+=====
 
+Now take that function with the logic you just created to solve the problem above and turn it into a class. Your class will be called `listStats` have the following methods:
 
+- setList()
+- getMin()
+- getAvg()
+- getMax()
+
+Here is some example usage of your class:
+
+```python
+l1 = [3,4,5,2,33,77,65,67,22,12,3,44,5,66,77]
+l2 = [55,7,66,23,45,3,4,11,2,99,8,7,98,58,23]
+s1 = listStats(l1)
+print(s1.getAvg()) 
+s1.setList(l2)
+print(s1.getMax())
+```
 
