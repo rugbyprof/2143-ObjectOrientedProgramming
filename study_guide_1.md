@@ -70,3 +70,31 @@ class Point:
 ```
 
 Write a `str` method to print out the string representation of the class.
+
+=====
+
+Given the following example of how to overload an operator:
+```python
+class Point:
+    def __init__(self, x = 0, y = 0):
+        self.x = x
+        self.y = y
+    
+    #Looks like an answer to another question!!! ;)
+    def __str__(self):
+        return "({0},{1})".format(self.x,self.y)
+    
+    def __add__(self,other):
+        x = self.x + other.x
+        y = self.y + other.y
+        return Point(x,y)
+```
+And it's usage:
+
+```python
+p1 = Point(2,3)
+p2 = Point(-1,2)
+print(p1 + p2)
+# prints: (1,5)
+```
+Overload the `equal` operator to test for `point` equality.
