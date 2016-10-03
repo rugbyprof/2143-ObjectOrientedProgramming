@@ -11,7 +11,7 @@ Give a basic overview of each data type below. What kind of data could/would you
 - tuples
 
 ======
-[Definitions](https://github.com/rugbyprof/2143-ObjectOrientedProgramming/wiki/Definitions)
+Words are Defined [here](https://github.com/rugbyprof/2143-ObjectOrientedProgramming/wiki/Definitions). 
 
 - Attributes
 - Class
