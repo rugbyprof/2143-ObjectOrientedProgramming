@@ -1,7 +1,7 @@
 # Not Done
 
 ======
-Discuss the following data types:
+Give a basic overview of each data type below. What kind of data could/would you store in each? Are each of them `mutable`? Give examples of each.
 - lists
 - dictionary's
 - tuples
@@ -10,7 +10,7 @@ Discuss the following data types:
 Looping over Lists:
 
 Given the following list: `[34,55,3,22,"hello","wassup",99,17.9,42]` provide more than one 
-method for accessing each element (by access I mean print). 
+method for accessing each element (in this example, by access I mean print). 
 
 =====
 A clerk works in a store where the cost of each item is a positive integer number of dollars.
@@ -20,6 +20,7 @@ $5, $10, and $20. Write a procedure that takes two arguments, the cost of an ite
 amount paid, and prints how to make change using the smallest possible number of bills.
 
 =====
+
 Write a procedure that takes a string of words separated by spaces (assume no punctuation
 or capitalization), together with a ”target” word, and shows the position of the target word
 in the string of words. 
