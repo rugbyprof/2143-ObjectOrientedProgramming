@@ -11,6 +11,21 @@ Give a basic overview of each data type below. What kind of data could/would you
 - tuples
 
 ======
+[Definitions](https://github.com/rugbyprof/2143-ObjectOrientedProgramming/wiki/Definitions)
+
+- Attributes
+- Class
+- Constructor
+- Data Member
+- Encapsulation
+- Immutable
+- Information Hiding
+- Inheritance
+- Instance Variable
+- Method
+- Mutable
+
+======
 Looping over Lists:
 
 Given the following list: `[34,55,3,22,"hello","wassup",99,17.9,42]` provide more than one 
@@ -41,15 +56,15 @@ and the target is the word `dont` then your procedure should return the list `1,
 =====
 
 Create a data structure to hold data for a student. This structure would hold the following:
-string first_name, string last_name, int id, string dob, ...
+`string` first_name, `string` last_name, `int` id, `string` dob 
 
 =====
 
-Write a function that will return a `tuple` that contains the `average`, `maximum`, and the `minimum` number in a list of integers.
+Write a function that will return a `tuple` that contains the `average`, `maximum`, and the `minimum` number in a given list of integers.
 
 =====
 
-Now take that function with the logic you just created to solve the problem above and turn it into a class. Your class will be called `listStats` have the following methods:
+Now take that function with the logic you just created to solve the problem above and turn it into a class. Your class will be called `listStats` and have the following methods:
 
 - setList()
 - getMin()
