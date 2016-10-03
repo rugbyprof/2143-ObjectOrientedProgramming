@@ -107,7 +107,7 @@ class Point:
 ```
 
 Write a `str` method to print out the string representation of the class. Example output:
-```
+```python
 p1 = Point(3,5)
 print(p1)
 # prints:
