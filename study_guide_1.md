@@ -126,3 +126,6 @@ print(p1 + p2)
 # prints: (1,5)
 ```
 Overload the `equal` operator to test for `point` equality.
+
+======
+
