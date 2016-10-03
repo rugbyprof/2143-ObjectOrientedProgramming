@@ -33,6 +33,8 @@ Words are Defined [here](https://github.com/rugbyprof/2143-ObjectOrientedProgram
 Given the following list: `[34,55,3,22,"hello","wassup",99,17.9,42]` provide more than one 
 method for accessing each element (in this example, by access I mean print). 
 
+https://gist.github.com/rugbyprof/2c5bf44a5d901d53e60b71defcdb725d
+
 =====
 #### Writing Functions
 
