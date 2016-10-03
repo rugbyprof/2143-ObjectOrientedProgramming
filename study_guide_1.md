@@ -161,6 +161,7 @@ Write a class called `wordDictonary` that represents an actual dictionary. Your 
 - `removeWord`:
     - this method lets you remove a word from the dictionary. 
     
+    https://gist.github.com/rugbyprof/13efbdccb15acf023637522a6a15127d
 ======
 
 ### Median Trickery
