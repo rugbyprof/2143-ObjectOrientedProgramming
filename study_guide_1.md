@@ -110,8 +110,7 @@ Write a `str` method to print out the string representation of the class. Exampl
 ```python
 p1 = Point(3,5)
 print(p1)
-# prints:
-(x:3,y:5)
+# prints: (x:3,y:5)
 ```
 
 =====
