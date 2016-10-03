@@ -2,7 +2,7 @@
 
 ======
 
-Everyone will get a copy of the [](./Python_Cheat_Sheet.md), so don't panic about memorizing all things python. 
+Everyone will get a copy of the [Python_Cheat_Sheet](./Python_Cheat_Sheet.md), so don't panic about memorizing all things python. 
 
 ======
 Give a basic overview of each data type below. What kind of data could/would you store in each? Are each of them `mutable`? Give examples of each.
