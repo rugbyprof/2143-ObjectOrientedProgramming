@@ -1,16 +1,19 @@
-# Not Done
+## Test 1 Study Guide
 
 ======
-
+#### Cheat Sheet
 Everyone will get a copy of the [Python_Cheat_Sheet](./Python_Cheat_Sheet.md), so don't panic about memorizing all things python. 
 
 ======
+#### Python Container Types
 Give a basic overview of each data type below. What kind of data could/would you store in each? Are each of them `mutable`? Give examples of each.
 - lists
 - dictionary's
 - tuples
 
 ======
+#### Definitions
+
 Words are Defined [here](https://github.com/rugbyprof/2143-ObjectOrientedProgramming/wiki/Definitions). 
 
 - Attributes
@@ -26,12 +29,14 @@ Words are Defined [here](https://github.com/rugbyprof/2143-ObjectOrientedProgram
 - Mutable
 
 ======
-Looping over Lists:
+#### Looping over Lists
 
 Given the following list: `[34,55,3,22,"hello","wassup",99,17.9,42]` provide more than one 
 method for accessing each element (in this example, by access I mean print). 
 
 =====
+#### Writing Functions
+
 A clerk works in a store where the cost of each item is a positive integer number of dollars.
 So, for example, something might cost $21, but nothing costs $9.99. In order to make change
 a clerk has an unbounded number of bills in each of of the following denominations: $1, $2,
@@ -39,6 +44,7 @@ $5, $10, and $20. Write a procedure that takes two arguments, the cost of an ite
 amount paid, and prints how to make change using the smallest possible number of bills.
 
 =====
+#### Working With Lists
 
 Write a procedure that takes a string of words separated by spaces (assume no punctuation
 or capitalization), together with a ”target” word, and shows the position of the target word
@@ -54,15 +60,20 @@ and the target is the word `dont` then your procedure should return the list `1,
 `False` if the target word doesn’t appear in the string.
 
 =====
+#### Choosing Correct Data Type
 
 Create a data structure to hold data for a student. This structure would hold the following:
 `string` first_name, `string` last_name, `int` id, `string` dob 
 
 =====
 
+#### Stats Function
+
 Write a function that will return a `tuple` that contains the `average`, `maximum`, and the `minimum` number in a given list of integers.
 
 =====
+
+#### Stats Class
 
 Now take that function with the logic you just created to solve the problem above and turn it into a class. Your class will be called `listStats` and have the following methods:
 
@@ -82,6 +93,7 @@ s1.setList(l2)
 print(s1.getMax())
 ```
 =====
+#### String Output of a Class
 
 Given the following class:
 
@@ -98,6 +110,8 @@ class Point:
 Write a `str` method to print out the string representation of the class.
 
 =====
+
+#### Overloading an Operator
 
 Given the following example of how to overload an operator:
 ```python
@@ -128,4 +142,40 @@ print(p1 + p2)
 Overload the `equal` operator to test for `point` equality.
 
 ======
+
+#### Dictionary Class
+
+Write a class called `wordDictonary` that represents an actual dictionary. Your class should contain the following methods:
+- `loadDictionary` : 
+    - reads a file that contains `word: definition` 
+    - a word may occur more than once (same word alternate definition)
+    - you should be able to hold all definitions
+- `updateDictionary`:
+    - a method that lets you add a word:definition to the class
+- `findWord`:
+    - this method receives a word, and returns all definitions that correspond to it. 
+- `removeWord`:
+    - this method lets you remove a word from the dictionary. 
+    
+======
+
+### Median Trickery
+
+- Complete the function using this algorithm: 
+    - continually remove the largest and smallest values from the list and return either the last value (if there is only one left) or the average of the two last values (if there are two left).
+    - Do not sort the list, and don't use any for loops in your solution.
+    - Functions `max` and `min` may be helpful, as well as one or more list methods.
+
+```python
+def myMedian(L):
+""" 
+@Description: Return the median of the numbers in L.
+@Params: L (list)
+@Returns: median (int)
+"""
+	# Start with a copy of the list so we don’t modify the original.
+	L = L[:]
+
+
+
 
