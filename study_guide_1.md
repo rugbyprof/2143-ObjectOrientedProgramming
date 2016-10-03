@@ -1,7 +1,7 @@
 ## Test 1 Study Guide
 
 #### Cheat Sheet
-Everyone will get a copy of the [Python_Cheat_Sheet](./Python_Cheat_Sheet.md), so don't panic about memorizing all things python. 
+Everyone will get a copy of the [Python_Cheat_Sheet](./Python_Cheat_Sheet.md) along with thier exam, so don't panic about memorizing all things python. 
 
 ======
 #### Python Container Types
