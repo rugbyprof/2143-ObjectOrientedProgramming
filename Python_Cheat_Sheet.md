@@ -48,6 +48,8 @@
     
 #### file open for reading:
 
+- `F = open`('file_name.ext')
+    - open a file for reading
 - `F.close()` -> NoneType
     - Close the file.
 - `F.read()` -> str
