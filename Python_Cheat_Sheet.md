@@ -48,7 +48,7 @@
     
 #### file open for reading:
 
-- `F = open`('file_name.ext')
+- `F = open`('workfile', 'r')
     - open a file for reading
 - `F.close()` -> NoneType
     - Close the file.
@@ -59,6 +59,12 @@
     - Return an empty string at EOF (End Of File).
 - `F.readlines()` -> list of str
     - Return a list of the lines from the file. Each string ends in a newline.
+- Loop through file printing every line:
+
+```
+for line in f:
+        print line
+```
 
 #### file open for writing:
 
