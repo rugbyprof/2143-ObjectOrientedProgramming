@@ -68,6 +68,8 @@ for line in f:
 
 #### file open for writing:
 
+- `F = open`('workfile', 'w')
+    - open a file for writing
 - `F.close()` -> NoneType
     - Close the file.
 - `F.write(x)` -> int
