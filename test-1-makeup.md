@@ -1,11 +1,10 @@
 # Test 1 Makeup - OOP - Fall 2016
-- Lists, Dictionaries, Functions, Class syntax
 
 ## Instructions:
 
 - I want a digital markdown copy of this document added to your repository, and a printed copy of this document turned it at the beginning of class on wednesday. Don't add your copy to your repo until after class on wednesday.  
 - Replace the `Test 1 Makeup - OOP - Fall 2016` line at the top with your name.
-
+- Delete these instructions
 
 -----
 
