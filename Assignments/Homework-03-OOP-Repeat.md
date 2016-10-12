@@ -3,7 +3,11 @@ Due: Oct 17<sup>th</sup> by class time.
 
 ### Deliverables
 
-- Print a copy of your answers and bring to class.
+- Print a copy of your answers and bring to class. 
+- Just include the questions and answers, not this whole document.
+- Place your name at the top of the file.
+- Any writing on the homework (pencil or ink) and it will NOT be graded.
+- Late homeworks `-20` points (out of 100)
 - Use the same format as the test 1 makeup, basically an organized markdown file.
 - After your turn in your hardcopy, place the markdown file in your repositories `assignments` folder.
 - Name your file `homework-03.md`
@@ -192,6 +196,13 @@ print(soumyas_bag.number_sold)
 # what prints?
 ```
 
+### Answer 1
+
+```python
+# answers here
+
+```
+
 **2)**  Write a new method for the Bag class called take color, which takes a color and
 removes (and returns) a Skittle of that color from the bag. If there is no Skittle
 of that color, then it returns `None`.
@@ -207,6 +218,13 @@ def take_color(self, color):
 ```
 
 
+### Answer 2
+
+```python
+# answer here
+
+```
+
 **3.** Write a new method for the Bag class called take all, which takes all the Skittles
 in the current bag and prints the color of the each Skittle taken from the bag.
 
@@ -215,5 +233,12 @@ def take_all(self):
 
 
 
+
+```
+
+### Answer 3
+
+```python
+# answer here
 
 ```
