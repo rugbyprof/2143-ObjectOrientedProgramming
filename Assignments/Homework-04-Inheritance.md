@@ -1,7 +1,6 @@
-# Not Done
+# Ineritance
+Due: Oct 24<sup>th</sup> by class time.
 
-
-## Ineritance
 
 Let’s explore another powerful object-oriented programming tool: inheritance. Suppose
 we want to write `Dog` and `Cat` classes. Here’s our first attempt:
