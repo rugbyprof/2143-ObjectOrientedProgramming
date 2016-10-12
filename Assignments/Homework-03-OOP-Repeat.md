@@ -1,5 +1,5 @@
 # OOP Repeat
-Due: 17 Oct by classtime.
+Due: Oct 17<sup>th</sup> by class time.
 
 ### Deliverables
 
