@@ -1,6 +1,8 @@
 # OOP Repeat
 Due: Oct 17<sup>th</sup> by class time.
 
+This is just to re-inforce what we've already been over. 
+
 ### Deliverables
 
 - Print a copy of your answers and bring to class. 
