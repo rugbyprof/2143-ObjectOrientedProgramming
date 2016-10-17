@@ -1,27 +1,31 @@
-## Program 1 - AsciiShop
+## Program 1 - AsciiShop Checklist (Rubric)
 | #       | Item                                                       | Value       | Earned   |                |
 |:--------|:-----------------------------------------------------------|:------------|:---------|:---------------|
 | ***1*** | ***General***                                              |             |          |  |
-| -       | Code was on github                                         | pass/fail   |          | ![Alt text][1] |
-| -       | Code could be ran.                                         | pass/fail   |          | ![Alt text][1] |
-| -       | Code was commented                                         |    20       |    20    | ![Alt text][1] |
-| -       | Followed naming conventions (named your file correctly).   |            |         |   |
-|         |      Classname: asciiShop                                  |    3       |     3   | ![Alt text][1] |
-|         |     Foldername: AsciiShop for all your files.              |    3       |     3   | ![Alt text][1] |   
-|         |     Renamed asciiArtClass.py to asciiShop.py               |    4       |     4   | ![Alt text][1] |
+| -       | Code was on github                                         | pass/fail   |          | |
+| -       | Code could be ran.                                         | pass/fail   |          | |
+| -       | Code was commented                                         |    20       |       | |
+| -       | Followed naming conventions (named your file correctly).   |            |          |   |
+|         |      Classname: asciiShop                                  |    3       |         |  |
+|         |     Foldername: AsciiShop for all your files.              |    3       |        | |   
+|         |     Renamed asciiArtClass.py to asciiShop.py               |    4       |      | |
 | ***2*** | ***Flip Method***                                          |             |          |   |
-| -       | worked                                                     |    30       |    30    | ![Alt text][1] |
-| -       | could choose the direction                                 |    10        |    10     | ![Alt text][1] |
+| -       | worked                                                     |    30       |      | |
+| -       | could choose the direction                                 |    10        |        |  |
 | ***3*** | ***Invert Method***                                        |             |          |   |
-| -       | worked                                                     |    30       |    30    | ![Alt text][1] |
-|         | Totals:                                                    | **100**     |  **100** | ![Alt text][1] |
+| -       | worked                                                     |    30       |        |  |
+|         | Totals:                                                    | **100**     |  |  |
 | ***E*** | ***Extra Credit***                                         |             |          |   |
-| -       | Did one of the extra credit methods                        |    20       |    0     | ![Alt text][1] |
+| -       | Did one of the extra credit methods                        |    20       |        |  |
 
 ### Comments:
 ```
 
 ```
+
+- ![Alt text][1] = Full Points
+- ![Alt text][3] = Problem, partial points
+- ![Alt text][2] = Error, no points
 
 [1]: http://f.cl.ly/items/3E231i211n2E042B1U3K/right.png  "Correct"
 [2]: http://f.cl.ly/items/2X473C1Q1F2x3S1E4231/wrong.gif  "Incorrect"
