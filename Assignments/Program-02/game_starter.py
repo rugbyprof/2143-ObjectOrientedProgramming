@@ -89,11 +89,18 @@ class Game(object):
     """
     def PlayerRoll(self,player,number_rolls):
         total = 0
-        for i in range(random.randint(1,number_rolls)):
-            roll_value = self.pig.Roll()
-            if roll_value == 0:
-                return 0
-            total +=  roll_value
+        if player == 'bob':
+            while total <= 20:
+                roll_value = self.pig.Roll()
+                if roll_value == 0:
+                    return 0
+                total +=  roll_value
+        else:
+            for i in range(random.randint(1,number_rolls)):
+                roll_value = self.pig.Roll()
+                if roll_value == 0:
+                    return 0
+                total +=  roll_value
 
         return total
         
@@ -127,6 +134,7 @@ class GenericPlayer(object):
         self.Name = name
         self.Score = 0
         self.LastTurn = 0
+        self.LastNumRolls = 0
         self.Opponents = {}
 
     def AddOpponents(self,opponent):
@@ -155,7 +163,7 @@ class AggressivePlayer(GenericPlayer):
 
 def simulation():
 
-    num_players = 5
+    num_players = 3
     possible = ['ann','bob','sue','bill','ace','dax','erl','fox','gob','hal']
     players = []
 
@@ -167,14 +175,14 @@ def simulation():
     PlayerWins = {}
 
     # How many rounds to run our mini simulation
-    total_rounds = 10000
+    total_rounds = 100
 
     # Init each player number of wins to 0
     for p in players:
         PlayerWins[p] = 0
 
     # Param values to initialize a pig game instance
-    kwargs = {'num_dice':2,'random_roles':7,'target_score':100,'players':players}
+    kwargs = {'num_dice':1,'random_roles':9,'target_score':100,'players':players}
 
     # Play a game for how ever many rounds in "total_rounds"
     for i in range(total_rounds):
@@ -190,21 +198,23 @@ def simulation():
 
     print(PlayerWins)
 
-if __name__=='__main__':
-    #simulation()
 
-    p1 = GenericPlayer('ann')
-    p2 = GenericPlayer('bob')
-    p3 = GenericPlayer('sue')
+#simulation()
 
-    p1.AddOpponents(p2)
-    p2.AddOpponents(p1)
-    p1.AddOpponents(p3)
-    p2.AddOpponents(p3)
-    p3.AddOpponents([p1,p2])
+p1 = GenericPlayer('ann')
+p2 = GenericPlayer('bob')
+p3 = GenericPlayer('sue')
 
-    p1.Score=12
+p1.AddOpponents(p2)
+p2.AddOpponents(p1)
+p1.AddOpponents(p3)
+p2.AddOpponents(p3)
+p3.AddOpponents([p1,p2])
 
-    print(p1)
-    print(p2)
-    print(p3)
+p1.Score=12
+p3.Score=99
+p3.LastTurn=24
+
+print(p1)
+print(p2)
+print(p3)
