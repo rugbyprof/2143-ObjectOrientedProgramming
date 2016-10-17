@@ -15,7 +15,7 @@ We are going to implement a video poker game. Video poker is an electronic versi
 
 ### Poker Hand Ranks
 
-![](http://www.learn-texas-holdem.com/images/poker-hand-picture.png)
+![](http://www.freevideopoker4u.com/images/gamelogos/poker-hands.gif)
 
 | Rank | Name              | Cards                                          | Payout |
 |:----:|:------------------|:-----------------------------------------------|:------:|
