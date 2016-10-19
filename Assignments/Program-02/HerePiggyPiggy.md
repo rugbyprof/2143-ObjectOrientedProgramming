@@ -70,7 +70,7 @@ We decided that this strategy would be "conservative" if they were ahead of thei
 
 This will incorporate a combination of 2 or more of the above strategies.
 
-## Part 1 Requirements
+## Part 1 Deliverables
 
 - Create a folder called _**program\_2**_ in your **_assignments_** folder. (If I haven't previously instructed you to create an assignments folder, please do).
 - Create a file called _**game\_part1.py**_ within _**program\_2**_ that is a copy of the given file [game_starter.py](./game_starter.py)
@@ -80,12 +80,12 @@ This will incorporate a combination of 2 or more of the above strategies.
 - In addition to changing the game play, add a statement that will print the following:
     - "{Playername} has just reached {Target Score} points and is stopping."
 
-## Part 2 Requirements
+## Part 2 Deliverables
 
 - TBD
 
 
-## Part 3 Requirements
+## Part 3 Deliverables
 
 - TBD
 
