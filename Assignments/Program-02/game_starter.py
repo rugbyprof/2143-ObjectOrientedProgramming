@@ -132,16 +132,39 @@ class Player(object):
         int: max rolls 
     @Returns: int: total
     """
+    
     def Roll(self):
-        self.LastScore = 0
-        self.LastNumRolls = 0
+        Score,NumRolls = self.RandomRoll()
+        self.TotalScore += Score
+        self.LastScore = Score
+        self.LastNumRolls = NumRolls
+        
+        
+    def RandomRoll(self):
+        Score = 0
+        NumRolls = 0
         for i in range(random.randint(1,7)):
+            NumRolls += 1
             roll = self.pig.Roll()
             if roll == 0:
-                return
-            self.TotalScore += roll
-            self.LastNumRolls += 1
-            self.LastScore += roll
+                break
+            Score += roll
+        
+        return (Score,NumRolls)
+
+            
+    def Aggressive(self):
+        pass
+        
+    def Cautious(self):
+        pass
+
+    def Robust(self):
+        pass
+        
+    def CopyCat(self):
+        pass
+
 
 
 ##############################################################################
