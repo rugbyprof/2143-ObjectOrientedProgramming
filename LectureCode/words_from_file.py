@@ -1,4 +1,3 @@
-```python
 import pprint
 import operator
 
@@ -22,4 +21,3 @@ sorted_x = sorted(wc.items(), key=operator.itemgetter(1))
 
 pp = pprint.PrettyPrinter(depth=4)
 pp.pprint(sorted_x)
-```
