@@ -3,13 +3,7 @@ Due: TBD
 
 ## Program Overview
 
-In the simplest terms, we are writing a game program. Our program will contain the necessary components for us to play the game "Pig" (described below). But this is a computer science class, so lets go beyond simple game implementation.
-
-We are going to enhance the game play by implementing a set of strategies within the game. Right now, for each turn, we simply roll the dice for some random number of rolls. This could be considered a strategy, albeit a really bad one. A simple improvement on this could be to roll a set number of times, or try to achieve a set score each time, or even better, base your decision on the current game state! This won't be as hard to implement as you think. 
-
-Once we enhance our gameplay by adding strategy, then we are going to run a simulation to decide which strategy, or set of strategies is the best choice. Don't get intimidated by anything described here. You will see that what is being proposed is extremely doable.
-
-
+You are going to determine the best strategy for playing the dice game pig. By simulating thousands of rounds of games, we can see which strategy would maximize a players odds for winning. The basic game class has been written, and what you need to do is create a player class that will represent a player, thier score, and thier strategy. Below is a basic explanation of the game "pig" that we have been discussing in class.
 
 ### Pig
 
@@ -31,4 +25,48 @@ A computer model is the algorithms and equations used to capture the behavior of
 
 <sup>Source: https://en.wikipedia.org/wiki/Computer_simulation</sup>
 
+## Game Play Styles (Strategies)
 
+- Categories
+    - Aggressive 
+    - Cautious
+    - Robust
+    - Copycat
+- Strategies
+    - Target Score
+    - Target Rolls
+    - Sprint to Finish
+    - Mimic Opponent
+    - Situational
+
+### Target Score
+
+This simply picks a target score for each turn. For example the value 20 seemed to work well in our simple experiments in class. We could adjust this score up or down to see there is any improvement in outcome.
+
+### Target Rolls
+
+The player will roll a "target" number of times every time unless a skunk value occurs. Again, we could adjust this target up or down to see there is any improvement in outcome.
+
+### Sprint To Finish
+
+This strategy could be employed with one of the above strategies (Target Score, Target Rolls), with the addition of the "sprint". If the player comes within _**X**_ points of finishing the game, they will continue to roll until they encounter a skunk, or finish. 
+
+> Note: The implementation of this could be a little fuzzy. For example lets define our "sprint" threshold as 72. If our current score is 55, and in our current turn we achieve the "sprint" score, do we keep going? If we skunk out we go back to 55. OR if we have 55 do we employ our current strategy (no matter if we get to 72 or not) then the NEXT turn if we are 72 or greater we can sprint to the end. 
+
+### Mimic Opponent
+
+Count your oppenents rolls, or avg points per turn, and copy their actions. This may take a few turns to figure out, so an initial strategy may need to be employed. 
+
+### Situational
+
+We decided that this strategy would be "conservative" if they were ahead of their opponent, or "aggressive" if they were behind their opponent. This could get a little hard if we are playing with more than one opponent. 
+
+
+
+## Requirements
+
+- Create a folder called _**program\_2**_.
+- Create a file called _**driver.py**_ within _**program\_2**_ that is a copy of the given file [game_starter.py](./game_starter.py)
+-  
+
+ 
