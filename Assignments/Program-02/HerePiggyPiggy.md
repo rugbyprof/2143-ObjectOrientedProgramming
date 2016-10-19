@@ -1,9 +1,18 @@
 # Program 2 - Gaming Strategy Simulation
-Due: TBD
+- Part 1 Due: 24<sup>th</sup> Oct by Classtime.
+- Part 2 Due: 31<sup>th</sup> Oct by Classtime.
+- Part 3 Due: 7<sup>th</sup> Oct by Classtime.
 
 ## Program Overview
 
+This is a three part project:
+
+- Part 1: Make a minor adjustment to the game play, get familiar with code base.
+- Part 2: Add two strategy methods
+- Part 3: Run a simulation to determine best strategies.
+
 You are going to determine the best strategy for playing the dice game pig. By simulating thousands of rounds of games, we can see which strategy would maximize a players odds for winning. The basic game class has been written, and what you need to do is create a player class that will represent a player, thier score, and thier strategy. Below is a basic explanation of the game "pig" that we have been discussing in class.
+
 
 ### Pig
 
@@ -27,17 +36,13 @@ A computer model is the algorithms and equations used to capture the behavior of
 
 ## Game Play Styles (Strategies)
 
-- Categories
-    - Aggressive 
-    - Cautious
-    - Robust
-    - Copycat
 - Strategies
     - Target Score
     - Target Rolls
     - Sprint to Finish
     - Mimic Opponent
     - Situational
+    - Combination
 
 ### Target Score
 
@@ -61,12 +66,28 @@ Count your oppenents rolls, or avg points per turn, and copy their actions. This
 
 We decided that this strategy would be "conservative" if they were ahead of their opponent, or "aggressive" if they were behind their opponent. This could get a little hard if we are playing with more than one opponent. 
 
+### Combination
+
+This will incorporate a combination of 2 or more of the above strategies.
+
+## Part 1 Requirements
+
+- Create a folder called _**program\_2**_ in your **_assignments_** folder. (If I haven't previously instructed you to create an assignments folder, please do).
+- Create a file called _**game\_part1.py**_ within _**program\_2**_ that is a copy of the given file [game_starter.py](./game_starter.py)
+- Make necessary changes so that game play is correct:
+    - Currently the player does not stop rolling immediately after reaching the target score.
+    - Adjust the player class so that the player knows the target score and stop immediately after reaching it.
+- In addition to changing the game play, add a statement that will print the following:
+    - "{Playername} has just reached {Target Score} points and is stopping."
+
+## Part 2 Requirements
+
+- TBD
 
 
-## Requirements
+## Part 3 Requirements
 
-- Create a folder called _**program\_2**_.
-- Create a file called _**driver.py**_ within _**program\_2**_ that is a copy of the given file [game_starter.py](./game_starter.py)
--  
+- TBD
+
 
  

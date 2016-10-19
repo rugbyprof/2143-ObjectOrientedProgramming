@@ -82,12 +82,12 @@ class Player(object):
     @Returns: None
     """
     def AddOpponents(self,opponent):
-        # if not type(opponent) == list and not opponent.Name == self.Name:
-        #     self.Opponents[opponent.Name] = opponent
-        # else:
-        for op in opponent:
-            if not op.Name == self.Name:
-                self.Opponents[op.Name] = op
+        if not type(opponent) == list and not opponent.Name == self.Name:
+            self.Opponents[opponent.Name] = opponent
+        else:
+            for op in opponent:
+                if not op.Name == self.Name:
+                    self.Opponents[op.Name] = op
 
     """
     @Method: __str__
@@ -156,7 +156,7 @@ class Player(object):
     def RandomRoll(self):
         Score = 0
         NumRolls = 0
-        for i in range(random.randint(1,self.Strategies['Random'])):
+        for i in range(random.randint(1,7)):
             NumRolls += 1
             roll = self.pig.Roll()
             if roll == 0:
@@ -166,18 +166,23 @@ class Player(object):
         return (Score,NumRolls)
 
             
-    def Aggressive(self):
+    def Target_Score(self):
         pass
         
-    def Cautious(self):
+    def Target_Roll(self):
         pass
 
-    def Robust(self):
+    def Sprint_To_Finish(self):
         pass
         
-    def CopyCat(self):
+    def Mimic_Opponent(self):
         pass
 
+    def Situational(self):
+        pass
+        
+    def Combination(self):
+        pass
 
 
 ##############################################################################
