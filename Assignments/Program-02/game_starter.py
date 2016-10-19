@@ -15,6 +15,9 @@ class Dice(object):
     def Roll(self):
         return random.randint(1,self.NumSides)  
 
+##############################################################################
+##############################################################################
+
 """
 @Class: Pig
 @Description: 
@@ -44,6 +47,106 @@ class Pig(object):
                 return 0 
         return sum(scores)
 
+##############################################################################
+##############################################################################
+
+class Player(object):
+    def __init__(self,name,num_dice=1):
+        self.Name = name        # My name
+        self.TotalScore = 0     # Total score
+        self.LastScore = 0      # Score on last turn
+        self.LastNumRolls = 0   # Last number of rolls
+        self.Opponents = {}     # Dict of opponents
+        self.pig = Pig(num_dice)# init pig game 
+        self.Strategies = {
+                'Target_Score':0,
+                'Target_Rolls':0,
+                'Sprint_To_Finish':0,
+                'Mimic_Opponent':0,
+                'Situational':0
+            }
+
+    """
+    @Method: AddOpponents
+    @Description: Adds an opponent, or list of opponents (as long as it's not me) to a dictionary with name and score.
+        Example: {
+                   'bob':0.
+                   'sue':0
+                 }
+    
+    @Params: [] - Opponents
+    @Returns: None
+    """
+    def AddOpponents(self,opponent):
+        if not type(opponent) == list and not opponent.Name == self.Name:
+            self.Opponents[opponent.Name] = opponent
+        else:
+            for op in opponent:
+                if not op.Name == self.Name:
+                    self.Opponents[op.Name] = op
+
+    """
+    @Method: __str__
+    @Description: Prints out a nice version of self
+    @Returns: string representation
+    """
+    def __str__(self):
+        tmp = " "
+        for k,v in self.Opponents.items():
+            tmp = tmp + "[" + k + " " + str(v.TotalScore) + "," + str(v.LastScore) + "," + str(v.LastNumRolls) + "] "
+        return "Name: %s, TotScore: %s, LastScore: %s, LastNumRolls: %s, Opponents: %s" % (self.Name,self.TotalScore,self.LastScore,self.LastNumRolls,tmp)
+        
+    """
+    @Method: __repr__
+    @Description: Calls __str__
+    @Returns: a call to __str__
+    """
+    def __repr__(self):
+        return self.__str__()
+        
+
+    """
+    @Method: SetStrategy
+    @Description: Sets the current strategy for the player
+    @Params:
+        strategy: string 
+        value: int    
+    @Returns: None
+    @Usage:
+            SetStrategy('Target_Score',20)
+            SetStrategy('Target_Rolls',5)     
+            SetStrategy('Sprint_To_Finish',72)    
+    """
+    def SetStrategy(self,strategy,value):
+        if strategy in self.Strategies:
+            self.Strategies[strategy] = value
+        else:
+            raise ValueError('The strategy does not exist!')
+
+    """
+    @Method: PlayerRoll
+    @Description: Implements a turn for a player. If the player rolls a 1 at any time zero is returned, 
+                  otherwise the total of the rolls is returned.
+    @Params:
+        string: player
+        int: max rolls 
+    @Returns: int: total
+    """
+    def Roll(self):
+        self.LastScore = 0
+        self.LastNumRolls = 0
+        for i in range(random.randint(1,7)):
+            roll = self.pig.Roll()
+            if roll == 0:
+                return
+            self.TotalScore += roll
+            self.LastNumRolls += 1
+            self.LastScore += roll
+
+
+##############################################################################
+##############################################################################
+
 """
 This Class represents one instance of a game with X players rolling X dice playing to a score of X.
 """
@@ -63,47 +166,53 @@ class Game(object):
         self.NumDice = kwargs['num_dice']           # number of dice per roll
         self.RandomRolls = kwargs['random_roles']   # max num random rolls
         self.TargetScore = kwargs['target_score']   # game winning score
-        self.pig = Pig(self.NumDice)                  # init pig game 
         self.WinnerName = None                      # no winner yet
         
-        # initialize all players score to zero
-        for p in kwargs['players']:             
-            self.Players[p] = 0
+        # initialize all players
+        self.AddPlayers(kwargs['players'])
             
+        self.StartGame()
+        
+    def __str__(self):
+        string = ""
+        for name,obj in self.Players.items():
+            string += obj.__str__() + "\n"
+        return string
+        
+    """
+    @Method: AddPlayers
+    @Description: Adds a new player or players to the game
+        Example: {
+                   'bob':<player_object>
+                   'sue':<player_object>
+                 }
+    
+    @Params: [] - players
+    @Returns: None
+    """
+    def AddPlayers(self,players):
+        if not type(players) == list:
+            self.Players[players.Name] = players
+        else:
+            for p in players:
+                self.Players[p.Name] = p
+                    
+    """
+    @Method: WinnerExists
+    @Description: Checks to see if a player has acheived the target score.
+    @Params:None
+    @Returns: bool
+    """         
+    def StartGame(self):
+
+        self.UpdatePlayerOpponents()
+        
         # Main game loop
         while not self.WinnerExists():
-            for p,s in self.Players.items():
-                self.Players[p] +=  self.PlayerRoll(p,self.RandomRolls)
-
-                if self.Winner():
-                    self.WinnerName =  self.Winner()
-                
-    """
-    @Method: PlayerRoll
-    @Description: Implements a turn for a player. If the player rolls a 1 at any time zero is returned, 
-                  otherwise the total of the rolls is returned.
-    @Params:
-        string: player
-        int: max rolls 
-    @Returns: int: total
-    """
-    def PlayerRoll(self,player,number_rolls):
-        total = 0
-        if player == 'bob':
-            while total <= 20:
-                roll_value = self.pig.Roll()
-                if roll_value == 0:
-                    return 0
-                total +=  roll_value
-        else:
-            for i in range(random.randint(1,number_rolls)):
-                roll_value = self.pig.Roll()
-                if roll_value == 0:
-                    return 0
-                total +=  roll_value
-
-        return total
-        
+            print(self)
+            for name,PlayerObj in self.Players.items():
+                PlayerObj.Roll()
+       
     """
     @Method: WinnerExists
     @Description: Checks to see if a player has acheived the target score.
@@ -111,9 +220,9 @@ class Game(object):
     @Returns: bool
     """
     def WinnerExists(self):
-        for player_name,score in self.Players.items():
-            if score >= self.TargetScore:
-                self.WinnerName = player_name
+        for name,PlayerObj in self.Players.items():
+            if PlayerObj.TotalScore >= self.TargetScore:
+                self.WinnerName = PlayerObj.Name
                 return True
         self.WinnerName = None
         return False
@@ -126,95 +235,38 @@ class Game(object):
     """
     def Winner(self):
         return self.WinnerName
+        
+    """
+    @Method: UpdatePlayerOpponents
+    @Description: Gives a copy of each player in the game, to every other player in the game. 
+    @Params:None
+    @Returns: None
+    """   
+    def UpdatePlayerOpponents(self):
+
+        for name,PlayerObj in self.Players.items():
+            PlayerObj.AddOpponents(self.Players.values())
+
+##############################################################################
+##############################################################################
 
 
-class GenericPlayer(object):
-    __metaclass__ = abc.ABCMeta
-    def __init__(self,name):
-        self.Name = name
-        self.Score = 0
-        self.LastTurn = 0
-        self.LastNumRolls = 0
-        self.Opponents = {}
 
-    def AddOpponents(self,opponent):
-        if not type(opponent) == list:
-            self.Opponents[opponent.Name] = opponent
-        else:
-            for op in opponent:
-                self.Opponents[op.Name] = op
+def main():
 
-    def __str__(self):
-        tmp = " "
-        for k,v in self.Opponents.items():
-            tmp = tmp + "[" + k + " " + str(v.Score) + "," + str(v.LastTurn) + "] "
-        return "Name: %s, Score: %s, LastTurn: %s, Opponents: %s" % (self.Name,self.Score,self.LastTurn,tmp)
-
-    def __repr__(self):
-        return self.__str__()
-
-    @abc.abstractmethod
-    def Roll(self):
-        pass
-
-class AggressivePlayer(GenericPlayer):
-    def __init__(self,name):
-        super().__init__(name)
-
-def simulation():
-
-    num_players = 3
-    possible = ['ann','bob','sue','bill','ace','dax','erl','fox','gob','hal']
-    players = []
-
-    # Add specified number of players to the list
-    for i in range(num_players):
-        players.append(possible[i])
-
-    # Create an empty dictionary to keep track of player wins
-    PlayerWins = {}
-
-    # How many rounds to run our mini simulation
-    total_rounds = 100
-
-    # Init each player number of wins to 0
-    for p in players:
-        PlayerWins[p] = 0
-
+    p1 = Player('ann')
+    p2 = Player('bob')
+    p3 = Player('sue')
+    p4 = Player('dax')
+    
+    AllPlayers = [p1,p2,p3,p4]
+    
     # Param values to initialize a pig game instance
-    kwargs = {'num_dice':1,'random_roles':9,'target_score':100,'players':players}
+    kwargs = {'num_dice':1,'random_roles':9,'target_score':100,'players':AllPlayers}
 
-    # Play a game for how ever many rounds in "total_rounds"
-    for i in range(total_rounds):
-        g = Game(**kwargs)
-        PlayerWins[g.Winner()] += 1 # Get winner for current game, and add 1 to the dictionary
-
-    # Print the dictionary with number of wins per player
-    print(PlayerWins)
-
-    # Convert sum of wins to percentages
-    for p in PlayerWins:
-        PlayerWins[p] /= total_rounds
-
-    print(PlayerWins)
-
-
-#simulation()
-
-p1 = GenericPlayer('ann')
-p2 = GenericPlayer('bob')
-p3 = GenericPlayer('sue')
-
-p1.AddOpponents(p2)
-p2.AddOpponents(p1)
-p1.AddOpponents(p3)
-p2.AddOpponents(p3)
-p3.AddOpponents([p1,p2])
-
-p1.Score=12
-p3.Score=99
-p3.LastTurn=24
-
-print(p1)
-print(p2)
-print(p3)
+    g = Game(**kwargs)
+    
+    print(g)
+    
+    
+main()
