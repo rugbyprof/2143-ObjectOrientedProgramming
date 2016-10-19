@@ -51,20 +51,24 @@ class Pig(object):
 ##############################################################################
 
 class Player(object):
-    def __init__(self,name,num_dice=1):
+    def __init__(self,name,num_dice=1,strategy=('Random',7)):
         self.Name = name        # My name
         self.TotalScore = 0     # Total score
         self.LastScore = 0      # Score on last turn
         self.LastNumRolls = 0   # Last number of rolls
         self.Opponents = {}     # Dict of opponents
+        self.NumDice = num_dice
+        self.Strategy = strategy[0]
         self.pig = Pig(num_dice)# init pig game 
         self.Strategies = {
                 'Target_Score':0,
                 'Target_Rolls':0,
                 'Sprint_To_Finish':0,
                 'Mimic_Opponent':0,
-                'Situational':0
+                'Situational':0,
+                'Random':0
             }
+        self.Strategies[strategy[0]] = strategy[1]
 
     """
     @Method: AddOpponents
@@ -132,9 +136,18 @@ class Player(object):
         int: max rolls 
     @Returns: int: total
     """
-    
     def Roll(self):
-        Score,NumRolls = self.RandomRoll()
+        if self.Strategy == 'Random':
+            Score,NumRolls = self.RandomRoll()
+        elif self.Strategy == 'Aggressive':
+            pass
+        elif self.Strategy == 'Cautious':
+            pass
+        elif self.Strategy == 'Robust':
+            pass
+        elif self.Strategy == 'CopyCat':
+            pass
+        
         self.TotalScore += Score
         self.LastScore = Score
         self.LastNumRolls = NumRolls
