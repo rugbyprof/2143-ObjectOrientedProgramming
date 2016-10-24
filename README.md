@@ -49,6 +49,7 @@
 ## Misc:
 
 - https://stackedit.io/editor
+- https://app.classeur.io
 
 - Attending class is one of the primary keys to doing well in this class. Students may be dropped for excessive absences. There is no distinction made between excused and unexcused. 
 
