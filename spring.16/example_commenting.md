@@ -10,7 +10,7 @@ usage). Hopefully it will also force you to "think" a little bit about design be
 """
 Program:
 --------
-    Short Title  - Long Title
+    Program 2 - Binary heap implementation.
 
 Description:
 ------------
@@ -24,89 +24,60 @@ Date: 3 Feb 2016
 
 ### Class Comment Block
 
-**Definition**
-
 ```python
-"""
-@Class: This is just the name of your class 
-@Usage: example class declaration here
-    
-@Description:
-    This would be a short description of your class and a general overview of what it does. 
-@Params:
-    param1 - (type) All these are parameters that you passed into your class (possibly) to help construct the class
-    param2 - (type) They should be alphebetized
-    param3 - (type)
+class SampleClass(object):
+    """Summary of class here.
 
-@Methods:
-    Alphebetize the methods here...
-    High level descriptions and usage here. This is a quick view for you or someone who's using your class so 
-    they know what methods are available, and how to use them. If they need more, they can go look at the method
-    itself.
-    method1 - description
-        usage: example1 use here
-    method1 - description
-        usage: example2 use here
-"""
-```
+    Longer class information....
+    Longer class information....
 
-**Example**
+    Attributes:
+        likes_spam: A boolean indicating if we like SPAM or not.
+        eggs: An integer count of the eggs we have laid.
+    """
 
-```python
-from types import *
+    def __init__(self, likes_spam=False):
+        """Inits SampleClass with blah."""
+        self.likes_spam = likes_spam
+        self.eggs = 0
 
-"""
-@Class: MyFraction 
-@Usage: 
-    f1 = MyFraction(2,3)    # creates 2/3
-    f2 = MyFraction()       # creates None/None
-    
-@Description:
-    This is a class that assists in the general creation and manipulation of fractions. It provides overloaded operators
-    to assist in basic arithmetic operations between fractions.
-@Params:
-    denominator  - (int) a denominator value or None
-    numerator    - (int) a numerator value or None
-
-@Methods:
-    add - Add two fractions
-        usage:  f3 = MyFraction(2,3) + MyFraction(1,2)
-                f4 = f1 + f2
-    sub - Subtract two fractions
-        usage: same as add but use a + :)
-    
-    mul - Multiply two fractions
-        usage: same as add but use a * :)
-    
-    div - Divide two fractions
-        usage: same as add but use a / :)
-"""
-class MyFraction:
-    def __init__(numerator=None,denominator=None):
-        assert (type(numerator) is int or numerator == None) , "Assertion: numerator bad value: %d" % (n)
-        assert (type(denominator) is int or denominator == None) , "Assertion: denominator bad value: %d" % (n)
-        assert (denominator != 0) , "Assertion: divide by zero!" 
-        
-        self.numerator = numerator
-        self.denominator = denominator
-        
+    def public_method(self):
+        """Performs operation blah."""
 ```
 
 ### Method Comment Block
 
 ```python
 
-def mul(rhs):
+def fetch_bigtable_rows(big_table, keys, other_silly_variable=None):
+    """Fetches rows from a Bigtable.
+
+    Retrieves rows pertaining to the given keys from the Table instance
+    represented by big_table.  Silly things may happen if
+    other_silly_variable is not None.
+
+    Args:
+        big_table: An open Bigtable Table instance.
+        keys: A sequence of strings representing the key of each table row
+            to fetch.
+        other_silly_variable: Another optional variable, that has a much
+            longer name than the other args, and which does nothing.
+
+    Returns:
+        A dict mapping keys to the corresponding table row data
+        fetched. Each row is represented as a tuple of strings. For
+        example:
+
+        {'Serak': ('Rigel VII', 'Preparer'),
+         'Zim': ('Irk', 'Invader'),
+         'Lrrr': ('Omicron Persei 8', 'Emperor')}
+
+        If a key from the keys argument is missing from the dictionary,
+        then that row was not found in the table.
+
+    Raises:
+        IOError: An error occurred accessing the bigtable.Table object.
     """
-    @Description:
-        This method multiplys a passed in fraction to self, without altering self and passes back a new fraction
-        It does not reduce the resulting fraction. 
-    @Params:
-        rhs - (MyFraction) The right hand side of the operation
-    @Returns:
-        (MyFraction) - result of operation
-    """
-    
-    return MyFraction(self.numerator*rhs.numerator,self.denominator*rhs.denominator)
+    pass
     
 ```
