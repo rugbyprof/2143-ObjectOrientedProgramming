@@ -1,6 +1,9 @@
+
+
+
 # Program 2 - Gaming Strategy Simulation
 - Part 1 Due: 24<sup>th</sup> Oct by Classtime.
-- Part 2 Due: 31<sup>th</sup> Oct by Classtime.
+- Part 2 Due: 31<sup>st</sup> Oct by Classtime.
 - Part 3 Due: 7<sup>th</sup> Oct by Classtime.
 
 ## Program Overview
@@ -71,7 +74,7 @@ We decided that this strategy would be "conservative" if they were ahead of thei
 This will incorporate a combination of 2 or more of the above strategies.
 
 ## Part 1 Deliverables
-
+Part 1 Due: 24<sup>th</sup> Oct by Classtime.
 - Create a folder called _**program\_2**_ in your **_assignments_** folder. (If I haven't previously instructed you to create an assignments folder, please do).
 - Create a file called _**game\_part1.py**_ within _**program\_2**_ that is a copy of the given file [game_starter.py](./game_starter.py)
 - Make necessary changes so that game play is correct:
@@ -81,9 +84,34 @@ This will incorporate a combination of 2 or more of the above strategies.
     - "{Playername} has just reached {Target Score} points and is stopping."
 
 ## Part 2 Deliverables
+Part 1 Due: 31<sup>st</sup> Oct by Classtime.
+- Create a file called _**game\_part2.py**_ within _**program\_2**_ that is a copy of your corrected version of the following: [game_starter.py](./game_starter.py) (Basically a copy of your _**game\_part1.py**_)
+- Complete the method `Sprint_To_Finish` . This method should be invoked when the player gets close enough to the final score in order to feel like they can achieve the  score if they keep rolling. Currently, the strategy is `Random`. I would do something like below to choose which strategy to roll with:
 
-- TBD
+```python
 
+        # New code to choose strategy 
+        # This block will apply the sprint to finish when the player
+        # is within %80 of the final score.
+        if self.TotalScore / self.TargetScore >= .8:
+            self.Strategy = 'SprintToFinish'
+            
+        # Same if/else statements to call strategy method
+        if self.Strategy == 'Random':
+            Score,NumRolls = self.RandomRoll()
+        elif self.Strategy == 'Aggressive':
+            pass
+        elif self.Strategy == 'Cautious':
+            pass
+        elif self.Strategy == 'Robust':
+            pass
+        elif self.Strategy == 'CopyCat':
+            pass
+        elif self.Strategy == 'SprintToFinish':
+            self.SprintToFinish()
+```
+
+- Complete the `Aggressive` and `Cautious` methods. Remember the "Random" method rolled the die between 1 and 7 times randomly (unless they rolled a 1).  The average score for a single roll of a die is **3.5** and if we use the **20** points as a goal, thats **5.7** rolls. I'm not sure what is aggressive or cautious but it probably should be based on these values, where aggressive would be 2-3 rolls above the average 6 rolls, and the cautious would be 2-3 below.  
 
 ## Part 3 Deliverables
 
