@@ -219,27 +219,51 @@ Write a python snippet to find the words that occur most often. You output shoul
 
 ## Q:
 
-Write a class called `book_analysis` that will do a word frequency analysis on a book. You can assume that the book has had all punctuation removed. Your class should count the number of unique words and be able to return the **n**<sup>th</sup> most frequent word. Below is some helper code.
+Write a class called `book_analysis` that will do a word frequency analysis on a book. You can assume that the book has had all punctuation removed. Your class should count the number of unique words and be able to return the **n**<sup>th</sup> most frequent word. Below is some code that WILL actually do what I'm asking you to do (but not in a class).
 
 ```python
-f = open('some_book.txt')
+import string
+import operator
+
+#url for book = http://www.gutenberg.org/files/2701/2701.txt
+f = open('moby_dick.txt')
+
+
+dict = {}
 
 for line in f:
-    words = line.split(' ')
-    for word in words:
-        # do something with the word
+    exclude = set(string.punctuation)
+    words = ''.join(ch for ch in line.strip() if ch not in exclude).lower()
+    for word in words.split(' '):
+        if not word in dict:
+            dict[word] = 0
+        dict[word] += 1
+
+sorted_dict = sorted(dict.items(), key=operator.itemgetter(1), reverse=True)
+
+print(sorted_dict)
 ```
 
-Lets assume the constructor will load the book. Here is some usage:
+The `sorted_dict` looks like:
+
+```
+
+[('the', 14508), ('of', 6701), ('and', 6434), ('a', 4690), ('to', 4658), ('in', 4202), ('', 3491), ('that', 2955), ('his', 2520), ('it',2382), ('i', 1943), ('but', 1781), ('with', 1768), ('he', 1749), ('is', 1731), ('as', 1730), ('was', 1637), ('for', 1627), ('all', 1493),('this', 1411), ('at', 1326), ('by', 1219), .... ('repute', 1), ('aftman', 1), ('incredibly', 1), ('flexion', 1), ('shakespeares', 1), ('coursefor', 1), ('scabbards', 1), ('causesuch', 1), ('filial', 1), ('barwait', 1), ('hornsofplenty', 1), ('sash', 1), ('races', 1), ('linenow', 1), ('andromedaindeed', 1)]
+```
+where the word and occurence are in a tuple.
+
+Your job is to organize into class form. Lets assume the constructor will load the book. Here is some usage:
 
 ```python
-anlyz = BookAnalysis('somebook.txt')
-most = anlyz.getnth(1)
+anlyz = BookAnalysis('moby_dick.txt')
+most = anlyz.getnth(3)
 print(most)
-# prints and : 11327
-x = anlyz.occurs('and')
+# ('and', 6434)
+x = anlyz.occurs('barwait')
 print(x)
-# prints and occurs 4135 times
+# barwait occurs 1 times
+print(anlyz.totalWords())
+# total words: 20211
 ```
 
-You will need to use a dictionary to keep track of all your words and counts. 
+Some of the methods return a printed message (e.g. "barwait occurs 1 times"), this is ok for this test problem, but normally methods do not print messages and return values!
