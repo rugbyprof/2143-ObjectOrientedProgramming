@@ -1,6 +1,4 @@
 # Study Guide
-NOT DONE
-
 
 ##Q:
 
@@ -28,6 +26,8 @@ print(c1)
 
 ```
 
+----
+
 ##Q:
 
 Overload the addition operator so that we can add two colors. Adding colors is a pretty wierd experience, so we will create our own addition method. Basically we will average each color. 
@@ -43,6 +43,8 @@ c3 = c1 + c2
 print(c3)
 #prints: (128,128,128)
 ```
+
+----
 
 ##Q:
 
@@ -118,6 +120,8 @@ class GrayScaler(Color):
 
 ```
 
+----
+
 ## Q:
 
 Create a point class, line class, and a rectangle class. 
@@ -133,7 +137,7 @@ Create a point class, line class, and a rectangle class.
 
 
 
-    
+----
 
 ## Q:
 
@@ -160,6 +164,8 @@ print student.is_old()	# prints True
 print student.is_honor_student()	# prints True
 ```
 
+----
+
 ## Q:
 
 Run a binary search on the following values looking for key=55. Show the index values for `first` `mid` and `last` at each iteration.
@@ -168,6 +174,7 @@ Run a binary search on the following values looking for key=55. Show the index v
 |---|---|---|---|---|---|---|---|---|---|---|
 | 0 | 5 | 13| 19 | 22	| 41	| 55	| 68	| 72	| 81	| 98 |
 
+----
 
 ## Q:
 
@@ -187,6 +194,8 @@ def remove_all(el, lst):
 
 ```
 
+----
+
 ## Q: 
 
 Given a list of words like so:
@@ -205,3 +214,32 @@ Write a python snippet to find the words that occur most often. You output shoul
 ```python
 [('eyes', 8), ('the', 5), ('look', 4)]
 ```
+
+----
+
+## Q:
+
+Write a class called `book_analysis` that will do a word frequency analysis on a book. You can assume that the book has had all punctuation removed. Your class should count the number of unique words and be able to return the **n**<sup>th</sup> most frequent word. Below is some helper code.
+
+```python
+f = open('some_book.txt')
+
+for line in f:
+    words = line.split(' ')
+    for word in words:
+        # do something with the word
+```
+
+Lets assume the constructor will load the book. Here is some usage:
+
+```python
+anlyz = BookAnalysis('somebook.txt')
+most = anlyz.getnth(1)
+print(most)
+# prints and : 11327
+x = anlyz.occurs('and')
+print(x)
+# prints and occurs 4135 times
+```
+
+You will need to use a dictionary to keep track of all your words and counts. 
