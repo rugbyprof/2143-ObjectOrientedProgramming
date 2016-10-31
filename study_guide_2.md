@@ -267,3 +267,44 @@ print(anlyz.totalWords())
 ```
 
 Some of the methods return a printed message (e.g. "barwait occurs 1 times"), this is ok for this test problem, but normally methods do not print messages and return values!
+
+----
+
+## Q:
+```python
+import random
+
+nums = []
+
+for i in range(100):
+	nums.append(random.randint(0,500))
+
+searchKey = random.randint(1,100)
+print(searchKey)
+
+nums.append(searchKey)
+
+nums = sorted(nums)
+
+print(nums)
+
+f = 0 
+l = len(nums)
+m = (f + l) // 2
+
+
+
+Found = False
+
+while not Found:
+	if nums[m] == searchKey:
+		Found = True
+		print(m)
+	if searchKey > nums[m]:
+		f = m 
+	else:
+		l = m 
+		
+	m = (f + l) // 2
+	
+```
