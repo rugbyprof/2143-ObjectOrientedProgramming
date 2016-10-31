@@ -20,7 +20,7 @@ c1.blue = 255
 print(c1)
 #prints: (red: 255, green: 0, blue: 255)
 
-c1.color = (0,0,0)
+c1.setColor((0,0,0))
 print(c1)
 #prints: (red: 0, green: 0, blue: 0)
 
@@ -36,12 +36,12 @@ For example:
 
 ```python
 
-c1 = (255,255,255)
-c2 = (0,0,0)
+c1 = Color(255,255,255)
+c2 = Color(0,0,0)
 c3 = c1 + c2
 
 print(c3)
-#prints: (128,128,128)
+#prints: (red: 128,green: 128,blue: 128)
 ```
 
 ----
