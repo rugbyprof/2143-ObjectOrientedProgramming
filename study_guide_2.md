@@ -226,6 +226,7 @@ import string
 import operator
 
 #url for book = http://www.gutenberg.org/files/2701/2701.txt
+#go to url and save book as moby_dick.txt on your computer
 f = open('moby_dick.txt')
 
 
