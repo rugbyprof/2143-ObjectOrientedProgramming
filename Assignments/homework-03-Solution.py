@@ -48,6 +48,7 @@ class Bag(object):
 
     def take_all(self):
         """Remove each skittle from bag and print color"""
+        """adapted from micah's solution"""
 
         while len(self.skittles) > 0:
             print(self.skittles.pop().color)
