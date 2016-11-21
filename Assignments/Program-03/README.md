@@ -211,7 +211,7 @@ In your analysis, detail the design process. How did you choose the number of in
 
 | Warhol effect|
 |:---:|
-|![](http://www.cs.umb.edu/~jreyes/csit114-fall-2007/images/project4/warhol.jpg)|
+|![](https://d3vv6lp55qjaqc.cloudfront.net/items/0N412s0r1K252a2H1R40/warhol_16.jpg?X-CloudApp-Visitor-Id=1094421)|
 
 Waterlilies à la Warhol. Intervals were taken in multiples of 32.
 The colors used were blue, magenta, orange, yellow, and pink.
