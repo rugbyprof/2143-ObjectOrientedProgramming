@@ -43,7 +43,7 @@ Most of the filters described below can be done using [convolution](https://en.w
 
 Each example will be using the original image viewed below:
 
-| Original, unaltered lilies |
+| lilies.jpg |
 |:---:|
 |![](http://www.cs.umb.edu/~jreyes/csit114-fall-2007/images/project4/waterlilies.jpg)|
 
@@ -107,15 +107,15 @@ Hmmmm. You've got this.
 
 ```
 
-| Lilies flipped upside-down |
+| Lilies flipped Vertically|
 |:---:|
 |![](http://www.cs.umb.edu/~jreyes/csit114-fall-2007/images/project4/flip.jpg)|
 
 ### Posterize
 
-Posterization is the result of reducing the number of colors present in an image. The effect therefore resembles a graphic poster. If you try to view a 24-bit color image on an old 16 color CRT monitor, the screen will render a posterized version of the image.
+Posterization is the result of reducing the number of colors present in an image. The effect therefore resembles a graphic poster. Kind of like turning an image into a cartoon version. Remember most images have thousand or millions of colors. Posterizing reduces that number to hundreds or dozens.
 
-In the algorithm below, we will split up each of the color channels into ranges. All values within each range will get transformed to a specified value for that range. For example, all values between 0 and 64 might get mapped to 0. However, what these values are is entirely up to you. Then all values between 64 and 128 to 64, etc. You may want to implement a method that allows you to specify the number of divisions at run-time.
+In the algorithm below, we will split up each of the color channels into ranges. All values within each range will get transformed to a specified value for that range. For example, all values between 0 and 64 might get mapped to 0. However, what these values are is entirely up to you. Then all values between 64 and 128 to 64, etc. 
 
 ```
 Choose a rectangular region in the image.
@@ -126,6 +126,20 @@ For each pixel CURRENT in the region:
 	For CHANNEL∈{red, green, blue} values of CURRENT:
 		If CHANNEL∈Ik, then set CURRENT to VALUEk.
 ```
+Here is a method that "snaps" values to a particular interval. Another way to look at it is to "round" a value to the 10's or 20's or 30's etc..  We can use a snap-to method to reduce colors by basically rounding an integer value to a "bin". 
+
+```python
+def __snap_color__(self,color,snap_val):
+    color = int(color)
+    m = color % snap_val
+    if m < (snap_val // 2):
+        color -= m
+    else:
+        color += (snap_val - m)
+
+    return int(color)
+```
+
 
 There are several ways to implement this algorithm. To make the selection of the numbers VALUEk easy, you may want to rely on the modulo operator, x%y, which returns the remainder of x divided by y.
 
