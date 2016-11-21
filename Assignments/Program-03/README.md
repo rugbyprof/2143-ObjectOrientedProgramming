@@ -39,10 +39,10 @@ choice = random.choice(nums)
 You could alter the above snippet to ensure that all random choices are ON the current image.
 
 There are other ways to handle the boundary cases. What you decide to do is ultimately up to you. Be sure to include a discussion of what you do decide to do in your analysis.
-
+<center>
 ![](http://www.cs.umb.edu/~jreyes/csit114-fall-2007/images/project4/glass.jpg)
 Lilies through glass. DISTANCE = 5.
-
+</center>
 ### Vertical Flip
 
 The vertical flip has the same effect viewing the image from mirror placed at the image's bottom (or top, depending on how you look at it.) Alternatively, pretend that the image is printed on a translucent gel and that you're facing it from the front. Now physically flip the picture over its top (or bottom) edge so that you're viewing it from the back. This acheives the same effect as the vertical flip filter.
