@@ -140,9 +140,6 @@ def __snap_color__(self,color,snap_val):
     return int(color)
 ```
 
-
-There are several ways to implement this algorithm. To make the selection of the numbers VALUEk easy, you may want to rely on the modulo operator, x%y, which returns the remainder of x divided by y.
-
 | Posterized lilies. Colors reduced mod 64 |
 |:---:|
 |![](http://www.cs.umb.edu/~jreyes/csit114-fall-2007/images/project4/posterize.jpg)|
