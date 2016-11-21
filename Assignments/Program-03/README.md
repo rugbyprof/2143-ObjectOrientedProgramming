@@ -28,7 +28,7 @@ For each pixel in the image:
 
 	Set the color of the CURRENT to the color of the NEIGHBOR.
 ```
-Don't forget that dealing with pixels near the border of the image could result in a pixel that is "off" the image itself (value < 0 or value > image_size). Pythons `random.choice` function could help with this problem. Here is an example where we don't allow any choices to be below 0:
+Don't forget that dealing with pixels near the border of the image could result in a pixel that is "off" the image itself (`value < 0 or value > image_size`). Pythons `random.choice` function could help with this problem. Here is an example where we don't allow any choices to be below 0:
 
 ```python
 # assume i is some number between 0 and width of your image.
@@ -36,11 +36,11 @@ nums = [x for x in range(i - distance, i + distance) if x >= 0]
 
 choice = random.choice(nums)
 ```
-
+You could alter the above snippet to ensure that all random choices are ON the current image.
 
 There are other ways to handle the boundary cases. What you decide to do is ultimately up to you. Be sure to include a discussion of what you do decide to do in your analysis.
 
-Glass filter
+![](http://www.cs.umb.edu/~jreyes/csit114-fall-2007/images/project4/glass.jpg)
 Lilies through glass. DISTANCE = 5.
 
 ### Vertical Flip
