@@ -28,7 +28,11 @@ For each pixel in the image:
 
 	Set the color of the CURRENT to the color of the NEIGHBOR.
 ```
-Don't forget that dealing with pixels near the border of the image could result in a pixel that is "off" the image itself (`value < 0 or value > image_size`). Pythons `random.choice` function could help with this problem. Here is an example where we don't allow any choices to be below 0:
+Don't forget that dealing with pixels near the border of the image could result in a pixel that is "off" the image itself where:
+
+> (`value < 0 or value > image_size`). 
+
+Pythons `random.choice` function could help with this problem. Here is an example where we don't allow any choices to be below 0:
 
 ```python
 # assume i is some number between 0 and width of your image.
