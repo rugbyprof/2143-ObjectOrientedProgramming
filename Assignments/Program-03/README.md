@@ -183,7 +183,7 @@ Over-exposed lilies. Solarized with threshold set for those pixels with intensit
 
 | Solarized (Overexposure)|
 |:---:|
-|![](http://www.cs.umb.edu/~jreyes/csit114-fall-2007/images/project4/solarize.jpg)|
+|![](https://d3vv6lp55qjaqc.cloudfront.net/items/1L1w2E0r2P1l0U2u3h0v/solarize.jpg?X-CloudApp-Visitor-Id=1094421)|
 
 
 
