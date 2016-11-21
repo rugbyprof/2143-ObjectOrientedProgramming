@@ -1,6 +1,28 @@
 ## Image Processing Filters
 <sup>source: http://www.cs.umb.edu/~jreyes/csit114-fall-2007/project4/filters.html#warhol</sup>
 
+
+### Links to help you
+<sup>Note: You cannot used any built in functions to apply any of the filters below. You must alter each pixel yourself. In other words, loop over the image to mage all your changes.</sup>
+
+http://effbot.org/imagingbook/introduction.htm
+
+```python
+# opens an image using PIL
+img = Image.open(file_name)
+
+# resizes an image to a new height
+img = img.resize((new_width,new_height), Image.ANTIALIAS)
+
+# one method to get all the pixel data from an image however
+# you now have one long list of rgb values and no idea of 
+# width and height
+pixels = list(img.getdata())
+
+size = img.size 
+# size is now a tuple with width and height (e.g. (345,200)) where 345=width and 200=height
+```
+
 ### Description of Algorithms
 
 Most of the filters described below can be done using [convolution](https://en.wikipedia.org/wiki/Kernel_(image_processing)) which is a technique of traversing over image data and applying special functions to alter pixel values. 
