@@ -43,9 +43,9 @@ Most of the filters described below can be done using [convolution](https://en.w
 
 Each example will be using the original image viewed below:
 
-| lilies.jpg |
+| original image |
 |:---:|
-|![](http://www.cs.umb.edu/~jreyes/csit114-fall-2007/images/project4/waterlilies.jpg)|
+|![](https://d3vv6lp55qjaqc.cloudfront.net/items/052f2r2i1G0X391c3v1C/yellow_purple_640.jpg?X-CloudApp-Visitor-Id=1094421)|
 
 ### Glass Filter
 
@@ -142,7 +142,7 @@ def __snap_color__(self,color,snap_val):
 
 | Posterized lilies. Colors reduced mod 64 |
 |:---:|
-|![](http://www.cs.umb.edu/~jreyes/csit114-fall-2007/images/project4/posterize.jpg)|
+|![](https://d3vv6lp55qjaqc.cloudfront.net/items/0846470J2X3k3f0Y4539/tandr.jpg?X-CloudApp-Visitor-Id=1094421)|
 
 ### Blur
 
