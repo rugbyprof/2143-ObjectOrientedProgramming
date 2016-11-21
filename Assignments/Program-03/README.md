@@ -36,35 +36,36 @@ nums = [x for x in range(i - distance, i + distance) if x >= 0]
 
 choice = random.choice(nums)
 ```
-You could alter the above snippet to ensure that all random choices are ON the current image.
-
-There are other ways to handle the boundary cases. What you decide to do is ultimately up to you. Be sure to include a discussion of what you do decide to do in your analysis.
+You could alter the above snippet to ensure that all random choices are ON the current image by changing the `if` statement in the list comprehension.
 
 | Lilies through glass DISTANCE = 5  |
 |:---:|
 |![](http://www.cs.umb.edu/~jreyes/csit114-fall-2007/images/project4/glass.jpg)|
 
-
-
 ### Vertical Flip
 
-The vertical flip has the same effect viewing the image from mirror placed at the image's bottom (or top, depending on how you look at it.) Alternatively, pretend that the image is printed on a translucent gel and that you're facing it from the front. Now physically flip the picture over its top (or bottom) edge so that you're viewing it from the back. This acheives the same effect as the vertical flip filter.
+The vertical flip has the same effect viewing the image from mirror placed at the image's bottom (or top, depending on how you look at it.) 
 
 ```
-Choose a rectangular region RECTANGLE in the image.
-Let TOP be the y-coordinate that bounds the top of RECTANGLE.
+# if flipping horizontal
 
-For each pixel CURRENT in RECTANGLE:
-	Let DISTANCE be the difference between the y-coordinate of CURRENT and TOP.
-	Let MIRROR-RELATIVE be the pixel whose x-coordinate is the same as CURRENT
-		and whose y-coordinate is the same distance from BOTTOM as DISTANCE.
-		
-	Set the color of CURRENT to the color of MIRROR-RELATIVE.
+define opposite:
+   opposite = image_height - current_row
+Example:
+   image_size = (100,200)
+   i = 0 , opposite = (image_size[1] - 0) # or 200
+   i = 27, opposite = (image_size[1] - 27) # or 173 
+
+start at top of image (y == 0)
+
+loop through entire image one row at a time:
+    exchange current row with opposite row 
+   
+# flipping vertical
+
+Hmmmm. You've got this.
+
 ```
-
-You can easily tweak this algorithm to achieve a horizontal flip. When I initially implemented this filter, I accidentally flipped both vertically and horizontally. How might you do this? How might you reflect across another, oblique axis?
-
-
 
 | Lilies flipped upside-down |
 |:---:|
@@ -117,7 +118,6 @@ As in the glass filter, you will need to deal with the boundary pixels. Again, y
 Solarization is an effect from chemical photography caused by vast amounts of over-exposure to film. It results in the reversal of some tones in a photograph; that is, it is a partial negation of the image. The same effect can be achieved in digital image processing by negating those pixels whose intensity lies above or below a certain threshold. You may want your implementation to take a parameter that allows you to experiment more easily.
 
 ```
-Choose a rectangular region in the image.
 Let THRESHOLD be a fixed number.
 
 For each pixel CURRENT in the region:
