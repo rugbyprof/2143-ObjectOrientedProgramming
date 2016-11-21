@@ -117,6 +117,7 @@ You may want to apply some technique other than negate in your method to achieve
 
 
 Over-exposed lilies. Solarized with threshold set for those pixels with intensity less than 128.
+
 | Solarized (Overexposure)|
 |:---:|
 |![](http://www.cs.umb.edu/~jreyes/csit114-fall-2007/images/project4/solarize.jpg)|
