@@ -115,8 +115,13 @@ For each pixel CURRENT in the region:
 		then negate CURRENT.
 You may want to apply some technique other than negate in your method to achieve another effect instead. In your analysis, be sure to explain how you obtained your final threshold value and comparison operator (greater than, less than, e.g.). How does choosing a smaller (larger) value change the result of solarization?
 
-Solarized (Overexposure)
+
 Over-exposed lilies. Solarized with threshold set for those pixels with intensity less than 128.
+| Solarized (Overexposure)|
+|:---:|
+|![](http://www.cs.umb.edu/~jreyes/csit114-fall-2007/images/project4/solarize.jpg)|
+
+
 
 ### Warhol effect
 
@@ -136,8 +141,12 @@ Several strategies that we've already seen are present here, most notably thresh
 
 In your analysis, detail the design process. How did you choose the number of intervals, their ranges, and associated colors?
 
-Warhol effect
+
+| Warhol effect|
+|:---:|
+|![](http://www.cs.umb.edu/~jreyes/csit114-fall-2007/images/project4/warhol.jpg)|
+
 Waterlilies à la Warhol. Intervals were taken in multiples of 32.
 The colors used were blue, magenta, orange, yellow, and pink.
 
-Last Updated: 18 October 2007
+
