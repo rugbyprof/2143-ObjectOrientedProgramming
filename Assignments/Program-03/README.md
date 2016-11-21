@@ -160,9 +160,9 @@ For each pixel CURRENT in the region:
 
 As in the glass filter, you will need to deal with the boundary pixels. Again, you may choose to wrap the image. It is also customary to set pixels on the boundary to a fixed color, for example, to black. In your analysis, describe the choices you made and the rationale behind them.
 
-| Blurry lilies. Each pixel on a full 3×3 grid weighted by 1/9 |
+| Blurry lilies. Kernel size 5 |
 |:---:|
-|![](http://www.cs.umb.edu/~jreyes/csit114-fall-2007/images/project4/blur.jpg)|
+|![](https://d3vv6lp55qjaqc.cloudfront.net/items/2U2W471g2a3v3s1I0l20/blur_5.jpg?X-CloudApp-Visitor-Id=1094421)|
 
 ### Solarize
 
