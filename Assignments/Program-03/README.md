@@ -30,7 +30,7 @@ width,height = img.size
 width = img.size[0]
 height = img.size[1]
 
-# open an image using a url
+# open an image from a url
 import urllib, cStringIO
 file = cStringIO.StringIO(urllib.urlopen(URL).read())
 img = Image.open(file)
