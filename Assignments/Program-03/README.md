@@ -175,7 +175,7 @@ For each pixel CURRENT in the image:
 You may want to apply some technique other than negate in your method to achieve another effect instead. How does choosing a smaller (larger) value change the result of solarization?
 
 
-Over-exposed lilies. Solarized with threshold set for those pixels with intensity less than 128.
+Over-exposed lilies. Solarized with threshold set for those pixels with intensity less than 100.
 
 | Solarized (Overexposure)|
 |:---:|
