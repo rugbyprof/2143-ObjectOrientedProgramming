@@ -109,22 +109,21 @@ Hmmmm. You've got this.
 
 | Lilies flipped Vertically|
 |:---:|
-|![](http://www.cs.umb.edu/~jreyes/csit114-fall-2007/images/project4/flip.jpg)|
+|![](https://d3vv6lp55qjaqc.cloudfront.net/items/0M34353D2e1101452z2g/yellow_purple_640_flipped.jpeg?X-CloudApp-Visitor-Id=1094421)|
 
 ### Posterize
 
-Posterization is the result of reducing the number of colors present in an image. The effect therefore resembles a graphic poster. Kind of like turning an image into a cartoon version. Remember most images have thousand or millions of colors. Posterizing reduces that number to hundreds or dozens.
+Posterization is the result of reducing the number of colors present in an image. The effect therefore resembles a graphic poster. Kind of like turning an image into a cartoon version. Remember most images have thousands or millions of colors. Posterizing reduces that number to hundreds or dozens.
 
-In the algorithm below, we will split up each of the color channels into ranges. All values within each range will get transformed to a specified value for that range. For example, all values between 0 and 64 might get mapped to 0. However, what these values are is entirely up to you. Then all values between 64 and 128 to 64, etc. 
+In the algorithm below, we will split up each of the color channels into ranges. Essentially grouping somewhat like colors into bins, and all values within that bin will get transformed to a specified color assigned to that bin. For example, all values between 0 and 64 might get mapped to 32. However, what these values are is entirely up to you. Then all values between 64 and 128 to 96, etc. 
 
 ```
-Choose a rectangular region in the image.
-Split the values [0, 255] into N distinct intervals I1, I2, ..., IN.
-For each interval Ik, assign a fixed number VALUEk.
+Decide how many colors you want to posterize with,create a list of those colors.
 
-For each pixel CURRENT in the region:
-	For CHANNEL∈{red, green, blue} values of CURRENT:
-		If CHANNEL∈Ik, then set CURRENT to VALUEk.
+For each pixel CURRENT in the image:
+	CURRENT.red <- SnappedColor
+	CURRENT.blue <- SnappedColor
+	CURRENT.green <- SnappedColor
 ```
 Here is a method that "snaps" values to a particular interval. Another way to look at it is to "round" a value to the 10's or 20's or 30's etc..  We can use a snap-to method to reduce colors by basically rounding an integer value to a "bin". 
 
@@ -146,19 +145,16 @@ def __snap_color__(self,color,snap_val):
 
 ### Blur
 
-There are many ways to smooth or blur an image. The approach taken here is sometimes called mean filtering. In general, this algorithm as a low-pass filter. That is, it selects the low spatial frequencies present in the image while dispensing with the high ones (which is the opposite of the edge detector we designed in class does). For more on spatial filtering and image processing, you might check out this page on frequency filtering.
+There are many ways to smooth or blur an image. The approach taken here is sometimes called mean filtering because we are "filtering" the image by averaging each pixel with it's neighbor and thereby "blurring" the image.
 
 ```
-Choose a rectangular region RECTANGLE in the image.
+Choose how big your kernel will be.
 
-For each pixel CURRENT in the region:
-	For VALUE∈{red, green, blue} value of a pixel:
-		Find the average VALUE of CURRENT and the neighboring pixels 
-			immediately to its left, top, right, and bottom.
-		Set VALUE to this average.
+For each pixel CURRENT in the image:
+    Move your kernel along the image, averaging the center pixel with all the other pixels within the kernel.
 ```
 
-As in the glass filter, you will need to deal with the boundary pixels. Again, you may choose to wrap the image. It is also customary to set pixels on the boundary to a fixed color, for example, to black. In your analysis, describe the choices you made and the rationale behind them.
+As in the glass filter, you will need to deal with the boundary pixels. As far as I'm concerned, you can ignore the edges and start a few pixels in to make things easier. 
 
 | Blurry lilies. Kernel size 5 |
 |:---:|
@@ -171,12 +167,12 @@ Solarization is an effect from chemical photography caused by vast amounts of ov
 ```
 Let THRESHOLD be a fixed number.
 
-For each pixel CURRENT in the region:
+For each pixel CURRENT in the image:
 	If the intensity of CURRENT is less than (greater than) THRESHOLD,
 		then negate CURRENT.
 ```
 
-You may want to apply some technique other than negate in your method to achieve another effect instead. In your analysis, be sure to explain how you obtained your final threshold value and comparison operator (greater than, less than, e.g.). How does choosing a smaller (larger) value change the result of solarization?
+You may want to apply some technique other than negate in your method to achieve another effect instead. How does choosing a smaller (larger) value change the result of solarization?
 
 
 Over-exposed lilies. Solarized with threshold set for those pixels with intensity less than 128.
