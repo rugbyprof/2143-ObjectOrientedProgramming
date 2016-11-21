@@ -80,7 +80,7 @@ You could alter the above snippet to ensure that all random choices are ON the c
 
 | Lilies through glass DISTANCE = 5  |
 |:---:|
-|![](http://www.cs.umb.edu/~jreyes/csit114-fall-2007/images/project4/glass.jpg)|
+|![](https://d3vv6lp55qjaqc.cloudfront.net/items/3p2N0H1d2Q0U3K0v333j/glass.jpg?X-CloudApp-Visitor-Id=1094421)|
 
 ### Vertical Flip
 
