@@ -7,9 +7,9 @@ Most of the filters described below can be done using [convolution](https://en.w
 
 Each example will be using the original image viewed below:
 
-![](http://www.cs.umb.edu/~jreyes/csit114-fall-2007/images/project4/waterlilies.jpg)
-
-Original, unaltered lilies.
+| Original, unaltered lilies |
+|:---:|
+|![](http://www.cs.umb.edu/~jreyes/csit114-fall-2007/images/project4/waterlilies.jpg)|
 
 ### Glass Filter
 
@@ -39,11 +39,12 @@ choice = random.choice(nums)
 You could alter the above snippet to ensure that all random choices are ON the current image.
 
 There are other ways to handle the boundary cases. What you decide to do is ultimately up to you. Be sure to include a discussion of what you do decide to do in your analysis.
-|  |
+
+| Lilies through glass DISTANCE = 5  |
 |:---:|
 |![](http://www.cs.umb.edu/~jreyes/csit114-fall-2007/images/project4/glass.jpg)|
 
-Lilies through glass. DISTANCE = 5.
+
 
 ### Vertical Flip
 
