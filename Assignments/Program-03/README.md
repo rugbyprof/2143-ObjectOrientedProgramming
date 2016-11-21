@@ -61,8 +61,11 @@ For each pixel CURRENT in RECTANGLE:
 	Set the color of CURRENT to the color of MIRROR-RELATIVE.
 You can easily tweak this algorithm to achieve a horizontal flip. When I initially implemented this filter, I accidentally flipped both vertically and horizontally. How might you do this? How might you reflect across another, oblique axis?
 
-Vertical flip
-Lilies flipped upside-down.
+
+
+| Lilies flipped upside-down |
+|:---:|
+|![](http://www.cs.umb.edu/~jreyes/csit114-fall-2007/images/project4/flip.jpg)|
 
 ### Posterize
 
@@ -79,8 +82,9 @@ For each pixel CURRENT in the region:
 		If CHANNEL∈Ik, then set CURRENT to VALUEk.
 There are several ways to implement this algorithm. To make the selection of the numbers VALUEk easy, you may want to rely on the modulo operator, x%y, which returns the remainder of x divided by y.
 
-Posterize (16 colors)
-Posterized lilies. Colors reduced mod 64.
+| Posterized lilies. Colors reduced mod 64 |
+|:---:|
+|![](http://www.cs.umb.edu/~jreyes/csit114-fall-2007/images/project4/posterize.jpg)|
 
 ### Blur
 
@@ -95,8 +99,9 @@ For each pixel CURRENT in the region:
 		Set VALUE to this average.
 As in the glass filter, you will need to deal with the boundary pixels. Again, you may choose to wrap the image. It is also customary to set pixels on the boundary to a fixed color, for example, to black. In your analysis, describe the choices you made and the rationale behind them.
 
-Blur filter
-Blurry lilies. Each pixel on a full 3×3 grid weighted by 1/9.
+| Blurry lilies. Each pixel on a full 3×3 grid weighted by 1/9 |
+|:---:|
+|![](http://www.cs.umb.edu/~jreyes/csit114-fall-2007/images/project4/blur.jpg)|
 
 ### Solarize
 
