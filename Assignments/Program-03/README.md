@@ -1,8 +1,9 @@
 ## Image Processing Filters
+<sup>source: http://www.cs.umb.edu/~jreyes/csit114-fall-2007/project4/filters.html#warhol</sup>
 
 ### Description of Algorithms
 
-Most of the filters described below can be done using [convolution](https://en.wikipedia.org/wiki/Kernel_(image_processing)) which is a technique of traversing over image data and applying functions. 
+Most of the filters described below can be done using [convolution](https://en.wikipedia.org/wiki/Kernel_(image_processing)) which is a technique of traversing over image data and applying special functions to alter pixel values. 
 
 Each example will be using the original image viewed below:
 
@@ -12,10 +13,9 @@ Original, unaltered lilies.
 
 ### Glass Filter
 
-To create a filter that mimics the effect of viewing the image through glass. Here is the general strategy to apply the filter to a particular patch of an image:
+To create a filter that mimics the effect of viewing the image through antique glass. Here is the general strategy to apply the filter to a particular patch of an image:
 
 ```
-
 Choose a DISTANCE value.
 
 For each pixel in the image: 
@@ -28,7 +28,7 @@ For each pixel in the image:
 
 	Set the color of the CURRENT to the color of the NEIGHBOR.
 ```
-Don't forget pythons `random.choice` function to help with this filter. Here is an example:
+Don't forget that dealing with pixels near the border of the image could result in a pixel that is "off" the image itself (value < 0 or value > image_size). Pythons `random.choice` function could help with this problem. Here is an example where we don't allow any choices to be below 0:
 
 ```python
 # assume i is some number between 0 and width of your image.
@@ -37,14 +37,13 @@ nums = [x for x in range(i - distance, i + distance) if x >= 0]
 choice = random.choice(nums)
 ```
 
-This algorithm may select for the neighboring pixel a pixel that lies outside the image. In this case, you may want to wrap around to the other side of the image. For example, if your algorithm happens to select the pixel with coordinates (WIDTH+5, YPOS) where WIDTH is the width of the image and YPOS is a valid y-coordinate, then you could set select the pixel (5, YPOS) instead.
 
 There are other ways to handle the boundary cases. What you decide to do is ultimately up to you. Be sure to include a discussion of what you do decide to do in your analysis.
 
 Glass filter
 Lilies through glass. DISTANCE = 5.
 
-Vertical Flip
+### Vertical Flip
 
 The vertical flip has the same effect viewing the image from mirror placed at the image's bottom (or top, depending on how you look at it.) Alternatively, pretend that the image is printed on a translucent gel and that you're facing it from the front. Now physically flip the picture over its top (or bottom) edge so that you're viewing it from the back. This acheives the same effect as the vertical flip filter.
 
@@ -62,7 +61,7 @@ You can easily tweak this algorithm to achieve a horizontal flip. When I initial
 Vertical flip
 Lilies flipped upside-down.
 
-Posterize
+### Posterize
 
 Posterization is the result of reducing the number of colors present in an image. The effect therefore resembles a graphic poster. If you try to view a 24-bit color image on an old 16 color CRT monitor, the screen will render a posterized version of the image.
 
@@ -80,7 +79,7 @@ There are several ways to implement this algorithm. To make the selection of the
 Posterize (16 colors)
 Posterized lilies. Colors reduced mod 64.
 
-Blur
+### Blur
 
 There are many ways to smooth or blur an image. The approach taken here is sometimes called mean filtering. In general, this algorithm as a low-pass filter. That is, it selects the low spatial frequencies present in the image while dispensing with the high ones (which is the opposite of the edge detector we designed in class does). For more on spatial filtering and image processing, you might check out this page on frequency filtering.
 
@@ -96,7 +95,7 @@ As in the glass filter, you will need to deal with the boundary pixels. Again, y
 Blur filter
 Blurry lilies. Each pixel on a full 3×3 grid weighted by 1/9.
 
-Solarize
+### Solarize
 
 Solarization is an effect from chemical photography caused by vast amounts of over-exposure to film. It results in the reversal of some tones in a photograph; that is, it is a partial negation of the image. The same effect can be achieved in digital image processing by negating those pixels whose intensity lies above or below a certain threshold. You may want your implementation to take a parameter that allows you to experiment more easily.
 
@@ -111,7 +110,7 @@ You may want to apply some technique other than negate in your method to achieve
 Solarized (Overexposure)
 Over-exposed lilies. Solarized with threshold set for those pixels with intensity less than 128.
 
-Warhol effect
+### Warhol effect
 
 Andy Warhol was an American artist. He began his career as a commercial illustrator and then became a famous painter. His style combined techniques from commercial illustration popular at the time. We will combine filters described above and in class to mimic his work.
 
