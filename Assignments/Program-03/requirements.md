@@ -9,5 +9,7 @@ Your going to write a class called `ImageEd` inside the `imageEdit.py` file that
 - flip
 - blur
 - posterize
-- solerize
-- 
+- solarize
+- warhol
+
+Each is described in the ./README.md file. 
