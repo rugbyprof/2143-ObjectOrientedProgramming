@@ -13,3 +13,7 @@ Your going to write a class called `ImageEd` inside the `imageEdit.py` file that
 - warhol
 
 Each is described in the [README.md](./README.md) file. 
+
+To use your "module" in your main file, simply say `import imageEdit` in your main file. 
+
+More coming ...
