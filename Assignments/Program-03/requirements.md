@@ -12,4 +12,4 @@ Your going to write a class called `ImageEd` inside the `imageEdit.py` file that
 - solarize
 - warhol
 
-Each is described in the ./README.md file. 
+Each is described in the [README.md](./README.md) file. 
