@@ -3,7 +3,7 @@
 
 
 ### Links to help you
-<sup>Note: You cannot used any built in functions to apply any of the filters below. You must alter each pixel yourself. In other words, loop over the image to mage all your changes.</sup>
+<sup>Note: You cannot used any built in functions to apply any of the filters below. You must alter each pixel yourself. In other words, loop over all pixels and apply changes programmatically.</sup>
 
 http://effbot.org/imagingbook/introduction.htm
 
