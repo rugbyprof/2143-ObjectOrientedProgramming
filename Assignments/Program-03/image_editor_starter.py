@@ -177,7 +177,7 @@ class ImageAscii(object):
         if not path_parts['full_path'] == '':
             self.raw_ascii_name = path_parts['full_path']
         else:
-            self.raw_ascii_name = self.path_parts['path']+"/"+self.path_parts['name']+"-raw-ascii"+'.jpg'
+            self.raw_ascii_name = self.path_parts['path']+"/"+self.path_parts['name']+"-raw-ascii"+'.txt'
 
 
     def __str__(self):
