@@ -3,7 +3,7 @@
 
 
 ### Links to help you
-<sup>Note: You cannot used any built in functions to apply any of the filters below. You must alter each pixel yourself. In other words, loop over all pixels and apply changes programmatically.</sup>
+<sup>Note: You cannot used any built in image processing functions to apply any of the filters below. You must alter each pixel yourself. In other words, loop over all pixels and apply changes programmatically. You can however use PIL to grayscale your image if necessary.</sup>
 
 http://effbot.org/imagingbook/introduction.htm
 
