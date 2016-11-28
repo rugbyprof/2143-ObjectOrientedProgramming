@@ -4,6 +4,8 @@
 - Create a file called `main.py` in your program folder.
 - Create a file called `imageEdit.py` in your program folder.
 
+#### Due: Last day of class. By 1:00. No late projects will be accepted.
+
 Your going to write a class called `ImageEd` inside the `imageEdit.py` file that will include the following methods:
 - glass_effect
 - flip
