@@ -1,5 +1,6 @@
 # Abstract Factory Pattern
 
+```python
 """Implementation of the abstract factory pattern"""
 import random
 
@@ -60,7 +61,8 @@ for i in range(3):
     shop.pet_factory = get_factory()
     shop.show_pet()
     print "=" * 10
-
+```
+```
 Sample output:
 
 This is a lovely Dog
@@ -75,3 +77,4 @@ This is a lovely Cat
 It says meow
 It eats cat food
 ==========
+```
