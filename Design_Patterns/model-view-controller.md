@@ -65,7 +65,7 @@ This is the middle man between the **View** and the **Model**. It provides an in
 <sup>Source: [[4]]</sup>
 ## Code Example  
 
-```
+```python
 class Model(object):
 
     products = {
