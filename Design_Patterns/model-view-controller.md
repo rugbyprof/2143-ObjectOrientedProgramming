@@ -2,8 +2,8 @@
 
 ### Overview
 
-"Model–View–Controller (MVC)is a software design pattern for implementing user interfaces on computers. It divides a given software application into three interconnected parts, so as to separate internal representations of information from the ways that information is presented to or accepted from the user."
-<sup>https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller</sup>
+"Model–View–Controller (MVC)is a software design pattern for implementing user interfaces on computers. It divides a given software application into three interconnected parts, so as to separate internal representations of information from the ways that information is presented to or accepted from the user."<sup>[2]</sup>
+
 
 The interacting parts are known as the **Model**, the **View** and the **Controller**. This pattern aims at dividing the application (the Controller part), the business processing logic (the Model part) and the output format logic (the View part) from each other. It's widely used in desktop solutions needing a "GUI" and in web sites.
 
@@ -18,17 +18,15 @@ The interacting parts are known as the **Model**, the **View** and the **Control
 |:------------------------------:|
 | ![](http://www.bogotobogo.com/DesignPatterns/images/mvc/mvc_diagram.png) |
 
-It all starts with a request…
-In the case of the Legos, it was your brother who asked you to build something. In the case of a web app, it’s a user entering a URL, requesting to view a certain page.
 
-So your brother is the user.
+### It all starts with a ***request…***
+Like a user entering a URL, requesting to view a certain page.
 
-The request reaches the controller…
-With the Legos, you are the controller.
 
+### The request reaches the ***controller…***
 The controller is responsible for grabbing all of the necessary building blocks and organizing them as necessary.
 
-Those building blocks are known as models…
+### Those building blocks are known as models…
 The different types of Legos are the models. You have all different sizes and shapes, and you grab the ones you need to build the spaceship. In a web app, models help the controller retrieve all of the information it needs from the database.
 
 So the request comes in…
@@ -129,3 +127,6 @@ if __name__ == '__main__':
 #
 # That product "arepas" does not exist in the records
 ```
+#### Sources:
+<sup>1. https://realpython.com/blog/python/the-model-view-controller-mvc-paradigm-summarized-with-legos/</sup>
+<sup>2. https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller</sup>
