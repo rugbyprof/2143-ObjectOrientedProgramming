@@ -32,7 +32,7 @@ Four terms always associated with the command pattern are ***command***, ***rece
 <sup>Source: [[1]]</sup>
 ## Code Example  
 
-```
+```python
 class Switch(object):
     """The INVOKER class"""
     def __init__(self):
