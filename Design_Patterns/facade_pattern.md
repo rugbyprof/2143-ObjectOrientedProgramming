@@ -1,0 +1,1 @@
+“The facade pattern is a software engineering design pattern commonly used with Object-oriented programming. (The name is by analogy to an architectural facade.). A facade is an object that provides a simplified interface to a larger body of code, such as a class library.”
