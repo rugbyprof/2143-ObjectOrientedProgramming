@@ -1,4 +1,6 @@
-# Unique Pattern
+# Single Instance Patterns
+
+## Unique Pattern
 
 ```python
 #Unique Pattern
@@ -11,9 +13,7 @@ class Unique:
         return cls
 ```
 
-# Singleton Pattern
-
-#Singleton Pattern
+## Singleton Pattern
 
 ```python
 class Singleton:
@@ -34,7 +34,7 @@ class Singleton:
         return cls.__single
 ```
 
-# Borg Pattern
+## Borg Pattern
 
 ```python
 class Borg:
@@ -51,7 +51,8 @@ class Borg:
             self.__dict__ = Borg.__monostate
 ```
 
-## Test
+### Test
+
 ```python
 #SINGLETON
 print "\nSINGLETON\n"
