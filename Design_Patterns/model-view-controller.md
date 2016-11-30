@@ -4,6 +4,7 @@
 
 "Model–View–Controller (MVC)is a software design pattern for implementing user interfaces on computers. It divides a given software application into three interconnected parts, so as to separate internal representations of information from the ways that information is presented to or accepted from the user."<sup>[[2]]</sup>
 
+> "MVC is all about separation of concerns."
 
 The interacting parts are known as the **Model**, the **View** and the **Controller**. This pattern aims at dividing the application (the Controller part), the business processing logic (the Model part) and the output format logic (the View part) from each other. It's widely used in desktop solutions needing a "GUI" and in web sites.
 
@@ -14,7 +15,7 @@ The interacting parts are known as the **Model**, the **View** and the **Control
 
 
 
-### Example 
+## Workflow  
 
 #### It all starts with a ***request…***
 Like a user entering a URL, requesting to view a certain page.
@@ -36,9 +37,11 @@ It’s the final product that’s ultimately shown to the person who made the re
 
 <sup>Source: [[1]]</sup>
 
+## Definitions
+
 ### Model
 
-This typically is known as the "data" compoenent. Another description is "business logic":"In computer software, business logic or domain logic is the part of the program that encodes the real-world business rules that determine how data can be created, displayed, stored, and changed." This fits really well, because the "model" is all about data. 
+This typically is known as the "data" compoenent. Another description is "business logic":"In computer software, business logic or domain logic is the part of the program that encodes the real-world business rules that determine how data can be created, displayed, stored, and changed." This fits really well, because the "model" is all about getting and returning data. 
 
 ### View
 
@@ -46,9 +49,21 @@ This is the presentation layer, or what the user sees. It is responsible for for
 
 
 ### Controller
-This is the middle man between the **View** and the **Model**. 
+This is the middle man between the **View** and the **Model**. It provides an interface for the view to make requests and receive data from the model. 
+
+## Key Points
+
+- MVC is all about separation of concerns. 
+- The Model contains no View/Controller code.
+    - It doesn't dictate what happens, it doesn't determine how things look, it just handles requests for data.
+- The View/Controller contains no Model code.
+    - These don't perform database lookups, or open files to find information. The view asks the controller who in turn performs the proper requests to one or more model methods.
+- What's key to the whole MVC pattern is the ***direction*** in which those connection goes: ALL instructions flow ***from*** the View/Controller ***to*** the Model. The Model NEVER tells the View/Controller what to do. 
+- The View/Controller is permitted to know a little about the Model (specifically, the Model's API), but the Model is not allowed to know anything whatsoever about the View/Controller. 
 
 
+<sup>Source: [[4]]</sup>
+## Code Example  
 
 ```
 class Model(object):
@@ -131,3 +146,4 @@ if __name__ == '__main__':
 [1]: https://realpython.com/blog/python/the-model-view-controller-mvc-paradigm-summarized-with-legos/
 [2]: https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller
 [3]: http://zqpythonic.qiniucdn.com/data/20140929095044/index.html
+[4]: https://wiki.wxpython.org/ModelViewController
