@@ -142,6 +142,8 @@ if __name__ == '__main__':
 #### Sources:
 - <sup>1. https://realpython.com/blog/python/the-model-view-controller-mvc-paradigm-summarized-with-legos/</sup>
 - <sup>2. https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller</sup>
+- <sup>3. http://zqpythonic.qiniucdn.com/data/20140929095044/index.html
+- <sup>4. https://wiki.wxpython.org/ModelViewController
 
 [1]: https://realpython.com/blog/python/the-model-view-controller-mvc-paradigm-summarized-with-legos/
 [2]: https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller
