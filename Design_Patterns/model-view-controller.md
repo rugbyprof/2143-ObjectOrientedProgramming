@@ -8,15 +8,40 @@
 The interacting parts are known as the **Model**, the **View** and the **Controller**. This pattern aims at dividing the application (the Controller part), the business processing logic (the Model part) and the output format logic (the View part) from each other. It's widely used in desktop solutions needing a "GUI" and in web sites.
 
 
-|             Simple View        |
-|:------------------------------:|
-| ![](https://upload.wikimedia.org/wikipedia/commons/a/a0/MVC-Process.svg) |
+|             Simple View        |             More Complex View        |
+|:------------------------------:|:------------------------------:|
+| ![](https://upload.wikimedia.org/wikipedia/commons/a/a0/MVC-Process.svg) |![](http://www.bogotobogo.com/DesignPatterns/images/mvc/mvc_diagram.png) |
 
 
 
 |             More Complex View        |
 |:------------------------------:|
 | ![](http://www.bogotobogo.com/DesignPatterns/images/mvc/mvc_diagram.png) |
+
+It all starts with a request…
+In the case of the Legos, it was your brother who asked you to build something. In the case of a web app, it’s a user entering a URL, requesting to view a certain page.
+
+So your brother is the user.
+
+The request reaches the controller…
+With the Legos, you are the controller.
+
+The controller is responsible for grabbing all of the necessary building blocks and organizing them as necessary.
+
+Those building blocks are known as models…
+The different types of Legos are the models. You have all different sizes and shapes, and you grab the ones you need to build the spaceship. In a web app, models help the controller retrieve all of the information it needs from the database.
+
+So the request comes in…
+The controller (you) receives the request.
+
+It goes to the models (Legos) to retrieve the necessary items.
+
+And now everything is in place to produce the final product.
+
+The final product is known as the view…
+The spaceship is the view. It’s the final product that’s ultimately shown to the person who made the request (your brother).
+
+In a web application, the view is the final page the user sees in their browser.
 
 ### Model
 
