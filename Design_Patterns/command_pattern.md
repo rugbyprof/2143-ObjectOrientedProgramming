@@ -20,12 +20,6 @@ Four terms always associated with the command pattern are `command`, `receiver`,
 | ![](https://d3vv6lp55qjaqc.cloudfront.net/items/3D3j412h0t0g0N2P2p08/command_pattern.png?X-CloudApp-Visitor-Id=1094421) | 
 
 
-
-## Workflow  
-
-
-<sup>Source: [[1]]</sup>
-
 ## Definitions
 1. ***Client, Source, Invoker***: the button, toolbar button, or menu item clicked, the shortcut key pressed by the user.
 2. Command Object, Routed Command Object, Action Object: a singleton object (e.g. there is only one CopyCommand object), which knows about shortcut keys, button images, command text, etc. related to the command. A source/invoker object calls the Command/Action object's execute/performAction method. The Command/Action object notifies the appropriate source/invoker objects when the availability of a command/action has changed. This allows buttons and menu items to become inactive (grayed out) when a command/action cannot be executed/performed.
