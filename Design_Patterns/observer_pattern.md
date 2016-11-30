@@ -1,3 +1,8 @@
+
+
+
+## Example 1
+
 ```python
 class Observable:
     def __init__(self):
@@ -24,8 +29,16 @@ observer = Observer(subject)
 subject.notify_observers('test')
 ```
 
-Let's take the example of a TechForumon which technical posts are published by different users. The users might subscribe to receive notifications when any of the other users publishes a new post. To see this in the light of objects, we could have a  ̳TechForum‘ object and we can have anotherlist of objects called  ̳User‘ objects that are registered to the  ̳TechForum‘ object, that canobservefor any new posts on the  ̳TechForum‘. Along with the new post notification, the title of the post is sent.A similar analogy could be drawn in terms of aJob Agency and Job Seekers/Employers. This could be an extension where Employers and Job Seekers subscribe to two different kinds of notification via a common subject (Job Agency). Job Seekers would be looking for relevant job notifications and employers would be looking for new job seeker registration fitting a job profile
+## Example 2
 
+Let's say there is a TechForumon in which technical posts are published by different users. The users might subscribe to receive notifications when any of the other users publishes a new post. 
+
+So we have: 
+
+- A `TechForum` object
+- Some list of objects that registered with `TechForum` object.
+
+Any object registered with the `TechForum` object, is an **observer**, and will be notified of any new posts. Along with the new post notification, the title of the post is sent.
 
 ```python
 """Python snippet for a Technical Forum where technical posts 
