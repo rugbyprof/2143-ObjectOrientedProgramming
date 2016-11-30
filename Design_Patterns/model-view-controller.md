@@ -14,32 +14,27 @@ The interacting parts are known as the **Model**, the **View** and the **Control
 
 
 
-|             More Complex View        |
-|:------------------------------:|
-| ![](http://www.bogotobogo.com/DesignPatterns/images/mvc/mvc_diagram.png) |
+### Example 
 
-
-### It all starts with a ***request…***
+#### It all starts with a ***request…***
 Like a user entering a URL, requesting to view a certain page.
 
 
-### The request reaches the ***controller…***
+#### The request reaches the ***controller…***
 The controller is responsible for grabbing all of the necessary building blocks and organizing them as necessary.
 
-### Those building blocks are known as models…
+#### Those building blocks are known as models…
 The different types of Legos are the models. You have all different sizes and shapes, and you grab the ones you need to build the spaceship. In a web app, models help the controller retrieve all of the information it needs from the database.
 
-So the request comes in…
-The controller (you) receives the request.
+#### So the request comes in…
+- The **controller** receives the request.
+- It goes to the **models**  to retrieve the necessary items.
+- And now everything is in place to produce the final product (**view**)
 
-It goes to the models (Legos) to retrieve the necessary items.
+#### The final product is known as the view…
+It’s the final product that’s ultimately shown to the person who made the request. For example, in a web application the view is the final page the user sees in their browser.
 
-And now everything is in place to produce the final product.
-
-The final product is known as the view…
-The spaceship is the view. It’s the final product that’s ultimately shown to the person who made the request (your brother).
-
-In a web application, the view is the final page the user sees in their browser.
+<sup>Source: [[1]]</sup>
 
 ### Model
 
@@ -128,5 +123,8 @@ if __name__ == '__main__':
 # That product "arepas" does not exist in the records
 ```
 #### Sources:
-<sup>1. https://realpython.com/blog/python/the-model-view-controller-mvc-paradigm-summarized-with-legos/</sup>
-<sup>2. https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller</sup>
+- <sup>1. https://realpython.com/blog/python/the-model-view-controller-mvc-paradigm-summarized-with-legos/</sup>
+- <sup>2. https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller</sup>
+
+[1]: https://realpython.com/blog/python/the-model-view-controller-mvc-paradigm-summarized-with-legos/
+[2]: https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller
