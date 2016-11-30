@@ -18,7 +18,7 @@ Four terms always associated with the command pattern are ***command***, ***rece
 
 |             Command Pattern        | 
 |:------------------------------:|
-| ![](https://d3vv6lp55qjaqc.cloudfront.net/items/3D3j412h0t0g0N2P2p08/command_pattern.png?X-CloudApp-Visitor-Id=1094421) | 
+| ![](https://d3vv6lp55qjaqc.cloudfront.net/items/2w1P1524472V341D3l0X/CommandDiagram.png?X-CloudApp-Visitor-Id=1094421) | 
 
 
 ## Definitions
