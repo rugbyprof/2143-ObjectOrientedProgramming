@@ -2,7 +2,7 @@
 
 ### Overview
 
-"Model–View–Controller (MVC)is a software design pattern for implementing user interfaces on computers. It divides a given software application into three interconnected parts, so as to separate internal representations of information from the ways that information is presented to or accepted from the user."<sup>[2]</sup>
+"Model–View–Controller (MVC)is a software design pattern for implementing user interfaces on computers. It divides a given software application into three interconnected parts, so as to separate internal representations of information from the ways that information is presented to or accepted from the user."<sup>[[2]]</sup>
 
 
 The interacting parts are known as the **Model**, the **View** and the **Controller**. This pattern aims at dividing the application (the Controller part), the business processing logic (the Model part) and the output format logic (the View part) from each other. It's widely used in desktop solutions needing a "GUI" and in web sites.
@@ -122,9 +122,12 @@ if __name__ == '__main__':
 #
 # That product "arepas" does not exist in the records
 ```
+<sup>Source: [[3]]</sup>
+
 #### Sources:
 - <sup>1. https://realpython.com/blog/python/the-model-view-controller-mvc-paradigm-summarized-with-legos/</sup>
 - <sup>2. https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller</sup>
 
 [1]: https://realpython.com/blog/python/the-model-view-controller-mvc-paradigm-summarized-with-legos/
 [2]: https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller
+[3]: http://zqpythonic.qiniucdn.com/data/20140929095044/index.html
