@@ -1,40 +1,45 @@
 from PIL import Image
+# Imports image library stuff
 import urllib, cStringIO
+# Imports libs to read image from internet
 import random
 
 def random_color():
     return (random.randint(255),random.randint(255),random.randint(255))
 
-def blur(img,blur_power=3):
-    width = img.size[0]
-    height = img.size[1]
 
-    r = 0
-    g = 0
-    b = 0
-    d = 2*blur_power * 2*blur_power
-    for x in range(blur_power,width-blur_power):
-        for y in range(blur_power,height-blur_power):
-            for i in range(-blur_power,blur_power):
-                for j in range(-blur_power,blur_power):
-                    pix = img.getpixel((x+i,y+j))
-                    r += pix[0]
-                    g += pix[1]
-                    b += pix[2]
-            img.putpixel((x,y),(int(r/d),int(g/d),int(b/d)))
-            r = 0
-            g = 0
-            b = 0
+# Image resource from internet
+url = 'http://fyf.tac-cdn.net/images/products/large/FYF-870.jpg'
 
-url = 'https://s-media-cache-ak0.pinimg.com/564x/b1/64/2a/b1642af1ba8b662e19e6d7a701a2522f.jpg'
+# Turn image url into something that can be read / opened by PIL
 file = cStringIO.StringIO(urllib.urlopen(url).read())
+
+# Actually open the image
+
 img = Image.open(file)
-img = img.convert("L")
+#img = Image.open('fruit.jpg')
+
+# Get width and height of image so we can loop through it
 width = img.size[0]
 height = img.size[1]
 
+# Loop through the image and read every pixel
 for x in range(width):
     for y in range(height):
+        # Print rgb value to the screen
         print(img.getpixel((x,y)))
 
-img.save('puppy.jpg')
+        # Get rgb value from pixel
+        rgb = img.getpixel((x,y))
+
+        # Divide each color channel in half. Why? Because
+        # this is a basic example of how every function for
+        # you program will manipulate the image
+
+        rgb2 = (255-rgb[0],255-rgb[1],255-rgb[2])
+
+        # Write the pixel back to the image. This actually
+        # is the editing part
+        img.putpixel((x,y),rgb2)
+img.save('fruit.jpg')
+img.show()
