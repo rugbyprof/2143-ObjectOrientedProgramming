@@ -33,7 +33,7 @@ class Negative(object):
             self.input_url = parts['-u']
             p = self.input_url.split('/')
             self.save_file = p[len(p)-1]
-            self.img =  Image.open(cStringIO.StringIO(urllib.urlopen(self.input_url ).read()))
+            self.img =  Image.open(cStringIO.StringIO(urllib.urlopen(self.input_url).read()))
 
         if '-s' in parts.keys():
             self.save_file = parts['-s']
@@ -102,7 +102,7 @@ class Negative(object):
 def print_usage():
     print("Error: \n   Url or filename needed")
     print("Usage: \n   python %s -u url [-o outputfile]\n   python %s -f filename [-s savefile, -show 1]" % (sys.argv[0],sys.argv[0]))
-    print("Example: \n   python %s -u http://plusquotes.com/images/quotes-img/flowers-06.jpg -o negative.jpg -show 1" % (sys.argv[0]))
+    print("Example: \n   python %s -u https://s-media-cache-ak0.pinimg.com/originals/05/b3/83/05b3831a2cefe769af2e9e5c877e6cc8.jpg -o negative.jpg -show 1" % (sys.argv[0]))
     print("   (this would open the url, process it, save it locally in 'negative.jpg' and also open the result")
 
 # Ummmm run me if this file called directly.
