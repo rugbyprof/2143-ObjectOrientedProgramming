@@ -7,7 +7,6 @@ import random
 def random_color():
     return (random.randint(255),random.randint(255),random.randint(255))
 
-
 # Image resource from internet
 url = 'http://fyf.tac-cdn.net/images/products/large/FYF-870.jpg'
 
