@@ -3,13 +3,14 @@
 ## Roster
 ![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster](https://docs.google.com/spreadsheets/d/1wX5f7oQNqYAx6Hj1KRe35Fv28uLIAsv40_QTgXh9-LA/edit?usp=sharing)
 
-- Days: MW 1:00 p.m. - 2:20 p.m. 
-- Location: BO 320 
-- Final Exam: Monday Dec 12th, 3:30 p.m. - 5:30 p.m.
+- Days: TR 11:00 p.m. - 12:20 p.m. 
+- Location: BO 309
+- Final Exam: Tuesday May 9<sup>th</sup>, 1:00 p.m. - 3:00 p.m.
 - Dates: August 29 - Dec 9
 - Holidays: 
-    - Thanksgiving November 23-25 
-- Last Day for “W” @ 4:00 p.m. : October 31
+    - Spring Break March 13-18
+    - Easter Break April 13-14
+- Last Day for “W” @ 4:00 p.m. : March 27
 
 
 ## Course Topics:
