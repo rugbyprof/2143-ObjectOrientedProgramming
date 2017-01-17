@@ -1,5 +1,5 @@
 ## Assignment 1 - Setting up Develepment Environment
-#### Due: Wednesday Aug 31st by classtime.
+#### Due: Friday January 20th by 5:00pm
 
 ## ADE - Academic Development Environment
 
@@ -166,10 +166,10 @@ a means to push your files to a central repository. So if your using a lab or pe
 ### Step 6: Class Roster
 ---
 
-![](https://d3vv6lp55qjaqc.cloudfront.net/items/2Y3p3e0B3t362M1Z020X/Apps-Google-Drive-Sheets-icon.png?X-CloudApp-Visitor-Id=1094421)
+![](https://docs.google.com/spreadsheets/d/1GBNKqQUz9HOn7Y7rjm_l9eoPpBnZKxSiwTiIipeTgiQ/edit?usp=sharing)
 #### Update the Class Roster:
 
-- Here is a link to our class roster on google docs: https://docs.google.com/spreadsheets/d/1wX5f7oQNqYAx6Hj1KRe35Fv28uLIAsv40_QTgXh9-LA/edit?usp=sharing
+- Here is a link to our class roster on google docs: https://docs.google.com/spreadsheets/d/1GBNKqQUz9HOn7Y7rjm_l9eoPpBnZKxSiwTiIipeTgiQ/edit?usp=sharing
 
 - Update the roster by adding your information to it. 
 
