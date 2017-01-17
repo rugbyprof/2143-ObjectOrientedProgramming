@@ -1,7 +1,7 @@
 # 2143 Object Oriented Programming
 
 ## Roster
-![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster](https://docs.google.com/spreadsheets/d/1wX5f7oQNqYAx6Hj1KRe35Fv28uLIAsv40_QTgXh9-LA/edit?usp=sharing)
+![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster](https://docs.google.com/spreadsheets/d/1GBNKqQUz9HOn7Y7rjm_l9eoPpBnZKxSiwTiIipeTgiQ/edit?usp=sharing)
 
 - Days: TR 11:00 p.m. - 12:20 p.m. 
 - Location: BO 309
