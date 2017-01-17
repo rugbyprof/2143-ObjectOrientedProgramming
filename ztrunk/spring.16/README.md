@@ -1,17 +1,16 @@
 # 2143 Object Oriented Programming
 
-- Companion Website:
-    - Signup Link: https://piazza.com/mwsu/spring2016/cmps2143
-    - Class Link: https://piazza.com/mwsu/spring2016/cmps2143/home
-- Days: TR 1100am 1220pm 
-- Location: BO 304 
-- Final Exam: Tuesday May 10th, 1:00 - 3:00 p.m.
-- Dates: January 16 - May 6
+## Roster
+![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster](https://docs.google.com/spreadsheets/d/1wX5f7oQNqYAx6Hj1KRe35Fv28uLIAsv40_QTgXh9-LA/edit?usp=sharing)
+
+- Days: MW 1:00 p.m. - 2:20 p.m. 
+- Location: BO 320 
+- Final Exam: Monday Dec 12th, 3:30 p.m. - 5:30 p.m.
+- Dates: August 29 - Dec 9
 - Holidays: 
-    - Martin Luther King: January 18 
-    - Spring Break: March 21-26
-    - Easter Break: March 28-29
-- Last Day for “W”: March 30
+    - Thanksgiving November 23-25 
+- Last Day for “W” @ 4:00 p.m. : October 31
+
 
 ## Course Topics:
 
@@ -48,6 +47,9 @@
 >**4**. Plane ticket prices, events like weddings, or trips out of the country are not valid excuses for missing the final exam at its scheduled time. I will not make accommodations for anything other than an issue vetted by the dean of students. 
 
 ## Misc:
+
+- https://stackedit.io/editor
+- https://app.classeur.io
 
 - Attending class is one of the primary keys to doing well in this class. Students may be dropped for excessive absences. There is no distinction made between excused and unexcused. 
 
