@@ -28,7 +28,7 @@
 - Subclasses and Subtypes
 - Static and Dynamic Behavior
 
-## Learning Goals
+## Learning Outcomes
 This course focuses on the design and analysis of larger, more complex programs using an Object Oriented approach. The specific goals of this course are: 
 - To know and use basic Python programming constructs for object-oriented problem solving (e.g., classes, polymorphism, inheritance, interfaces) 
 - To appreciate the role of algorithms and data structures in problem solving and software design (e.g., objected-oriented design, lists, files, searching and sorting) 
