@@ -2,7 +2,8 @@
 Due: January 31<sup>st</sup> by class time.
 
 What to turn in:
-- A python document with all your functions and answers from below.
+- A python document with all your functions and answers from below. 
+- Remember that gitprint prints nicely!
 - Use comments where and when needed to explain your answers.
 - A comment block at the top should look like this:
 
