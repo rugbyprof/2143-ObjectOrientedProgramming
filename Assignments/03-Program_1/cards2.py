@@ -1,5 +1,6 @@
 import os
 
+#Source: http://codereview.stackexchange.com/questions/82103/ascii-fication-of-playing-cards
 
 CARD = """\
 ┌─────────┐
