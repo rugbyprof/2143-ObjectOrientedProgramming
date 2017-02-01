@@ -146,5 +146,8 @@ class Deck(object):
 if __name__=='__main__':
     c = Card('Clubs',14)
     print(c)
+    D = Deck()
+    D.shuffle()
+    c = D.pop_card()
+    print(c)
 
-    
