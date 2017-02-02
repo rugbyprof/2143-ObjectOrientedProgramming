@@ -1,5 +1,6 @@
 Program 1
 =========
+Due: February 14<sup>th</sup> by classtime
 
 ![](https://d3vv6lp55qjaqc.cloudfront.net/items/1c0c2u113x262e2k2R0C/war.png?X-CloudApp-Visitor-Id=1094421)
 
