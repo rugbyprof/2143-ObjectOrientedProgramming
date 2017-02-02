@@ -4,7 +4,7 @@ Due: February 14<sup>th</sup> by classtime
 
 ![](https://d3vv6lp55qjaqc.cloudfront.net/items/1c0c2u113x262e2k2R0C/war.png?X-CloudApp-Visitor-Id=1094421)
 
-## Rules
+## Game Rules
 
 ***Goal***
 
@@ -23,3 +23,7 @@ If the cards are the same rank, it is War. Each player turns up one card face do
 ***How to Keep Score***
 
 The game ends when one player has won all the cards.
+
+## Program Overview
+
+- There is plenty of starter code that will 
