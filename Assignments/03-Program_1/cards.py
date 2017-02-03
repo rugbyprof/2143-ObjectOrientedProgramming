@@ -11,7 +11,8 @@ http://codereview.stackexchange.com/questions/82103/ascii-fication-of-playing-ca
 @Class AsciiCard 
 @Description:
     This class reads 53 (52 cards, and 1 back) ascii representations of a deck of cards from the given file.
-@method get_ascii(string,int)
+@methods:
+    get_ascii(string,int)
 """
 class AsciiCard(object):
 
@@ -91,6 +92,7 @@ class Card(AsciiCard):
         self.rank = rank
         self.symbol = self.name_to_symbol[self.suit]
         self.card = self.get_ascii(self.suit,self.rank)
+        self.ascii = self.get_ascii(self.suit,self.rank)
 
     def __str__(self):
         return (self.card)
@@ -132,7 +134,9 @@ class Deck(object):
         return " ".join(res)
     
     def pop_card(self):
-        return self.cards.pop(0)
+        if len(self.cards) > 0:
+            return self.cards.pop(0)
+        return None
         
     def add_card(self,card):
         self.cards.append(card)
@@ -142,12 +146,65 @@ class Deck(object):
     
     def sort(self):
         self.cards = sorted(self.cards)
+        
+    def size(self):
+        return len(self.cards)
+
+
+    
+class Hand(list):
+    def __init__(self, cards=None):
+        """Initialize the class"""
+        super().__init__()
+        if (cards is not None):
+            self._list = list(cards)
+        else:
+            self._list = []
+    
+    def __str__(self):
+        return self.join_lines()
+
+    def join_lines(self):
+        """
+        Stack strings horizontally.
+        This doesn't keep lines aligned unless the preceding lines have the same length.
+        :param strings: Strings to stack
+        :return: String consisting of the horizontally stacked input
+        """
+        liness = [card.ascii.splitlines() for card in self._list]
+        return '\n'.join(''.join(lines) for lines in zip(*liness))
+        
+    def add(self,card):
+        self._list.append(card)
+        
+    def sort(self):
+        self._list = sorted(self._list)
+        
+    def __getitem__(self,key):
+        return self._list[key]
+    
 
 if __name__=='__main__':
-    c = Card('Clubs',14)
-    print(c)
+   # c = Card('Clubs',14)
+    #print(c)
+   # D = Deck()
+   # D.shuffle()
+   # c1 = D.pop_card()
+    #c2 = D.pop_card()
+   # c3 = D.pop_card()
+    #hand = join_lines([c1.card,c2.card,c3.card])
+    #print(hand)
     D = Deck()
     D.shuffle()
-    c = D.pop_card()
-    print(c)
+    H = Hand()
+#     H.add(D.pop_card())
+#     print(H)
+    for i in range(5):
+        H.add(D.pop_card())
+    H.sort()
+    print(H)
+    print(H[0])
+
+    
+    
 

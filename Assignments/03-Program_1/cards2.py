@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 
 #Source: http://codereview.stackexchange.com/questions/82103/ascii-fication-of-playing-cards
@@ -44,6 +45,13 @@ class Card(object):
         'King': 10
     }
 
+    name_to_symbol = {
+        'Spades':   '♠',
+        'Diamonds': '♦',
+        'Hearts':   '♥',
+        'Clubs':    '♣',
+    }
+
     def __init__(self, suit, rank):
         """
         :param suit: The face of the card, e.g. Spade or Diamond
@@ -52,6 +60,20 @@ class Card(object):
         self.suit = suit.capitalize()
         self.rank = rank
         self.points = self.card_values[rank]
+
+    def __str__(self):
+        return CARD.format(rank=self.rank, suit=name_to_symbol[self.suit])
+           
+    def __cmp__(self,other):
+        t1 = self.suit,self.rank
+        t2 = other.suit,other.rank
+        return int(t1[1])<int(t2[1])
+   
+    # Python3 wasn't liking the __cmp__ to sort the cards, so 
+    # documentation told me to use the __lt__ (less than) 
+    # method.
+    def __lt__(self,other):
+        return self.__cmp__(other)
 
 def join_lines(strings):
     """
@@ -110,4 +132,4 @@ test_card_4 = Card('Hearts', '10')
 print("Player")
 print(ascii_version_of_card(test_card_1, test_card_2))
 print("Dealer")
-print(ascii_version_of_hidden_card(test_card_3, test_card_4))
+print(ascii_version_of_card(test_card_3, test_card_4))
