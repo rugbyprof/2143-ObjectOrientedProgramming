@@ -27,4 +27,13 @@ The game ends when one player has won all the cards.
 ## Program Overview
 
 - There is plenty of code examples in this folder. I tried to organize what I thought was a good approach into [starter.py](./starter.py).
-- 
+- The [starter.py](./starter.py) doesn't need an ascii file to print cards, but then again, the cards aren't that amazing. However, the point is to implement a game! So you can print cards whichever way you like, as long as it's not totally text based.
+- The classes provided are:
+    - Card
+    - Deck
+    - Hand
+- Feel free to change these around to fit your solution. 
+- You are required to create an additional `Player` class that will represent a single player in the game along with a `Game` class that will manage the game. 
+- I don't see any place where inheritance will be needed. Composition seems to be the best approach:
+    - A `Player` has an instance of a `Hand` (where a `Hand` starts with 26 cards).
+    - A `Game` has two `Player` instances (possibly more depending on how we implement the game).
