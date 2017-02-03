@@ -37,6 +37,7 @@ The game ends when one player has won all the cards.
 - I don't see any place where inheritance will be needed. Composition seems to be the best approach:
     - A ***`Player`*** has an instance of a ***`Hand`*** (where a ***`Hand`*** starts with 26 cards).
     - A ***`Game`*** has two ***`Player`*** instances (possibly more depending on how we implement the game).
+- I've been implementing the game, and I think that a player extending a hand may be a better approach. More in class.
 - You should think about what a player will do when playing the game, and what the game needs to provide each player, nad let those thoughts help you create your methods. Here are some thoughts:
     - A Player plays a card: `play_a_card` (pop 1 card from a players hand)
     - The game will compare two cards and assign a winner.
