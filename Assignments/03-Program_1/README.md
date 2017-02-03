@@ -27,7 +27,7 @@ The game ends when one player has won all the cards.
 ## Program Overview
 
 - There is plenty of code examples in this folder. I tried to organize what I thought was a good approach into [starter.py](./starter.py).
-- The [starter.py](./starter.py) doesn't need an ascii file to print cards, but then again, the cards aren't that amazing. However, the point is to implement a game! So you can print cards whichever way you like, as long as it's not totally text based.
+- The [starter.py](./starter.py) doesn't need an ascii file to print cards, but then again, the cards aren't that amazing. However, the point is to implement a game! So you can print cards whichever way you like, as long as it's not totally text based. (BTW: Text based is something like: KS = King of spades. 9H = Nine of hearts, etc.)
 - The classes provided are:
     - ***`Card`***
     - ***`Deck`***
