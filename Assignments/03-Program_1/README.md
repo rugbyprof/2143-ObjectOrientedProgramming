@@ -26,4 +26,5 @@ The game ends when one player has won all the cards.
 
 ## Program Overview
 
-- There is plenty of starter code that will 
+- There is plenty of code examples in this folder. I tried to organize what I thought was a good approach into [starter.py](./starter.py).
+- 
