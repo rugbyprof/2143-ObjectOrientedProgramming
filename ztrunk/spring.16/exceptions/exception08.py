@@ -1,6 +1,7 @@
 """
 What if we want to catch different exceptions and do different things with them? 
-Or maybe we want to do something with an exception and then allow it to continue to bubble up to the parent function, as if it had never been caught? 
+Or maybe we want to do something with an exception and then allow it to continue 
+to bubble up to the parent function, as if it had never been caught? 
 """
 
 def funny_division3(anumber):
