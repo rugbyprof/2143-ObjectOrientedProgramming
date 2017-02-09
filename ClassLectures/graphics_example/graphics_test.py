@@ -21,7 +21,7 @@ offset = 0
 loops = 1000
 for i in range(loops):
     if i % 3 == 0:
-        cardImage = Image(Point(width/4,start_y-offset), "./cards_128.gif")
+        cardImage = Image(Point(width/4,start_y-offset), './card_images/100x/queen_of_hearts2.gif')
         cardImage.draw(win)
         offset += 5
         if i % 5 == 0:
