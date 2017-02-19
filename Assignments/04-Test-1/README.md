@@ -14,33 +14,37 @@ I will provide a python cheatsheet for the exam. Syntax should not be an issue. 
 - Count the number of occurrences of words in a string using a dictionary as your container. The code we discussed in class is [HERE](https://github.com/rugbyprof/2143-ObjectOrientedProgramming/blob/master/ClassLectures/day3b.py).  Assume there is a string
 called `words` that is space delimited and has NO punctuation. 
 
-Given:
+***Given:***
 ```python
 words = "the the and the and and and the boy boy the and boy boy and and and end"
 ```
 
-Result:
+***Result:***
 ```python
 {'the': 5,'and': 8,'boy': 4,'end': 1 }
 ```
 
 -----
 
-Given:
+***Given:***
 
+```python
 grades = {
     'Bob' : { "A": [98,99,99,90,91], "B" : [88,89,87,81], "C" : [70,72,71,77,75]},
     'Sue' : { "A": [92,99,91], "B" : [88,84,87,86,82], "C" : [70,74,71]},
     'Ann' : { "A": [93,94], "B" : [88,89,87,83,82], "C" : [70,72,71,73,75]},
     'Bill' : { "A": [96,99,95], "B" : [88,82,87,86], "C" : [70,72,71,77,71,75,75]}
 }
+```
+
 Print out the name, and count of each grade type for each student:
 
+```
 Bob: A's = 5 , B's = 4 , C's = 5
 Bob: A's = 3, B's = 5 , C's = 3
 Bob: A's = 2 , B's = 5 , C's = 5
 Bob: A's = 3 , B's = 4 , C's = 7
-
+```
 -----
 
 
