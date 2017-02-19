@@ -11,12 +11,7 @@ words = "the the and the and and and the boy boy the and boy boy and and and end
 
 Result:
 ```python
-{
-'the': 5,
-'and': 8,
-'boy': 4,
-'end': 1 
-}
+{'the': 5,'and': 8,'boy': 4,'end': 1 }
 ```
 
 -----
