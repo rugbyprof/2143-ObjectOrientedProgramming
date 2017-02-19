@@ -26,6 +26,23 @@ Result:
 
 -----
 
+Given:
+
+grades = {
+    'Bob' : { "A": [98,99,99,90,91], "B" : [88,89,87,81], "C" : [70,72,71,77,75]},
+    'Sue' : { "A": [92,99,91], "B" : [88,84,87,86,82], "C" : [70,74,71]},
+    'Ann' : { "A": [93,94], "B" : [88,89,87,83,82], "C" : [70,72,71,73,75]},
+    'Bill' : { "A": [96,99,95], "B" : [88,82,87,86], "C" : [70,72,71,77,71,75,75]}
+}
+Print out the name, and count of each grade type for each student:
+
+Bob: A's = 5 , B's = 4 , C's = 5
+Bob: A's = 3, B's = 5 , C's = 3
+Bob: A's = 2 , B's = 5 , C's = 5
+Bob: A's = 3 , B's = 4 , C's = 7
+
+-----
+
 
 ### Python Lists / Functions
 
