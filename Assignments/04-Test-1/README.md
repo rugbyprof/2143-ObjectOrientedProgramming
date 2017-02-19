@@ -15,13 +15,9 @@ Result:
 ```
 
 -----
-### Class Definitions
 
-Be able to write a fraction class and overload the `addition` and `multiplication` operators. I will provide a GCD method. Make sure you implement the `str` method so a fraction prints out correctly.
 
------
-
-### Median Trickery
+### Python Lists / Functions
 
 - Complete the function using this algorithm: 
     - continually remove the largest and smallest values from the list and return either the last value (if there is only one left) or the average of the two last values (if there are two left).
@@ -47,6 +43,13 @@ def myMedian(L):
 
 ```
 -----
+
+### Class Definitions
+
+Be able to write a fraction class and overload the `addition` and `multiplication` operators. I will provide a GCD method. Make sure you implement the `str` method so a fraction prints out correctly.
+
+-----
+
 
 ### Color Class
 
