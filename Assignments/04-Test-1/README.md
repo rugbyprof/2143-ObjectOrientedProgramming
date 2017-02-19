@@ -1,8 +1,9 @@
-#### Not Done
+# Test 1 Study Guide
+***Test Date: 23 Feb 2017***
 
 I will provide a python cheatsheet for the exam. Syntax should not be an issue. [HERE](https://github.com/rugbyprof/2143-ObjectOrientedProgramming/blob/master/Resources/python_cheatsheet.md) is the sheet.
 
-### Define:
+## Definitions:
 
 - Polymorphism
 - Encapsulation
@@ -10,7 +11,9 @@ I will provide a python cheatsheet for the exam. Syntax should not be an issue. 
 - Immutable vs Mutable 
 
 
-### Dictionaries
+## Dictionaries
+
+#### Counting Occurences
 - Count the number of occurrences of words in a string using a dictionary as your container. The code we discussed in class is [HERE](https://github.com/rugbyprof/2143-ObjectOrientedProgramming/blob/master/ClassLectures/day3b.py).  Assume there is a string
 called `words` that is space delimited and has NO punctuation. 
 
@@ -24,7 +27,7 @@ words = "the the and the and and and the boy boy the and boy boy and and and end
 {'the': 5,'and': 8,'boy': 4,'end': 1 }
 ```
 
------
+#### Traversing Dictionaries
 
 ***Given:***
 
@@ -48,7 +51,7 @@ Bob: A's = 3 , B's = 4 , C's = 7
 -----
 
 
-### Python Lists / Functions
+## Python Lists / Functions
 
 This function returns the "median" value from a list of unsorted values. 
 
@@ -80,13 +83,13 @@ def myMedian(L):
 ## Classes
 
 
-***Fraction Class***
+#### Fraction Class
 Be able to write a fraction class and overload the `addition` and `multiplication` operators. I will provide a GCD method. Make sure you implement the `str` method so a fraction prints out correctly.
 
 -----
 
 
-***Color Class***
+#### Color Class
 
 - Create a class called "Color" that will store a tuple of (r,g,b). 
 - The tuple should be stored in a data member called color.
@@ -112,7 +115,7 @@ print(c1)
 
 -----
 
-***Operator Overloading***
+#### Operator Overloading
 Overload the addition operator so that we can add two colors. Adding colors is a pretty wierd experience, so we will create our own addition method. Basically we will average each color. 
 
 For example:
@@ -129,7 +132,7 @@ print(c3)
 
 -----
 
-***Grayscale Class***
+#### Grayscale Class
 
 This class will ***extend*** the color class.
 
