@@ -1,5 +1,15 @@
 #### Not Done
 
+I will provide a python cheatsheet for the exam. Syntax should not be an issue. [HERE](https://github.com/rugbyprof/2143-ObjectOrientedProgramming/blob/master/Resources/python_cheatsheet.md) is the sheet.
+
+### Define:
+
+-Polymorphism
+-Encapsulation
+-Inheritance
+-Immutable vs Mutable 
+
+
 ### Dictionaries
 - Count the number of occurrences of words in a string using a dictionary as your container. The code we discussed in class is [HERE](https://github.com/rugbyprof/2143-ObjectOrientedProgramming/blob/master/ClassLectures/day3b.py).  Assume there is a string
 called `words` that is space delimited and has NO punctuation. 
