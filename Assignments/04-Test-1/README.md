@@ -77,14 +77,16 @@ def myMedian(L):
 ```
 -----
 
-### Class Definitions
+## Classes
 
+
+***Fraction Class***
 Be able to write a fraction class and overload the `addition` and `multiplication` operators. I will provide a GCD method. Make sure you implement the `str` method so a fraction prints out correctly.
 
 -----
 
 
-### Color Class
+***Color Class***
 
 - Create a class called "Color" that will store a tuple of (r,g,b). 
 - The tuple should be stored in a data member called color.
@@ -110,6 +112,7 @@ print(c1)
 
 -----
 
+***Operator Overloading***
 Overload the addition operator so that we can add two colors. Adding colors is a pretty wierd experience, so we will create our own addition method. Basically we will average each color. 
 
 For example:
@@ -126,7 +129,7 @@ print(c3)
 
 -----
 
-### Grayscale Class
+***Grayscale Class***
 
 This class will ***extend*** the color class.
 
