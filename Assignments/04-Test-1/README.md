@@ -19,6 +19,8 @@ Result:
 
 ### Python Lists / Functions
 
+This function returns the "median" value from a list of unsorted values. 
+
 - Complete the function using this algorithm: 
     - continually remove the largest and smallest values from the list and return either the last value (if there is only one left) or the average of the two last values (if there are two left).
     - Do not sort the list, and don't use any for loops in your solution. 
