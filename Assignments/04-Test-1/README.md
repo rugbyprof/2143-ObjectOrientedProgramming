@@ -4,10 +4,10 @@ I will provide a python cheatsheet for the exam. Syntax should not be an issue. 
 
 ### Define:
 
--Polymorphism
--Encapsulation
--Inheritance
--Immutable vs Mutable 
+- Polymorphism
+- Encapsulation
+- Inheritance
+- Immutable vs Mutable 
 
 
 ### Dictionaries
