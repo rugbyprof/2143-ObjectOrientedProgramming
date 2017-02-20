@@ -1,7 +1,11 @@
 # Test 1 Study Guide
 ***Test Date: 23 Feb 2017***
 
-I will provide a python cheatsheet for the exam. Syntax should not be an issue. [HERE](https://github.com/rugbyprof/2143-ObjectOrientedProgramming/blob/master/Resources/python_cheatsheet.md) is the sheet.
+- I will provide a python cheatsheet for the exam. Syntax should not be an issue. [HERE](https://github.com/rugbyprof/2143-ObjectOrientedProgramming/blob/master/Resources/python_cheatsheet.md) is the sheet.
+- Show up to class on time. 
+- Bring a pencil, pens not allowed.
+- Bring a blue book.
+- Questions on the actual test could be exact copies of the question below, more likely they will be closely related in scope. In the case of lists and dictionaries be ready for varying types of organizations. (e.g. Lists of dictionaries of lists, or Dictionaries of lists of dictionaries, etc.). You get the picture. 
 
 ## Definitions:
 
