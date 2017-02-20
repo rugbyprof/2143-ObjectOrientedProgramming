@@ -4,7 +4,31 @@
 ### Overview
 
 - Given the [grid.py](./grid.py) file in this directory, turn this module style file into an object called grid.
-- The "color_wheel" provided by this module has 18 unique colors. 
+- The "color_wheel" provided by this module has 18 unique colors. We are going to increase this by a lot. Lets use all the "named" html colors that exist. The file [colors.json](./colors.json) has 148 colors. Of course this doesn't mean that all colors will be rendered perfect or look good next to each other, however it does give us more choices.
+- To read this json file in, use the following snippet:
+```
+with open("colors.json") as file: 
+   colors = file.read()
+
+colors = json.loads(colors)
+
+for color in colors:
+    print(color)
+```
+
+- This will print out:
+
+```
+...
+{u'rgb': [46, 139, 87], u'html': u'#2e8b57', u'name': u'seagreen'}
+{u'rgb': [255, 250, 250], u'html': u'#fffafa', u'name': u'snow'}
+{u'rgb': [0, 0, 205], u'html': u'#0000cd', u'name': u'mediumblue'}
+{u'rgb': [25, 25, 112], u'html': u'#191970', u'name': u'midnightblue'}
+{u'rgb': [175, 238, 238], u'html': u'#afeeee', u'name': u'paleturquoise'}
+{u'rgb': [238, 232, 170], u'html': u'#eee8aa', u'name': u'palegoldenrod'}
+...
+```
+
 - The new `__main__` code for testing should do the following:
     - Create a 16 x 16 grid
     - 
