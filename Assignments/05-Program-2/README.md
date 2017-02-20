@@ -32,10 +32,13 @@ for color in colors:
 - The new `__main__` code for testing should do the following:
     - Ask the user for how many colors (or use argv)
     - Check the input number to ensure it can be displayed in a square grid. For example:
-        - 9 = ***`3 x 3`***
-        - 16 = ***`4 x 4`***
-        - 25 = ***`5 x 5`***
-    - Based on this number of colors ***N***, create a grid that is ***N x N***. 
-    - For a ***9 x 9*** grid, each color will be in a mini ***3 x 3*** grid:
+        - 9 = ***`3 x 3`*** (rows,cols)
+        - 16 = ***`4 x 4`*** (rows,cols)
+        - 25 = ***`5 x 5`*** (rows,cols)
+        - 7 = Not So Much
+        - 23 = Not So Much
+    - After we OK the number of colors ***N***, create a grid that is ***N x N***. 
+    - We want to display each color in its own mini grid.
+    - For example: a ***9 x 9*** grid, each color will be in a mini ***3 x 3*** grid:
     
     ![](https://d3vv6lp55qjaqc.cloudfront.net/items/3x0n3t300n1V1C0X2b3u/table9x9_colors.png?X-CloudApp-Visitor-Id=1094421)
