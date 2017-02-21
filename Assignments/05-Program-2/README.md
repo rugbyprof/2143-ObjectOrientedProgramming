@@ -3,9 +3,12 @@
 
 ### Overview
 
-- Given the [grid.py](./grid.py) file in this directory, turn this module style file into an object called grid.
-- The "color_wheel" provided by this module has 18 unique colors. We are going to increase this by a lot. Lets use all the "named" html colors that exist. The file [colors.json](./colors.json) has 148 colors. Of course this doesn't mean that all colors will be rendered perfect or look good next to each other, however it does give us more choices.
-- To read this json file in, use the following snippet:
+- Given the [grid.py](./grid.py) file in this directory, turn this "module style" collection of functions into a class called ***`Grid`***.
+- There are many "global" variables defined in the file, we will discuss the use of globals in this file in class so you can determine which should stay "global" and which should become class members.   
+- Additionally, Their is a  "color_wheel" provided by this module and it has 18 unique colors. We are going to increase this by a lot.
+- HTML has a ton of "named" colors. Here is a file: [colors.json](./colors.json) that has 148 of them. 
+- Using more colors isn't always the better choice, but I think the 18 provided by the original file could be increased significantly.
+- To read the exisiting [colors.json](./colors.json) file in, use the following snippet:
 ```
 with open("colors.json") as file: 
    colors = file.read()
@@ -29,6 +32,10 @@ for color in colors:
 ...
 ```
 
+- Use the information provided from the `json` file to add to the "color wheel" of your class.
+
+## Deliverables
+- Create a folder called program_2 in your Assignments folder. 
 - The new `__main__` code for testing should do the following:
     - Ask the user for how many colors (or use argv)
     - Check the input number to ensure it can be displayed in a square grid. For example:
