@@ -28,6 +28,7 @@
 - `range([start], stop, [step])` -> list-like-object of int
     - Return the integers starting with start and ending with stop - 1 with step specifying the amount to increment (or decrement).
     - If start is not specified, the list starts at 0. If step is not specified, the values are incremented by 1.
+    
 #### Random:
 
 - random.randint(a, b)
