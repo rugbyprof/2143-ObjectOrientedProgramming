@@ -248,20 +248,20 @@ class sms_store(object):
     def __init__(self):
       self.messages = []
       
-    add_new_arrival(from_number, time_arrived, text_of_SMS)
+    def add_new_arrival(from_number, time_arrived, text_of_SMS)
       """
       - Makes new SMS tuple, inserts it after other messages in the store. 
       - When creating this message, its has_been_viewed status is set False.
       """
       self.messages.append((False,from_number, time_arrived, text_of_SMS))
 
-    message_count()
+    def message_count()
       """
       - Returns the number of sms messages in my_inbox
       """
       return len(self.messages)
       
-    get_unread_indexes()
+    def get_unread_indexes()
       """
       - Returns list of indexes of all not-yet-viewed SMS messages
       """
@@ -274,7 +274,7 @@ class sms_store(object):
         
       return L
       
-    get_message(i)
+    def get_message(i)
       """
       - Return (from_number, time_arrived, text_of_sms) for message[i]
       - Also change its state to "has been viewed".
@@ -288,13 +288,13 @@ class sms_store(object):
           self.messages[i] = new
       return new
       
-    delete(i)
+    def delete(i)
       """
       - Delete the message at index i
       """
       del self.messages[i]
       
-    clear()
+    def clear()
       """
       - Delete all messages from inbox
       """
