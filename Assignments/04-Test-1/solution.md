@@ -37,6 +37,7 @@ Define the following terms:
 
 >Objects whose value can change are said to be mutable; objects whose value is unchangeable once they are created are called immutable.
 >Dictionaries and Lists are mutable, while Tuples are immutable.
+
 -----
 
 ## Question 2:
