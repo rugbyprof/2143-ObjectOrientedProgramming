@@ -19,10 +19,24 @@
 Define the following terms:
 
 - **A.** Polymorphism
+
+>Generally, the ability to appear in many forms. In object-oriented programming, polymorphism refers to a programming language's ability to process objects differently depending on their data type or class. More specifically, it is the ability to redefine methods for derived classes.
+
 - **B.** Encapsulation
+
+>Encapsulation boils down to hiding or limiting access to data or data manipulators in a class. 
+
 - **C.** Inheritance vs Composition (define both, explain difference)
+
+>Inheritance: Taking on the properties of existing objects. 
+>Composition: Aggregating objects together by making some objects attributes of other objects.
+>So Inheritence would "extend" a base obect gaining access to its methods and data members, while composition simply 
+>would create instances of another object within its own class definition and use it in that way.
+
 - **D.** Immutable vs Mutable 
 
+>Objects whose value can change are said to be mutable; objects whose value is unchangeable once they are created are called immutable.
+>Dictionaries and Lists are mutable, while Tuples are immutable.
 -----
 
 ## Question 2:
