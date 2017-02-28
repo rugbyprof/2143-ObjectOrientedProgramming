@@ -121,7 +121,7 @@ def unique_words(words):
     A dictionary with the count for each unique word: {'the': 5,'and': 8,'boy': 4,'end': 1}
 """
   dict = {}
-  for word in words:
+  for word in words.split():
     if not word in dict:
       dict[word] = 0
     dict[word] += 1
