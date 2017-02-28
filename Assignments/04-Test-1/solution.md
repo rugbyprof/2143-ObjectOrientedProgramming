@@ -20,16 +20,36 @@ Define the following terms:
 
 - **A.** Polymorphism
 
->Generally, the ability to appear in many forms. In object-oriented programming, polymorphism refers to a programming language's ability to process objects differently depending on their data type or class. More specifically, it is the ability to redefine methods for derived classes.
+>Generally, the ability to appear in many forms. A programming language's ability to process objects differently depending on their data type or class. More specifically, it is the ability of methods / functions to act differently based on the data types involved. One prime example is the overloading of operators. The operation will behave differently based on the data type involved. 
 
 - **B.** Encapsulation
 
->Encapsulation boils down to hiding or limiting access to data or data manipulators in a class. 
+>Encapsulation boils down to hiding or limiting access to data or data manipulators in a class. Private methods and members vs Public methods and members.
 
 - **C.** Inheritance vs Composition (define both, explain difference)
 
->Inheritance: Taking on the properties of existing objects. 
+>Inheritance: Taking on the properties of existing object by using the existing objects definitions as the basis for its own class definition. 
+
+```python
+
+class someclass(otherclass):
+    def __init__(self):
+        super().__init__()
+        # we now have access to all of 'otherclass's' "stuff" by inheriting from otherclass
+        
+```
+
 >Composition: Aggregating objects together by making some objects attributes of other objects.
+
+```python
+
+class someclass(object):
+    def __init__(self):
+        other = otherclass()
+        #we now have an instance of otherclass making it an attribute of this class.
+        
+```
+
 >So Inheritence would "extend" a base obect gaining access to its methods and data members, while composition simply 
 >would create instances of another object within its own class definition and use it in that way.
 
