@@ -70,13 +70,13 @@ def grade_avg(students):
 """
   ans = {}
   for k,v in students.items():
-      if not v['year'] in ans:
-          ans =[v['year']] = []
-      ans[v['year']].extend(v['grades'])
-
+    if not v['year'] in ans:
+      ans[v['year']] = []
+    ans[v['year']].extend(v['grades'])
+    
   for k,v in ans.items():
-      ans[k] = sum(v) / len(v)
-
+    ans[k] = round(sum(v) / len(v),2)
+    
   return ans
 ```
 
