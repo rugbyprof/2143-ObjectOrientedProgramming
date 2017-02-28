@@ -147,12 +147,12 @@ Write a `fraction` class that overloads the `addition` and `multiplication` oper
       def __init__(self,n=1,d=1):
           self.num = n
           self.den = d
-          self.reduce()
+          self.__reduce()
 
       def __str__(self):
           return "%d / %d" % (self.num,self.den)
 
-      def reduce(self):
+      def __reduce(self):
           thegcd = gcd(self.num,self.den)
           self.num /= thegcd
           self.den /= thegcd
