@@ -156,7 +156,7 @@ def myMedian(L):
     @Params: L (list)
     @Returns: median (int)
 """
-  while len(L) >= 2:
+  while len(L) > 2:
     pop(L.index(max(L)))
     pop(L.index(min(L)))
   if len(L) == 2:
