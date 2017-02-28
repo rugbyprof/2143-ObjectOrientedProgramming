@@ -187,7 +187,7 @@ def make_random_ints_no_dups(num, lower_bound, upper_bound):
   for i in range(num):
     r = random.randint(lower_bound,upper_bound)
     while r in res:
-      r = random.randinit(lower_bound,upper_bound)
+      r = random.randint(lower_bound,upper_bound)
     res.append(r)
   return res
 ```
@@ -208,38 +208,63 @@ message_box = SMS_store()
 - The object should provide these methods:
 
 ```python
-add_new_arrival(from_number, time_arrived, text_of_SMS)
-"""
-  - Makes new SMS tuple, inserts it after other messages in the store. 
-  - When creating this message, its has_been_viewed status is set False.
-"""
+class sms_store(object):
 
-message_count()
-"""
-  - Returns the number of sms messages in my_inbox
-"""
+    def __init__(self):
+      self.messages = []
+      
+    add_new_arrival(from_number, time_arrived, text_of_SMS)
+      """
+      - Makes new SMS tuple, inserts it after other messages in the store. 
+      - When creating this message, its has_been_viewed status is set False.
+      """
+      self.messages.append((False,from_number, time_arrived, text_of_SMS))
 
-get_unread_indexes()
-"""
-  - Returns list of indexes of all not-yet-viewed SMS messages
-"""
-
-get_message(i)
-"""
-  - Return (from_number, time_arrived, text_of_sms) for message[i]
-  - Also change its state to "has been viewed".
-  - If there is no message at position i, return None
-"""
-
-delete(i)
-"""
-  - Delete the message at index i
-"""
-
-clear()
-"""
-  - Delete all messages from inbox
-"""
+    message_count()
+      """
+      - Returns the number of sms messages in my_inbox
+      """
+      return len(self.messages)
+      
+    get_unread_indexes()
+      """
+      - Returns list of indexes of all not-yet-viewed SMS messages
+      """
+      L=[]
+      i=0
+      for m in self.messages:
+        if not m[0]:
+          L.append(i)
+        i = i + 1
+        
+      return L
+      
+    get_message(i)
+      """
+      - Return (from_number, time_arrived, text_of_sms) for message[i]
+      - Also change its state to "has been viewed".
+      - If there is no message at position i, return None
+      """
+      if i >= len(self.messages):
+          return None
+      else:
+          old = self.message[i]
+          new = (True,old[1],old[2],old[3])
+          self.messages[i] = new
+      return new
+      
+    delete(i)
+      """
+      - Delete the message at index i
+      """
+      del self.messages[i]
+      
+    clear()
+      """
+      - Delete all messages from inbox
+      """
+      self.messages = []
+      
 ```
 
 
