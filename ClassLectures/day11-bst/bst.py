@@ -131,11 +131,11 @@ def bin_order(L):
 #random.seed(97697)
 
 tree = BST()
-L = [int(1000 * random.random()) for i in xrange(100)]
+L = [int(10000 * random.random()) for i in xrange(1000)]
 
 #L = sorted(L)
 
-tree.insert(500)
+tree.insert(5000)
 for i in L:
    tree.insert(i)
 
