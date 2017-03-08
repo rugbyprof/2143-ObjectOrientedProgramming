@@ -1,0 +1,407 @@
+digraph {
+	0 [label=500]
+	1 [label=389]
+		0 -> 1
+	2 [label=150]
+		1 -> 2
+	3 [label=85]
+		2 -> 3
+	4 [label=82]
+		3 -> 4
+	5 [label=26]
+		4 -> 5
+	6 [label="*" color=gray shape=point]
+		5 -> 6
+	7 [label=39]
+		5 -> 7
+	8 [label="*" color=gray shape=point]
+		7 -> 8
+	9 [label=80]
+		7 -> 9
+	10 [label=47]
+		9 -> 10
+	11 [label="*" color=gray shape=point]
+		10 -> 11
+	12 [label="*" color=gray shape=point]
+		10 -> 12
+	13 [label="*" color=gray shape=point]
+		9 -> 13
+	14 [label="*" color=gray shape=point]
+		4 -> 14
+	15 [label=142]
+		3 -> 15
+	16 [label=138]
+		15 -> 16
+	17 [label=85]
+		16 -> 17
+	18 [label="*" color=gray shape=point]
+		17 -> 18
+	19 [label=92]
+		17 -> 19
+	20 [label="*" color=gray shape=point]
+		19 -> 20
+	21 [label=94]
+		19 -> 21
+	22 [label="*" color=gray shape=point]
+		21 -> 22
+	23 [label=113]
+		21 -> 23
+	24 [label="*" color=gray shape=point]
+		23 -> 24
+	25 [label=133]
+		23 -> 25
+	26 [label="*" color=gray shape=point]
+		25 -> 26
+	27 [label="*" color=gray shape=point]
+		25 -> 27
+	28 [label="*" color=gray shape=point]
+		16 -> 28
+	29 [label="*" color=gray shape=point]
+		15 -> 29
+	30 [label=227]
+		2 -> 30
+	31 [label=163]
+		30 -> 31
+	32 [label="*" color=gray shape=point]
+		31 -> 32
+	33 [label=224]
+		31 -> 33
+	34 [label=216]
+		33 -> 34
+	35 [label=173]
+		34 -> 35
+	36 [label="*" color=gray shape=point]
+		35 -> 36
+	37 [label="*" color=gray shape=point]
+		35 -> 37
+	38 [label="*" color=gray shape=point]
+		34 -> 38
+	39 [label="*" color=gray shape=point]
+		33 -> 39
+	40 [label=289]
+		30 -> 40
+	41 [label=234]
+		40 -> 41
+	42 [label=231]
+		41 -> 42
+	43 [label="*" color=gray shape=point]
+		42 -> 43
+	44 [label="*" color=gray shape=point]
+		42 -> 44
+	45 [label=262]
+		41 -> 45
+	46 [label=234]
+		45 -> 46
+	47 [label="*" color=gray shape=point]
+		46 -> 47
+	48 [label="*" color=gray shape=point]
+		46 -> 48
+	49 [label=274]
+		45 -> 49
+	50 [label="*" color=gray shape=point]
+		49 -> 50
+	51 [label="*" color=gray shape=point]
+		49 -> 51
+	52 [label=327]
+		40 -> 52
+	53 [label=318]
+		52 -> 53
+	54 [label=314]
+		53 -> 54
+	55 [label=295]
+		54 -> 55
+	56 [label=293]
+		55 -> 56
+	57 [label="*" color=gray shape=point]
+		56 -> 57
+	58 [label="*" color=gray shape=point]
+		56 -> 58
+	59 [label="*" color=gray shape=point]
+		55 -> 59
+	60 [label="*" color=gray shape=point]
+		54 -> 60
+	61 [label="*" color=gray shape=point]
+		53 -> 61
+	62 [label=346]
+		52 -> 62
+	63 [label=338]
+		62 -> 63
+	64 [label="*" color=gray shape=point]
+		63 -> 64
+	65 [label=345]
+		63 -> 65
+	66 [label="*" color=gray shape=point]
+		65 -> 66
+	67 [label="*" color=gray shape=point]
+		65 -> 67
+	68 [label=371]
+		62 -> 68
+	69 [label="*" color=gray shape=point]
+		68 -> 69
+	70 [label=380]
+		68 -> 70
+	71 [label=374]
+		70 -> 71
+	72 [label="*" color=gray shape=point]
+		71 -> 72
+	73 [label="*" color=gray shape=point]
+		71 -> 73
+	74 [label=380]
+		70 -> 74
+	75 [label="*" color=gray shape=point]
+		74 -> 75
+	76 [label="*" color=gray shape=point]
+		74 -> 76
+	77 [label=498]
+		1 -> 77
+	78 [label=423]
+		77 -> 78
+	79 [label=413]
+		78 -> 79
+	80 [label="*" color=gray shape=point]
+		79 -> 80
+	81 [label="*" color=gray shape=point]
+		79 -> 81
+	82 [label=431]
+		78 -> 82
+	83 [label="*" color=gray shape=point]
+		82 -> 83
+	84 [label=475]
+		82 -> 84
+	85 [label=440]
+		84 -> 85
+	86 [label="*" color=gray shape=point]
+		85 -> 86
+	87 [label="*" color=gray shape=point]
+		85 -> 87
+	88 [label=478]
+		84 -> 88
+	89 [label="*" color=gray shape=point]
+		88 -> 89
+	90 [label="*" color=gray shape=point]
+		88 -> 90
+	91 [label=499]
+		77 -> 91
+	92 [label="*" color=gray shape=point]
+		91 -> 92
+	93 [label="*" color=gray shape=point]
+		91 -> 93
+	94 [label=901]
+		0 -> 94
+	95 [label=717]
+		94 -> 95
+	96 [label=583]
+		95 -> 96
+	97 [label=570]
+		96 -> 97
+	98 [label=560]
+		97 -> 98
+	99 [label=533]
+		98 -> 99
+	100 [label=515]
+		99 -> 100
+	101 [label=502]
+		100 -> 101
+	102 [label="*" color=gray shape=point]
+		101 -> 102
+	103 [label=509]
+		101 -> 103
+	104 [label=504]
+		103 -> 104
+	105 [label="*" color=gray shape=point]
+		104 -> 105
+	106 [label="*" color=gray shape=point]
+		104 -> 106
+	107 [label="*" color=gray shape=point]
+		103 -> 107
+	108 [label=532]
+		100 -> 108
+	109 [label=521]
+		108 -> 109
+	110 [label="*" color=gray shape=point]
+		109 -> 110
+	111 [label="*" color=gray shape=point]
+		109 -> 111
+	112 [label="*" color=gray shape=point]
+		108 -> 112
+	113 [label=536]
+		99 -> 113
+	114 [label="*" color=gray shape=point]
+		113 -> 114
+	115 [label=553]
+		113 -> 115
+	116 [label=550]
+		115 -> 116
+	117 [label="*" color=gray shape=point]
+		116 -> 117
+	118 [label="*" color=gray shape=point]
+		116 -> 118
+	119 [label=555]
+		115 -> 119
+	120 [label="*" color=gray shape=point]
+		119 -> 120
+	121 [label=559]
+		119 -> 121
+	122 [label="*" color=gray shape=point]
+		121 -> 122
+	123 [label="*" color=gray shape=point]
+		121 -> 123
+	124 [label=566]
+		98 -> 124
+	125 [label=562]
+		124 -> 125
+	126 [label="*" color=gray shape=point]
+		125 -> 126
+	127 [label=563]
+		125 -> 127
+	128 [label="*" color=gray shape=point]
+		127 -> 128
+	129 [label="*" color=gray shape=point]
+		127 -> 129
+	130 [label="*" color=gray shape=point]
+		124 -> 130
+	131 [label="*" color=gray shape=point]
+		97 -> 131
+	132 [label=656]
+		96 -> 132
+	133 [label=640]
+		132 -> 133
+	134 [label=603]
+		133 -> 134
+	135 [label=590]
+		134 -> 135
+	136 [label="*" color=gray shape=point]
+		135 -> 136
+	137 [label="*" color=gray shape=point]
+		135 -> 137
+	138 [label="*" color=gray shape=point]
+		134 -> 138
+	139 [label=651]
+		133 -> 139
+	140 [label="*" color=gray shape=point]
+		139 -> 140
+	141 [label="*" color=gray shape=point]
+		139 -> 141
+	142 [label=696]
+		132 -> 142
+	143 [label=666]
+		142 -> 143
+	144 [label=659]
+		143 -> 144
+	145 [label="*" color=gray shape=point]
+		144 -> 145
+	146 [label="*" color=gray shape=point]
+		144 -> 146
+	147 [label="*" color=gray shape=point]
+		143 -> 147
+	148 [label="*" color=gray shape=point]
+		142 -> 148
+	149 [label=753]
+		95 -> 149
+	150 [label=751]
+		149 -> 150
+	151 [label=723]
+		150 -> 151
+	152 [label="*" color=gray shape=point]
+		151 -> 152
+	153 [label=747]
+		151 -> 153
+	154 [label="*" color=gray shape=point]
+		153 -> 154
+	155 [label="*" color=gray shape=point]
+		153 -> 155
+	156 [label="*" color=gray shape=point]
+		150 -> 156
+	157 [label=888]
+		149 -> 157
+	158 [label=806]
+		157 -> 158
+	159 [label=797]
+		158 -> 159
+	160 [label=758]
+		159 -> 160
+	161 [label=754]
+		160 -> 161
+	162 [label="*" color=gray shape=point]
+		161 -> 162
+	163 [label="*" color=gray shape=point]
+		161 -> 163
+	164 [label=763]
+		160 -> 164
+	165 [label=759]
+		164 -> 165
+	166 [label="*" color=gray shape=point]
+		165 -> 166
+	167 [label="*" color=gray shape=point]
+		165 -> 167
+	168 [label=791]
+		164 -> 168
+	169 [label=766]
+		168 -> 169
+	170 [label="*" color=gray shape=point]
+		169 -> 170
+	171 [label=780]
+		169 -> 171
+	172 [label="*" color=gray shape=point]
+		171 -> 172
+	173 [label="*" color=gray shape=point]
+		171 -> 173
+	174 [label="*" color=gray shape=point]
+		168 -> 174
+	175 [label=801]
+		159 -> 175
+	176 [label="*" color=gray shape=point]
+		175 -> 176
+	177 [label="*" color=gray shape=point]
+		175 -> 177
+	178 [label=876]
+		158 -> 178
+	179 [label=809]
+		178 -> 179
+	180 [label="*" color=gray shape=point]
+		179 -> 180
+	181 [label=844]
+		179 -> 181
+	182 [label="*" color=gray shape=point]
+		181 -> 182
+	183 [label="*" color=gray shape=point]
+		181 -> 183
+	184 [label="*" color=gray shape=point]
+		178 -> 184
+	185 [label="*" color=gray shape=point]
+		157 -> 185
+	186 [label=940]
+		94 -> 186
+	187 [label=903]
+		186 -> 187
+	188 [label="*" color=gray shape=point]
+		187 -> 188
+	189 [label=933]
+		187 -> 189
+	190 [label="*" color=gray shape=point]
+		189 -> 190
+	191 [label="*" color=gray shape=point]
+		189 -> 191
+	192 [label=958]
+		186 -> 192
+	193 [label=940]
+		192 -> 193
+	194 [label="*" color=gray shape=point]
+		193 -> 194
+	195 [label="*" color=gray shape=point]
+		193 -> 195
+	196 [label=960]
+		192 -> 196
+	197 [label="*" color=gray shape=point]
+		196 -> 197
+	198 [label=984]
+		196 -> 198
+	199 [label=982]
+		198 -> 199
+	200 [label="*" color=gray shape=point]
+		199 -> 200
+	201 [label="*" color=gray shape=point]
+		199 -> 201
+	202 [label="*" color=gray shape=point]
+		198 -> 202
+}

@@ -11,6 +11,7 @@ class Node(object):
         self.left_child = None
         self.right_child = None
         self.parent = None
+        self.node_id = None
 
     def setVal(self, val):
         self.data = val
@@ -31,7 +32,8 @@ class BST(object):
 
     def __init__(self):
         self.root = None
-        self.g1 = gv.Digraph(format='png')
+        
+
 
     def print_tree(self):
         self.__print_tree(self.root)
@@ -40,7 +42,28 @@ class BST(object):
         return self.__find(self.root, key)
 
     def render(self):
-        self.g1.render('g1.png')
+        self.viz = gv.Digraph(format='png')
+        self.node_id = 0
+        self.__build_viz(self.root)
+        self.viz.render('bst.png')
+        print(self.viz.source)
+        
+    def __build_viz(self,root,parent=None):
+        if root == None and parent:
+            self.viz.node(str(self.node_id),'*',shape='point',color='gray')
+            self.viz.edge(str(parent.node_id),str(self.node_id))
+            self.node_id += 1
+        if root == None:
+            return
+        else:
+            if not root.node_id:
+                root.node_id = self.node_id
+                self.node_id += 1
+                self.viz.node(str(root.node_id),str(root.data))
+            if parent:
+                self.viz.edge(str(parent.node_id),str(root.node_id))
+            self.__build_viz(root.left_child,root)
+            self.__build_viz(root.right_child,root)
 
 
     def insert(self, data):
@@ -48,7 +71,6 @@ class BST(object):
         # if no root exists
         if self.root == None:
             self.root = Node(data)
-            self.g1.node(str(data))
         else:
             # otherwise find location to insert
             parent = self.root
@@ -66,15 +88,14 @@ class BST(object):
                     temp = temp.right_child
 
             # Update parent pointer.
-            self.g1.node(str(data))
             if direction == 'left':
                 parent.left_child = Node(data)
                 parent.left_child.parent = parent
-                self.g1.edge(str(parent.left_child.parent.data),str(parent.left_child.data))
+
             else:
                 parent.right_child = Node(data)
                 parent.right_child.parent = parent
-                self.g1.edge(str(parent.right_child.parent.data),str(parent.right_child.data))
+
 
 
     def __find(self, root, key):
@@ -110,28 +131,14 @@ def bin_order(L):
 #random.seed(97697)
 
 tree = BST()
-#L = [int(1000 * random.random()) for i in xrange(100)]
+L = [int(1000 * random.random()) for i in xrange(100)]
 
 #L = sorted(L)
 
-#newL = bin_order(L)
+tree.insert(500)
+for i in L:
+   tree.insert(i)
 
-
-tree.insert(20)
-tree.insert(16)
-tree.insert(16)
-tree.insert(18)
-tree.insert(14)
-tree.insert(16)
-tree.insert(16)
-tree.insert(22)
-tree.insert(24)
-#for i in L:
-#    tree.insert(i)
-#tree.print_tree()
-
-
-#print(tree.find(911))
 tree.render()
 
 
