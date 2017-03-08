@@ -51,7 +51,7 @@ class BST(object):
     def __build_viz(self,root,parent=None):
         if root == None and parent:
             self.viz.node(str(self.node_id),'*',shape='point',color='gray')
-            self.viz.edge(str(parent.node_id),str(self.node_id))
+            self.viz.edge(str(parent.node_id),str(self.node_id),arrowhead='box',arrowsize='.5' )
             self.node_id += 1
         if root == None:
             return
