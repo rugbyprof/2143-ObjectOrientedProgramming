@@ -1,10 +1,10 @@
 # Program 2
-***Due: TBD (To Be Determined)***
+***Due: 28 Mar by Classtime***
 
 ### Overview
 
 - ***Use Python 2 for this assignment.***
-- Given the [grid.py](./grid.py) file in this directory, turn this "module style" collection of functions into a class called ***`Grid`***.
+- Given the [grid.py](./grid.py) file in this directory, turn this "module style" collection of functions into a class called ***Grid***.
 - There are many "global" variables defined in the file, we will discuss the use of globals in this file in class so you can determine which should stay "global" and which should become class members.   
 - Additionally, Their is a  "color_wheel" provided by this module and it has 18 unique colors. We are going to increase this by a lot.
 - HTML has a ton of "named" colors. Here is a file: [colors.json](./colors.json) that has 148 of them. 
