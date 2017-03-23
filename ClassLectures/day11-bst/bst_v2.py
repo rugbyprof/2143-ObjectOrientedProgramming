@@ -5,6 +5,8 @@ import graphviz as gv
 import sys
 import os
 from subprocess import call
+from PIL import Image
+import time
 
 
 class Node(object):
@@ -268,6 +270,7 @@ class DrawTree(BST):
     def __init__(self):
         super(DrawTree, self).__init__()
         self.viz = []
+        self.gif_frames = []
         self.node_id = 0
         self.node_style = {
             'fillcolor': 'lightblue2',
@@ -275,6 +278,7 @@ class DrawTree(BST):
             'shape': 'box',
             'color': 'black'
         }
+        os.system("rm ./images/*.png")
     
     def render(self, name=None,version=None):
 
@@ -283,11 +287,11 @@ class DrawTree(BST):
                 name = name + "_" + str(version)
         else:
             name = 'bst'
+        self.gif_frames.append(name+'.png')
         self.viz.append(gv.Digraph(name=name,format='png'))
         self.reset_nodes(self.root)
         self.__build_viz(self.root)
         self.viz[-1].render(name)
-        print(id(self.viz[-1]))
 
 
 
@@ -303,7 +307,6 @@ class DrawTree(BST):
             if not root.node_id:
                 root.node_id = self.node_id
                 self.node_id += 1
-                print(str(root.node_id), str(root.data))
                 self.viz[-1].node(str(root.node_id), str(root.data), **self.node_style)
             if parent:
                 self.viz[-1].edge(str(parent.node_id), str(root.node_id))
@@ -322,6 +325,36 @@ class DrawTree(BST):
             root.node_id = None
             self.reset_nodes(root.right)
 
+    def create_gif(self):
+        #convert in.png -gravity center -background white -extent 900x1500 out.png
+        #convert -delay 120 -loop 0 *.png animated.gif
+
+        max_width = 0
+        max_height = 0
+        images = []
+        sizes = []
+        print(self.gif_frames)
+        for i in range(len(self.gif_frames)):
+            images.append(Image.open(self.gif_frames[i]))
+            width,height = images[i].size
+            print(width,height)
+            sizes.append([width,height])
+            if width > max_width:
+                max_width = width
+            if height > max_height:
+                max_height = height
+        print(max_width,max_height)
+
+        max_width *= 1.15
+        max_height *= 1.15
+
+        for i in range(len(sizes)):
+            cmd = "convert %s -gravity center -background white -extent %dx%d %s" % (self.gif_frames[i],max_width,max_height,self.gif_frames[i])
+            print(cmd)
+            os.system(cmd)
+        time.sleep(5)
+        os.system("convert -delay 120 -loop 0 ./images/*.png ./images/animated.gif")
+        
 
 if __name__ == '__main__':
 
@@ -360,10 +393,19 @@ if __name__ == '__main__':
     for i in L:
         tree2.insert(i)
     print(tree2.find(18))
-    tree2.render('./images/bst',1)
-    tree2.delete(37)
-    tree2.delete(6)
-    tree2.delete(24)
-    tree2.delete(41)
-    tree2.render('./images/bst',2)
+    i = 1
+    tree2.render('./images/bst',i)
+    delete = [3,5,7,9,13,16,20,24,26,29]
+    for d in delete:
+        i += 1
+        tree2.delete(d)
+        tree2.render('./images/bst',i)
+    tree2.create_gif()
+    # tree2.delete(6)
+    # tree2.render('./images/bst',3)
+    # tree2.delete(24)
+    # tree2.render('./images/bst',4)
+    # tree2.delete(41)
+    # tree2.render('./images/bst',5)
+    # tree2.create_gif()
     #call(["mv", file_name + '.png', file_name])
