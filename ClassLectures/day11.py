@@ -75,6 +75,16 @@ class BST(object):
                 parent.right_child.parent = parent
                 self.g1.edge(str(parent.right_child.parent.data),str(parent.right_child.data))
 
+    def delete(self,key):
+        self.__delete(self.root,key)
+
+    def __delete(self,root,key):
+        node = self.__find(root,key)
+        print(self.__is_leaf(node))	
+        print(node)
+
+    def __is_leaf(self,node):
+        return node.left_child is None and node.right_child is None
 
     def __find(self, root, key):
         while True:
@@ -114,6 +124,6 @@ for i in L:
 
 print(tree.find(911))
 tree.render()
-
+tree.delete(911)
 
 			
