@@ -259,13 +259,6 @@ class BST(object):
             if order=='postorder':
                 print(root.data)
 
-        # self.node_style = {
-        #     'fillcolor': 'lightblue2',
-        #     'style': 'filled',
-        #     'shape': 'box',
-        #     'color': 'black'
-        # }
-
 class DrawTree(BST):
     def __init__(self):
         super(DrawTree, self).__init__()
@@ -374,38 +367,18 @@ if __name__ == '__main__':
 
     print(L)
 
-    #L = sorted(L)
+    version=1
 
+    tree = DrawTree()
     tree.insert(num_nodes // 2)
     for i in L:
         tree.insert(i)
-
-    print(tree.find(37))
-    # tree.delete(37)
-    # tree.delete(6)
-    # tree.delete(24)
-    # tree.delete(41)
-
-    version=1
-
-    tree2 = DrawTree()
-    tree2.insert(num_nodes // 2)
-    for i in L:
-        tree2.insert(i)
-    print(tree2.find(18))
+    print(tree.find(18))
     i = 1
-    tree2.render('./images/bst',i)
+    tree.render('./images/bst',i)
     delete = [3,5,7,9,13,16,20,24,26,29]
     for d in delete:
         i += 1
-        tree2.delete(d)
-        tree2.render('./images/bst',i)
-    tree2.create_gif()
-    # tree2.delete(6)
-    # tree2.render('./images/bst',3)
-    # tree2.delete(24)
-    # tree2.render('./images/bst',4)
-    # tree2.delete(41)
-    # tree2.render('./images/bst',5)
-    # tree2.create_gif()
-    #call(["mv", file_name + '.png', file_name])
+        tree.delete(d)
+        tree.render('./images/bst',i)
+    tree.create_gif()

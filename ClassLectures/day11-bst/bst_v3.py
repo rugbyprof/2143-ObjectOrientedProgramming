@@ -1,10 +1,12 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 import random
-from pygraphviz import *
+import graphviz as gv
 import sys
 import os
 from subprocess import call
+from PIL import Image
+import time
 
 
 class Node(object):
@@ -267,12 +269,16 @@ class BST(object):
 class DrawTree(BST):
     def __init__(self):
         super(DrawTree, self).__init__()
+        self.viz = []
+        self.gif_frames = []
+        self.node_id = 0
         self.node_style = {
             'fillcolor': 'lightblue2',
             'style': 'filled',
             'shape': 'box',
             'color': 'black'
         }
+        os.system("rm ./images/*.png")
     
     def render(self, name=None,version=None):
 
@@ -281,18 +287,19 @@ class DrawTree(BST):
                 name = name + "_" + str(version)
         else:
             name = 'bst'
-        self.node_id = 1
-        self.G=AGraph()
+        self.gif_frames.append(name+'.png')
+        self.viz.append(gv.Digraph(name=name,format='png'))
+        self.reset_nodes(self.root)
         self.__build_viz(self.root)
-        self.G.draw('file.png') 
+        self.viz[-1].render(name)
 
-    def style_node(self,key):
-        print(dir(self))
-        node = super(DrawTree, self)._BST__find(self.root,key)
+
 
     def __build_viz(self, root, parent=None):
         if root == None and parent:
-            self.G.add_node(str(self.node_id), '*', shape='point', color='gray')
+            self.viz[-1].node(str(self.node_id), '*', shape='point', color='gray')
+            self.viz[-1].edge(str(parent.node_id), str(self.node_id),
+                          arrowhead='box', arrowsize='.5')
             self.node_id += 1
         if root == None:
             return
@@ -300,33 +307,64 @@ class DrawTree(BST):
             if not root.node_id:
                 root.node_id = self.node_id
                 self.node_id += 1
-                self.G.add_node(str(root.data), self.node_style)
+                if not hasattr(root, 'node_style'):
+                    root.node_style = self.node_style
+                self.viz[-1].node(str(root.node_id), str(root.data), **root.node_style)
             if parent:
-                self.G.add_edge(str(parent.data), str(root.data))
+                self.viz[-1].edge(str(parent.node_id), str(root.node_id))
             self.__build_viz(root.left, root)
             self.__build_viz(root.right, root)
 
-    # def __build_viz(self, root, parent=None):
-    #     if root == None and parent:
-    #         self.viz.node(str(self.node_id), '*', shape='point', color='gray')
-    #         self.viz.edge(str(parent.node_id), str(self.node_id),
-    #                       arrowhead='box', arrowsize='.5')
-    #         self.node_id += 1
-    #     if root == None:
-    #         return
-    #     else:
-    #         if not root.node_id:
-    #             root.node_id = self.node_id
-    #             self.node_id += 1
-    #             self.viz.node(str(root.node_id), str(
-    #                 root.data), **self.node_style)
-    #         if parent:
-    #             self.viz.edge(str(parent.node_id), str(root.node_id))
-    #         self.__build_viz(root.left, root)
-    #         self.__build_viz(root.right, root)
+    def style_node(self,key):
+        node = super(DrawTree, self)._BST__find(self.root,key)
+        print(node)
+        node.node_style = {
+            'fillcolor': 'lightblue2',
+            'style': 'filled',
+            'shape': 'box',
+            'color': 'black'
+        }
+        node.node_style['fillcolor'] = 'red'
 
+    def reset_nodes(self, root):
+        if root == None:
+            return
+        else:
+            self.reset_nodes(root.left)
+            root.node_id = None
+            self.reset_nodes(root.right)
+
+    def create_gif(self):
+        #convert in.png -gravity center -background white -extent 900x1500 out.png
+        #convert -delay 120 -loop 0 *.png animated.gif
+
+        max_width = 0
+        max_height = 0
+        images = []
+        sizes = []
+        print(self.gif_frames)
+        for i in range(len(self.gif_frames)):
+            images.append(Image.open(self.gif_frames[i]))
+            width,height = images[i].size
+            print(width,height)
+            sizes.append([width,height])
+            if width > max_width:
+                max_width = width
+            if height > max_height:
+                max_height = height
+        print(max_width,max_height)
+
+        max_width *= 1.15
+        max_height *= 1.15
+
+        for i in range(len(sizes)):
+            cmd = "convert %s -gravity center -background white -extent %dx%d %s" % (self.gif_frames[i],max_width,max_height,self.gif_frames[i])
+            print(cmd)
+            os.system(cmd)
+        os.system("convert -delay 120 -loop 0 ./images/*.png ./images/animated.gif")
 
 if __name__ == '__main__':
+    # http://cs.mwsu.edu/~griffin/2143-ObjectOrientedProgramming/ClassLectures/day11-bst/
 
     if len(sys.argv) > 1:
         file_name = sys.argv[1]
@@ -336,8 +374,9 @@ if __name__ == '__main__':
     random.seed(97697)
 
     tree = BST()
-    num_nodes = 50
+    num_nodes = 127
     L = [i for i in xrange(num_nodes)]
+
 
     random.shuffle(L)
     random.shuffle(L)
@@ -362,11 +401,21 @@ if __name__ == '__main__':
     tree2.insert(num_nodes // 2)
     for i in L:
         tree2.insert(i)
-    print(tree2.find(18))
-    tree2.render('./images/bst',1)
-    tree2.delete(37)
-    tree2.delete(6)
-    tree2.delete(24)
-    tree2.delete(41)
-    tree2.render('./images/bst',2)
+    #print(tree2.find(18))
+    print(tree2.style_node(18))
+    i = 1
+    tree2.render('./images/bst',i)
+    # delete = [3,5,7,9,13,16,20,24,26,29]
+    # for d in delete:
+    #     i += 1
+    #     tree2.delete(d)
+    #     tree2.render('./images/bst',i)
+    #tree2.create_gif()
+    # tree2.delete(6)
+    # tree2.render('./images/bst',3)
+    # tree2.delete(24)
+    # tree2.render('./images/bst',4)
+    # tree2.delete(41)
+    # tree2.render('./images/bst',5)
+    # tree2.create_gif()
     #call(["mv", file_name + '.png', file_name])
