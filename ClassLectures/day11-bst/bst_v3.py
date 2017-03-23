@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 import random
-import graphviz as gv
+from pygraphviz import *
 import sys
 import os
 from subprocess import call
@@ -267,8 +267,6 @@ class BST(object):
 class DrawTree(BST):
     def __init__(self):
         super(DrawTree, self).__init__()
-        self.viz = []
-        self.node_id = 0
         self.node_style = {
             'fillcolor': 'lightblue2',
             'style': 'filled',
@@ -283,19 +281,18 @@ class DrawTree(BST):
                 name = name + "_" + str(version)
         else:
             name = 'bst'
-        self.viz.append(gv.Digraph(name=name,format='png'))
-        self.reset_nodes(self.root)
+        self.node_id = 1
+        self.G=AGraph()
         self.__build_viz(self.root)
-        self.viz[-1].render(name)
-        print(id(self.viz[-1]))
+        self.G.draw('file.png') 
 
-
+    def style_node(self,key):
+        print(dir(self))
+        node = super(DrawTree, self)._BST__find(self.root,key)
 
     def __build_viz(self, root, parent=None):
         if root == None and parent:
-            self.viz[-1].node(str(self.node_id), '*', shape='point', color='gray')
-            self.viz[-1].edge(str(parent.node_id), str(self.node_id),
-                          arrowhead='box', arrowsize='.5')
+            self.G.add_node(str(self.node_id), '*', shape='point', color='gray')
             self.node_id += 1
         if root == None:
             return
@@ -303,24 +300,30 @@ class DrawTree(BST):
             if not root.node_id:
                 root.node_id = self.node_id
                 self.node_id += 1
-                print(str(root.node_id), str(root.data))
-                self.viz[-1].node(str(root.node_id), str(root.data), **self.node_style)
+                self.G.add_node(str(root.data), self.node_style)
             if parent:
-                self.viz[-1].edge(str(parent.node_id), str(root.node_id))
+                self.G.add_edge(str(parent.data), str(root.data))
             self.__build_viz(root.left, root)
             self.__build_viz(root.right, root)
 
-    def style_node(self,key):
-        print(dir(self))
-        node = super(DrawTree, self)._BST__find(self.root,key)
-
-    def reset_nodes(self, root):
-        if root == None:
-            return
-        else:
-            self.reset_nodes(root.left)
-            root.node_id = None
-            self.reset_nodes(root.right)
+    # def __build_viz(self, root, parent=None):
+    #     if root == None and parent:
+    #         self.viz.node(str(self.node_id), '*', shape='point', color='gray')
+    #         self.viz.edge(str(parent.node_id), str(self.node_id),
+    #                       arrowhead='box', arrowsize='.5')
+    #         self.node_id += 1
+    #     if root == None:
+    #         return
+    #     else:
+    #         if not root.node_id:
+    #             root.node_id = self.node_id
+    #             self.node_id += 1
+    #             self.viz.node(str(root.node_id), str(
+    #                 root.data), **self.node_style)
+    #         if parent:
+    #             self.viz.edge(str(parent.node_id), str(root.node_id))
+    #         self.__build_viz(root.left, root)
+    #         self.__build_viz(root.right, root)
 
 
 if __name__ == '__main__':
