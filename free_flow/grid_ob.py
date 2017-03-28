@@ -45,6 +45,8 @@ class Grid(object):
 
         self.nrows = 1
 
+
+
     def make(self, rows, cols, width, height ) :
         """Create the grid display, initially all white.
         rows, cols are the grid size in rows and columns.
@@ -64,6 +66,8 @@ class Grid(object):
         self.cell_width = width / cols
         self.cell_height = height / rows
         self.nrows = rows 
+
+        print(dir(self.win))
 
     def get_cur_color(self):
         """Return the currently chosen color in the color wheel.  
@@ -130,10 +134,6 @@ class Grid(object):
         mark.setFill(color)
         mark.draw(self.win)
 
-    def draw_cell(self,color,bottom=0,top=0,left=0,right=0):
-        rect = Rectangle( Point(100,100), Point(400,400) )
-        rect.setFill( color_rgb(255,255,255) ) # White background
-        rect.draw(self.win)
         
     def label_cell(self,row, col, text, color=''):
         """Place text label on cell[row,col].
@@ -220,44 +220,19 @@ if __name__ == "__main__":
 
     G = Grid()
     G.load_colors('colors.json')
-    rows = int(sqrt(num_colors))
-    cols = int(sqrt(num_colors))
+    rows = int(sqrt(float(num_colors)))
+    cols = int(sqrt(float(num_colors)))
     # print("Testing grid: 3x3 with 3x3 subgrid")
     G.make(rows,cols,500,500)
-    G.sub_grid_dim(rows,cols)
+    # G.sub_grid_dim(rows,cols)
     for row in range(rows):
         for col in range(cols):
-            color = G.get_next_color()
-            G.fill_cell(row, col, color)
-            for i in range(rows):
-                for j in range(cols):
-                    G.sub_label_cell(row, col, i, j, str(i)+str(j))
+            #color = G.get_next_color()
+            G.fill_cell(row, col, color_rgb(255,255,255))
 
+    c = Circle(Point(rows//2,rows//2), .5)
+    #c.setFill(color_rgb(255,0,0))
+    c.draw(G.win)
 
-    G.draw_cell(color,100,100,100,100)
-
-    null = input("Press enter to exit ")
+    null = raw_input("Press enter to exit ")
     G.close()
-    
-   
-    # G = Grid()
-    # rows = 7
-    # cols = 7
-    # print("Testing grid: 3x3 with 3x3 subgrid")
-    # G.make(rows,cols,500,500)
-    # G.sub_grid_dim(3,3)
-    # for row in range(rows):
-    #     for col in range(cols):
-    #         G.fill_cell(row, col, white)
-    # G.label_cell(0,0,"00")
-    # G.label_cell(1,1,"11")
-    # G.label_cell(2,2,"22")
-    # for i in range(3):
-    #     for j in range(3):
-    #          G.sub_label_cell(0, 2, i, j, str(i)+str(j))
-
-
-
-    # input("Press enter to exit")
-    # G.close()
-    

@@ -1,0 +1,48 @@
+
+class Cell(object):
+    def __init__(self,row=None,col=None,color=None):
+        self.occupied = False
+        self.color = color
+        self.location = [row,col]
+
+    def __str__(self):
+        return "[%s %s %s]" % (self.occupied,self.color,self.location)
+
+
+class Grid(object):
+    def __init__(self,data=None):
+        data = data.strip()
+        self.board = []
+        row = 0
+        for line in data.splitlines():
+            self.board.append([])
+            line = line.split()
+            col = 0
+            for val in line:
+                self.board[-1].append(Cell(row,col,val))
+
+    def __str__(self):
+        string = ""
+        for row in self.board:
+            for cell in row:
+                string += cell.__str__() + ' '
+            string += "\n"
+        return string
+ 
+class FlowGame(object):
+    pass
+
+
+if __name__=='__main__':
+    
+    
+    data ='''
+    Y 0 0 0 0
+    0 0 0 0 0
+    0 0 G 0 0
+    B G R 0 Y
+    R 0 0 0 B
+    '''
+
+    G = Grid(data)
+    print(G)
