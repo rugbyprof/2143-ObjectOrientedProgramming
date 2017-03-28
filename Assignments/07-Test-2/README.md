@@ -5,9 +5,12 @@ Test 2 Study Guide
 ### Candy Class
 
 Create a set of classes that represent the following:
+
 - A bag/box of candy
 - A case of the above
 - Inventory of our candy
+
+Determine whether to use inheritence or composition as the relationship between classes.
 
 ***Candy Class*** 
 - Attributes
