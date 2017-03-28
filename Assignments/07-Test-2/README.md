@@ -46,6 +46,13 @@ Determine whether to use inheritence or composition as the relationship between 
             - sells (subtracts) a amount of items from inventory.
             - returns cost of selling that many item(s).
         
-## Two
+## Q3
 
-More to come
+Create a `point class`, `line class`, and a `rectangle class`. 
+
+- A point is a tuple of two integers: `(3,6)`
+    - Add a move point method that receives: *dx*,*dy* which are the amounts of change to apply to the point. Example: *(-2,2)* would turn the point *(3,6)* into *(1,8)*.
+- A line consists of two points: `(3,6),(7,8)`
+    - Add a length method that returns the length of a line.
+- A rectangle consists of two points as well, the upper right, and the lower left.
+    - Add an area and perimeter method 
