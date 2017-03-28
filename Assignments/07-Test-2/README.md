@@ -16,7 +16,7 @@ Create a set of classes that represent the following:
 - A case of the above
 - Inventory of our candy
 
-Determine whether to use inheritence or composition as the relationship between classes.
+Determine whether to use inheritence or composition as the relationship between classes. Use the information given below to guide your class creation:
 
 - ***Candy Class*** 
     - Attributes
