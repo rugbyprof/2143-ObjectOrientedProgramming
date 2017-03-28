@@ -1,7 +1,12 @@
 Test 2 Study Guide
 ==================
 
-## One
+## Q1
+
+Read the following: [Inheritance](https://github.com/rugbyprof/2143-ObjectOrientedProgramming/blob/master/ztrunk/fall.16/inheritence_explanation.md)
+
+## Q2
+
 ### Candy Class
 
 Create a set of classes that represent the following:
