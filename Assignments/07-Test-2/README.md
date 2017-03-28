@@ -32,10 +32,10 @@ Create a set of classes that represent the following:
 - Attributes
     - uses a dictionary to track items or cases of items
 - Methods:
-    - AddItem(int key,string name,float price,int amount)
+    - `AddItem(int key,string name,float price,int amount)`
         - adds an item(s) to your inventory
         - returns None
-    - SellItem(int key,int amount)
+    - `SellItem(int key,int amount)`
         - sells (subtracts) a amount of items from inventory.
         - returns cost of selling that many item(s).
         
