@@ -1,6 +1,6 @@
 # Study Guide
 
-##Q:
+## Q:
 
 ### Color Class
 
@@ -28,7 +28,7 @@ print(c1)
 
 ----
 
-##Q:
+## Q:
 
 Overload the addition operator so that we can add two colors. Adding colors is a pretty wierd experience, so we will create our own addition method. Basically we will average each color. 
 
@@ -46,7 +46,7 @@ print(c3)
 
 ----
 
-##Q:
+## Q:
 
 ### Grayscale Class
 
