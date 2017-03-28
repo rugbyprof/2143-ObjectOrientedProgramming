@@ -11,7 +11,6 @@ Colors = {
 }
 
 
-
 def Force(m1=1,m2=1,d=1):
     G = 6.67 * pow(10,-11)
     F = (G*m1*m2) / (d * d)
@@ -55,14 +54,6 @@ class FlowGame(object):
 if __name__=='__main__':
     
     data ='''
-    Y 0 0 0 0
-    0 0 0 0 0
-    0 0 G 0 0
-    B G R 0 Y
-    R 0 0 0 B
-    '''
-
-    data ='''
     0 O B 0 0 G
     0 0 0 0 0 0
     0 0 Y R 0 0
@@ -71,6 +62,15 @@ if __name__=='__main__':
     0 0 0 0 0 0
     '''
 
+    data ='''
+    0 0 0 0 0 0 0
+    B Y 0 0 0 L G
+    O B 0 0 0 0 R
+    0 0 Y 0 0 0 0
+    0 0 0 0 0 L 0
+    0 0 0 O 0 G 0
+    R 0 0 0 0 0 0
+    '''
 
 
     G = Grid(data)
