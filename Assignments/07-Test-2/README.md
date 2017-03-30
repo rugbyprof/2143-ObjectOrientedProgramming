@@ -116,3 +116,19 @@ def pigify(w):
  
  
  ```
+
+## Q6
+
+```
+def replace(thelist,a,b):
+ """Returns: A COPY of thelist with all occurrences of a replaced by b.
+ Example: replace([1,2,3,1], 1, 4) = [4,2,3,4].
+
+ Precondition: thelist is a list of ints; a and b are ints
+ returns a [] 
+ """
+ 
+ 
+ 
+ 
+ ```
