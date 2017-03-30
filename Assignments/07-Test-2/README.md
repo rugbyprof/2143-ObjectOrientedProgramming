@@ -10,6 +10,50 @@ Also, go look at this: https://inst.eecs.berkeley.edu/~cs61a/fa14/lab/lab06/
 
 ## Q2
 
+- ***class:***
+    - A user-defined type. A class definition creates a new class object.
+- ***class object:***
+    - An object that contains information about a user-defined type. The class object can be used to create instances of the type.
+- ***instance:***
+    - An object that belongs to a class.
+- ***attribute:***
+    - One of the named values associated with an object. Also referred to as instance variables.
+- ***method:***
+    - A function that is defined inside a class definition and is invoked on instances of that class.
+- ***object diagram:***
+    - A diagram that shows objects, their attributes, and the values of the attributes.
+- ***subject:***
+    - The object a method is invoked on.
+- ***constructor:***
+    - A special method always named __init__ that handles initializing the values of attributes in an object, and any other setup required when a new instance is created.
+- ***magic methods:***
+    - Method names that begin and end with __; they are implicitly and automatically invoked by the Python interpreter.
+- ***object-oriented language:***
+    - A language that provides features, such as user-defined classes and method syntax, that facilitate object-oriented programming.
+- ***object-oriented programming:***
+    - A style of programming in which data and the operations that manipulate it are organized into classes and methods. Also referred to as OOP.
+- ***embedded (object):***
+    - An object that is stored as an attribute of another object.
+- ***HAS-A relationship:***
+    - The relationship between two classes where instances of one class contain references to instances of the other.
+- ***IS-A relationship:***
+    - The relationship between a child class and its parent class.
+- ***inheritance:***
+    - The ability to define a new class that is a modified version of a previously defined class.
+- ***parent class:***
+    - The class from which a child class inherits.
+- ***child class:***
+    - A new class created by inheriting from an existing class; also called a “subclass.”
+- ***shallow copy:***
+    - To copy the contents of an object, including any references to embedded objects; implemented by the copy function in the copy module.
+- ***deep copy:***
+    - To copy the contents of an object as well as any embedded objects, and any objects embedded in them, and so on; implemented by the deepcopy function in the copy module.
+- ***class attribute:***
+    - An attribute associated with a class object. Class attributes are defined inside a class definition but outside any method.
+
+
+## Q3
+
 ### Candy Class
 
 Create a set of classes that represent the following:
@@ -48,7 +92,7 @@ Determine whether to use inheritence or composition as the relationship between 
             - sells (subtracts) a amount of items from inventory.
             - returns cost of selling that many item(s).
         
-## Q3
+## Q4
 
 Create a `point class`, `line class`, and a `rectangle class`. 
 
@@ -59,7 +103,7 @@ Create a `point class`, `line class`, and a `rectangle class`.
 - A rectangle consists of two points as well, the upper right, and the lower left.
     - Add an area and perimeter method 
 
-## Q4
+## Q5
 
 Given an email class to represent an email: 
 ```python
@@ -103,7 +147,7 @@ list2 = Logger.get_received_by("sue@gmail.com")
 
 Your answer should be a complete class that would fulfill the usage example above.
 
-## Q5
+## Q6
 
 ```python
 def pigify(w):
@@ -119,7 +163,7 @@ def pigify(w):
  
  ```
 
-## Q6
+## Q7
 
 ```
 def replace(thelist,a,b):
