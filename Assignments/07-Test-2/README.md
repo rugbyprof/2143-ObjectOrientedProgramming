@@ -100,3 +100,19 @@ list2 = Logger.get_received_by("sue@gmail.com")
 ```
 
 Your answer should be a complete class that would fulfill the usage example above.
+
+## Q5
+
+```python
+def pigify(w):
+ """Returns: copy of w converted to Pig Latin 'y' is a vowel if it is not the first letter 
+ If word begins with a vowel, append 'hay'
+ If word starts with 'q', assume followed by 'u'; move 'qu' to the end, and append 'ay'
+ If word begins with a consonant, move all consonants up to first vowel to end and add 'ay'
+ Precondition: w contains only (lowercase) letters"""
+ 
+ 
+ 
+ 
+ 
+ ```
