@@ -56,3 +56,47 @@ Create a `point class`, `line class`, and a `rectangle class`.
     - Add a length method that returns the length of a line.
 - A rectangle consists of two points as well, the upper right, and the lower left.
     - Add an area and perimeter method 
+
+## Q4
+
+Given an email class to represent an email: 
+```python
+class Email(object):
+	def __init__(self, msg, subj, sender, receiver):
+		self.message = msg
+		self.subject = subj
+		self.sender = sender 	#email address
+		self.receiver = receiver #email address
+```
+
+- Write a class called "EmailLogger" that will keep track of all emails sent and received by each user. 
+- Do you need to extend the Email class? Or use composition.
+- Create 2 containers: `emails_sent` and `emails_received` that would let you obtain a list of emails when you pass in an email address.
+- The method `get_sent_by` would receive an email address as input and return a list of emails sent by that user.
+- The method `get_received_by` would receive an email address as input and return a list of emails received by that user. 
+
+Usage:
+```
+Logger = EmailLogger()
+
+Email1 = Email("fake message 1","fake subject 1","joe@yahoo.com","sue@gmail.com")
+Logger.add(Email1)
+
+Email2 = Email("fake message 2","fake subject 2","bill@yahoo.com","sue@gmail.com")
+Logger.add(Email2)
+
+Email3 = Email("fake message 3","fake subject 3","bill@yahoo.com","joe@yahoo.com")
+Logger.add(Email3)
+
+Email4 = Email("fake message 4","fake subject 4","jon@hotmail.com","sue@gmail.com")
+Logger.add(Email4)
+
+
+list1 = Logger.get_sent_by("bill@yahoo.com")
+# list1 = [Email2,Email3]
+
+list2 = Logger.get_received_by("sue@gmail.com")
+# list2 = [Email1,Email2,Email4]
+```
+
+Your answer should be a complete class that would fulfill the usage example above.
