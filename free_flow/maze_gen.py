@@ -20,17 +20,21 @@ def clear_screen():
     # Action
     system_call(command)
 
+def terminal_size():
+    return (os.popen('stty size', 'r').read().split())
+
 class Cell(object):
-    def __init__(self,x=None,y=None):
-        self.x = x
-        self.y = y
+    def __init__(self,row=None,col=None):
+        self.row = row
+        self.col = col
         self.visited = False
         self.top = NSBARRIER
         self.left = EWBARRIER
         self.path = False 
 
     def __str__(self):
-        return "[ coord:[%d,%d], vis: %s, top: %s, left:%s ]" % (self.x,self.y,self.visited,self.top,self.left)
+        return "[ [row:%d, col:%d], vis: %s, top: %s, left:%s ]" % (self.row,self.col,self.visited,self.top,self.left)
+        
 
 class Maze(object):
     def __init__(self,w=32,h=16):
@@ -38,18 +42,23 @@ class Maze(object):
         self.height = h
         self.maze = []
         self.move_stack = []
-        self.start = (0,0)
-        self.exit = (self.height-1,self.width-1)
+
+        
+        self.log = open('log.txt','w')
+        self.log.close()
 
         self.__init_maze()
-        self.__walk(randrange(self.width), randrange(self.height))
+        #self.__walk(randrange(self.height), randrange(self.width))
         self.__reset_maze()
+
+        self.start = self.maze[0][0]
+        self.exit = self.maze[self.height-1][self.width-1]
 
 
     def traverse_maze(self):
-        self.maze[self.start[0]][self.start[1]].visited = True
-        self.maze[self.start[0]][self.start[1]].path = True
-        self.move_stack.append(self.maze[self.start[0]][self.start[1]])
+        self.start.visited = True
+        self.start.path = True
+        self.move_stack.append(self.start)
 
         self.__traverse_maze()
 
@@ -57,84 +66,111 @@ class Maze(object):
         clear_screen()
         print(self.__str__())
         if len(self.move_stack) == 0:
-            return
+            return False
+        
+
         current = self.move_stack.pop()
+
         current.visited = True
         current.path = True
-        #print(current)
-        ch = raw_input()
 
-        d = self.__possible_moves(current.x,current.y)
+        if current == self.exit:
+            return True
+            
+        d = self.__possible_moves(current.row,current.col)
         shuffle(d)
 
-        while len(d) == 0:
-            current.path = False
-            current = self.move_stack.pop()
-            d = self.__possible_moves(current.x,current.y)
-            shuffle(d)
+        self.__log(d)
 
-        x = d[0][0]
-        y = d[0][1]
-        self.move_stack.append(self.maze[y][x])
+        ch = raw_input()
+
+        if len(d) == 0:
+            current.path = False
+            self.move_stack.pop()
+            print("popping")
+        else:
+            self.move_stack.append(d.pop())
+            print("adding")
+
         self.__traverse_maze()
 
-    def __possible_moves(self,x,y):
+    def __log(self,m):
+        self.log = open('log.txt','a')
+        if type(m) is list:
+            for i in m:
+                i = i.__str__()
+                self.log.write(i+'\n')
+            self.log.write('\n')
+        else:
+            self.log.write(m+'\n')
+            self.log.write('\n')
+        self.log.close()
+
+    def possible_moves(self,row,col):
+        self.__log( self.__possible_moves(row,col))
+        return self.__possible_moves(row,col)
+
+    def __possible_moves(self,row,col):
         possible = []
-        if self.__in_bounds(x - 1,y):
-            if not self.maze[y][x].left == EWBARRIER and not self.maze[y][x-1].visited:
-                possible.append((x - 1,y))
-        if self.__in_bounds(x, y + 1):
-            if not self.maze[y+1][x].top == NSBARRIER and not self.maze[y+1][x].visited:
-                possible.append((x,y+1))
-        if self.__in_bounds(x + 1, y):
-            if not self.maze[y][x+1].left == EWBARRIER and not self.maze[y][x+1].visited:
-                possible.append((x+1,y))
-        if self.__in_bounds(x, y - 1):
-            if not self.maze[y][x].top == NSBARRIER and not self.maze[y-1][x].visited:
-                possible.append((x,y-1))
+        if self.__in_bounds(row - 1,col):
+            if not self.maze[row][col].left == EWBARRIER and not self.maze[row][col-1].visited:
+                self.__log("%s"%('Left'))
+                possible.append(self.maze[row][col-1])
+        if self.__in_bounds(row, col + 1):
+            if not self.maze[row+1][col].top == NSBARRIER and not self.maze[row+1][col].visited:
+                self.__log("%s"%('Down'))
+                possible.append(self.maze[row+1][col])
+        if self.__in_bounds(row + 1, col):
+            if not self.maze[row][col+1].left == EWBARRIER and not self.maze[row][col+1].visited:
+                self.__log("%s"%('Right'))
+                possible.append(self.maze[row][col+1])
+        if self.__in_bounds(row, col - 1):
+            if not self.maze[row][col].top == NSBARRIER and not self.maze[row-1][col].visited:
+                self.__log("%s"%('Up'))
+                possible.append(self.maze[row-1][col])
         return possible
 
         
     def __reset_maze(self):
         """Mark each cell in maze as not visited.
         """
-        for y in range(self.height):
-            for x in range(self.width):
-                self.maze[y][x].visited = False
+        for row in range(self.height):
+            for col in range(self.width):
+                self.maze[row][col].visited = False
 
     def __init_maze(self):
         """Create a new cell for each maze location
         """
-        for y in range(self.height):
+        for row in range(self.height):
             self.maze.append([])
-            for x in range(self.width):
-                self.maze[-1].append(Cell(y,x))
+            for col in range(self.width):
+                self.maze[-1].append(Cell(row,col))
 
-    def __walk(self,x, y):
+    def __walk(self,row,col):
         """Walk the maze randomly and knock down walls to create maze.
         """
-        self.maze[y][x].visited = True
+        self.maze[row][col].visited = True
 
-        d = [(x - 1, y), (x, y + 1), (x + 1, y), (x, y - 1)]
+        d = [(row - 1, col), (row, col + 1), (row + 1, col), (row, col - 1)]
         shuffle(d)
-        for (xx, yy) in d:
-            if not self.__in_bounds(xx,yy):
+        for (rr, cc) in d:
+            if not self.__in_bounds(rr,cc):
                 continue
-            if self.maze[yy][xx].visited:
+            if self.maze[rr][cc].visited:
                 continue
             else:
-                if xx == x:
-                    if self.__in_bounds(x,max(y, yy)):
-                        self.maze[max(y, yy)][x].top = NSOPEN
-                if yy == y: 
-                    if self.__in_bounds(max(x, xx),y):
-                        self.maze[y][max(x, xx)].left = EWOPEN                
-            self.__walk(xx, yy)
+                if rr == row:
+                    if self.__in_bounds(row,max(col, cc)) and row > 0:
+                        self.maze[max(row, rr)][col].top = NSOPEN
+                if cc == col: 
+                    if self.__in_bounds(max(row, rr),col) and col>0:
+                        self.maze[row][max(col, cc)].left = EWOPEN                
+            self.__walk(rr, cc)
 
-    def __in_bounds(self,x,y):
+    def __in_bounds(self,row,col):
         """Test to see if coords are on the maze.
         """
-        return (x < self.width and y < self.height) and (x >= 0 and y >= 0)
+        return (row < self.height and col < self.width) and (row >= 0 and col >= 0)
     
     def __str__(self):
         strmz = ""
@@ -158,7 +194,7 @@ class Maze(object):
         return strmz
 
     def __is_exit(self,cell):
-        return cell.row == self.exit[0] and cell.col == self.exit[1]
+        return cell.row == self.exit.row and cell.col == self.exit.col
 
 
 
@@ -168,6 +204,8 @@ def print_usage():
 def run_test():
     if len(sys.argv) != 3:
         print_usage()
+        h,w = terminal_size()
+        print(h,w)
         sys.exit()
     else:
         w = sys.argv[1]
@@ -177,10 +215,11 @@ def run_test():
     # M.maze[1][0].visited = True
     # M.maze[1][0].path = True
     print(M)
-    M.traverse_maze()
+    print(M.possible_moves(4,0))
+    #M.traverse_maze()
 
 if __name__ == '__main__':
-    #seed(2234)
+    seed(2234)
     clear_screen()
     run_test()
 
