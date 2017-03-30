@@ -32,7 +32,7 @@ Also, go look at this: https://inst.eecs.berkeley.edu/~cs61a/fa14/lab/lab06/
     - A language that provides features, such as user-defined classes and method syntax, that facilitate object-oriented programming.
 - ***object-oriented programming:***
     - A style of programming in which data and the operations that manipulate it are organized into classes and methods. Also referred to as OOP.
-- ***embedded (object):***
+- ***embedded (object) (aka composition):***
     - An object that is stored as an attribute of another object.
 - ***HAS-A relationship:***
     - The relationship between two classes where instances of one class contain references to instances of the other.
