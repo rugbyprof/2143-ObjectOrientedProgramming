@@ -148,14 +148,17 @@ list2 = Logger.get_received_by("sue@gmail.com")
 Your answer should be a complete class that would fulfill the usage example above.
 
 ## Q6
+Write a function called `pigify` that turns a string of words into piglatin.
+- 'y' is a vowel if it is not the first letter of a word 
+- If word begins with a vowel, append 'hay'
+- If word starts with 'q', assume followed by 'u'; move 'qu' to the end, and append 'ay'
+- If word begins with a consonant, move all consonants up to first vowel to end and add 'ay'
+- Precondition: input contains only (lowercase) letters
 
 ```python
 def pigify(w):
- """Returns: copy of w converted to Pig Latin 'y' is a vowel if it is not the first letter 
- If word begins with a vowel, append 'hay'
- If word starts with 'q', assume followed by 'u'; move 'qu' to the end, and append 'ay'
- If word begins with a consonant, move all consonants up to first vowel to end and add 'ay'
- Precondition: w contains only (lowercase) letters"""
+""" Returns: copy of w converted to Pig Latin
+"""
  
  
  
@@ -164,14 +167,15 @@ def pigify(w):
  ```
 
 ## Q7
+Write a function that receives a list of integers along with an `A` and a `B`. Replace all the `A's` in the list with whatever value `B` is.
+
+- Example: replace([1,2,3,1], 1, 4) = [4,2,3,4].
+- Precondition: All values in the list, and A,B will be integers.
 
 ```
 def replace(thelist,a,b):
  """Returns: A COPY of thelist with all occurrences of a replaced by b.
- Example: replace([1,2,3,1], 1, 4) = [4,2,3,4].
 
- Precondition: thelist is a list of ints; a and b are ints
- returns a [] 
  """
  
  
