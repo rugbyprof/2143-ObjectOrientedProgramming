@@ -172,10 +172,9 @@ Write a function that receives a list of integers along with an `A` and a `B`. R
 - Example: replace([1,2,3,1], 1, 4) = [4,2,3,4].
 - Precondition: All values in the list, and A,B will be integers.
 
-```
+```python
 def replace(thelist,a,b):
  """Returns: A COPY of thelist with all occurrences of a replaced by b.
-
  """
  
  
