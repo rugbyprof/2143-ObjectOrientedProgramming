@@ -27,8 +27,10 @@ class Cell(object):
     def __init__(self,x=None,y=None):
         self.x = x
         self.y = y
+        self.type = 
         self.visited = False
-        self.path = False 
+        self.path = False
+
 
     def __str__(self):
         return "[ coord:[%d,%d], vis: %s, top: %s, left:%s ]" % (self.x,self.y,self.visited,self.top,self.left)
@@ -42,9 +44,7 @@ class Maze(object):
         self.start = (0,0)
         self.exit = (self.height-1,self.width-1)
 
-
-
-        # self.__init_maze()
+        self.__init_maze()
         # self.__walk(randrange(self.width), randrange(self.height))
         # self.__reset_maze()
 
@@ -55,6 +55,25 @@ class Maze(object):
             self.maze.append([])
             for x in range(self.width):
                 self.maze[-1].append(Cell(y,x))
+
+    def __str__(self):
+        strmz = ""
+        pmaze = []
+        for row in self.maze:
+            for cell in row:
+                top.append(cell.top)
+                marker = cell.left
+                if cell.path:
+                    marker = marker[0] + '# '
+                left.append(marker)                
+            pmaze.append(top)
+            pmaze.append(left)
+        for row in pmaze:
+            strmz += ''.join(map(str, row)) + '|'
+            strmz += '\n'
+        strmz += NSBARRIER * self.width + '+'
+
+        return strmz
 
 def print_usage():
     print("Usage: Need a width and height.\ne.g. python maze_gen.py 24 24")
