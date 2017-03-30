@@ -5,6 +5,8 @@ Test 2 Study Guide
 
 Read the following: [Inheritance](https://github.com/rugbyprof/2143-ObjectOrientedProgramming/blob/master/ztrunk/fall.16/inheritence_explanation.md)
 
+Also, go look at this: https://inst.eecs.berkeley.edu/~cs61a/fa14/lab/lab06/
+
 
 ## Q2
 
