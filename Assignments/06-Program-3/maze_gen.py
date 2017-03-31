@@ -14,9 +14,6 @@ EWBARRIER = "|  "
 EWOPEN = "   "
 
 
-
-
-
 def clear_screen():
     """Clears the terminal screen on windows or linux.
     """
@@ -41,9 +38,18 @@ class Cell(object):
         self.left = EWBARRIER
         self.path = False 
         self.direction = ''
+        self.taxidistance = None
+        self.parent = None
+        self.reach_cost = None 
+        self.astarval = None
 
     def __str__(self):
-        return "[ [row:%d, col:%d], vis: %s, top: %s, left:%s ]" % (self.row,self.col,self.visited,self.top,self.left)
+        if self.parent:
+            parent = str(self.parent.row)+','+str(self.parent.col)
+        else:
+            parent = " "
+        return "[ [row:%d, col:%d], vis: %s, top: %s, left:%s dir: %s\n taxi: %s, parent: [%s], reach: %s, astar: %s ]" % (self.row,self.col,self.visited,self.top,self.left,self.direction,str(self.taxidistance),
+                                                                                                                                str(parent),str(self.reach_cost),str(self.astarval))
         
 
 class Maze(object):
@@ -92,11 +98,11 @@ class Maze(object):
             'W': u'\u21C7'
         }
 
-        # out_maze = out_maze.replace('#',u'\u2588')
-        # out_maze = out_maze.replace('N',arrows['N'])
-        # out_maze = out_maze.replace('S',arrows['S'])
-        # out_maze = out_maze.replace('E',arrows['E'])
-        # out_maze = out_maze.replace('W',arrows['W'])
+        out_maze = out_maze.replace('#',u'\u2588')
+        out_maze = out_maze.replace('N',arrows['N'])
+        out_maze = out_maze.replace('S',arrows['S'])
+        out_maze = out_maze.replace('E',arrows['E'])
+        out_maze = out_maze.replace('W',arrows['W'])
         print(out_maze)
 
     def set_start(self,row,col):
@@ -111,7 +117,7 @@ class Maze(object):
         """
         self.exit = self.maze[row][col]
 
-    def __possible_moves(self,row,col):
+    def __possible_moves(self,row,col,randomize=True):
         prospects = [(row - 1, col), (row, col + 1), (row + 1, col), (row, col - 1)]
         moves = []
 
@@ -120,7 +126,8 @@ class Maze(object):
                 continue
             elif not self.maze[r][c].visited and self.__is_hallway(self.maze[row][col],self.maze[r][c]):
                 moves.append((r,c))
-        shuffle(moves)
+        if randomize:
+            shuffle(moves)
         return moves
 
     def __is_hallway(self,cell1,cell2):
@@ -136,7 +143,72 @@ class Maze(object):
             return cell2.top == NSOPEN
         elif d == "West":
             return cell1.left == EWOPEN
+
+    def pseudo_a_star(self):
+        """loose implementation of A* algorithm
+        self.taxidistance = None
+        self.parent = None
+        self.reach_cost = None 
+        self.astarval = None
+        """
+        open = []
+        closed = []
+
+        current = self.start
+
+        closed.append(current)
+
+        self.start.taxidistance = self.__taxicab_distance(current,self.exit) * 10
+        self.start.reach_cost = 0
+        self.astarval = self.start.taxidistance + self.start.reach_cost
+
+        moves = self.__possible_moves(current.row,current.col,False)
+
+        for r,c in moves:
+            candidate = self.maze[r][c]
+            if not candidate in closed:
+                candidate.parent = current
+                candidate.taxidistance = self.__taxicab_distance(candidate,self.exit) * 10
+                candidate.reach_cost = candidate.parent.reach_cost + 10
+                candidate.astarval = candidate.taxidistance + candidate.reach_cost
+                open.append(candidate)
+
+        while not current == self.exit:
+            current = open.pop(0)
+
+            if current == self.exit:
+                closed.append(current)
+                break
+
+            closed.append(current)
+
+            moves = self.__possible_moves(current.row,current.col,False)
+
+            for r,c in moves:
+                candidate = self.maze[r][c]
+                if not candidate in closed:
+                    candidate.parent = current
+                    candidate.taxidistance = self.__taxicab_distance(candidate,self.exit) * 10
+                    candidate.reach_cost = candidate.parent.reach_cost + 10
+                    candidate.astarval = candidate.taxidistance + candidate.reach_cost
+                    open.append(candidate)
+
+
         
+        closed.reverse()
+        current = closed[0]
+        while current is not None:
+            current.direction = '#'
+            current.path = True
+            self.print_maze()
+            time.sleep(.02)
+            current = current.parent
+        
+
+
+    def __taxicab_distance(self,cell1,cell2):
+        return abs(cell2.col - cell1.col) + abs(cell2.row - cell1.row)
+
 
     def solve_maze(self):
         self.move_stack = []
@@ -366,7 +438,8 @@ def run_test():
 
     M = Maze(int(rows),int(cols),True)
     M.print_maze()
-    M.solve_maze()
+    #M.solve_maze()
+    M.pseudo_a_star()
 
 if __name__ == '__main__':
     #seed(2234)
