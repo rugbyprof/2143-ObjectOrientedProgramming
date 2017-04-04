@@ -87,23 +87,25 @@ class Maze(object):
         """ Clears the screenm then prints the maze to stdout.
             Returns: None
         """
-        clear_screen()
-        #time.sleep(.02)
         out_maze = self.__str__()
 
-        arrows = {
-            'N': u'\u21C8',
-            'S': u'\u21CA',
-            'E': u'\u21C9',
-            'W': u'\u21C7'
-        }
 
-        out_maze = out_maze.replace('#',u'\u2588')
-        out_maze = out_maze.replace('N',arrows['N'])
-        out_maze = out_maze.replace('S',arrows['S'])
-        out_maze = out_maze.replace('E',arrows['E'])
-        out_maze = out_maze.replace('W',arrows['W'])
+        # arrows = {
+        #     'N': u'\u21C8',
+        #     'S': u'\u21CA',
+        #     'E': u'\u21C9',
+        #     'W': u'\u21C7'
+        # }
+
+        #out_maze = out_maze.replace('#',u'\u263A')
+        # out_maze = out_maze.replace('N',arrows['N'])
+        # out_maze = out_maze.replace('S',arrows['S'])
+        # out_maze = out_maze.replace('E',arrows['E'])
+        # out_maze = out_maze.replace('W',arrows['W'])
+        clear_screen()
         print(out_maze)
+        time.sleep(.03)
+
 
     def set_start(self,row,col):
         """ Sets the starting cell of the maze.
@@ -144,6 +146,22 @@ class Maze(object):
         elif d == "West":
             return cell1.left == EWOPEN
 
+    def knock_down_walls(self,x):
+        total_walls = 0
+        while total_walls < x:
+            r = randrange(1,self.height-1)
+            c = randrange(1,self.width-1)
+            w = randint(0,pow(2,20)) % 2
+            if w == 0:
+                if self.maze[r][c].top == NSBARRIER:
+                    self.maze[r][c].top = NSOPEN
+                    total_walls += 1
+            else:
+                if self.maze[r][c].left == EWBARRIER:
+                    self.maze[r][c].left = EWOPEN
+                    total_walls += 1
+
+                
     def pseudo_a_star(self):
         """loose implementation of A* algorithm
         self.taxidistance = None
@@ -151,58 +169,59 @@ class Maze(object):
         self.reach_cost = None 
         self.astarval = None
         """
-        open = []
-        closed = []
+        self.__reset_maze()
+
+        open = []           # candidate cells that are being considered
+        closed = []         # cells that are in the path 
 
         current = self.start
-
+        open.append(current)
         closed.append(current)
 
         self.start.taxidistance = self.__taxicab_distance(current,self.exit) * 10
         self.start.reach_cost = 0
-        self.astarval = self.start.taxidistance + self.start.reach_cost
-
-        moves = self.__possible_moves(current.row,current.col,False)
-
-        for r,c in moves:
-            candidate = self.maze[r][c]
-            if not candidate in closed:
-                candidate.parent = current
-                candidate.taxidistance = self.__taxicab_distance(candidate,self.exit) * 10
-                candidate.reach_cost = candidate.parent.reach_cost + 10
-                candidate.astarval = candidate.taxidistance + candidate.reach_cost
-                open.append(candidate)
+        self.start.astarval = self.start.taxidistance + self.start.reach_cost
 
         while not current == self.exit:
             current = open.pop(0)
+            if current.path:
+                continue
 
             if current == self.exit:
                 closed.append(current)
                 break
-
+            
             closed.append(current)
+            current.direction = '#'
+            current.path = True
+            self.print_maze()
+
 
             moves = self.__possible_moves(current.row,current.col,False)
 
             for r,c in moves:
                 candidate = self.maze[r][c]
-                if not candidate in closed:
+                if candidate.path == False:
                     candidate.parent = current
                     candidate.taxidistance = self.__taxicab_distance(candidate,self.exit) * 10
                     candidate.reach_cost = candidate.parent.reach_cost + 10
                     candidate.astarval = candidate.taxidistance + candidate.reach_cost
                     open.append(candidate)
 
-
-        
+        self.__reset_maze()
         closed.reverse()
         current = closed[0]
+        path = []
+
         while current is not None:
-            current.direction = '#'
-            current.path = True
-            self.print_maze()
-            time.sleep(.02)
+            path.append(current)
             current = current.parent
+
+        path.reverse()
+        for p in path:
+            p.direction = '#'
+            p.path = True
+            self.print_maze()
         
 
 
@@ -210,7 +229,8 @@ class Maze(object):
         return abs(cell2.col - cell1.col) + abs(cell2.row - cell1.row)
 
 
-    def solve_maze(self):
+    def random_walk(self):
+        self.__reset_maze()
         self.move_stack = []
 
         # Prime the move stack with the "first" move.
@@ -256,6 +276,7 @@ class Maze(object):
             else:
                 popped = self.move_stack.pop()
                 popped.path = False
+
 
     
 
@@ -395,6 +416,12 @@ class Maze(object):
         for row in range(self.height):
             for col in range(self.width):
                 self.maze[row][col].visited = False
+                self.maze[row][col].path = False
+                self.maze[row][col].direction = ''
+                self.maze[row][col].taxidistance = None
+                self.maze[row][col].parent = None
+                self.maze[row][col].reach_cost = None 
+                self.maze[row][col].astarval = None
 
     def __str__(self):
         """ String representation of the maze. 
@@ -436,12 +463,12 @@ def run_test():
         rows = sys.argv[1]
         cols = sys.argv[2]
 
-    M = Maze(int(rows),int(cols),True)
-    M.print_maze()
-    #M.solve_maze()
+    M = Maze(int(rows),int(cols),False)
+    M.knock_down_walls(100)
+    M.random_walk()
     M.pseudo_a_star()
 
 if __name__ == '__main__':
-    #seed(2234)
+    seed(2234)
     clear_screen()
     run_test()
