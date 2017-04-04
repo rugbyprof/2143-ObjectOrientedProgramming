@@ -208,7 +208,7 @@ class Maze(object):
                     candidate.astarval = candidate.taxidistance + candidate.reach_cost
                     open.append(candidate)
 
-        self.__reset_maze()
+        self.__reset_path()
         closed.reverse()
         current = closed[0]
         path = []
@@ -422,6 +422,14 @@ class Maze(object):
                 self.maze[row][col].parent = None
                 self.maze[row][col].reach_cost = None 
                 self.maze[row][col].astarval = None
+
+    def __reset_path(self):
+        """Mark  path in maze as not visited.
+        """
+        for row in range(self.height):
+            for col in range(self.width):
+                self.maze[row][col].path = False
+
 
     def __str__(self):
         """ String representation of the maze. 
