@@ -15,3 +15,25 @@ try:
     print(dict['six'])
 except KeyError:
     print( "Key doesn't exist!")
+
+"""
+2
+1
+1
+1
+1
+0
+0
+0
+1
+2
+1
+0
+Silly wabbit, you can't divide by zero!
+0
+0
+0
+0
+0
+Key doesn't exist!
+"""
