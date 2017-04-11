@@ -259,18 +259,18 @@ def pigify(w):
 """ Returns: copy of w converted to Pig Latin 
 """
 def pigify(w):
-  vowels = ['a','e','i','o','u','y']
+  vowels = ['a','e','i','o','u']
   words = w.split()
   new = ""
   for w in words:
-    if w[0] in vowels and not w[0] == 'y' :
+    if w[0] in vowels:
       w = w +'hay'
     elif w[0] == 'q':
       w = w[2:] +'quay'
     else:
       i = 0
       while i < len(w):
-        if w[i] in vowels[:-1]:
+        if w[i] in vowels + ['y'] and i > 0:
           break
         i += 1
       w = w[i:]+w[:i]+'ay'
@@ -278,7 +278,7 @@ def pigify(w):
     new += " "
   return new
 
-print(pigify("hello this is your quirky doctor calling you"))
+print(pigify("hello this is your quirky doctor calling you to say bye yes we do"))
 ```
 >Prints: `ellohay isthay ishay ouryay irkyquay octorday allingcay ouyay `
 
