@@ -1,6 +1,6 @@
  
 
-1) Place the appropriate letter in the space next to its corresponding definition. 
+***1)*** Place the appropriate letter in the space next to its corresponding definition. 
 
 <> | Word | Ans | Definition
 ------- | ------- | ------- | -------
@@ -25,7 +25,7 @@ R. | Parent Class: | S | To copy the contents of an object, including any refere
 S. | Shallow Copy: | G | To copy the contents of an object as well as any embedded objects, and any objects embedded in them, and so on; implemented by the deepcopy function in the copy module.
 T. | Subject: | C | An attribute associated with a class object. Class attributes are defined inside a class definition but outside any method.
 
-2) Create a point class, line class, and a rectangle class.
+***2)*** Create a point class, line class, and a rectangle class.
 - •	A point is a tuple of two integers: (3,6)
     - o	Add a move point method that receives: dx,dy which are the amounts of change to apply to the point. Example: (-2,2) would turn the point (3,6) into (1,8).
     - o	Overload the addition operater to add two points together:
@@ -85,7 +85,7 @@ class Rectangle(object):
 
 
  
-3) Given an email class to represent an email: 
+***3)*** Given an email class to represent an email: 
 ```python
 class Email(object):
 	def __init__(self, msg, subj, sender, receiver):
@@ -235,12 +235,12 @@ emails_sent = [ ('fake message 1' , 'fake subject 1' , 'joe@yahoo.com' , 'sue@gm
  
 
 
-4) Write a function called pigify that turns a string of words into piglatin.
-•	'y' is a vowel if it is not the first letter of a word
-•	If word begins with a vowel, append 'hay'
-•	If word starts with 'q', assume followed by 'u'; move 'qu' to the end, and append 'ay'
-•	If word begins with a consonant, move all consonants up to first vowel to end and add 'ay'
-•	Precondition: input contains only (lowercase) letters
+***4)*** Write a function called pigify that turns a string of words into piglatin.
+- 'y' is a vowel if it is not the first letter of a word
+- If word begins with a vowel, append 'hay'
+- If word starts with 'q', assume followed by 'u'; move 'qu' to the end, and append 'ay'
+- If word begins with a consonant, move all consonants up to first vowel to end and add 'ay'
+- Precondition: input contains only (lowercase) letters
 
 ```python
 def pigify(w): 
@@ -270,10 +270,17 @@ print(pigify("hello this is your quirky doctor calling you"))
 ```
 >Prints: `ellohay isthay ishay ouryay irkyquay octorday allingcay ouyay `
 
-5) Write a function that receives a list of integers along with an A and a B. Replace all the A's in the list with whatever value B is.
-•	Example: replace([1,2,3,1], 1, 4) = [4,2,3,4].
-•	Precondition: All values in the list, and A,B will be integers.
+***5)*** Write a function that receives a list of integers along with an A and a B. Replace all the A's in the list with whatever value B is.
+- Example: replace([1,2,3,1], 1, 4) = [4,2,3,4].
+- Precondition: All values in the list, and A,B will be integers.
+
+```python
 def replace(thelist,a,b):  
 """Returns: A COPY of the list with all occurrences of a replaced by b.  
 """
-
+copy = thelist[:]
+for i in range(len(copy)):
+    if copy[i] == a:
+        copy[i] = b
+return copy
+```
