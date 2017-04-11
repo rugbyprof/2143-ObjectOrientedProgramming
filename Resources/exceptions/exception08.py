@@ -20,3 +20,10 @@ def funny_division3(anumber):
 for val in (0, "hello", 50.0, 13):
     print("Testing {}:".format(val), end=" ")
     print(funny_division3(val))
+
+"""
+Testing 0: Enter a number other than zero
+Testing hello: Enter a numerical value
+Testing 50.0: 2.0
+Testing 13: 7.6923076923076925
+""
