@@ -35,7 +35,8 @@ T. | Subject: | C | An attribute associated with a class object. Class attribute
 - •	A rectangle consists of two points as well, the upper right, and the lower left.
     - o	Add an area and perimeter method
     - o	Overload the addition operator to add rectangles A and B. This method would take min and max of all the points in A and B, and create a single rectangle that encompasses both A and B.
-    
+
+#### Answer:
 ```python
 class Point(object):
     def __init__(self,x=0,y=0):
@@ -127,7 +128,7 @@ list2 = Logger.get_received_by("sue@gmail.com")
 
 Your answer should be a complete class that would fulfill the usage example above.
 
-### Answer:
+#### Answer:
 ```python
 
 class Email(object):
@@ -242,6 +243,7 @@ emails_sent = [ ('fake message 1' , 'fake subject 1' , 'joe@yahoo.com' , 'sue@gm
 - If word begins with a consonant, move all consonants up to first vowel to end and add 'ay'
 - Precondition: input contains only (lowercase) letters
 
+#### Answer:
 ```python
 def pigify(w): 
 """ Returns: copy of w converted to Pig Latin 
@@ -274,6 +276,7 @@ print(pigify("hello this is your quirky doctor calling you"))
 - Example: replace([1,2,3,1], 1, 4) = [4,2,3,4].
 - Precondition: All values in the list, and A,B will be integers.
 
+#### Answer:
 ```python
 def replace(thelist,a,b):  
 """Returns: A COPY of the list with all occurrences of a replaced by b.  
