@@ -18,3 +18,16 @@ def call_exceptor():
 
 
 call_exceptor()
+
+"""
+call_exceptor starts here...
+I am about to raise an exception
+Traceback (most recent call last):
+  File "ex.py", line 16, in <module>
+    call_exceptor()
+  File "ex.py", line 10, in call_exceptor
+    no_return()
+  File "ex.py", line 3, in no_return
+    raise Exception("This is always raised")
+Exception: This is always raised
+"""
