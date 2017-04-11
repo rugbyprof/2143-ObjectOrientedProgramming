@@ -13,3 +13,8 @@ def funny_division2(anumber):
        except (ZeroDivisionError, TypeError):
            return "Enter a number other than zero"
 
+"""
+Enter a number other than zero
+2.0
+Enter a number other than zero
+"""
