@@ -75,6 +75,10 @@ class Rectangle(object):
     def __init__(self,ul=None,lr=None):
         self.ul = ul
         self.lr = lr
+        l1 = Line(Point(self.ul.x,self.ul.y),Point(self.lr.x,self.ul.y))
+        l2 = Line(Point(self.lr.x,self.lr.y),Point(self.lr.x,self.ul.y))
+        self.w = l1.length()
+        self.h = l2.length()
         
     def __add__(self,rhs):
         min_x = min([self.ul.x,self.lr.x,rhs.ul.x,rhs.lr.x])
@@ -82,11 +86,12 @@ class Rectangle(object):
         min_y = min([self.ul.y,self.lr.y,rhs.ul.y,rhs.lr.y])
         max_y = max([self.ul.y,self.lr.y,rhs.ul.y,rhs.lr.y])
         return Rectangle(Point(min_x,max_y),Point(max_x,min_y))
-	
+    
     def area(self):
-        l1 = Line(Point(ul.x,ul.y),Point(lr.x,ul.y))
-	l2 = Line(Point(lr.x,lr.y),Point(lr.x,ul.y))
-        return l1.length * l2.length
+        return self.w * self.h
+        
+    def perimeter(self):
+        return self.w*2 + self.h*2 
 ```
 
 
