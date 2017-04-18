@@ -1,6 +1,10 @@
 import sqlite3
 import datetime
 
+"""
+https://www.tutorialspoint.com/sqlite/sqlite_python.htm
+"""
+
 conn = sqlite3.connect("sales.db")
 conn.execute("DROP TABLE Sales")
 conn.execute("CREATE TABLE Sales (salesperson text, ""amt currency, year integer, model text, new boolean)")
@@ -71,8 +75,18 @@ class UserGrossQuery(QueryTemplate):
         with open(filename, 'w') as outfile:
             outfile.write(self.formatted_results)
 
+class GetemAll(QueryTemplate):
+    def construct_query(self):
+        self.query = "select * from Sales"
+
+    def output_results(self):
+        print(self.formatted_results)
+
 nv = NewVehiclesQuery()
 uq = UserGrossQuery()
+ga = GetemAll()
 
 nv.process_format()
 uq.process_format()
+print()
+ga.process_format()
