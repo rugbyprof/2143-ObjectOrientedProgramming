@@ -1,14 +1,14 @@
 import random
-import abc
 
-"""
-@Class: Dice
-@Description: 
-    Represents a single "die" with X number of sides.
-@Methods:
-    Roll - Rolls the dice and returns a value between 1 and "number of sides" 
-"""
+
 class Dice(object):
+    """
+    @Class: Dice
+    @Description: 
+        Represents a single "die" with X number of sides.
+    @Methods:
+        Roll - Rolls the dice and returns a value between 1 and "number of sides" 
+    """
     def __init__(self,num_sides=6):
         self.NumSides = num_sides
 
@@ -18,14 +18,15 @@ class Dice(object):
 ##############################################################################
 ##############################################################################
 
-"""
-@Class: Pig
-@Description: 
-    Represents the game of pig (dice game)
-@Methods:
-    Roll - Rolls the "die" or "dice" and returns a list of rolled values
-"""
+
 class Pig(object):
+    """
+    @Class: Pig
+    @Description: 
+        Represents the game of pig (dice game)
+    @Methods:
+        Roll - Rolls the "die" or "dice" and returns a list of rolled values
+    """
     def __init__(self,num_dice=1,dice_sides=6,skunk_value=1):
         self.NumDice = num_dice
         self.DiceSides = dice_sides
@@ -33,13 +34,14 @@ class Pig(object):
         self.SkunkValue = skunk_value
         for i in range(self.NumDice):
             self.DiceList.append(Dice(self.DiceSides))
-    """
-    @Method: Roll
-    @Description: 
-        One roll in a pig game, with 1 to NumDice per roll
-    @Returns: int: [0=skunk value occured, total of all dice otherwise]
-    """ 
+
     def Roll(self):
+        """
+        @Method: Roll
+        @Description: 
+            One roll in a pig game, with 1 to NumDice per roll
+        @Returns: int: [0=skunk value occured, total of all dice otherwise]
+        """ 
         scores = []
         for d in self.DiceList:
             scores.append(d.Roll())
@@ -70,18 +72,19 @@ class Player(object):
             }
         self.Strategies[strategy[0]] = strategy[1]
 
-    """
-    @Method: AddOpponents
-    @Description: Adds an opponent, or list of opponents (as long as it's not me) to a dictionary with name and score.
-        Example: {
-                   'bob':0.
-                   'sue':0
-                 }
-    
-    @Params: [] - Opponents
-    @Returns: None
-    """
+
     def AddOpponents(self,opponent):
+        """
+        @Method: AddOpponents
+        @Description: Adds an opponent, or list of opponents (as long as it's not me) to a dictionary with name and score.
+            Example: {
+                       'bob':0.
+                       'sue':0
+                     }
+
+        @Params: [] - Opponents
+        @Returns: None
+        """
         # if not type(opponent) == list and not opponent.Name == self.Name:
         #     self.Opponents[opponent.Name] = opponent
         # else:
@@ -89,54 +92,58 @@ class Player(object):
             if not op.Name == self.Name:
                 self.Opponents[op.Name] = op
 
-    """
-    @Method: __str__
-    @Description: Prints out a nice version of self
-    @Returns: string representation
-    """
+
     def __str__(self):
+        """
+        @Method: __str__
+        @Description: Prints out a nice version of self
+        @Returns: string representation
+        """
         tmp = " "
         for k,v in self.Opponents.items():
             tmp = tmp + "[" + k + " " + str(v.TotalScore) + "," + str(v.LastScore) + "," + str(v.LastNumRolls) + "] "
         return "Name: %s, TotScore: %s, LastScore: %s, LastNumRolls: %s, Opponents: %s" % (self.Name,self.TotalScore,self.LastScore,self.LastNumRolls,tmp)
         
-    """
-    @Method: __repr__
-    @Description: Calls __str__
-    @Returns: a call to __str__
-    """
+
     def __repr__(self):
+        """
+        @Method: __repr__
+        @Description: Calls __str__
+        @Returns: a call to __str__
+        """
         return self.__str__()
         
 
-    """
-    @Method: SetStrategy
-    @Description: Sets the current strategy for the player
-    @Params:
-        strategy: string 
-        value: int    
-    @Returns: None
-    @Usage:
-            SetStrategy('Target_Score',20)
-            SetStrategy('Target_Rolls',5)     
-            SetStrategy('Sprint_To_Finish',72)    
-    """
+
     def SetStrategy(self,strategy,value):
+        """
+        @Method: SetStrategy
+        @Description: Sets the current strategy for the player
+        @Params:
+            strategy: string 
+            value: int    
+        @Returns: None
+        @Usage:
+                SetStrategy('Target_Score',20)
+                SetStrategy('Target_Rolls',5)     
+                SetStrategy('Sprint_To_Finish',72)    
+        """
         if strategy in self.Strategies:
             self.Strategies[strategy] = value
         else:
             raise ValueError('The strategy does not exist!')
 
-    """
-    @Method: PlayerRoll
-    @Description: Implements a turn for a player. If the player rolls a 1 at any time zero is returned, 
-                  otherwise the total of the rolls is returned.
-    @Params:
-        string: player
-        int: max rolls 
-    @Returns: int: total
-    """
+
     def Roll(self):
+        """
+        @Method: PlayerRoll
+        @Description: Implements a turn for a player. If the player rolls a 1 at any time zero is returned, 
+                      otherwise the total of the rolls is returned.
+        @Params:
+            string: player
+            int: max rolls 
+        @Returns: int: total
+        """
         if self.Strategy == 'Random':
             Score,NumRolls = self.RandomRoll()
         elif self.Strategy == 'Aggressive':
@@ -215,32 +222,33 @@ class Game(object):
             string += obj.__str__() + "\n"
         return string
         
-    """
-    @Method: AddPlayers
-    @Description: Adds a new player or players to the game
-        Example: {
-                   'bob':<player_object>
-                   'sue':<player_object>
-                 }
-    
-    @Params: [] - players
-    @Returns: None
-    """
+
     def AddPlayers(self,players):
+        """
+        @Method: AddPlayers
+        @Description: Adds a new player or players to the game
+            Example: {
+                       'bob':<player_object>
+                       'sue':<player_object>
+                     }
+
+        @Params: [] - players
+        @Returns: None
+        """
         if not type(players) == list:
             self.Players[players.Name] = players
         else:
             for p in players:
                 self.Players[p.Name] = p
                     
-    """
-    @Method: WinnerExists
-    @Description: Checks to see if a player has acheived the target score.
-    @Params:None
-    @Returns: bool
-    """         
+     
     def StartGame(self):
-
+        """
+        @Method: WinnerExists
+        @Description: Checks to see if a player has acheived the target score.
+        @Params:None
+        @Returns: bool
+        """    
         self.UpdatePlayerOpponents()
         
         # Main game loop
@@ -249,13 +257,14 @@ class Game(object):
             for name,PlayerObj in self.Players.items():
                 PlayerObj.Roll()
        
-    """
-    @Method: WinnerExists
-    @Description: Checks to see if a player has acheived the target score.
-    @Params:None
-    @Returns: bool
-    """
+
     def WinnerExists(self):
+        """
+        @Method: WinnerExists
+        @Description: Checks to see if a player has acheived the target score.
+        @Params:None
+        @Returns: bool
+        """
         for name,PlayerObj in self.Players.items():
             if PlayerObj.TotalScore >= self.TargetScore:
                 self.WinnerName = PlayerObj.Name
@@ -263,23 +272,24 @@ class Game(object):
         self.WinnerName = None
         return False
 
-    """
-    @Method: Winner
-    @Description: Returns the winner, if there is one.
-    @Params:None
-    @Returns: [string,None]: Players name or None
-    """
+
     def Winner(self):
+        """
+        @Method: Winner
+        @Description: Returns the winner, if there is one.
+        @Params:None
+        @Returns: [string,None]: Players name or None
+        """        
         return self.WinnerName
         
-    """
-    @Method: UpdatePlayerOpponents
-    @Description: Gives a copy of each player in the game, to every other player in the game. 
-    @Params:None
-    @Returns: None
-    """   
-    def UpdatePlayerOpponents(self):
 
+    def UpdatePlayerOpponents(self):
+        """
+        @Method: UpdatePlayerOpponents
+        @Description: Gives a copy of each player in the game, to every other player in the game. 
+        @Params:None
+        @Returns: None
+        """   
         for name,PlayerObj in self.Players.items():
             PlayerObj.AddOpponents(self.Players.values())
 
