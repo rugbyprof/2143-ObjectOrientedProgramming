@@ -69,7 +69,7 @@ We decided that this strategy would be "conservative" if they were ahead of thei
 This will incorporate a combination of 2 or more of the above strategies.
 
 ## Part 1 Deliverables
-Part 1 Due: 24<sup>th</sup> Oct by Classtime.
+Part 1 Due: 7<sup>th</sup> May by Classtime.
 - Create a folder called _**program\_2**_ in your **_assignments_** folder. (If I haven't previously instructed you to create an assignments folder, please do).
 - Create a file called _**game\_part1.py**_ within _**program\_2**_ that is a copy of the given file [game_starter.py](./game_starter.py)
 - Make necessary changes so that game play is correct:
@@ -79,7 +79,7 @@ Part 1 Due: 24<sup>th</sup> Oct by Classtime.
     - "{Playername} has just reached {Target Score} points and is stopping."
 
 ## Part 2 Deliverables
-Part 1 Due: 31<sup>st</sup> Oct by Classtime.
+Part 1 Due: 7<sup>st</sup> May by Classtime.
 - Create a file called _**game\_part2.py**_ within _**program\_2**_ that is a copy of your corrected version of the following: [game_starter.py](./game_starter.py) (Basically a copy of your _**game\_part1.py**_)
 - Complete the method `Sprint_To_Finish` . This method should be invoked when the player gets close enough to the final score in order to feel like they can achieve the  score if they keep rolling. Currently, the strategy is `Random`. I would do something like below to choose which strategy to roll with:
 
