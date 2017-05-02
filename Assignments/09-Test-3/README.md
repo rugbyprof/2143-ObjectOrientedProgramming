@@ -66,3 +66,20 @@ Return YES, if Vasya can sell a ticket to each person and give the change. Other
 tickets([25, 25, 50]) # => YES 
 tickets([25, 100]) # => NO. Vasya will not have enough money to give change to 100 dollars
 ```
+
+## Q3
+
+Define a class named Shape and its subclass Square. The Square class has an init function which takes a 
+length as argument. Both classes have a area function which can print the area of the shape where Shape's 
+area is 0 by default.
+
+Hints:
+
+To override a method in super class, we can define a method with the same name in the super class.
+
+
+### Example:
+```python
+aSquare= Square(3)
+print aSquare.area()
+```
