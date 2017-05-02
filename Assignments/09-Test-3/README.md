@@ -111,10 +111,28 @@ The array will always have at least 2 elements and all the elements will be numb
 
 ## Q6
 
-Roulette Wheel
-![](http://farm9.staticflickr.com/8089/8370772707_6e0b6d13e2.jpg)
+Your going to write a simplified version of a roulette game. 
+
+![](http://cdn-blog-assets.bigfishgames.com/uploads/2013/11/6-1-American-Roulette-1024x463.png)
+
+**Roulette Wheel Class**
+Write a class to represent a roulette wheel. Looking at the image below should give you some ideas about what needs to be represented. 
+A single method `spin` is needed, and it will return a dictionary with the following information:
+
+- `{'number':8,'color':'black'}
+- `{'number':19,'color':'red'}
+
+**Roulette Table Class**
 
 
-Roulette Table
 
-![](http://www.itmaybeahack.com/book/oodesign-python-2.1/html/_images/Roulette2.png)
+**Player Class**
+
+This class should contain the following attributes:
+
+| attribute            | desription | 
+|----------------------|-------------------------------------|
+| name                 | Players name                        |
+| total_bank           | Total amount of money for betting   |
+| current_bet_amount   | Current bet placed amount           |
+| current_bet          | What player is betting on           | 
