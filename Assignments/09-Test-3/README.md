@@ -108,3 +108,13 @@ E.g. If we have an array `[1,2,3,4,6,7,8]` then 1 then 2 then 3 then 4 are all c
 If the whole array is consecutive then return `null`
 
 The array will always have at least 2 elements and all the elements will be numbers. The numbers will also all be unique and in ascending order. The numbers could be positive or negetive and the first non-consecutive could be either too!
+
+## Q6
+
+Roulette Wheel
+![](http://farm9.staticflickr.com/8089/8370772707_6e0b6d13e2.jpg)
+
+
+Roulette Table
+
+![](http://www.itmaybeahack.com/book/oodesign-python-2.1/html/_images/Roulette2.png)
