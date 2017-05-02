@@ -1,4 +1,4 @@
-# Program 2 - Gaming Strategy Simulation
+# Program 4 - Gaming Strategy Simulation
  Due: 7<sup>th</sup> May by Classtime.
 
 ## Program Overview
@@ -70,7 +70,7 @@ This will incorporate a combination of 2 or more of the above strategies.
 
 ## Part 1 Deliverables
 Part 1 Due: 7<sup>th</sup> May by Classtime.
-- Create a folder called _**program\_2**_ in your **_assignments_** folder. (If I haven't previously instructed you to create an assignments folder, please do).
+- Create a folder called _**program\_4**_ in your **_assignments_** folder. (If I haven't previously instructed you to create an assignments folder, please do).
 - Create a file called _**game\_part1.py**_ within _**program\_2**_ that is a copy of the given file [game_starter.py](./game_starter.py)
 - Make necessary changes so that game play is correct:
     - Currently the player does not stop rolling immediately after reaching the target score.
@@ -80,7 +80,7 @@ Part 1 Due: 7<sup>th</sup> May by Classtime.
 
 ## Part 2 Deliverables
 Part 1 Due: 7<sup>st</sup> May by Classtime.
-- Create a file called _**game\_part2.py**_ within _**program\_2**_ that is a copy of your corrected version of the following: [game_starter.py](./game_starter.py) (Basically a copy of your _**game\_part1.py**_)
+- Create a file called _**game\_part4.py**_ within _**program\_4**_ that is a copy of your corrected version of the following: [game_starter.py](./game_starter.py) (Basically a copy of your _**game\_part1.py**_)
 - Complete the method `Sprint_To_Finish` . This method should be invoked when the player gets close enough to the final score in order to feel like they can achieve the  score if they keep rolling. Currently, the strategy is `Random`. I would do something like below to choose which strategy to roll with:
 
 ```python
@@ -110,7 +110,23 @@ Part 1 Due: 7<sup>st</sup> May by Classtime.
 
 ## Part 3 Deliverables
 
-- TBD
+
+- All your code in the proper folder under assignments on github.
+- Strategies:
+    - Aggressive (Rolls a bunch or has a target score of ?)
+    - Conservative (rolls less than 7 and has a small target score)
+    - Sprint to finish (if score is greater than X (75 to start), player rolls until wins or skunks out). Uses conservative strategy to start with.
+-Run it 1000 times with a tabular output stating the following:
+    - Name of player
+    - Strategy 
+    - Number of wins (percentage)
+
+| name | strategy | % |
+|------|----------|---|
+| Bob  | Cons     | .22 | 
+| Sue  | Agg      | .21 |
+| Ann  | Sprint   | .25 |
+| Dax  | Sprint   | .26 |
 
 
  
