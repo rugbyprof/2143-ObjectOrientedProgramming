@@ -60,7 +60,7 @@ tickets strictly in the order people follow in the line?
 
 Return YES, if Vasya can sell a ticket to each person and give the change. Otherwise return NO.
 
-###Examples:
+#### Examples:
 
 ```python
 tickets([25, 25, 50]) # => YES 
