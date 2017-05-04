@@ -1,4 +1,4 @@
-## Exam Material
+## Take Home Portion of Exam
 
 - Create a digital document containing the answers to the following questions.
 - Your document should be organized and easy to read. Any code included (which is the whole exam :) ) should be commented.
