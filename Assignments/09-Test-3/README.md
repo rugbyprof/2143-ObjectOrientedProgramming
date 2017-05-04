@@ -25,7 +25,7 @@
 - What a waste of  time! Better to do nothing.
 - The path becomes `["EAST", "WEST"]`, now "EAST" and "WEST" annihilate each other, therefore, the final result is **`[]`**.
 
-- In ***`["NORTH", "EAST", "WEST", "SOUTH", "WEST", "WEST"]`***, ***`"NORTH"`*** and ***`"SOUTH"`*** are not directly opposite but they become directly opposite after the reduction of ***`"EAST"`***  and ***`"WEST"`*** so the whole path is reducible to ***`["WEST", "WEST"]`***.
+- In ***`["NORTH", "EAST", "WEST", "SOUTH", "WEST", "WEST"]`*** , ***`"NORTH"`*** and ***`"SOUTH"`*** are not directly opposite but they become directly opposite after the reduction of ***`"EAST"`***  and ***`"WEST"`*** so the whole path is reducible to ***`["WEST", "WEST"]`*** .
 
 #### Task
 
