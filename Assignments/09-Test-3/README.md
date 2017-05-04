@@ -1,3 +1,10 @@
+## Exam 
+
+- Create a digital document containing the answers to the following questions.
+- Your document should be organized and easy to read. Any code included (which is the whole exam :) ) should be commented.
+- Turn your document in to my office on Wednesday May 10<sup>th</sup> by 10:00 a.m.
+- By turning in this document, you are 
+
 ***Question 1***
 
 - Once upon a time, on a way through the old wild west a man was given directions to go from one point to another. The directions were  **"NORTH", "SOUTH", "WEST", "EAST"**.  Clearly ***`"NORTH"`*** and ***`"SOUTH"`*** are opposite, ***`"WEST"`*** and ***`"EAST"`*** too. 
