@@ -126,6 +126,24 @@ The array will always have at least 2 elements and all the elements will be numb
 
 ***Question 6***
 
+Given: 
+```python
+class Person(object):
+
+    def __init__(self, firstname, lastname):
+        self.firstname = firstname
+        self.lastname = lastname
+
+    def get_name(self):
+        return '%s %s' % (self.firstname, self.lastname)
+```
+
+- Write a class to represent a `Parent` and a `Child` using either inheritance or composition.
+- The `Parent` class should have a method that adds a "child" to a list. So a parent can have multiple children.
+- The `Child` class should have an attribite that specifies whom it's parent is. 
+
+***Question 7***
+
 Your going to write a simplified version of a roulette game. No worries ... right ?!?!
 
 ![](http://cdn-blog-assets.bigfishgames.com/uploads/2013/11/6-1-American-Roulette-1024x463.png)
@@ -205,3 +223,5 @@ class RoulettWheel(object):
 ```
 
 - Ultimately, your not totally expected to make a roulette game, but you are expected to design a class structure that could easily be turned into a game.
+
+
