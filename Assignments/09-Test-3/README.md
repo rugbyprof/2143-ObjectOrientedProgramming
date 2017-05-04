@@ -14,14 +14,12 @@
 - Since this is the wild west, with dreadfull weather and not much water, it's important  to save yourself some energy, otherwise you might die of thirst!
 - The directions given to the man are, for example, the following:
 
-><center> **`["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"]`.**
-></center>
+**`["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"]`**
 
 - You can immediatly see that going ***`"NORTH"`*** and then ***`"SOUTH"`*** is not reasonable, better stay to the same place! 
 - So the task is to  give to the man a simplified version of the plan. A better plan in this case is simply:
 
-><center> **`["WEST"]`**
-></center>
+**`["WEST"]`**
 
 - In `["NORTH", "SOUTH", "EAST", "WEST"]`, the direction "NORTH" + "SOUTH" is going north and coming back right away. 
 - What a waste of  time! Better to do nothing.
