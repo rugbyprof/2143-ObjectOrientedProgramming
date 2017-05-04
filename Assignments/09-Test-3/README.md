@@ -3,7 +3,8 @@
 - Create a digital document containing the answers to the following questions.
 - Your document should be organized and easy to read. Any code included (which is the whole exam :) ) should be commented.
 - Turn your document in to my office on Wednesday May 10<sup>th</sup> by 10:00 a.m.
-- By turning in this document, you are 
+- By turning in this document, you are guaranteeing the CS department that you worked alone.
+- Along with your digital document, you need to turn in a signed academic honesty sheet (found in this directory).
 
 ***Question 1***
 
