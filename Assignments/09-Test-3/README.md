@@ -98,6 +98,7 @@ print(c1.area())
 print(s1.perimeter())
 print(c1.surfaceArea())
 ```
+-----
 
 ***Question 4***
 
@@ -114,6 +115,8 @@ Example
 - "Indivisibilities" -> 2 # 'i' and 's'
 - "aa11" -> 2 # 'a' and '1'
 
+-----
+
 ***Question 5***
 
 Your task is to find the first element of an array that is not consecutive.
@@ -123,6 +126,8 @@ E.g. If we have an array `[1,2,3,4,6,7,8]` then 1 then 2 then 3 then 4 are all c
 If the whole array is consecutive then return `null`
 
 The array will always have at least 2 elements and all the elements will be numbers. The numbers will also all be unique and in ascending order. The numbers could be positive or negetive and the first non-consecutive could be either too!
+
+-----
 
 ***Question 6***
 
@@ -141,6 +146,8 @@ class Person(object):
 - Write a class to represent a `Parent` and a `Child` using either inheritance or composition.
 - The `Parent` class should have a method that adds a "child" to a list. So a parent can have multiple children.
 - The `Child` class should have an attribite that specifies whom it's parent is. 
+
+-----
 
 ***Question 7***
 
