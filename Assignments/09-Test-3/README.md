@@ -20,7 +20,7 @@
 - You can immediatly see that going ***`"NORTH"`*** and then ***`"SOUTH"`*** is not reasonable, better stay to the same place! 
 - So the task is to  give to the man a simplified version of the plan. A better plan in this case is simply:
 
-><center> **`["WEST"]`.**
+><center> **`["WEST"]`**
 ></center>
 
 - In `["NORTH", "SOUTH", "EAST", "WEST"]`, the direction "NORTH" + "SOUTH" is going north and coming back right away. 
